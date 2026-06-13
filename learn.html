@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+<title>SGRM · Learn (plain English glossary)</title>
+<style>
+:root{
+  --bg:#000;--card:#1c1c1e;--card-2:#2c2c2e;
+  --border:rgba(255,255,255,0.08);--text:#f5f5f7;--dim:#a1a1a6;--mute:#636366;
+  --accent:#0a84ff;--green:#30d158;--yellow:#ffd60a;--red:#ff453a;
+  --green-dim:#30d15822;--yellow-dim:#ffd60a22;--red-dim:#ff453a22;
+}
+@media (prefers-color-scheme:light){
+  :root{--bg:#f5f5f7;--card:#fff;--card-2:#fafafa;--border:rgba(0,0,0,0.08);
+        --text:#1d1d1f;--dim:#515154;--mute:#86868b;}
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);
+     font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;
+     padding:20px;max-width:760px;margin:0 auto;font-size:15px;line-height:1.6;
+     -webkit-font-smoothing:antialiased;letter-spacing:-0.011em;}
+h1{font-size:24px;font-weight:700;letter-spacing:-0.03em;margin-bottom:6px;}
+.sub{color:var(--mute);font-size:13px;margin-bottom:24px;}
+h2{font-size:18px;font-weight:600;margin:32px 0 4px;letter-spacing:-0.02em;color:var(--accent);}
+.cat-desc{color:var(--mute);font-size:12.5px;margin-bottom:14px;}
+.term{background:var(--card);border:1px solid var(--border);border-radius:12px;
+      padding:18px 20px;margin-bottom:14px;scroll-margin-top:20px;}
+.term h3{font-size:17px;font-weight:600;letter-spacing:-0.014em;margin-bottom:8px;
+         display:flex;align-items:baseline;gap:8px;}
+.term h3 .alias{color:var(--mute);font-size:12px;font-weight:400;}
+.term .def{margin-bottom:10px;}
+.term .ex{background:rgba(10,132,255,0.06);border-left:3px solid var(--accent);
+          padding:10px 14px;border-radius:0 8px 8px 0;font-size:13.5px;
+          color:var(--dim);margin:10px 0;}
+.term .ex b{color:var(--text);font-weight:600;}
+.term .why{font-size:13px;color:var(--dim);}
+.term .why b{color:var(--text);}
+.toc{background:var(--card);border:1px solid var(--border);border-radius:12px;
+     padding:16px 20px;margin-bottom:30px;}
+.toc-title{font-size:12px;color:var(--mute);text-transform:uppercase;
+           letter-spacing:0.06em;font-weight:600;margin-bottom:10px;}
+.toc a{color:var(--accent);text-decoration:none;font-size:13px;}
+.toc a:hover{text-decoration:underline;}
+.toc-group{display:flex;flex-wrap:wrap;gap:6px 14px;margin-bottom:10px;}
+.back{display:inline-block;margin:20px 0;font-size:13px;color:var(--accent);text-decoration:none;}
+.back:hover{text-decoration:underline;}
+code{background:rgba(255,255,255,0.06);padding:1px 6px;border-radius:4px;
+     font-family:ui-monospace,Menlo,monospace;font-size:13px;}
+@media (prefers-color-scheme:light){code{background:rgba(0,0,0,0.06);}}
+.footer{margin-top:36px;color:var(--mute);font-size:11px;text-align:center;}
+.tag{display:inline-block;padding:1px 7px;border-radius:4px;font-size:11px;
+     margin-left:6px;font-weight:600;letter-spacing:0.02em;}
+.tag.basics{background:var(--green-dim);color:var(--green);}
+.tag.layer{background:var(--yellow-dim);color:var(--yellow);}
+.tag.action{background:#0a84ff22;color:var(--accent);}
+</style>
+</head>
+<body>
+<a href="plan.html" class="back">← Back to today's plan</a>
+<h1>SGRM Learn</h1>
+<div class="sub">Plain-English glossary for every term used in the dashboard, Telegram alerts, and regime reads. Pick a term to jump to it.</div>
+
+<div class="toc">
+  <div class="toc-title">Market basics</div>
+  <div class="toc-group">
+    <a href="#tqqq">TQQQ</a> · <a href="#qqq">QQQ</a> · <a href="#put">Put option</a> ·
+    <a href="#strike">Strike price</a> · <a href="#premium">Premium</a> · <a href="#dte">DTE</a> ·
+    <a href="#otm">OTM</a> · <a href="#itm">ITM</a> · <a href="#assigned">Assigned</a> ·
+    <a href="#vxn">VXN</a> · <a href="#rsi">RSI</a>
+  </div>
+  <div class="toc-title">Regime &amp; gates</div>
+  <div class="toc-group">
+    <a href="#regime">Regime</a> · <a href="#streak">Red / green streak</a> ·
+    <a href="#condition">Condition (1R / 2R / 1RG)</a> ·
+    <a href="#10d-high">10-day high</a> · <a href="#brake">BRAKE</a> ·
+    <a href="#5d-return">5-day return</a> · <a href="#200d-ma">200-day moving avg</a> ·
+    <a href="#empirical">Empirical layer</a>
+  </div>
+  <div class="toc-title">Sizing &amp; pre-key</div>
+  <div class="toc-group">
+    <a href="#unit">Unit</a> · <a href="#buying-power">Buying power</a> ·
+    <a href="#sizing-matrix">Sizing matrix</a> · <a href="#batch">Batch (B1/B2/B3)</a> ·
+    <a href="#gtc">GTC limit order</a> · <a href="#pre-key">Pre-key</a>
+  </div>
+  <div class="toc-title">News shock &amp; alerts</div>
+  <div class="toc-group">
+    <a href="#qqq-gap">QQQ overnight gap</a> · <a href="#news-shock">News shock score</a> ·
+    <a href="#shock-level">Shock level (CLEAR/CAUTION/SHOCK)</a>
+  </div>
+  <div class="toc-title">Actions &amp; exits</div>
+  <div class="toc-group">
+    <a href="#action-go">GO</a> · <a href="#action-no">NO ENTRY</a> ·
+    <a href="#action-green">GREEN DAY</a> · <a href="#action-shock">SHOCK</a> ·
+    <a href="#defensive-close">Defensive close</a> · <a href="#roll">Roll</a> ·
+    <a href="#cut">Structural cut</a>
+  </div>
+</div>
+
+<h2>Market basics</h2>
+<div class="cat-desc">Things every option trader needs to know first.</div>
+
+<div class="term" id="tqqq">
+  <h3>TQQQ <span class="tag basics">basics</span></h3>
+  <div class="def">A stock-market fund (ETF) that moves <b>3× the daily change of the Nasdaq-100</b>. If the Nasdaq goes up 1% today, TQQQ goes up ~3%. If Nasdaq falls 1%, TQQQ falls ~3%.</div>
+  <div class="ex"><b>Example:</b> Nasdaq drops 2% in one day → TQQQ drops ~6%. That's why TQQQ can swing $5 or more in a single day even when the broader market is "calm."</div>
+  <div class="why"><b>Why we trade it:</b> the bigger swings mean the put options pay a lot of <a href="#premium">premium</a>, which is what we collect when we sell them.</div>
+</div>
+
+<div class="term" id="qqq">
+  <h3>QQQ <span class="tag basics">basics</span></h3>
+  <div class="def">The Nasdaq-100 ETF — the "regular" non-leveraged version. TQQQ tracks 3× of QQQ's daily move.</div>
+  <div class="ex"><b>Example:</b> QQQ closes at $500 → next morning futures show $495 (-1%). That's a "1% gap down" overnight. TQQQ futures would be down ~3% in sympathy.</div>
+  <div class="why"><b>Why we watch it:</b> the QQQ overnight gap is a great <i>early</i> signal of what TQQQ will do at the US market open.</div>
+</div>
+
+<div class="term" id="put">
+  <h3>Put option <span class="tag basics">basics</span></h3>
+  <div class="def">A contract that gives the <i>buyer</i> the right to sell the stock at a fixed price. We <b>sell</b> puts — meaning we agree to <i>buy</i> the stock from the buyer if it drops below that price. In exchange we collect a cash <a href="#premium">premium</a> upfront.</div>
+  <div class="ex"><b>Example:</b> TQQQ is at $80. We sell one $76 put for $1.20/share. We get $120 cash now (1 contract = 100 shares). If TQQQ stays above $76 until expiry, we keep the $120. If it drops to $70, we have to buy at $76 (a $6 loss per share = -$600), partially offset by the $120 we kept.</div>
+  <div class="why"><b>Why we sell them:</b> most of the time the stock stays above the strike and we keep all the premium. It's a way to get paid for being patient.</div>
+</div>
+
+<div class="term" id="strike">
+  <h3>Strike price <span class="tag basics">basics</span></h3>
+  <div class="def">The fixed price written into the put contract — the level at which the buyer can force us to buy the stock.</div>
+  <div class="ex"><b>Example:</b> TQQQ at $80 today. We sell the <b>$76 strike put</b>. If TQQQ stays above $76 → we keep the premium and nothing happens. If TQQQ drops below $76 → we may end up buying TQQQ at $76 (even if the real price is lower).</div>
+  <div class="why"><b>Why we pick lower strikes:</b> the further below the current price the strike is, the less likely we'll be forced to buy. But less premium too. The sizing matrix tries to balance this.</div>
+</div>
+
+<div class="term" id="premium">
+  <h3>Premium <span class="tag basics">basics</span></h3>
+  <div class="def">The cash the put buyer pays us upfront in exchange for taking on the risk. Quoted as dollars per share — multiply by 100 to get dollars per contract.</div>
+  <div class="ex"><b>Example:</b> Premium = $1.20/share → 1 contract = $120 cash received. 5 contracts = $600 received the moment we sell.</div>
+  <div class="why"><b>Why it matters:</b> premium is our income. The whole strategy is "collect lots of small premiums; survive the occasional bad one."</div>
+</div>
+
+<div class="term" id="dte">
+  <h3>DTE (Days To Expiration) <span class="tag basics">basics</span></h3>
+  <div class="def">How many calendar days until the option contract expires. After expiry, all decisions are final.</div>
+  <div class="ex"><b>Example:</b> Today is Jun 13, the option expires Jul 17. DTE = 34 days.</div>
+  <div class="why"><b>Why we typically pick ~30 DTE:</b> long enough to collect meaningful premium, short enough to limit how much can go wrong.</div>
+</div>
+
+<div class="term" id="otm">
+  <h3>OTM (Out of The Money) <span class="tag basics">basics</span></h3>
+  <div class="def">A put is "out of the money" when the <a href="#strike">strike price</a> is <i>below</i> the current stock price. The put is currently worthless if exercised — which is good for us as sellers.</div>
+  <div class="ex"><b>Example:</b> TQQQ at $80, strike at $76. Strike is 5% below spot → "5% OTM." If TQQQ stays above $76, this put expires worthless and we keep all the premium.</div>
+  <div class="why"><b>Why we want OTM:</b> the buyer has no immediate reason to exercise. Time works in our favor.</div>
+</div>
+
+<div class="term" id="itm">
+  <h3>ITM (In The Money) <span class="tag basics">basics</span></h3>
+  <div class="def">A put is "in the money" when the strike is <i>above</i> the current stock price. The put has real value — the buyer could profitably force us to buy.</div>
+  <div class="ex"><b>Example:</b> We sold $76 strike put when TQQQ was $80. TQQQ drops to $70. The put is now $6 ITM — every share, we'd be buying at $76 when the market price is $70.</div>
+  <div class="why"><b>Why this is bad:</b> when ITM at expiry, we get <a href="#assigned">assigned</a> — forced to buy at strike. The strategy gates try to avoid trades likely to end up here.</div>
+</div>
+
+<div class="term" id="assigned">
+  <h3>Assigned <span class="tag basics">basics</span></h3>
+  <div class="def">When the put buyer exercises their right and we have to actually buy the stock at strike. We end up owning shares, possibly at a loss.</div>
+  <div class="ex"><b>Example:</b> We sold one $76 put, TQQQ closes at $70 on expiry day. We're assigned 100 shares at $76. Real market value: $7000. Our cost: $7600. Realized loss: $600 (minus the $120 premium we kept = -$480 net).</div>
+  <div class="why"><b>Why it's not always disaster:</b> if we believe TQQQ recovers, holding the shares we were assigned can work. But if we don't want to hold, we can sell covered calls to recover cost, or just sell at market and take the loss.</div>
+</div>
+
+<div class="term" id="vxn">
+  <h3>VXN <span class="tag basics">basics</span></h3>
+  <div class="def">The Nasdaq-100 Volatility Index — how much "fear" the market is pricing into Nasdaq options. Higher VXN = bigger expected swings = more uncertainty.</div>
+  <div class="ex"><b>Example:</b> VXN at 18 = calm. VXN at 30 = nervous. VXN at 45 = crisis. On Jun 5 it spiked from 23 to 30 during a single bad day; on Jun 9 it touched 36.</div>
+  <div class="why"><b>Why we watch it:</b> our gates downsize when VXN > 35 and refuse to trade when VXN > 45. High VXN means option premiums are rich (good) but also that big moves are coming (dangerous).</div>
+</div>
+
+<div class="term" id="rsi">
+  <h3>RSI (Relative Strength Index) <span class="tag basics">basics</span></h3>
+  <div class="def">A momentum indicator from 0 to 100. <b>Below 30</b> = stock looks "oversold" (dropped a lot recently). <b>Above 70</b> = "overbought" (rallied a lot). Around 50 = neutral.</div>
+  <div class="ex"><b>Example:</b> TQQQ RSI = 34 → oversold (right after a big drop). RSI = 75 → overbought (after a strong rally).</div>
+  <div class="why"><b>Why we use it:</b> Gate 1 blocks new trades when RSI is too high (>80, or >70 in a RALLY regime). Selling puts into very overbought conditions tends to be a trap.</div>
+</div>
+
+<h2>Regime &amp; gates</h2>
+<div class="cat-desc">How we decide whether today is a green light or a red light.</div>
+
+<div class="term" id="regime">
+  <h3>Regime <span class="tag layer">layer</span></h3>
+  <div class="def">What kind of market we're in. Three modes: <b>RALLY</b> (uptrend), <b>SIDEWAYS</b> (range-bound), <b>DOWNTREND</b> (uptrend broken). Each has different sizing rules.</div>
+  <div class="ex"><b>Example:</b> TQQQ above its 4-week low by more than 30% = RALLY. Below 4-week high by more than 20% AND VXN ≥ 25 = DOWNTREND. Otherwise SIDEWAYS.</div>
+  <div class="why"><b>Why it matters:</b> regime drives sizing. RALLY is conservative (small positions). DOWNTREND allows bigger conviction sizing because premiums are richer.</div>
+</div>
+
+<div class="term" id="streak">
+  <h3>Red / green streak <span class="tag layer">layer</span></h3>
+  <div class="def">How many trading days in a row have closed lower (red) or higher (green). Resets to 0 on each direction change.</div>
+  <div class="ex"><b>Example:</b> Jun 9 was red. Jun 10 was red. Jun 11 was green → red streak ended at 2, green streak began at 1.</div>
+  <div class="why"><b>Why it matters:</b> the longer the red streak, the bigger the position the sizing matrix allows — but only inside the gates. A 6-day red streak with VXN > 40 triggers a full halt.</div>
+</div>
+
+<div class="term" id="condition">
+  <h3>Condition (1R / 2R / 3R / 1RG / GREEN) <span class="tag layer">layer</span></h3>
+  <div class="def">A label that combines streak history into a single tag the sizing matrix can look up.
+    <ul style="margin:6px 0 6px 22px">
+      <li><b>GREEN</b> = today closed up. No new entries.</li>
+      <li><b>1R / 2R / 3R</b> = today is the 1st / 2nd / 3rd red day in a row.</li>
+      <li><b>1RG</b> = today is the 1st red day after at least 5 green days. Special "buy the cooldown" setup.</li>
+      <li><b>4R+</b> = 4 or more reds in a row. Treated like 3R.</li>
+    </ul>
+  </div>
+  <div class="ex"><b>Example:</b> 6 greens followed by today's red → condition = <code>1RG</code>. The sizing matrix and batch drop% table both look up this tag to decide units and entry triggers.</div>
+  <div class="why"><b>Why these labels:</b> they distill "what shape of recent action are we in" into one key the rules can index against.</div>
+</div>
+
+<div class="term" id="10d-high">
+  <h3>10-day high / "vs 10d high" <span class="tag layer">layer</span></h3>
+  <div class="def">The highest TQQQ price in the last 10 trading sessions. "vs 10d high -12%" means today's close is 12% below that recent peak.</div>
+  <div class="ex"><b>Example:</b> 10-day high = $87.22. Today's close = $77. "vs 10d high" = ($77 - $87.22)/$87.22 = <b>-11.7%</b>.</div>
+  <div class="why"><b>Why it matters:</b> if we're more than ~12% below the recent high, the market is in a fresh drawdown — too dangerous to add new short puts. See <a href="#brake">BRAKE</a> and <a href="#empirical">empirical</a> layer.</div>
+</div>
+
+<div class="term" id="brake">
+  <h3>BRAKE (10-day-high brake) <span class="tag layer">layer</span></h3>
+  <div class="def">A hard stop: if TQQQ closes 12% or more below the 10-day high, we don't open <i>any</i> new trades. Existing trades are managed only.</div>
+  <div class="ex"><b>Example:</b> 10d high $87.22, today's close $69.27. Down 20.6% → BRAKE active.</div>
+  <div class="why"><b>Why this exists:</b> during fresh selloffs the "knife" hasn't stopped falling. Trying to catch it loses money. Wait for recovery above ~88% of the recent high.</div>
+</div>
+
+<div class="term" id="5d-return">
+  <h3>5-day return <span class="tag layer">layer</span></h3>
+  <div class="def">Percent change in TQQQ over the last 5 trading sessions.</div>
+  <div class="ex"><b>Example:</b> TQQQ 5 days ago = $80, today = $73. 5-day return = -8.75%.</div>
+  <div class="why"><b>Why we use it:</b> the empirical layer blocks new entries when 5-day return is worse than -7%. Lessons from your own 60-trade history: opening positions immediately after a sharp drop very often turned into losers.</div>
+</div>
+
+<div class="term" id="200d-ma">
+  <h3>200-day moving average <span class="tag layer">layer</span></h3>
+  <div class="def">The average TQQQ closing price over the last 200 trading days. Acts as a long-term trend marker.</div>
+  <div class="ex"><b>Example:</b> 200-day MA = $55. TQQQ at $77 → 40% above MA (healthy uptrend). TQQQ at $45 → 18% below MA (caution: extended downtrend).</div>
+  <div class="why"><b>Why we use it:</b> when TQQQ closes more than 5% below the 200-day MA, we halve sizing. More than 15% below, we halt. Slow grinds like 2022 sit below the 200-day for many months — this gate keeps us out.</div>
+</div>
+
+<div class="term" id="empirical">
+  <h3>Empirical layer <span class="tag layer">layer</span></h3>
+  <div class="def">Extra "no trade" rules derived from analyzing your actual 60 closed trades. They block setups that historically lost money even when the v7 gates passed.</div>
+  <div class="ex"><b>Example:</b> All 7 of your losing trades shared these patterns at entry: 5-day return < -3%, vs 10d high < -7%, or oversold RSI with red streak. The empirical layer now blocks new entries whenever any of these fire.</div>
+  <div class="why"><b>Why it sits next to v7:</b> v7 captures your <i>intent</i>; the empirical layer captures your <i>actual losing setups</i>. Both must pass before a trade is approved.</div>
+</div>
+
+<h2>Sizing &amp; pre-key orders</h2>
+<div class="cat-desc">How we decide how many contracts and at what prices to set the orders.</div>
+
+<div class="term" id="unit">
+  <h3>Unit <span class="tag layer">layer</span></h3>
+  <div class="def">A single option contract. 1 unit = the right to put 100 shares to us at strike if exercised.</div>
+  <div class="ex"><b>Example:</b> "Sell 5 units of TQQQ $76 put for $1.20" = 5 contracts × $1.20 × 100 shares = $600 premium collected, $38,000 of potential obligation if all get assigned at strike.</div>
+  <div class="why"><b>Why we track units:</b> every gate and limit refers to "max N units." The sizing matrix outputs a single number — how many units this day's setup allows.</div>
+</div>
+
+<div class="term" id="buying-power">
+  <h3>Buying power <span class="tag layer">layer</span></h3>
+  <div class="def">How much capital your broker is willing to let you commit to new positions. For cash-secured puts, this is your cash balance. With margin, it's roughly 2-4× your cash.</div>
+  <div class="ex"><b>Example:</b> Your buying power = $130,000. The strategy caps total committed BP at 40% = $52,000. At TQQQ $76 strike, that's enough for about 7 units before hitting the cap.</div>
+  <div class="why"><b>Why we cap usage:</b> if any single trade can use only a fraction of BP, we always have room to manage other positions or take advantage of better setups.</div>
+</div>
+
+<div class="term" id="sizing-matrix">
+  <h3>Sizing matrix <span class="tag layer">layer</span></h3>
+  <div class="def">A lookup table: pick (<a href="#regime">regime</a>) × (red streak count) and read off how many units to trade today.</div>
+  <div class="ex"><b>Example:</b> Regime = SIDEWAYS, red streak = 3 → matrix says 6 units. Same red streak in RALLY = only 4 units. Same in DOWNTREND = 9 units (because premiums are richer and we want to be more aggressive).</div>
+  <div class="why"><b>Why a table not a formula:</b> the matrix encodes your hard-learned intuition. A formula might miss subtleties; a table is auditable and easy to update.</div>
+</div>
+
+<div class="term" id="batch">
+  <h3>Batch (B1 / B2 / B3) <span class="tag layer">layer</span></h3>
+  <div class="def">The day's total units are split into 3 separate orders at progressively deeper entry prices. B1 fills on a small dip, B2 on a deeper dip, B3 on a deepest dip. If the market only dips a little, only B1 fills.</div>
+  <div class="ex"><b>Example:</b> Total = 6 units, condition = 2R, RALLY regime. Weights split 50/30/20 → B1 = 3 units @ 1.5% drop, B2 = 2 units @ 2.5% drop, B3 = 1 unit @ 3.5% drop. If TQQQ only drops 2%, only B1 fills (3 units).</div>
+  <div class="why"><b>Why batches: </b> "let the market come to you." Lower entries = better strikes = more safety. The system can't predict the day's low, but a 3-batch ladder catches a wider range of possible dips.</div>
+</div>
+
+<div class="term" id="gtc">
+  <h3>GTC limit order ("Good Till Cancelled") <span class="tag layer">layer</span></h3>
+  <div class="def">An order that sits in your broker until it fills or you cancel it. As opposed to a "day order" which expires at session end.</div>
+  <div class="ex"><b>Example:</b> Set a GTC sell order for the $76 put at $1.30. The order waits, day after day, until either someone matches $1.30 or you cancel.</div>
+  <div class="why"><b>Why GTC:</b> we pre-key these before bed and let the market come to our price. We don't have to be at the screen at open.</div>
+</div>
+
+<div class="term" id="pre-key">
+  <h3>Pre-key (pre-keyed orders) <span class="tag layer">layer</span></h3>
+  <div class="def">Entering all 3 batches as GTC limit orders <i>the night before</i> the trading day, so they're ready when the market opens.</div>
+  <div class="ex"><b>Example:</b> At 10 pm Sunday, you read the daily plan email/Telegram. It tells you B1 at $76.20, B2 at $75.40, B3 at $74.60. You log into your broker and place all 3 GTC orders. You sleep. Monday morning, the market opens — whichever batches' trigger prices were hit, those fill automatically.</div>
+  <div class="why"><b>Why pre-key:</b> the night-before brain is calm and analytical. The morning brain is reactive and emotional. We trust the plan we made last night.</div>
+</div>
+
+<h2>News shock &amp; alerts</h2>
+<div class="cat-desc">How we detect overnight surprises (tariffs, geopolitics, Fed) that change the game before market open.</div>
+
+<div class="term" id="qqq-gap">
+  <h3>QQQ overnight gap <span class="tag action">news</span></h3>
+  <div class="def">Pre-market price of QQQ vs prior session's close, as a percentage. Positive = futures pricing higher. Negative = futures pricing lower (something happened overnight).</div>
+  <div class="ex"><b>Example:</b> QQQ closed at $500 on Friday. Monday 7 am QQQ futures = $493. Gap = (493-500)/500 = <b>-1.4%</b>. That's a significant overnight shock — likely news-driven.</div>
+  <div class="why"><b>Why we watch it:</b> all 7 of your losing trades happened on days with QQQ gap < -1%. Big overnight gaps are the cleanest signal of "something happened, don't dive in this morning."</div>
+</div>
+
+<div class="term" id="news-shock">
+  <h3>News shock score (0-10) <span class="tag action">news</span></h3>
+  <div class="def">An AI scan of overnight financial news, scoring how shocky the headlines are. Trump posts, Iran/Israel escalation, and surprise Fed news are weighted 2× heavier than general market news.</div>
+  <div class="ex"><b>Example:</b> News scan reports: "Trump tariff announcement at 6 am · Iran-Israel skirmish · normal CPI release." Score = 7/10 (Trump + Iran flagged as high-impact even though CPI release was routine).</div>
+  <div class="why"><b>Why we score it:</b> the score plus the QQQ overnight gap combine into the <a href="#shock-level">shock level</a> that gates today's trades.</div>
+</div>
+
+<div class="term" id="shock-level">
+  <h3>Shock level: CLEAR / CAUTION / SHOCK <span class="tag action">news</span></h3>
+  <div class="def">Composite of QQQ overnight gap + news shock score:
+    <ul style="margin:6px 0 6px 22px">
+      <li><b>CLEAR</b> = score &lt; 5 AND gap &gt; -1%. Normal day.</li>
+      <li><b>CAUTION</b> = score 5-6 OR gap -1% to -1.5%. Halve sizing.</li>
+      <li><b>SHOCK</b> = score &ge; 7 OR gap &lt; -1.5%. No new entries. Defensive close any open position with mark &gt; 1.4× entry premium.</li>
+    </ul>
+  </div>
+  <div class="ex"><b>Example:</b> News score 6, gap -0.4% → CAUTION. News score 3, gap -1.8% → SHOCK (just the gap triggered it).</div>
+  <div class="why"><b>Why composite:</b> sometimes there's no news but futures gapped down (silent shock). Sometimes news is loud but markets shrugged. The composite catches both.</div>
+</div>
+
+<h2>Actions &amp; exits</h2>
+<div class="cat-desc">What the system can recommend and how positions wind up.</div>
+
+<div class="term" id="action-go">
+  <h3>GO <span class="tag action">action</span></h3>
+  <div class="def">Today passes all gates. The daily plan shows the 3-batch GTC orders. Pre-key them before bed.</div>
+  <div class="ex"><b>Example:</b> Action = "GO at SIDEWAYS tier" with 6 units split across 3 batches. Pre-key all 3, let market come to you tomorrow.</div>
+</div>
+
+<div class="term" id="action-no">
+  <h3>NO ENTRY <span class="tag action">action</span></h3>
+  <div class="def">One or more gates failed. Do not open new positions today. Manage existing only.</div>
+  <div class="ex"><b>Example:</b> Action = "NO ENTRY" with blocking reason "empirical: vs 10d high -12% < -10%". TQQQ is still too far below recent peak to safely sell new puts.</div>
+</div>
+
+<div class="term" id="action-green">
+  <h3>GREEN DAY — EXIT MODE <span class="tag action">action</span></h3>
+  <div class="def">Today closed higher than yesterday. No new sell-to-opens. Focus on closing winners and harvesting profit.</div>
+  <div class="ex"><b>Example:</b> TQQQ up 3% today. Queue any open puts close-orders at next profit-target rung. IV crush helps too.</div>
+</div>
+
+<div class="term" id="action-shock">
+  <h3>SHOCK ALERT — STAND DOWN <span class="tag action">action</span></h3>
+  <div class="def">A news-driven shock detected before market open. No new entries. Defensive close any position where the current option price is more than 1.4× what we collected.</div>
+  <div class="ex"><b>Example:</b> Overnight Trump tariff post + QQQ futures -2.5%. Telegram fires SHOCK alert with the top 3 stories listed. Cancel any pre-keyed orders from last night.</div>
+</div>
+
+<div class="term" id="defensive-close">
+  <h3>Defensive close <span class="tag action">action</span></h3>
+  <div class="def">Buying back a sold put before expiry because it's gone against us by more than a chosen multiple of the entry premium. The simplest version: close when current price is 1.7× what we sold for.</div>
+  <div class="ex"><b>Example:</b> Sold a put for $1.50/share. Today's price = $2.55/share (1.7×). Buy it back. Net loss: ~$1.05/share × contracts × 100. Caps the damage before it gets worse.</div>
+  <div class="why"><b>Why this rule:</b> normal losers tend to recover. But if a put more than doubles in price, it's usually heading much higher. The 1.7× rule is the line where "give it room" stops paying off.</div>
+</div>
+
+<div class="term" id="roll">
+  <h3>Roll <span class="tag action">action</span></h3>
+  <div class="def">Closing the current put and opening a new one further out in time (and usually at a lower strike), all in one combo trade. The trick: the new credit must be larger than the buy-back cost (a "net credit roll").</div>
+  <div class="ex"><b>Example:</b> Current $76 put, 8 days to expiry, has 30¢ left to decay. We buy it back for $0.30 and sell a new $74 put expiring in 50 days for $0.95. Net credit: $0.65/share. We got more time and a safer strike, with more money in pocket.</div>
+  <div class="why"><b>Why we roll:</b> when a position isn't going to win this cycle, rolling for a credit gives us another chance without locking in the loss.</div>
+</div>
+
+<div class="term" id="cut">
+  <h3>Structural cut <span class="tag action">action</span></h3>
+  <div class="def">When a position is deeply in trouble AND no net-credit roll is available, we cut. Either: accept assignment (own the shares + sell covered calls to recover) OR close at market and book the loss.</div>
+  <div class="ex"><b>Example:</b> Our $76 put is now 5 days to expiry with TQQQ at $68 (deeply ITM). No roll for credit is achievable (rolling 60 days out at $70 strike still pays less than the buy-back cost). We cut: close at market for a known loss, free up capital, redeploy at a fresh lower strike next cycle.</div>
+  <div class="why"><b>Why this exists:</b> "hope" is not a strategy. Once a position is unrollable, freezing it doesn't make it better. Cutting frees capital for the next setup.</div>
+</div>
+
+<a href="plan.html" class="back">← Back to today's plan</a>
+<div class="footer">SGRM Learn · v1 · permanent reference</div>
+</body>
+</html>

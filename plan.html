@@ -71,7 +71,7 @@ h1{font-size:18px;font-weight:600;letter-spacing:-0.024em;margin-bottom:4px;}
 </style>
 </head>
 <body>
-<h1>SGRM · Today's Plan</h1>
+<h1>SGRM · Today&#39;s Plan <a href="learn.html" style="margin-left:8px;font-size:13px;color:var(--accent);text-decoration:none;font-weight:400;">📖 Learn</a></h1>
 <div class="sub" id="sub">loading… <span class="refresh" onclick="location.reload()">↻</span></div>
 <div class="action" id="action">—</div>
 <div id="content"><div class="skel"></div></div>
@@ -79,6 +79,11 @@ h1{font-size:18px;font-weight:600;letter-spacing:-0.024em;margin-bottom:4px;}
 
 <script>
 const FEED = 'https://chattime.github.io/sgrm-regime-feed/';
+
+function learnLink(label, anchor){
+  return '<a href="learn.html#' + anchor + '" style="color:inherit;text-decoration:none;border-bottom:1px dotted var(--mute)" title="What is ' + label + '? Tap to learn.">' + label + '</a>';
+}
+
 async function load(){
   try{
     const [planR, regimeR] = await Promise.all([
@@ -115,23 +120,23 @@ function render(d, regime){
   // Market
   if(Object.keys(m).length){
     html += '<div class="card"><div class="card-title">Market</div>';
-    html += rowHTML('TQQQ Close', '$' + (m.tqqq_close ?? '—'));
-    html += rowHTML('VXN', m.vxn ?? '—');
-    html += rowHTML('RSI', m.rsi ?? '—');
-    html += rowHTML('Regime / Condition', (m.regime || '—') + ' / ' + (m.condition || '—'));
-    if(m.vs_10d_high_pct != null) html += rowHTML('vs 10-day high', m.vs_10d_high_pct + '%');
-    if(m.ret_5d_pct != null) html += rowHTML('5-day return', m.ret_5d_pct + '%');
-    if(m.ret_40d_pct != null) html += rowHTML('40-day return', m.ret_40d_pct + '%');
-    if(m.above_ma_200_pct != null) html += rowHTML('vs 200-day MA', m.above_ma_200_pct + '%');
-    if(m.red_streak != null) html += rowHTML('Red streak', m.red_streak + ' day(s)');
+    html += rowHTML(learnLink('TQQQ Close','tqqq'), '$' + (m.tqqq_close ?? '—'));
+    html += rowHTML(learnLink('VXN','vxn'), m.vxn ?? '—');
+    html += rowHTML(learnLink('RSI','rsi'), m.rsi ?? '—');
+    html += rowHTML(learnLink('Regime / Condition','regime'), (m.regime || '—') + ' / ' + (m.condition || '—'));
+    if(m.vs_10d_high_pct != null) html += rowHTML(learnLink('vs 10-day high','10d-high'), m.vs_10d_high_pct + '%');
+    if(m.ret_5d_pct != null) html += rowHTML(learnLink('5-day return','5d-return'), m.ret_5d_pct + '%');
+    if(m.ret_40d_pct != null) html += rowHTML(learnLink('40-day return','5d-return'), m.ret_40d_pct + '%');
+    if(m.above_ma_200_pct != null) html += rowHTML(learnLink('vs 200-day MA','200d-ma'), m.above_ma_200_pct + '%');
+    if(m.red_streak != null) html += rowHTML(learnLink('Red streak','streak'), m.red_streak + ' day(s)');
     html += '</div>';
   }
 
   // Pre-market / news shock
   html += '<div class="card"><div class="card-title">Pre-Market · News Shock Layer</div>';
-  html += rowHTML('Shock level', shock);
-  html += rowHTML('QQQ overnight gap', (pm.qqq_overnight_gap_pct ?? 0) + '%');
-  html += rowHTML('News shock score', (pm.news_shock_score ?? 0) + '/10');
+  html += rowHTML(learnLink('Shock level','shock-level'), shock);
+  html += rowHTML(learnLink('QQQ overnight gap','qqq-gap'), (pm.qqq_overnight_gap_pct ?? 0) + '%');
+  html += rowHTML(learnLink('News shock score','news-shock'), (pm.news_shock_score ?? 0) + '/10');
   html += '</div>';
   if(pm.news_top_stories && pm.news_top_stories.length){
     html += '<div class="card"><div class="card-title">Top Stories</div>';
@@ -143,11 +148,11 @@ function render(d, regime){
   // Sizing / batches (if GO)
   if(p.recommended_units > 0 || (p.batches && p.batches.length)){
     html += '<div class="card"><div class="card-title">Sizing & Pre-Key Orders</div>';
-    html += rowHTML('Total units', p.recommended_units || 0);
-    html += rowHTML('Strike', '$' + (p.recommended_strike || '—'));
-    html += rowHTML('DTE', (p.recommended_dte_days || 30) + ' days');
-    html += rowHTML('Buying power', '$' + Number(p.buying_power || 0).toLocaleString());
-    html += rowHTML('BP committed', '$' + Number(p.buying_power_committed || 0).toLocaleString() +
+    html += rowHTML(learnLink('Total units','unit'), p.recommended_units || 0);
+    html += rowHTML(learnLink('Strike','strike'), '$' + (p.recommended_strike || '—'));
+    html += rowHTML(learnLink('DTE','dte'), (p.recommended_dte_days || 30) + ' days');
+    html += rowHTML(learnLink('Buying power','buying-power'), '$' + Number(p.buying_power || 0).toLocaleString());
+    html += rowHTML(learnLink('BP committed','buying-power'), '$' + Number(p.buying_power_committed || 0).toLocaleString() +
                     ' (' + (p.bp_pct_used || 0) + '%)');
     html += '</div>';
     html += '<div class="card"><div class="card-title">3-Batch GTC Pre-Key</div>';
@@ -192,7 +197,7 @@ function render(d, regime){
 }
 
 function rowHTML(k, v){
-  return '<div class="row"><div class="row-k">' + esc(k) + '</div><div class="row-v">' + esc(v) + '</div></div>';
+  return '<div class="row"><div class="row-k">' + k + '</div><div class="row-v">' + esc(v) + '</div></div>';
 }
 function esc(s){
   if(s === null || s === undefined) return '—';

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><head><title>SGRM Regime Feed</title>
+<meta charset="utf-8">
+<style>
+  body{font:14px -apple-system,system-ui,sans-serif;padding:40px;max-width:640px;
+       margin:0 auto;color:#1d1d1f;background:#f5f5f7}
+  h1{font-size:22px;margin-bottom:6px}
+  .sub{color:#86868b;font-size:13px;margin-bottom:24px}
+  code{background:#fff;padding:3px 8px;border-radius:5px;font-size:12.5px;
+       font-family:"SF Mono",Menlo,monospace;border:1px solid #d2d2d7}
+  ul{padding-left:0;list-style:none}
+  li{margin:10px 0;padding:14px;background:#fff;border-radius:10px;
+     border:1px solid #d2d2d7}
+  a{color:#0a84ff;text-decoration:none;font-weight:500}
+  a:hover{text-decoration:underline}
+  .ok{color:#30d158;font-weight:600}
+  .desc{color:#86868b;font-size:12.5px;margin-top:4px}
+  .footer{margin-top:32px;color:#86868b;font-size:12px;text-align:center}
+</style></head><body>
+<h1>SGRM Regime Feed <span class="ok">●</span></h1>
+<p class="sub">Public JSON endpoints — read-only, no auth required.</p>
+<ul>
+  <li><a href="regime.json"><code>regime.json</code></a>
+      <div class="desc">Latest seven-lens market regime read (machine header + markdown text)</div></li>
+  <li><a href="daily_plan.json"><code>daily_plan.json</code></a>
+      <div class="desc">Latest daily plan with batch recommendations + news shock state</div></li>
+  <li><a href="meta.json"><code>meta.json</code></a>
+      <div class="desc">Feed metadata (timestamp, source, branch)</div></li>
+</ul>
+<p class="footer">Updated by automated pipeline · stale timestamp = operator VM down</p>
+</body></html>

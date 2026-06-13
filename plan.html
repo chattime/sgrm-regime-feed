@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+<title>SGRM · Today's Plan</title>
+<style>
+:root{
+  --bg:#000;--card:#1c1c1e;--card-2:#2c2c2e;
+  --border:rgba(255,255,255,0.08);--text:#f5f5f7;--dim:#a1a1a6;--mute:#636366;
+  --accent:#0a84ff;--green:#30d158;--yellow:#ffd60a;--red:#ff453a;
+  --green-dim:#30d15822;--yellow-dim:#ffd60a22;--red-dim:#ff453a22;
+}
+@media (prefers-color-scheme:light){
+  :root{--bg:#f5f5f7;--card:#fff;--card-2:#fafafa;--border:rgba(0,0,0,0.08);
+        --text:#1d1d1f;--dim:#515154;--mute:#86868b;}
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);
+     font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;
+     padding:20px;max-width:720px;margin:0 auto;font-size:14px;line-height:1.5;
+     -webkit-font-smoothing:antialiased;letter-spacing:-0.011em;}
+h1{font-size:18px;font-weight:600;letter-spacing:-0.024em;margin-bottom:4px;}
+.sub{color:var(--mute);font-size:12px;margin-bottom:20px;}
+.action{font-size:32px;font-weight:700;letter-spacing:-0.03em;margin:24px 0 16px;}
+.action.go{color:var(--green)}
+.action.no-entry{color:var(--yellow)}
+.action.shock{color:var(--red);animation:pulse 1.2s infinite}
+.action.green-day{color:var(--dim)}
+@keyframes pulse{50%{opacity:0.55}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;
+      padding:18px;margin-bottom:14px;}
+.card-title{font-size:11px;color:var(--mute);text-transform:uppercase;
+            letter-spacing:0.06em;font-weight:600;margin-bottom:10px;}
+.row{display:flex;justify-content:space-between;padding:8px 0;
+     border-bottom:1px solid var(--border);font-size:13px;}
+.row:last-child{border-bottom:none}
+.row-k{color:var(--dim)}
+.row-v{font-weight:500;font-variant-numeric:tabular-nums;text-align:right;}
+.batches .b{display:grid;grid-template-columns:40px 70px 1fr;gap:10px;
+            padding:8px 10px;background:rgba(10,132,255,0.1);border-radius:8px;
+            margin-bottom:6px;font-family:ui-monospace,Menlo,monospace;font-size:12px;
+            align-items:center;}
+.b-lbl{color:var(--mute);font-weight:600}
+.b-u{color:var(--green);font-weight:600}
+.b-p{color:var(--text)}
+.reasons li{margin:6px 0;padding:8px 12px;background:var(--yellow-dim);
+            color:var(--yellow);border-radius:8px;list-style:none;font-size:12.5px;}
+.news{background:var(--red-dim);padding:14px;border-radius:10px;}
+.news-t{color:var(--red);font-weight:600;margin-bottom:6px;font-size:13px;}
+.news li{font-size:12px;color:var(--text);margin:4px 0;list-style:none;
+         padding-left:14px;position:relative;}
+.news li::before{content:"•";position:absolute;left:0;color:var(--red);}
+.regime-md{font-size:13px;line-height:1.7;}
+.regime-md h1,.regime-md h2,.regime-md h3{font-weight:600;margin:14px 0 6px;}
+.regime-md h1{font-size:16px}.regime-md h2{font-size:14px}.regime-md h3{font-size:13px;color:var(--dim)}
+.regime-md p{margin:6px 0;}
+.regime-md ul{margin:6px 0 6px 18px;}
+.regime-md li{margin:2px 0;}
+.regime-md strong{color:var(--text);font-weight:600;}
+.regime-md table{width:100%;border-collapse:collapse;margin:8px 0;font-size:12px;}
+.regime-md th,.regime-md td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--border);}
+.regime-md th{text-transform:uppercase;font-size:10px;color:var(--mute);}
+.refresh{display:inline-block;margin-left:8px;color:var(--accent);cursor:pointer;
+         font-size:13px;}
+.footer{margin-top:24px;color:var(--mute);font-size:11px;text-align:center;}
+.skel{height:60px;background:linear-gradient(90deg,var(--card),var(--card-2),var(--card));
+      background-size:200% 100%;animation:skel 1.4s infinite;border-radius:10px;}
+@keyframes skel{from{background-position:200% 0}to{background-position:-200% 0}}
+</style>
+</head>
+<body>
+<h1>SGRM · Today's Plan</h1>
+<div class="sub" id="sub">loading… <span class="refresh" onclick="location.reload()">↻</span></div>
+<div class="action" id="action">—</div>
+<div id="content"><div class="skel"></div></div>
+<div class="footer">From public feed · auto-updated by operator pipeline</div>
+
+<script>
+const FEED = 'https://chattime.github.io/sgrm-regime-feed/';
+async function load(){
+  try{
+    const [planR, regimeR] = await Promise.all([
+      fetch(FEED + 'daily_plan.json?_=' + Date.now()),
+      fetch(FEED + 'regime.json?_=' + Date.now()),
+    ]);
+    const planData = await planR.json();
+    const regimeData = await regimeR.json();
+    render(planData, regimeData);
+  }catch(e){
+    document.getElementById('content').innerHTML =
+      '<div class="card">Failed to load feed: ' + e.message + '</div>';
+  }
+}
+
+function render(d, regime){
+  const p = d.plan || {};
+  const pm = d.pre_market || {};
+  const m = p.market || {};
+  const action = (p.action || 'no plan yet').toString();
+  const shock = (pm.shock_level || 'CLEAR').toString();
+
+  let cls = 'green-day';
+  if(shock === 'SHOCK') cls = 'shock';
+  else if(action.startsWith('GO')) cls = 'go';
+  else if(action.startsWith('NO')) cls = 'no-entry';
+  document.getElementById('action').className = 'action ' + cls;
+  document.getElementById('action').textContent = action;
+  document.getElementById('sub').innerHTML =
+    'As of ' + (p.as_of || d.timestamp || '?') + ' · user ' + (p.user_id || 'operator') +
+    ' <span class="refresh" onclick="location.reload()">↻</span>';
+
+  let html = '';
+  // Market
+  if(Object.keys(m).length){
+    html += '<div class="card"><div class="card-title">Market</div>';
+    html += rowHTML('TQQQ Close', '$' + (m.tqqq_close ?? '—'));
+    html += rowHTML('VXN', m.vxn ?? '—');
+    html += rowHTML('RSI', m.rsi ?? '—');
+    html += rowHTML('Regime / Condition', (m.regime || '—') + ' / ' + (m.condition || '—'));
+    if(m.vs_10d_high_pct != null) html += rowHTML('vs 10-day high', m.vs_10d_high_pct + '%');
+    if(m.ret_5d_pct != null) html += rowHTML('5-day return', m.ret_5d_pct + '%');
+    if(m.ret_40d_pct != null) html += rowHTML('40-day return', m.ret_40d_pct + '%');
+    if(m.above_ma_200_pct != null) html += rowHTML('vs 200-day MA', m.above_ma_200_pct + '%');
+    if(m.red_streak != null) html += rowHTML('Red streak', m.red_streak + ' day(s)');
+    html += '</div>';
+  }
+
+  // Pre-market / news shock
+  html += '<div class="card"><div class="card-title">Pre-Market · News Shock Layer</div>';
+  html += rowHTML('Shock level', shock);
+  html += rowHTML('QQQ overnight gap', (pm.qqq_overnight_gap_pct ?? 0) + '%');
+  html += rowHTML('News shock score', (pm.news_shock_score ?? 0) + '/10');
+  html += '</div>';
+  if(pm.news_top_stories && pm.news_top_stories.length){
+    html += '<div class="card"><div class="card-title">Top Stories</div>';
+    html += '<div class="news"><div class="news-t">📰 Headlines driving the score</div><ul>';
+    pm.news_top_stories.forEach(s => html += '<li>' + esc(s) + '</li>');
+    html += '</ul></div></div>';
+  }
+
+  // Sizing / batches (if GO)
+  if(p.recommended_units > 0 || (p.batches && p.batches.length)){
+    html += '<div class="card"><div class="card-title">Sizing & Pre-Key Orders</div>';
+    html += rowHTML('Total units', p.recommended_units || 0);
+    html += rowHTML('Strike', '$' + (p.recommended_strike || '—'));
+    html += rowHTML('DTE', (p.recommended_dte_days || 30) + ' days');
+    html += rowHTML('Buying power', '$' + Number(p.buying_power || 0).toLocaleString());
+    html += rowHTML('BP committed', '$' + Number(p.buying_power_committed || 0).toLocaleString() +
+                    ' (' + (p.bp_pct_used || 0) + '%)');
+    html += '</div>';
+    html += '<div class="card"><div class="card-title">3-Batch GTC Pre-Key</div>';
+    html += '<div class="batches">';
+    (p.batches || []).forEach((b, i) => {
+      html += '<div class="b"><span class="b-lbl">B' + (i+1) + '</span>' +
+              '<span class="b-u">' + b.units + '×</span>' +
+              '<span class="b-p">$' + b.trigger_price + ' (' + b.drop_pct + '% drop)</span></div>';
+    });
+    html += '</div></div>';
+  }
+
+  // Blocking reasons (if NO ENTRY)
+  if(p.blocking_reasons && p.blocking_reasons.length){
+    html += '<div class="card"><div class="card-title">Why No Entry</div><ul class="reasons">';
+    p.blocking_reasons.forEach(r => html += '<li>' + esc(r) + '</li>');
+    html += '</ul></div>';
+  }
+
+  // Gate detail
+  if(p.gate_results){
+    html += '<div class="card"><div class="card-title">Rule Stack</div>';
+    Object.entries(p.gate_results).forEach(([k, g]) => {
+      const icon = g.pass ? '✅' : '❌';
+      html += '<div class="row"><div class="row-k">' + icon + ' ' + k +
+              '</div><div class="row-v" style="text-align:right;font-size:12px;color:var(--dim)">' +
+              esc(g.reason) + '</div></div>';
+    });
+    html += '</div>';
+  }
+
+  // Regime read excerpt
+  if(regime && regime.markdown){
+    const excerpt = regime.markdown.length > 4000
+      ? regime.markdown.slice(0, 4000) + '\n\n*…(truncated — view full read on operator dashboard)*'
+      : regime.markdown;
+    html += '<div class="card"><div class="card-title">Latest Regime Read</div>';
+    html += '<div class="regime-md">' + md(excerpt) + '</div></div>';
+  }
+
+  document.getElementById('content').innerHTML = html;
+}
+
+function rowHTML(k, v){
+  return '<div class="row"><div class="row-k">' + esc(k) + '</div><div class="row-v">' + esc(v) + '</div></div>';
+}
+function esc(s){
+  if(s === null || s === undefined) return '—';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function md(s){
+  let t = s.trim();
+  t = t.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+  t = t.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+  t = t.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+  t = t.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  t = t.replace(/^\|(.+)\|\n\|([\s\-:|]+)\|\n((?:\|.+\|\n?)+)/gm, (m, h, _, rows) => {
+    const hdr = h.split('|').map(x=>x.trim()).filter(x=>x);
+    const rs = rows.trim().split('\n').map(r => r.replace(/^\||\|$/g,'').split('|').map(x=>x.trim()));
+    let tt = '<table><thead><tr>' + hdr.map(c=>'<th>'+c+'</th>').join('') + '</tr></thead><tbody>';
+    rs.forEach(r => { tt += '<tr>' + r.map(c=>'<td>'+c+'</td>').join('') + '</tr>'; });
+    return tt + '</tbody></table>';
+  });
+  t = t.replace(/(^- .+\n?)+/gm, m => '<ul>' + m.trim().split('\n').map(li=>'<li>'+li.replace(/^- /,'')+'</li>').join('') + '</ul>');
+  t = t.split('\n\n').map(p => /^<(h\d|ul|table)/.test(p.trim()) ? p : '<p>'+p+'</p>').join('\n');
+  return t;
+}
+load();
+</script>
+</body>
+</html>

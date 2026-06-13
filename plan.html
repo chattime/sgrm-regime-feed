@@ -31,6 +31,14 @@ h1{font-size:18px;font-weight:600;letter-spacing:-0.024em;margin-bottom:4px;}
 @keyframes pulse{50%{opacity:0.55}}
 .card{background:var(--card);border:1px solid var(--border);border-radius:14px;
       padding:18px;margin-bottom:14px;}
+.card-src{font-size:10.5px;color:var(--mute);margin-top:12px;padding-top:10px;
+          border-top:1px dashed var(--border);display:flex;justify-content:space-between;
+          gap:8px;flex-wrap:wrap;}
+.conf{display:inline-block;padding:1px 7px;border-radius:99px;font-weight:600;
+      letter-spacing:0.02em;font-size:10px;}
+.conf-high{background:var(--green-dim);color:var(--green);}
+.conf-med{background:var(--yellow-dim);color:var(--yellow);}
+.conf-low{background:#ff9f0a22;color:#ff9f0a;}
 .card-title{font-size:11px;color:var(--mute);text-transform:uppercase;
             letter-spacing:0.06em;font-weight:600;margin-bottom:10px;}
 .row{display:flex;justify-content:space-between;padding:8px 0;
@@ -79,6 +87,14 @@ h1{font-size:18px;font-weight:600;letter-spacing:-0.024em;margin-bottom:4px;}
 
 <script>
 const FEED = 'https://chattime.github.io/sgrm-regime-feed/';
+
+
+function srcLine(source, when, conf){
+  const c = conf === 'high' ? 'conf-high' : (conf === 'med' ? 'conf-med' : 'conf-low');
+  const cText = conf === 'high' ? 'high confidence' : (conf === 'med' ? 'medium confidence' : 'low confidence');
+  return '<div class="card-src"><span>source: ' + source + ' · ' + when + '</span>' +
+         '<span class="conf ' + c + '">' + cText + '</span></div>';
+}
 
 function learnLink(label, anchor){
   return '<a href="learn.html#' + anchor + '" style="color:inherit;text-decoration:none;border-bottom:1px dotted var(--mute)" title="What is ' + label + '? Tap to learn.">' + label + '</a>';
@@ -129,6 +145,7 @@ function render(d, regime){
     if(m.ret_40d_pct != null) html += rowHTML(learnLink('40-day return','5d-return'), m.ret_40d_pct + '%');
     if(m.above_ma_200_pct != null) html += rowHTML(learnLink('vs 200-day MA','200d-ma'), m.above_ma_200_pct + '%');
     if(m.red_streak != null) html += rowHTML(learnLink('Red streak','streak'), m.red_streak + ' day(s)');
+    html += srcLine('yfinance (CBOE ^VXN, TQQQ daily bars)', 'refreshed at decision run', 'high');
     html += '</div>';
   }
 
@@ -137,6 +154,7 @@ function render(d, regime){
   html += rowHTML(learnLink('Shock level','shock-level'), shock);
   html += rowHTML(learnLink('QQQ overnight gap','qqq-gap'), (pm.qqq_overnight_gap_pct ?? 0) + '%');
   html += rowHTML(learnLink('News shock score','news-shock'), (pm.news_shock_score ?? 0) + '/10');
+  html += srcLine('pre_market_check.sh (QQQ pre-market + regime report header)', 'refreshed when pre-market job ran', 'med');
   html += '</div>';
   if(pm.news_top_stories && pm.news_top_stories.length){
     html += '<div class="card"><div class="card-title">Top Stories</div>';
@@ -154,6 +172,7 @@ function render(d, regime){
     html += rowHTML(learnLink('Buying power','buying-power'), '$' + Number(p.buying_power || 0).toLocaleString());
     html += rowHTML(learnLink('BP committed','buying-power'), '$' + Number(p.buying_power_committed || 0).toLocaleString() +
                     ' (' + (p.bp_pct_used || 0) + '%)');
+    html += srcLine('deterministic from market + sizing matrix + your buying power', 'computed at decision run', 'high');
     html += '</div>';
     html += '<div class="card"><div class="card-title">3-Batch GTC Pre-Key</div>';
     html += '<div class="batches">';
@@ -162,14 +181,14 @@ function render(d, regime){
               '<span class="b-u">' + b.units + '×</span>' +
               '<span class="b-p">$' + b.trigger_price + ' (' + b.drop_pct + '% drop)</span></div>';
     });
-    html += '</div></div>';
+    html += '</div>' + srcLine('drop% table × regime weights × total units', 'computed', 'high') + '</div>';
   }
 
   // Blocking reasons (if NO ENTRY)
   if(p.blocking_reasons && p.blocking_reasons.length){
     html += '<div class="card"><div class="card-title">Why No Entry</div><ul class="reasons">';
     p.blocking_reasons.forEach(r => html += '<li>' + esc(r) + '</li>');
-    html += '</ul></div>';
+    html += '</ul>' + srcLine('first gate(s) that failed', 'live evaluation', 'high') + '</div>';
   }
 
   // Gate detail
@@ -181,7 +200,7 @@ function render(d, regime){
               '</div><div class="row-v" style="text-align:right;font-size:12px;color:var(--dim)">' +
               esc(g.reason) + '</div></div>';
     });
-    html += '</div>';
+    html += srcLine('three gate layers — v7 = your codified rules, empirical = your 60-trade history, news = composite shock', 'all evaluated this run', 'high') + '</div>';
   }
 
   // Regime read excerpt
@@ -190,7 +209,7 @@ function render(d, regime){
       ? regime.markdown.slice(0, 4000) + '\n\n*…(truncated — view full read on operator dashboard)*'
       : regime.markdown;
     html += '<div class="card"><div class="card-title">Latest Regime Read</div>';
-    html += '<div class="regime-md">' + md(excerpt) + '</div></div>';
+    html += '<div class="regime-md">' + md(excerpt) + '</div>' + srcLine('claude -p seven-lens read with WebSearch', 'last regime_report.sh run', 'med') + '</div>';
   }
 
   document.getElementById('content').innerHTML = html;

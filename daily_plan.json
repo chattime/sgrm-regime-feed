@@ -1,10 +1,215 @@
 {
   "version": 1,
-  "timestamp": "2026-06-13T01:53:03Z",
+  "timestamp": "2026-06-13T15:34:38Z",
   "plan": {
     "as_of": "2026-06-12",
     "user_id": "wanwoo",
-    "buying_power": 130000.0,
+    "buying_power": 80000.0,
+    "bp_already_committed": 161100.0,
+    "available_bp": 0,
+    "open_positions": {
+      "ok": true,
+      "count": 3,
+      "total_units": 23,
+      "bp_committed": 161100.0,
+      "positions": [
+        {
+          "tracker": "TQQQ Put 20260710 72.00",
+          "strike": 72.0,
+          "units_open": 3,
+          "premium_received": 708.0,
+          "bp_committed": 21600.0,
+          "mtm_last": -528.0
+        },
+        {
+          "tracker": "TQQQ Put 20260710 73.00",
+          "strike": 73.0,
+          "units_open": 15,
+          "premium_received": 4954.0,
+          "bp_committed": 109500.0,
+          "mtm_last": -1691.0
+        },
+        {
+          "tracker": "TQQQ Put 20260724 60.00",
+          "strike": 60.0,
+          "units_open": 5,
+          "premium_received": 1700.0,
+          "bp_committed": 30000.0,
+          "mtm_last": 650.0
+        }
+      ],
+      "near_close": [
+        {
+          "tracker": "TQQQ Put 20260710 72.00",
+          "premium": 708.0,
+          "mtm": -528.0,
+          "loss_pct_of_premium": 75.0
+        }
+      ],
+      "error": null
+    },
+    "recent_closes": [
+      {
+        "date": "2026-04-17",
+        "close": 58.59
+      },
+      {
+        "date": "2026-04-20",
+        "close": 58.08
+      },
+      {
+        "date": "2026-04-21",
+        "close": 57.4
+      },
+      {
+        "date": "2026-04-22",
+        "close": 60.21
+      },
+      {
+        "date": "2026-04-23",
+        "close": 59.22
+      },
+      {
+        "date": "2026-04-24",
+        "close": 62.56
+      },
+      {
+        "date": "2026-04-27",
+        "close": 62.64
+      },
+      {
+        "date": "2026-04-28",
+        "close": 60.74
+      },
+      {
+        "date": "2026-04-29",
+        "close": 61.86
+      },
+      {
+        "date": "2026-04-30",
+        "close": 63.54
+      },
+      {
+        "date": "2026-05-01",
+        "close": 65.3
+      },
+      {
+        "date": "2026-05-04",
+        "close": 64.91
+      },
+      {
+        "date": "2026-05-05",
+        "close": 67.39
+      },
+      {
+        "date": "2026-05-06",
+        "close": 71.57
+      },
+      {
+        "date": "2026-05-07",
+        "close": 71.34
+      },
+      {
+        "date": "2026-05-08",
+        "close": 76.28
+      },
+      {
+        "date": "2026-05-11",
+        "close": 76.96
+      },
+      {
+        "date": "2026-05-12",
+        "close": 74.96
+      },
+      {
+        "date": "2026-05-13",
+        "close": 77.24
+      },
+      {
+        "date": "2026-05-14",
+        "close": 78.95
+      },
+      {
+        "date": "2026-05-15",
+        "close": 75.34
+      },
+      {
+        "date": "2026-05-18",
+        "close": 74.32
+      },
+      {
+        "date": "2026-05-19",
+        "close": 72.93
+      },
+      {
+        "date": "2026-05-20",
+        "close": 76.51
+      },
+      {
+        "date": "2026-05-21",
+        "close": 76.95
+      },
+      {
+        "date": "2026-05-22",
+        "close": 77.84
+      },
+      {
+        "date": "2026-05-26",
+        "close": 81.95
+      },
+      {
+        "date": "2026-05-27",
+        "close": 81.67
+      },
+      {
+        "date": "2026-05-28",
+        "close": 83.68
+      },
+      {
+        "date": "2026-05-29",
+        "close": 84.56
+      },
+      {
+        "date": "2026-06-01",
+        "close": 86.04
+      },
+      {
+        "date": "2026-06-02",
+        "close": 87.22
+      },
+      {
+        "date": "2026-06-03",
+        "close": 86.56
+      },
+      {
+        "date": "2026-06-04",
+        "close": 85.22
+      },
+      {
+        "date": "2026-06-05",
+        "close": 73.05
+      },
+      {
+        "date": "2026-06-08",
+        "close": 76.27
+      },
+      {
+        "date": "2026-06-09",
+        "close": 73.72
+      },
+      {
+        "date": "2026-06-10",
+        "close": 69.27
+      },
+      {
+        "date": "2026-06-11",
+        "close": 76.01
+      },
+      {
+        "date": "2026-06-12",
+        "close": 77.52
+      }
+    ],
     "market": {
       "tqqq_close": 77.52,
       "vxn": 27.3,

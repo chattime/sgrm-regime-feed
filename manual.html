@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SGRM WSP Desk · User Manual + Strategy</title>
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel2:#1d212b; --border:#2a2f3a;
+    --text:#e6e8ec; --mute:#9aa3b2; --dim:#6b7280;
+    --green:#34c759; --red:#ff453a; --yellow:#ffd60a; --blue:#0a84ff;
+    --mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.6;font-size:15px}
+  a{color:var(--blue);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{display:flex;max-width:1280px;margin:0 auto}
+  /* sidebar */
+  nav{position:sticky;top:0;align-self:flex-start;height:100vh;overflow-y:auto;width:260px;
+      padding:24px 16px;border-right:1px solid var(--border);background:var(--panel)}
+  nav h1{font-size:15px;letter-spacing:-.01em;margin:0 0 4px}
+  nav .ver{font-size:11px;color:var(--dim);font-family:var(--mono);margin-bottom:16px}
+  nav a{display:block;color:var(--mute);font-size:13px;padding:5px 8px;border-radius:6px}
+  nav a:hover{background:var(--panel2);color:var(--text);text-decoration:none}
+  nav a.sub{padding-left:20px;font-size:12px;color:var(--dim)}
+  nav .grp{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);margin:14px 8px 4px}
+  /* content */
+  main{flex:1;min-width:0;padding:40px 48px 120px}
+  h2{font-size:24px;letter-spacing:-.02em;margin:48px 0 8px;padding-top:12px;border-top:1px solid var(--border)}
+  h2:first-of-type{border-top:none;margin-top:0}
+  h3{font-size:17px;margin:28px 0 6px;color:var(--text)}
+  h4{font-size:14px;margin:18px 0 4px;color:var(--mute);text-transform:uppercase;letter-spacing:.04em}
+  p{margin:8px 0}
+  code{font-family:var(--mono);font-size:.88em;background:var(--panel2);padding:1px 5px;border-radius:4px;color:#cdd6e4}
+  pre{background:var(--panel2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;overflow:auto;font-family:var(--mono);font-size:12.5px;line-height:1.5}
+  table{border-collapse:collapse;width:100%;margin:12px 0;font-size:13.5px}
+  th,td{border:1px solid var(--border);padding:7px 10px;text-align:left;vertical-align:top}
+  th{background:var(--panel2);font-weight:600;color:var(--text)}
+  td.num,th.num{text-align:right;font-family:var(--mono)}
+  .pos{color:var(--green)} .neg{color:var(--red)} .warn{color:var(--yellow)}
+  .callout{border:1px solid var(--border);border-left:3px solid var(--blue);background:var(--panel);border-radius:8px;padding:12px 16px;margin:14px 0}
+  .callout.green{border-left-color:var(--green)}
+  .callout.amber{border-left-color:var(--yellow)}
+  .callout.red{border-left-color:var(--red)}
+  .callout b{color:var(--text)}
+  .lead{font-size:17px;color:var(--mute)}
+  .tag{display:inline-block;font-family:var(--mono);font-size:11px;padding:2px 7px;border-radius:5px;background:var(--panel2);border:1px solid var(--border);color:var(--mute)}
+  .pill{display:inline-block;padding:2px 8px;border-radius:99px;font-size:12px;font-weight:600}
+  .pill.g{background:rgba(52,199,89,.15);color:var(--green)}
+  .pill.a{background:rgba(255,214,10,.15);color:var(--yellow)}
+  .pill.r{background:rgba(255,69,58,.15);color:var(--red)}
+  ul,ol{margin:8px 0;padding-left:22px}
+  li{margin:3px 0}
+  hr{border:none;border-top:1px solid var(--border);margin:24px 0}
+  .kbd{font-family:var(--mono);font-size:12px;background:var(--panel2);border:1px solid var(--border);border-bottom-width:2px;border-radius:5px;padding:1px 6px}
+  footer{margin-top:60px;padding-top:20px;border-top:1px solid var(--border);color:var(--dim);font-size:12px}
+  @media(max-width:880px){nav{display:none}main{padding:24px 18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <h1>SGRM WSP Desk</h1>
+  <div class="ver">User Manual · Strategy v3.7</div>
+  <div class="grp">Start here</div>
+  <a href="#what">1 · What this is</a>
+  <a href="#daily">2 · Your daily routine</a>
+  <div class="grp">The Strategy</div>
+  <a href="#recipe">3 · One-screen recipe</a>
+  <a href="#strike" class="sub">Strike selection</a>
+  <a href="#sizing" class="sub">Sizing matrix</a>
+  <a href="#batches" class="sub">Batch ladder</a>
+  <a href="#exits" class="sub">Exits</a>
+  <a href="#scalp" class="sub">Intraday scalp</a>
+  <a href="#regime" class="sub">Regime &amp; condition</a>
+  <div class="grp">The Guards</div>
+  <a href="#guards">4 · Why it says NO ENTRY</a>
+  <a href="#brake" class="sub">Drawdown brake</a>
+  <a href="#el" class="sub">Excess-liquidity guard</a>
+  <a href="#filters" class="sub">Other gates &amp; news</a>
+  <a href="#calendars" class="sub">Event calendars</a>
+  <div class="grp">Using it</div>
+  <a href="#dashboard">5 · The dashboard</a>
+  <a href="#settings" class="sub">Settings</a>
+  <a href="#bpel">6 · BP &amp; excess liquidity</a>
+  <a href="#telegram">7 · Telegram alerts</a>
+  <a href="#friends">8 · Friends setup</a>
+  <a href="#cron">9 · Schedule (cron)</a>
+  <a href="#glossary">10 · Glossary</a>
+</nav>
+
+<main>
+
+<h2 id="what">1 · What this system does</h2>
+<p class="lead">It produces <b>one decision every morning</b>: <em>"Sell N TQQQ puts at strike $X, in 3 batches at triggers A / B / C."</em></p>
+<p>Everything in the platform serves that single output. The decision is:</p>
+<ul>
+  <li>Backed by the highest historical win-rate for the current market state.</li>
+  <li>Aware of price action (close, 10/40-day highs &amp; lows, RSI, VXN, streak).</li>
+  <li>Aware of official news (FOMC, CPI, NFP, earnings) and ad-hoc shocks.</li>
+  <li>Aware of your <b>account margin</b> — it won't size you into a forced liquidation.</li>
+  <li>Expressed as <b>direction + sizing + ladder</b>, ready to pre-key as GTC orders.</li>
+</ul>
+<div class="callout"><b>The core trade:</b> you sell cash-secured / margin short puts on TQQQ (a 3× leveraged Nasdaq-100 ETF) about 12–16% out-of-the-money, ~45 days out. You collect premium up front and keep it all if TQQQ stays above your strike. The system's job is to tell you <em>how much</em> to sell and <em>when not to</em>.</p></div>
+
+<h3>How the pieces fit</h3>
+<pre>Tiger (your account)  +  Nasdaq option chain  +  market data
+        │
+        ▼
+  morning_inputs.py   → live BP / net-liq / excess-liquidity + δ-0.20 strike pick
+        │
+        ▼
+  daily_decision.py   → THE PLAN (regime, units, strike, 3 batches, all guards)
+        │
+        ├──► Telegram group  (@SGRM_WSP_bot — the plain-English alert)
+        ├──► your Google Sheet (via doorway.gs)
+        └──► public feed (daily_plan.json) ──► friends' dashboards
+        │
+        ▼
+  SGRM_wsp_v8a.html   → the dashboard you read every morning</pre>
+
+<h2 id="daily">2 · Your daily routine</h2>
+<ol>
+  <li>The VM runs the engine automatically at <b>09:00 ET</b> (pre-open) and posts the plan to Telegram + your sheet.</li>
+  <li>Read the <b>Telegram message</b> — it tells you in plain English: trade today or stand down, and the 3 batch triggers.</li>
+  <li>Open the <b>dashboard</b> → <b>Plan</b> tab to see the ladder, then <b>Analysis</b> to see <em>why</em>.</li>
+  <li>If it's a GO: <b>pre-key 3 GTC limit orders</b> tonight at the batch trigger prices. Whatever fills tomorrow, fills.</li>
+  <li>Check <b>Positions</b> for anything hitting a profit target or needing defense.</li>
+  <li>A second <b>verify run at 10:05 ET</b> re-checks with post-open data and only re-alerts if the plan changed.</li>
+</ol>
+<div class="callout green"><b>If it says GREEN day / NO ENTRY:</b> do nothing new. Manage existing positions only. Patience is part of the edge — most of the system's value is in the days it tells you <em>not</em> to trade.</div>
+
+<h2 id="recipe">3 · The strategy — one-screen recipe</h2>
+<table>
+<tr><th>Item</th><th>Value</th></tr>
+<tr><td>Underlying</td><td>TQQQ (3× Nasdaq-100)</td></tr>
+<tr><td>Strike</td><td><b>anchor = spot × (1 − intraday_drop − 10% margin)</b> ≈ spot × 0.875; pick the chain strike closest to anchor that passes the δ cap</td></tr>
+<tr><td>δ cap</td><td>CLEAR |δ|≤0.24 · CAUTION |δ|≤0.27 · SHOCK |δ|≤0.20</td></tr>
+<tr><td>DTE</td><td>30–45 days (target <b>45</b>; exit/roll by <b>21</b>)</td></tr>
+<tr><td>Capital</td><td>$130k default — overridden by live Tiger buying power</td></tr>
+<tr><td>BP per day</td><td>max <b>40%</b> committable (0.50 only in conviction mode)</td></tr>
+<tr><td>Batches</td><td>3 GTC limit orders, queued before open</td></tr>
+<tr><td>Unit split</td><td>RALLY 50/30/20 · SIDEWAYS 33/33/33 · DOWNTREND 20/30/50</td></tr>
+<tr><td>Exits</td><td>3 GTC profit rungs, regime-specific (§ exits)</td></tr>
+<tr><td>News modes</td><td>CLEAR ×1.0 · CAUTION ×0.5 (harvest into noise) · SHOCK ×0 (no entry)</td></tr>
+</table>
+
+<h3 id="strike">Strike selection (anchor + δ cap)</h3>
+<p>Old rigid "X% OTM" logic breaks in high volatility — at 80% IV a 10%-OTM put has δ ≈ −0.30, not −0.20. So the picker uses a <b>price anchor</b> for targeting and a <b>delta cap</b> for safety:</p>
+<pre>anchor = spot × (1 − 0.025 intraday_drop − 0.10 margin_of_safety)   ≈ spot × 0.875</pre>
+<p>Then: compute IV + δ locally (Black-Scholes) on every liquid strike, keep only those with <code>|δ| ≤ cap</code>, and pick the one closest to the anchor. <b>If no strike passes the cap → NO ENTRY</b> (the vol regime is too hot to sell safely).</p>
+<h4>Worked example — spot $77.52, IV 80%, 39 DTE</h4>
+<table>
+<tr><th>Strike</th><th class="num">OTM%</th><th class="num">δ (computed)</th><th class="num">Bid</th><th>Passes 0.24?</th></tr>
+<tr><td>$70</td><td class="num">9.7%</td><td class="num">−0.295</td><td class="num">$4.00</td><td class="neg">❌</td></tr>
+<tr><td>$68</td><td class="num">12.3%</td><td class="num">−0.27</td><td class="num">$3.40</td><td class="neg">❌</td></tr>
+<tr><td><b>$65</b></td><td class="num"><b>16.2%</b></td><td class="num"><b>−0.21</b></td><td class="num"><b>$2.50</b></td><td class="pos">✅ picked</td></tr>
+<tr><td>$63</td><td class="num">18.7%</td><td class="num">−0.18</td><td class="num">$1.95</td><td class="pos">✅</td></tr>
+<tr><td>$60</td><td class="num">22.6%</td><td class="num">−0.15</td><td class="num">$1.50</td><td class="pos">✅</td></tr>
+</table>
+<p>$65 is the closest acceptable strike to the $67.83 anchor. If news mode were SHOCK (cap 0.20), $65 fails and $63/$60 win.</p>
+
+<h3 id="sizing">Sizing matrix (regime × red-streak)</h3>
+<p>Total units for the day, read by <b>regime</b> and <b>how many red days in a row</b> (the streak). More fear (longer streak) → more size, scaled by regime.</p>
+<table>
+<tr><th class="num">Red streak</th><th class="num">RALLY</th><th class="num">SIDEWAYS</th><th class="num">DOWNTREND</th></tr>
+<tr><td class="num">1</td><td class="num">2</td><td class="num">3</td><td class="num">4</td></tr>
+<tr><td class="num">2</td><td class="num">3</td><td class="num">4</td><td class="num">6</td></tr>
+<tr><td class="num">3</td><td class="num">4</td><td class="num">6</td><td class="num">9</td></tr>
+<tr><td class="num">4</td><td class="num">5</td><td class="num">7</td><td class="num">10</td></tr>
+<tr><td class="num">5</td><td class="num">5</td><td class="num">8</td><td class="num">12</td></tr>
+<tr><td class="num">6</td><td class="num">5</td><td class="num">9</td><td class="num">14</td></tr>
+<tr><td class="num">7+</td><td class="num">5</td><td class="num">10</td><td class="num">15</td></tr>
+</table>
+<p>The raw number is then <b>capped by buying power</b> (40% ÷ strike×100), by the empirical max, and by the news/conviction multipliers. Hard cap 50 units (backtest-inert headroom for larger capital).</p>
+
+<h3 id="batches">Batch ladder (the 3 trigger prices)</h3>
+<p>Each day's units split into <b>3 batches</b> entered at progressively lower trigger prices. The drop ladder depends on the <b>condition</b> (which is driven by the streak):</p>
+<table>
+<tr><th>Condition</th><th>Batch drops (from last close)</th></tr>
+<tr><td>1RG <span class="tag">1 red after ≥5 green</span></td><td>−1.0% / −2.0% / −3.0%</td></tr>
+<tr><td>1R <span class="tag">first red</span></td><td>−2.1% / −3.0% / −4.0%</td></tr>
+<tr><td>2R</td><td>−1.5% / −2.5% / −3.5%</td></tr>
+<tr><td>3R</td><td>−1.0% / −2.0% / −3.0%</td></tr>
+<tr><td>4R+</td><td>−1.0% / −2.0% / −3.0%</td></tr>
+</table>
+<p><b>Unit weighting per batch</b> shifts with regime: RALLY front-loads (50/30/20), DOWNTREND back-loads (20/30/50) to buy deeper discounts in a falling tape. <b>B1 rule:</b> take the better of the table trigger vs. the intraday low.</p>
+
+<h3 id="exits">Exits (Section C — 3 GTC profit rungs)</h3>
+<p>Queue all three exit rungs at once. Buyback price = credit × (1 − target%).</p>
+<table>
+<tr><th>Regime</th><th>Rung 1</th><th>Rung 2</th><th>Rung 3</th></tr>
+<tr><td>RALLY</td><td>+20%, close 50%</td><td>+35%, close 30%</td><td>+50%, close 20%</td></tr>
+<tr><td>SIDEWAYS</td><td>+25%, close 50%</td><td>+45%, close 30%</td><td>+75%, close 20%</td></tr>
+<tr><td>DOWNTREND</td><td>+15%, close 50%</td><td>+30%, close 30%</td><td>+60%, close 20%</td></tr>
+</table>
+<p><b>Event tightening:</b> near a Tier-A event, pull Rung 1 in so winners clear pre-catalyst (0–1d +12% · 2d +15% · 3d +20%).</p>
+<h4>Defense (Rules A · B · E)</h4>
+<ul>
+  <li><b>Roll</b> only if profit-remaining &lt; 15% <em>and</em> DTE ≤ 10, for ≥ $0.10/ct net credit, same/lower strike, 45–60 DTE — <b>max one roll</b>.</li>
+  <li><b>RALLY/SIDEWAYS:</b> roll for credit OK. <b>DOWNTREND:</b> take assignment, do <b>not</b> roll (credit-rolling caused 115 forced cuts in the 2022 bear backtest).</li>
+  <li>Close highest-δ positions first to cut assignment risk.</li>
+</ul>
+
+<h3 id="scalp">Intraday scalp (Rule B) — short-put harvest</h3>
+<p>Separate from the daily plan. When a <b>sudden one-off shock</b> spikes intraday fear, IV jumps and puts get richly priced — so you <b>sell puts</b> to harvest the inflated premium, then buy them back as the panic fades. It's a <em>short-put</em> play (not buying puts), and it does <b>not</b> count toward the daily unit cap.</p>
+<table>
+<tr><th>Field</th><th>Value</th></tr>
+<tr><td>Trigger</td><td>TQQQ drops ≥ <b>3%</b> intraday on a one-off shock</td></tr>
+<tr><td>Rungs</td><td>3 sell rungs at <b>−5% / −8% / −11%</b> from the close</td></tr>
+<tr><td>Strike</td><td>~<b>5% OTM</b> below each rung's entry price</td></tr>
+<tr><td>DTE</td><td>≤ <b>30 days</b></td></tr>
+<tr><td>Exit</td><td>buy-to-close at <b>+30–50%</b> of credit</td></tr>
+<tr><td>Size</td><td>STO 2–5 contracts per rung</td></tr>
+<tr><td>Guard</td><td><b>One-off noise only.</b> Stand down if structural — drawdown brake, news SHOCK, or 10d-high brake</td></tr>
+</table>
+<p>The dashboard scalp card and the Telegram message both show the full in &amp; out per rung: trigger price, strike, estimated credit, and the buy-to-close range.</p>
+
+<h3 id="regime">Regime &amp; condition engines</h3>
+<h4>Regime (40-day lookback)</h4>
+<ul>
+  <li><b>RALLY</b> — spot &gt; 30% above the 40-day low.</li>
+  <li><b>DOWNTREND</b> — spot &gt; 20% below the 40-day high <em>and</em> VXN ≥ 25.</li>
+  <li><b>SIDEWAYS</b> — everything else.</li>
+</ul>
+<h4>Condition (streak)</h4>
+<pre>red_streak 0           → GREEN  (exit mode, no new sells)
+red_streak 1 + ≥5 green → 1RG
+red_streak 1            → 1R
+red_streak 2            → 2R
+red_streak 3            → 3R
+red_streak ≥4           → 4R+</pre>
+
+<h2 id="guards">4 · The guards — why it sometimes says NO ENTRY</h2>
+<p>Before any sizing, the plan runs layered guards. <b>Any one failing → NO ENTRY.</b> Layer 1 holds the two highest-priority circuit breakers.</p>
+
+<h3 id="brake">Streak Drawdown Brake <span class="tag">Layer 1</span></h3>
+<p>Watches how far TQQQ has fallen <b>from where the current red streak began</b> (the anchor = first close of the streak).</p>
+<table>
+<tr><th>Band</th><th>Condition</th><th>Action</th></tr>
+<tr><td><span class="pill g">GREEN</span></td><td>drawdown ≥ −15%</td><td>normal</td></tr>
+<tr><td><span class="pill a">AMBER</span></td><td>−22% … −15%</td><td>finish only if nearest strike has &gt;12% OTM buffer (soft)</td></tr>
+<tr><td><span class="pill r">RED</span></td><td>drawdown &lt; −22%</td><td>units = 0</td></tr>
+<tr><td><span class="pill r">HARD-STOP</span></td><td>any open strike within 8% of spot</td><td>units = 0 (checked first, all bands)</td></tr>
+</table>
+<p class="warn">Backtest (2010–2026): v7.5 + this brake = −$4,361 P/L (vs −$11,576) and max drawdown $7,124 (vs $17,414). The HARD-STOP is the live lever.</p>
+
+<h3 id="el">Excess-Liquidity guard <span class="tag">Layer 1 · v3.6</span></h3>
+<p>The brake watches <em>price</em>; this watches your <em>account</em>. <b>Excess Liquidity</b> is the broker's cushion before it <b>force-liquidates</b> your positions:</p>
+<pre>Excess Liquidity = Equity-with-Loan-Value − Maintenance-Margin-Requirement</pre>
+<p>When it hits <b>$0 the broker starts auto-selling.</b> As TQQQ falls, the margin requirement on your short puts rises and net-liq drops, so this cushion shrinks <em>faster</em> than price. The guard halts new entries while the cushion is still healthy.</p>
+<table>
+<tr><th>Band</th><th>Cushion (EL ÷ net-liq)</th><th>Action</th></tr>
+<tr><td><span class="pill g">GREEN</span></td><td>≥ 20%</td><td>normal</td></tr>
+<tr><td><span class="pill a">AMBER</span></td><td>10–20%</td><td>half-size new entries (×0.5)</td></tr>
+<tr><td><span class="pill r">RED</span></td><td>&lt; 10% <em>or</em> EL &lt; $15,000</td><td>NO ENTRY</td></tr>
+</table>
+<div class="callout red"><b>This is the real force-selling trigger — not buying power.</b> Buying power answers "can I open a new trade?"; excess liquidity answers "will the broker close my existing trades?" The second is what wrecks accounts.</div>
+<p>Live Tiger data only. With no live account data the guard is <b>inactive</b> (it passes — never blocks on estimates), and the Telegram alert will say so explicitly so a silent fallback never goes unnoticed.</p>
+
+<h3 id="filters">Other gates &amp; the news overlay</h3>
+<h4>Systemic shut-offs &amp; core gates</h4>
+<ul>
+  <li><b>10-day-high brake</b> — close &lt; −15% from the 10-day high → stop new batches.</li>
+  <li><b>Streak halt</b> — red streak ≥ 6 <em>and</em> VXN &gt; 40.</li>
+  <li><b>VXN</b> — 35–45 = half size + wider strike; &gt; 45 = halt.</li>
+  <li><b>RSI</b> — &gt; 75 (70 in RALLY) = overbought block; &lt; 35 + streak ≥ 2 = capitulation block.</li>
+  <li><b>Macro</b> — Tier-A event within 3 days tightens behaviour.</li>
+</ul>
+<h4>Layer-4 empirical filters</h4>
+<ul>
+  <li><b>5-day return floor</b> — block if 5d return &lt; −7%.</li>
+  <li><b>vs-10d-high floor</b> — block if &gt; 10% below the 10-day high. (Backtested 2015–26: this hard −10% block beats softer variants; it earns its keep catching deep-drop losers in 2022/2025.)</li>
+  <li><b>RSI oversold</b> — block if RSI &lt; 35 with a 2+ day red streak.</li>
+</ul>
+<h4>Layer-5 news modes (3-mode classifier)</h4>
+<table>
+<tr><th>Mode</th><th>Meaning</th><th>Size</th><th>δ cap</th></tr>
+<tr><td><span class="pill g">CLEAR</span></td><td>normal tape</td><td>×1.0</td><td>0.24</td></tr>
+<tr><td><span class="pill a">CAUTION</span></td><td>one-sided / likely <em>noise</em> fear spike</td><td>×0.5 (harvest rich premium at half size)</td><td>0.27</td></tr>
+<tr><td><span class="pill r">SHOCK</span></td><td>structural panic</td><td>×0 (NO ENTRY)</td><td>0.20</td></tr>
+</table>
+<p>The key idea: a fear spike isn't always danger — sometimes it's the <em>best</em> premium. CAUTION lets you harvest it at half size rather than blocking outright; SHOCK stands fully aside.</p>
+
+<h3 id="calendars">Event calendars (structural + macro)</h3>
+<p>Two calendars ride with every plan — they're <b>informational context</b>, not gates, and show in the Analysis calendar card plus a <b>macro summary point under the Plan</b>.</p>
+<h4>Structural (rule-computed)</h4>
+<p>Monthly OPEX, <b>Quad-witching</b>, NFP, month-end &amp; quarter-end rebalance, Russell reconstitution, and <b>VIX expiry</b> — each with date + days-until, flagged when ≤ 2 days out. The dashboard shows the full table.</p>
+<h4>Macro (hand-maintained econ-calendar)</h4>
+<p><b>FOMC, CPI, PPI, PCE, Jackson Hole</b> — date-varying, so they live in a dated list (<code>ECON_CALENDAR</code>) in the engine that needs a <b>yearly refresh</b> from the Fed/BLS/BEA schedules. Events within 5 days surface as the summary point under the plan, e.g. <em>"FOMC Day 1 today — decision tomorrow."</em> These also appear in the regime report; the engine calendar is the always-present machine-readable source.</p>
+
+<h2 id="dashboard">5 · The dashboard (SGRM_wsp_v8a.html)</h2>
+<p>One HTML file, used by you and friends alike. Each tab:</p>
+<table>
+<tr><th>Tab</th><th>What it shows</th></tr>
+<tr><td><b>Plan</b></td><td>The headline decision card — action, units, strike, the 3-batch GTC ladder with premiums, BP committed.</td></tr>
+<tr><td><b>Analysis</b></td><td>The full 5-layer decision trace — every gate (incl. Drawdown Brake + Excess-Liquidity), why GO or stop, the ladder, calendar &amp; scalp card.</td></tr>
+<tr><td><b>Positions</b></td><td>Your open puts (from your sheet), an <b>Excess-Liquidity gauge</b> at the top, and a Roll/Cut defense table with proposed exits.</td></tr>
+<tr><td><b>Sizing A/B</b></td><td>Two sizing models side-by-side (monotonic vs literal v7.5), each streak × 3-batch with premiums + exit strategy. Uses your Settings BP and flags a margin warning if your EL is thin.</td></tr>
+<tr><td><b>Tracker</b></td><td>30-day TQQQ trend table (streak / MA40 / RSI) + market &amp; streak snapshot.</td></tr>
+<tr><td><b>Yields</b></td><td>Bond-yield / cross-asset snapshot (operator analysis).</td></tr>
+<tr><td><b>Regime</b></td><td>The morning regime report (pulled from the feed).</td></tr>
+<tr><td><b>What-If</b></td><td>Sandbox: change spot/strike/units/VXN and see premium, breakeven, loss scenarios.</td></tr>
+<tr><td><b>Log</b></td><td>Raw transaction rows.</td></tr>
+</table>
+
+<h3 id="settings">Settings (the gear)</h3>
+<table>
+<tr><th>Field</th><th>What it does</th></tr>
+<tr><td>Doorway URL + key</td><td>Connects to your Google Sheet via the Apps Script web app. Required.</td></tr>
+<tr><td>Buying power</td><td>Manual sandbox value that drives the <b>Sizing A/B</b> tab. (Your live plan still uses Tiger BP.)</td></tr>
+<tr><td>Excess liquidity</td><td>Your own force-sell cushion — feeds the Positions EL gauge &amp; A/B margin warning. <b>Leave blank for yourself</b> so it uses live Tiger EL.</td></tr>
+<tr><td>Shared feed URL</td><td>Operator's public regime.json. If set, Regime + (for friends) the whole Plan pull from the feed.</td></tr>
+</table>
+<p>Open with <span class="kbd">?demo=1</span> (a real NO-ENTRY day) or <span class="kbd">?demo=go</span> (a synthetic GO day) to explore with no doorway configured.</p>
+
+<h2 id="bpel">6 · Buying power vs. excess liquidity (plain English)</h2>
+<div class="callout"><b>Buying Power</b> = "How much new can I open?" It sets the <em>unit count</em>: <code>units ≈ floor(BP × 40% ÷ (strike × 100))</code>. Because the strike tracks TQQQ's price, your unit count moves with <em>both</em> your BP and the TQQQ price.</div>
+<div class="callout red"><b>Excess Liquidity</b> = "Will the broker force-sell me?" It's the cushion above the maintenance-margin requirement. Hit $0 and the broker liquidates your positions automatically — usually at the worst possible moment. This is the metric that actually causes blow-ups, which is why it's a hard Layer-1 guard.</div>
+<p>For <b>you</b>: both come from Tiger automatically via the morning engine run — you don't type them in (leave the Settings EL blank). For a <b>friend</b>: they have no Tiger access, so they type their own BP and EL into Settings, and the dashboard re-sizes / re-warns on their numbers.</p>
+
+<h2 id="telegram">7 · Telegram alerts</h2>
+<p>All alerts come from <b>@SGRM_WSP_bot</b> into the shared WSP group. Message types:</p>
+<ul>
+  <li><span class="pill g">🟢 Trade today</span> — sell N $X puts; lists the 3 batch triggers and total credit.</li>
+  <li><span class="pill g">🟢 Green day — exit mode</span> — TQQQ closed up; take profits, no new sells.</li>
+  <li><span class="pill a">🟡 Don't trade today</span> — a gate blocked entry; lists the plain-English reason.</li>
+  <li><span class="pill r">🚨 Stand down</span> — overnight news shock; manage existing only.</li>
+</ul>
+<p>Extra lines you may see: 📅 calendar (witching / quarter-end), ⚡ intraday scalp levels, and the margin line:</p>
+<ul>
+  <li><span class="pill g">🛡 Margin cushion OK</span> / <span class="pill a">🟠 Margin watch</span> / <span class="pill r">🛑 MARGIN ALERT</span> — your excess-liquidity band.</li>
+  <li><span class="pill a">⚠ Tiger account data missing</span> — live data didn't arrive; EL guard inactive today, check margin manually.</li>
+  <li><span class="tag">⏳ Market data not ready</span> — price bar isn't in yet; no plan generated, will retry.</li>
+</ul>
+<div class="callout amber"><b>Important for the group:</b> the strike / triggers / regime are universal, but the <b>units, BP committed, and EL</b> in the message are computed from the <em>operator's</em> account. Everyone re-sizes to their own capital (Sizing A/B) and judges margin from their own EL.</div>
+
+<h2 id="friends">8 · Friends setup (shared model)</h2>
+<p>One engine (yours), one bot, one group. Friends share your market/plan data and only keep their own transactions.</p>
+<table>
+<tr><th>Friend needs</th><th>Detail</th></tr>
+<tr><td>A blank copy of your sheet</td><td>Same <code>Sheet1</code> columns, no data. <b>Do not share your real sheet</b> (it has your trades).</td></tr>
+<tr><td><code>friend_doorway.gs</code></td><td>Deployed on their copy — serves their transactions only.</td></tr>
+<tr><td>The dashboard</td><td>The same <code>SGRM_wsp_v8a.html</code>, configured with their doorway + <b>your feed URL</b>.</td></tr>
+<tr><td>Settings: BP + EL</td><td>Their own numbers (no Tiger access).</td></tr>
+<tr><td>Telegram</td><td>Join the group — alerts come from your bot. No friend bot needed.</td></tr>
+</table>
+<p><b>Where each thing comes from for a friend:</b> transactions/positions → their sheet; plan / regime / strike / batches / TQQQ history → your public feed (<code>daily_plan.json</code> / <code>regime.json</code>). They never touch your Google Sheet.</p>
+<div class="callout"><b>Two doorways, different roles:</b> <code>doorway.gs</code> (yours — full: writes &amp; serves the plan) and <code>friend_doorway.gs</code> (theirs — transactions only). They are not copies of each other.</div>
+
+<h2 id="cron">9 · Schedule (cron, MYT → ET)</h2>
+<table>
+<tr><th>MYT</th><th>ET</th><th>Job</th></tr>
+<tr><td>21:00 Mon–Fri</td><td>09:00 (pre-open)</td><td><b>Morning plan</b> — <code>pre_market_check.sh</code> (news + live inputs) then <code>daily_decision.py --live</code>. Always posts to Telegram.</td></tr>
+<tr><td>22:05 Mon–Fri</td><td>10:05 (post-open)</td><td><b>Verify</b> — refresh live data, re-run; Telegram only if the plan changed.</td></tr>
+<tr><td>12:00 Mon–Fri</td><td>—</td><td>Regime report.</td></tr>
+</table>
+<p>Times are interpreted in <code>Asia/Kuala_Lumpur</code> (set via <code>CRON_TZ</code>); ET shown for summer/EDT and shifts +1h in winter.</p>
+
+<h2 id="glossary">10 · Glossary</h2>
+<table>
+<tr><td><b>WSP</b></td><td>Weekly Short Put — the strategy of selling out-of-the-money puts for premium.</td></tr>
+<tr><td><b>Strike</b></td><td>The price at which you'd be obligated to buy TQQQ if assigned.</td></tr>
+<tr><td><b>Delta (δ)</b></td><td>Roughly the probability the option finishes in-the-money. We target ~0.20 (≈20%).</td></tr>
+<tr><td><b>DTE</b></td><td>Days to expiry. Target 45, exit by 21.</td></tr>
+<tr><td><b>Premium</b></td><td>Cash you collect for selling the put; yours to keep if it expires worthless.</td></tr>
+<tr><td><b>Red streak</b></td><td>Consecutive down-close days — drives how much you sell.</td></tr>
+<tr><td><b>Regime</b></td><td>RALLY / SIDEWAYS / DOWNTREND, from the 40-day range + VXN.</td></tr>
+<tr><td><b>VXN</b></td><td>Nasdaq-100 volatility index — the market's "fear gauge."</td></tr>
+<tr><td><b>Buying Power</b></td><td>Capacity to open new positions.</td></tr>
+<tr><td><b>Excess Liquidity</b></td><td>Margin cushion before the broker force-liquidates you (the real risk metric).</td></tr>
+<tr><td><b>Assignment</b></td><td>Being obligated to buy the shares because the put finished in-the-money.</td></tr>
+</table>
+
+<footer>
+SGRM WSP Desk — User Manual · Strategy v3.6 · TQQQ 0.2-Δ short-put system.<br>
+Source of truth: <code>STRATEGY.md</code> (constants &amp; gates) · <code>CHANGELOG.md</code> (version history). All trades are user-executed; the system only proposes.
+</footer>
+
+</main>
+</div>
+</body>
+</html>

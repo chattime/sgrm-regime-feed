@@ -1,14 +1,10 @@
 {
   "version": 1,
-  "timestamp": "2026-06-18T13:00:24Z",
+  "timestamp": "2026-06-18T14:05:28Z",
   "plan": {
-    "as_of": "2026-06-17",
+    "as_of": "2026-06-18",
     "user_id": "you",
     "recent_closes": [
-      {
-        "date": "2026-04-22",
-        "close": 60.21
-      },
       {
         "date": "2026-04-23",
         "close": 59.22
@@ -164,18 +160,13 @@
       {
         "date": "2026-06-17",
         "close": 77.54
+      },
+      {
+        "date": "2026-06-18",
+        "close": 81.62
       }
     ],
     "recent_days": [
-      {
-        "date": "2026-05-06",
-        "day": "Wed",
-        "close": 71.57,
-        "chg_pct": 6.2,
-        "streak": 2,
-        "ma40": 51.88,
-        "rsi14": 81.4
-      },
       {
         "date": "2026-05-07",
         "day": "Thu",
@@ -436,112 +427,116 @@
         "streak": -2,
         "ma40": 74.36,
         "rsi14": 43.9
+      },
+      {
+        "date": "2026-06-18",
+        "day": "Thu",
+        "close": 81.62,
+        "chg_pct": 5.26,
+        "streak": 1,
+        "ma40": 74.89,
+        "rsi14": 47.3
       }
     ],
     "calendar": {
       "next_opex": "2026-06-18",
-      "days_to_opex": 1,
+      "days_to_opex": 0,
       "next_witching": "2026-06-18",
-      "days_to_witching": 1,
+      "days_to_witching": 0,
       "next_nfp": "2026-07-02",
-      "days_to_nfp": 15,
+      "days_to_nfp": 14,
       "next_month_end": "2026-06-30",
-      "days_to_month_end": 13,
+      "days_to_month_end": 12,
       "next_quarter_end": "2026-06-30",
-      "days_to_quarter_end": 13,
+      "days_to_quarter_end": 12,
       "next_russell": "2026-06-26",
-      "days_to_russell": 9,
-      "next_vix_expiry": "2026-06-17",
-      "days_to_vix_expiry": 0,
+      "days_to_russell": 8,
+      "next_vix_expiry": "2026-07-15",
+      "days_to_vix_expiry": 27,
       "events": [
-        {
-          "event": "VIX expiry",
-          "date": "2026-06-17",
-          "days": 0
-        },
         {
           "event": "Monthly OPEX",
           "date": "2026-06-18",
-          "days": 1
+          "days": 0
         },
         {
           "event": "Quad-witching",
           "date": "2026-06-18",
-          "days": 1
+          "days": 0
         },
         {
           "event": "Russell reconstitution",
           "date": "2026-06-26",
-          "days": 9
+          "days": 8
         },
         {
           "event": "Month-end rebalance",
           "date": "2026-06-30",
-          "days": 13
+          "days": 12
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-06-30",
-          "days": 13
+          "days": 12
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-07-02",
-          "days": 15
+          "days": 14
+        },
+        {
+          "event": "VIX expiry",
+          "date": "2026-07-15",
+          "days": 27
         }
       ],
       "flags": [
-        "Monthly OPEX in 1d (2026-06-18)",
-        "Quad-witching in 1d (2026-06-18)",
-        "VIX expiry in 0d (2026-06-17)"
+        "Monthly OPEX in 0d (2026-06-18)",
+        "Quad-witching in 0d (2026-06-18)"
       ],
-      "days_to_rebalance": 13,
+      "days_to_rebalance": 12,
       "next_rebalance": "2026-06-30"
     },
     "econ_calendar": {
       "upcoming": [
         {
-          "event": "FOMC decision",
-          "date": "2026-06-17",
-          "days": 0
-        },
-        {
           "event": "PCE",
           "date": "2026-06-26",
-          "days": 9
+          "days": 8
         },
         {
           "event": "CPI",
           "date": "2026-07-14",
-          "days": 27
+          "days": 26
         },
         {
           "event": "PPI",
           "date": "2026-07-15",
-          "days": 28
+          "days": 27
         },
         {
           "event": "FOMC decision",
           "date": "2026-07-29",
-          "days": 42
+          "days": 41
         },
         {
           "event": "PCE",
           "date": "2026-07-31",
-          "days": 44
+          "days": 43
+        },
+        {
+          "event": "CPI",
+          "date": "2026-08-12",
+          "days": 55
         }
       ],
-      "flags": [
-        "FOMC decision today (2026-06-17)"
-      ],
-      "summary": "FOMC decision today (2026-06-17)",
-      "today": [
-        "FOMC decision"
-      ],
+      "flags": [],
+      "summary": "no major macro events in the next 5d",
+      "today": [],
       "next": {
-        "event": "FOMC decision",
-        "date": "2026-06-17",
-        "days": 0
+        "event": "PCE",
+        "date": "2026-06-26",
+        "days": 8
       }
     },
     "scalp_plan": {
@@ -553,22 +548,22 @@
         {
           "rung": 1,
           "drop_pct": 5.0,
-          "entry": 73.66,
-          "strike": 64.5,
-          "otm_pct": 12.4,
-          "delta": -0.24,
-          "credit": 2.78,
+          "entry": 77.54,
+          "strike": 68.5,
+          "otm_pct": 11.7,
+          "delta": -0.25,
+          "credit": 2.88,
           "exit_buyback": [
-            1.39,
-            1.95
+            1.44,
+            2.01
           ]
         },
         {
           "rung": 2,
           "drop_pct": 8.0,
-          "entry": 71.34,
-          "strike": 62.5,
-          "otm_pct": 12.4,
+          "entry": 75.09,
+          "strike": 66.0,
+          "otm_pct": 12.1,
           "delta": -0.24,
           "credit": 2.7,
           "exit_buyback": [
@@ -579,14 +574,14 @@
         {
           "rung": 3,
           "drop_pct": 11.0,
-          "entry": 69.01,
-          "strike": 60.5,
-          "otm_pct": 12.3,
+          "entry": 72.64,
+          "strike": 64.0,
+          "otm_pct": 11.9,
           "delta": -0.25,
-          "credit": 2.62,
+          "credit": 2.65,
           "exit_buyback": [
-            1.31,
-            1.84
+            1.32,
+            1.85
           ]
         }
       ],
@@ -599,22 +594,22 @@
       "note": "Exit = buy-to-close at +30–50% of credit. Credit est uses current VXN; a real spike prints richer."
     },
     "market": {
-      "tqqq_close": 77.54,
-      "vxn": 28.6,
-      "rsi": 44.0,
-      "red_streak": 2,
-      "green_streak": 0,
-      "green_before_red": 3,
-      "up_days_10d": 4,
-      "down_days_10d": 6,
+      "tqqq_close": 81.62,
+      "vxn": 26.8,
+      "rsi": 47.0,
+      "red_streak": 0,
+      "green_streak": 1,
+      "green_before_red": 1,
+      "up_days_10d": 5,
+      "down_days_10d": 5,
       "up_days_20d": 12,
       "down_days_20d": 8,
-      "condition": "2R",
+      "condition": "GREEN",
       "regime": "RALLY",
-      "vs_10d_high_pct": -5.5,
-      "ret_5d_pct": 11.9,
-      "ret_40d_pct": 35.1,
-      "above_ma_200_pct": 38.7
+      "vs_10d_high_pct": -4.0,
+      "ret_5d_pct": 7.4,
+      "ret_40d_pct": 35.6,
+      "above_ma_200_pct": 45.5
     },
     "pre_market": {
       "qqq_overnight_gap_pct": 1.63,
@@ -625,7 +620,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (1.9% from anchor)",
+        "reason": "no active streak (no anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -647,173 +642,27 @@
     },
     "drawdown_brake": {
       "band": "GREEN",
-      "anchor": 79.93,
-      "spot": 81.47,
-      "dd_pct": 1.9,
-      "reason": "drawdown OK (1.9% from anchor)"
+      "anchor": null,
+      "spot": 81.59,
+      "dd_pct": null,
+      "reason": "no active streak (no anchor)"
     },
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 77.9,
-    "hv_20d": 85.9,
-    "iv_hv": 0.91,
+    "atm_iv": 76.7,
+    "hv_20d": 86.2,
+    "iv_hv": 0.89,
     "iv_hv_mult": 0.5,
     "iv_hv_flag": "underpaid",
-    "iv_percentile": 93.0,
+    "iv_percentile": 86.0,
     "size_mult": 0.5,
-    "spot_reference": 81.47,
-    "spot_source": "live/pre-market",
-    "sizing_limiter": "portfolio cap (open units)",
-    "sizing_caps": {
-      "matrix (regime×streak)": 4,
-      "empirical cap (12)": 12,
-      "hard cap (50)": 50,
-      "buying power": 43,
-      "portfolio cap (open units)": 2
-    },
-    "sizing_mult_notes": [
-      "IV/HV 0.91 underpaid ×0.5"
-    ],
-    "action": "GO at RALLY tier",
-    "recommended_units": 2,
-    "recommended_strike": 55.0,
-    "recommended_dte_days": 36,
-    "batches": [
-      {
-        "units": 1,
-        "trigger_price": 80.25,
-        "drop_pct": 1.5,
-        "premium": 3.5
-      },
-      {
-        "units": 1,
-        "trigger_price": 79.34,
-        "drop_pct": 2.6,
-        "premium": 3.68
-      }
-    ],
-    "trace_json": {
-      "version": "v2.6",
-      "inputs": {
-        "tqqq_close": 77.54,
-        "vxn": 28.6,
-        "rsi": 44.0,
-        "red_streak": 2,
-        "green_before_red": 3,
-        "high_10d": 86.25,
-        "high_40d": 87.22,
-        "low_40d": 59.22,
-        "ma_200": 55.92,
-        "vs_10d_high_pct": -5.5,
-        "ret_5d_pct": 11.9,
-        "ret_40d_pct": 35.1,
-        "above_ma_200_pct": 38.7,
-        "capital": 828277.5
-      },
-      "gates": {
-        "layer1_v7": {
-          "pass": true,
-          "reason": "v7 gates pass (mult=1.0)",
-          "size_mult": 1.0
-        },
-        "layer4_empirical": {
-          "pass": true,
-          "reason": "empirical gates pass"
-        },
-        "layer5_news": {
-          "pass": true,
-          "reason": "no news shock",
-          "size_mult": 1.0
-        }
-      },
-      "sizing": {
-        "regime_locked": "RALLY",
-        "condition": "2R",
-        "base_units_from_matrix": 8,
-        "final_mult": 0.5,
-        "units_after_mult": 4,
-        "empirical_cap": 12,
-        "bp_cap_units": 43,
-        "portfolio_cap_units": 2,
-        "final_units": 2
-      },
-      "strike_derivation": {
-        "rule": "richest strike with |delta| ≤ 0.24 at spot (calibrated surface); live chain pick overrides",
-        "spot": 81.47,
-        "delta_cap": 0.24,
-        "plan_strike": 70.0,
-        "plan_strike_delta": -0.235,
-        "dte_target": 36
-      },
-      "batches": [
-        {
-          "units": 1,
-          "trigger_price": 80.25,
-          "drop_pct": 1.5,
-          "premium": 3.5
-        },
-        {
-          "units": 1,
-          "trigger_price": 79.34,
-          "drop_pct": 2.6,
-          "premium": 3.68
-        }
-      ],
-      "positions_context": {
-        "existing_open": 2,
-        "existing_units": 10
-      },
-      "confidence": {
-        "baseline_win_rate_pct": 87.7,
-        "rcp_win_rate_pct": 88.5,
-        "phase_b_win_rate_pct": 100.0,
-        "phase_c_win_rate_pct": 90.0,
-        "sample_size_trades": 60,
-        "backtest_period_years": 16
-      },
-      "live_data": {
-        "live_spot": 77.54,
-        "live_chain_atm_iv": 0.7791130065917968,
-        "live_chain_atm_strike": 77.0,
-        "live_put_call_ratio": 0.65,
-        "live_put_call_ratio_oi": 0.76,
-        "live_pcr_detail": {
-          "pcr_volume": 0.65,
-          "pcr_oi": 0.76,
-          "put_volume": 96098,
-          "call_volume": 147524,
-          "put_oi": 655018,
-          "call_oi": 860613
-        },
-        "live_chain_strike": 55.0,
-        "live_chain_bid": 1.11,
-        "live_chain_ask": 1.65,
-        "live_chain_mid": 1.38,
-        "live_chain_iv": 1.0019092559814449,
-        "live_chain_delta": -0.10329761345511557,
-        "live_chain_expiry": "2026-07-24",
-        "live_chain_identifier": "TQQQ  260724P00055000",
-        "live_chain_anchor_strike": 67.84750000000001,
-        "live_chain_anchor_otm": 0.125,
-        "live_chain_pick_method": "anchor_with_delta_cap",
-        "live_chain_no_entry_reason": null,
-        "live_chain_note": "nasdaq FOC: 7 candidates (OI≥50); 1 pass |δ|≤0.24 cap (news_mode=CLEAR, source=vxn+cross_asset+bash); anchor=$67.85 (spot × (1 − 2.5% drop − 10.0% MoS)); picked closest to anchor among acceptable; actual δ=-0.103, IV=100.2%, OTM=29.1%, DTE=36; BS r=0.045",
-        "news_mode": "CLEAR",
-        "news_mode_source": "vxn+cross_asset+bash",
-        "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.85 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.90%. Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
-        "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.85). Some money is moving to safety (long bonds +0.16%, the dollar +0.90%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
-        "news_size_mult": 1.0,
-        "news_delta_cap_applied": 0.24,
-        "data_source": "nasdaq_foc + local_bs",
-        "data_age_seconds": 1,
-        "existing_units": 0,
-        "broker_snapshot_possibly_stale": false,
-        "broker_snapshot_note": "Tiger position snapshot within refresh window"
-      }
-    },
-    "live_premium_bid": 1.11,
-    "live_premium_ask": 1.65,
-    "live_premium_iv": 1.0019092559814449,
-    "live_premium_delta": -0.10329761345511557
+    "action": "GREEN DAY — EXIT MODE",
+    "recommended_units": 0,
+    "batches": [],
+    "recommended_strike": 70.0,
+    "live_premium_bid": 3.1,
+    "live_premium_ask": 3.5,
+    "live_premium_iv": 0.8334182739257812,
+    "live_premium_delta": -0.23165079647922515
   },
   "pre_market": {
     "timestamp": "2026-06-18 12:30:05 UTC",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-06-18T12:02:52Z",
+  "timestamp": "2026-06-18T12:30:25Z",
   "plan": {
     "as_of": "2026-06-17",
     "user_id": "you",
@@ -611,24 +611,21 @@
       "down_days_20d": 8,
       "condition": "2R",
       "regime": "RALLY",
-      "vs_10d_high_pct": -6.2,
+      "vs_10d_high_pct": -5.9,
       "ret_5d_pct": 11.9,
       "ret_40d_pct": 35.1,
       "above_ma_200_pct": 38.7
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": 0.0,
-      "news_shock_score": 4,
-      "news_top_stories": [
-        "BMW stock slumps to 5-year low as Iran war and China slowdown spark profit warning",
-        "Strategy's Dividend-Paying Stock Crashes"
-      ],
-      "shock_level": "CAUTION"
+      "qqq_overnight_gap_pct": 1.63,
+      "news_shock_score": 0,
+      "news_top_stories": [],
+      "shock_level": "CLEAR"
     },
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (1.2% from anchor)",
+        "reason": "drawdown OK (1.6% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -644,55 +641,54 @@
       },
       "news": {
         "pass": true,
-        "reason": "CAUTION: all clear",
-        "size_mult": 0.5
+        "reason": "no news shock",
+        "size_mult": 1.0
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 79.93,
-      "spot": 80.92,
-      "dd_pct": 1.2,
-      "reason": "drawdown OK (1.2% from anchor)"
+      "spot": 81.17,
+      "dd_pct": 1.6,
+      "reason": "drawdown OK (1.6% from anchor)"
     },
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 78.0,
+    "atm_iv": 77.9,
     "hv_20d": 85.9,
     "iv_hv": 0.91,
     "iv_hv_mult": 0.5,
     "iv_hv_flag": "underpaid",
     "iv_percentile": 93.0,
-    "size_mult": 0.25,
-    "spot_reference": 80.92,
+    "size_mult": 0.5,
+    "spot_reference": 81.17,
     "spot_source": "live/pre-market",
     "sizing_limiter": "portfolio cap (open units)",
     "sizing_caps": {
-      "matrix (regime×streak)": 2,
+      "matrix (regime×streak)": 4,
       "empirical cap (12)": 12,
       "hard cap (50)": 50,
       "buying power": 43,
       "portfolio cap (open units)": 2
     },
     "sizing_mult_notes": [
-      "news CAUTION ×0.5",
       "IV/HV 0.91 underpaid ×0.5"
     ],
     "action": "GO at RALLY tier",
     "recommended_units": 2,
-    "recommended_strike": 67.0,
+    "recommended_strike": 55.0,
     "recommended_dte_days": 36,
     "batches": [
       {
         "units": 1,
-        "trigger_price": 79.71,
+        "trigger_price": 79.95,
         "drop_pct": 1.5,
-        "premium": 3.47
+        "premium": 3.56
       },
       {
         "units": 1,
-        "trigger_price": 78.81,
+        "trigger_price": 79.05,
         "drop_pct": 2.6,
-        "premium": 3.65
+        "premium": 3.74
       }
     ],
     "trace_json": {
@@ -707,11 +703,11 @@
         "high_40d": 87.22,
         "low_40d": 59.22,
         "ma_200": 55.92,
-        "vs_10d_high_pct": -6.2,
+        "vs_10d_high_pct": -5.9,
         "ret_5d_pct": 11.9,
         "ret_40d_pct": 35.1,
         "above_ma_200_pct": 38.7,
-        "capital": 825819.2
+        "capital": 826586.4
       },
       "gates": {
         "layer1_v7": {
@@ -725,16 +721,16 @@
         },
         "layer5_news": {
           "pass": true,
-          "reason": "CAUTION: all clear",
-          "size_mult": 0.5
+          "reason": "no news shock",
+          "size_mult": 1.0
         }
       },
       "sizing": {
         "regime_locked": "RALLY",
         "condition": "2R",
         "base_units_from_matrix": 8,
-        "final_mult": 0.25,
-        "units_after_mult": 2,
+        "final_mult": 0.5,
+        "units_after_mult": 4,
         "empirical_cap": 12,
         "bp_cap_units": 43,
         "portfolio_cap_units": 2,
@@ -742,24 +738,24 @@
       },
       "strike_derivation": {
         "rule": "richest strike with |delta| ≤ 0.24 at spot (calibrated surface); live chain pick overrides",
-        "spot": 80.92,
+        "spot": 81.17,
         "delta_cap": 0.24,
-        "plan_strike": 69.5,
-        "plan_strike_delta": -0.234,
+        "plan_strike": 70.0,
+        "plan_strike_delta": -0.239,
         "dte_target": 36
       },
       "batches": [
         {
           "units": 1,
-          "trigger_price": 79.71,
+          "trigger_price": 79.95,
           "drop_pct": 1.5,
-          "premium": 3.47
+          "premium": 3.56
         },
         {
           "units": 1,
-          "trigger_price": 78.81,
+          "trigger_price": 79.05,
           "drop_pct": 2.6,
-          "premium": 3.65
+          "premium": 3.74
         }
       ],
       "positions_context": {
@@ -776,8 +772,8 @@
       },
       "live_data": {
         "live_spot": 77.54,
-        "live_chain_atm_iv": 0.7803335189819336,
-        "live_chain_atm_strike": 78.0,
+        "live_chain_atm_iv": 0.7791130065917968,
+        "live_chain_atm_strike": 77.0,
         "live_put_call_ratio": 0.65,
         "live_put_call_ratio_oi": 0.76,
         "live_pcr_detail": {
@@ -785,47 +781,44 @@
           "pcr_oi": 0.76,
           "put_volume": 96098,
           "call_volume": 147524,
-          "put_oi": 640236,
-          "call_oi": 843227
+          "put_oi": 655018,
+          "call_oi": 860613
         },
-        "live_chain_strike": 67.0,
-        "live_chain_bid": 2.33,
-        "live_chain_ask": 4.0,
-        "live_chain_mid": 3.165,
-        "live_chain_iv": 0.8168132781982422,
-        "live_chain_delta": -0.23727152523123285,
+        "live_chain_strike": 55.0,
+        "live_chain_bid": 1.11,
+        "live_chain_ask": 1.65,
+        "live_chain_mid": 1.38,
+        "live_chain_iv": 1.0019092559814449,
+        "live_chain_delta": -0.10329761345511557,
         "live_chain_expiry": "2026-07-24",
-        "live_chain_identifier": "TQQQ  260724P00067000",
+        "live_chain_identifier": "TQQQ  260724P00055000",
         "live_chain_anchor_strike": 67.84750000000001,
         "live_chain_anchor_otm": 0.125,
         "live_chain_pick_method": "anchor_with_delta_cap",
         "live_chain_no_entry_reason": null,
-        "live_chain_note": "nasdaq FOC: 21 candidates (OI≥50); 6 pass |δ|≤0.27 cap (news_mode=CAUTION, source=vxn+cross_asset+bash); anchor=$67.85 (spot × (1 − 2.5% drop − 10.0% MoS)); picked closest to anchor among acceptable; actual δ=-0.237, IV=81.7%, OTM=13.6%, DTE=36; BS r=0.045",
-        "news_mode": "CAUTION",
+        "live_chain_note": "nasdaq FOC: 9 candidates (OI≥50); 1 pass |δ|≤0.24 cap (news_mode=CLEAR, source=vxn+cross_asset+bash); anchor=$67.85 (spot × (1 − 2.5% drop − 10.0% MoS)); picked closest to anchor among acceptable; actual δ=-0.103, IV=100.2%, OTM=29.1%, DTE=36; BS r=0.045",
+        "news_mode": "CLEAR",
         "news_mode_source": "vxn+cross_asset+bash",
-        "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.84 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: GLD +0.36%, UUP +0.11%; 3m/10y normal (+80bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
-        "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.84). Some money is moving to safety (gold +0.36%, long bonds +0.15%, the dollar +0.11%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
-        "news_size_mult": 0.5,
-        "news_delta_cap_applied": 0.27,
+        "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.85 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.90%. Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
+        "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.85). Some money is moving to safety (long bonds +0.16%, the dollar +0.90%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+        "news_size_mult": 1.0,
+        "news_delta_cap_applied": 0.24,
         "data_source": "nasdaq_foc + local_bs",
-        "data_age_seconds": 3,
+        "data_age_seconds": 1,
         "existing_units": 0,
-        "broker_snapshot_possibly_stale": true,
-        "broker_snapshot_note": "Tiger position snapshot likely pre-refresh — treat Sheet1 as authoritative"
+        "broker_snapshot_possibly_stale": false,
+        "broker_snapshot_note": "Tiger position snapshot within refresh window"
       }
     },
-    "live_premium_bid": 2.33,
-    "live_premium_ask": 4.0,
-    "live_premium_iv": 0.8168132781982422,
-    "live_premium_delta": -0.23727152523123285
+    "live_premium_bid": 1.11,
+    "live_premium_ask": 1.65,
+    "live_premium_iv": 1.0019092559814449,
+    "live_premium_delta": -0.10329761345511557
   },
   "pre_market": {
-    "timestamp": "2026-06-17 14:41:22 UTC",
-    "news_shock_score": 4,
-    "news_top_stories": [
-      "BMW stock slumps to 5-year low as Iran war and China slowdown spark profit warning",
-      "Strategy's Dividend-Paying Stock Crashes"
-    ],
+    "timestamp": "2026-06-18 12:30:05 UTC",
+    "news_shock_score": 0,
+    "news_top_stories": [],
     "event_alert": "",
     "regime": {
       "vxn": 0,
@@ -833,45 +826,45 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": 0.0,
-    "shock_level": "CAUTION",
+    "qqq_overnight_gap_pct": 1.63,
+    "shock_level": "CLEAR",
     "reason": "all clear",
-    "delta_cap": 0.27,
-    "size_mult": 0.5,
+    "delta_cap": 0.24,
+    "size_mult": 1.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.84 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: GLD +0.36%, UUP +0.11%; 3m/10y normal (+80bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
-    "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.84). Some money is moving to safety (gold +0.36%, long bonds +0.15%, the dollar +0.11%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.85 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.90%. Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
+    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.85). Some money is moving to safety (long bonds +0.16%, the dollar +0.90%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 16.38,
-      "vix3m_back": 19.52,
-      "term_ratio": 0.839,
+      "vix_front": 17.36,
+      "vix3m_back": 20.51,
+      "term_ratio": 0.846,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
         "prev": 397.63,
-        "curr": 399.07,
-        "change_pct": 0.36
+        "curr": 388.6,
+        "change_pct": -2.27
       },
       "uup": {
         "prev": 27.93,
-        "curr": 27.9599,
-        "change_pct": 0.11
+        "curr": 28.18,
+        "change_pct": 0.9
       },
       "tlt": {
         "prev": 86.19,
-        "curr": 86.32,
-        "change_pct": 0.15
+        "curr": 86.33,
+        "change_pct": 0.16
       },
-      "yield_10y": 4.43,
-      "yield_3m": 3.63,
-      "yield_5y": 4.162,
-      "spread_3m10y_bp": 80,
-      "spread_5y10y_bp": 27,
-      "curve_inverted_3m10y": false
+      "yield_10y": null,
+      "yield_3m": null,
+      "yield_5y": null,
+      "spread_3m10y_bp": null,
+      "spread_5y10y_bp": null,
+      "curve_inverted_3m10y": null
     },
-    "news_classifier_run_at": "2026-06-17T14:41:24.402102+00:00"
+    "news_classifier_run_at": "2026-06-18T12:30:06.911888+00:00"
   }
 }

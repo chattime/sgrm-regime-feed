@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-06-18T12:30:25Z",
+  "timestamp": "2026-06-18T13:00:24Z",
   "plan": {
     "as_of": "2026-06-17",
     "user_id": "you",
@@ -611,7 +611,7 @@
       "down_days_20d": 8,
       "condition": "2R",
       "regime": "RALLY",
-      "vs_10d_high_pct": -5.9,
+      "vs_10d_high_pct": -5.5,
       "ret_5d_pct": 11.9,
       "ret_40d_pct": 35.1,
       "above_ma_200_pct": 38.7
@@ -625,7 +625,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (1.6% from anchor)",
+        "reason": "drawdown OK (1.9% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -648,9 +648,9 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 79.93,
-      "spot": 81.17,
-      "dd_pct": 1.6,
-      "reason": "drawdown OK (1.6% from anchor)"
+      "spot": 81.47,
+      "dd_pct": 1.9,
+      "reason": "drawdown OK (1.9% from anchor)"
     },
     "atm_iv_source": "nasdaq chain",
     "atm_iv": 77.9,
@@ -660,7 +660,7 @@
     "iv_hv_flag": "underpaid",
     "iv_percentile": 93.0,
     "size_mult": 0.5,
-    "spot_reference": 81.17,
+    "spot_reference": 81.47,
     "spot_source": "live/pre-market",
     "sizing_limiter": "portfolio cap (open units)",
     "sizing_caps": {
@@ -680,15 +680,15 @@
     "batches": [
       {
         "units": 1,
-        "trigger_price": 79.95,
+        "trigger_price": 80.25,
         "drop_pct": 1.5,
-        "premium": 3.56
+        "premium": 3.5
       },
       {
         "units": 1,
-        "trigger_price": 79.05,
+        "trigger_price": 79.34,
         "drop_pct": 2.6,
-        "premium": 3.74
+        "premium": 3.68
       }
     ],
     "trace_json": {
@@ -703,11 +703,11 @@
         "high_40d": 87.22,
         "low_40d": 59.22,
         "ma_200": 55.92,
-        "vs_10d_high_pct": -5.9,
+        "vs_10d_high_pct": -5.5,
         "ret_5d_pct": 11.9,
         "ret_40d_pct": 35.1,
         "above_ma_200_pct": 38.7,
-        "capital": 826586.4
+        "capital": 828277.5
       },
       "gates": {
         "layer1_v7": {
@@ -738,24 +738,24 @@
       },
       "strike_derivation": {
         "rule": "richest strike with |delta| ≤ 0.24 at spot (calibrated surface); live chain pick overrides",
-        "spot": 81.17,
+        "spot": 81.47,
         "delta_cap": 0.24,
         "plan_strike": 70.0,
-        "plan_strike_delta": -0.239,
+        "plan_strike_delta": -0.235,
         "dte_target": 36
       },
       "batches": [
         {
           "units": 1,
-          "trigger_price": 79.95,
+          "trigger_price": 80.25,
           "drop_pct": 1.5,
-          "premium": 3.56
+          "premium": 3.5
         },
         {
           "units": 1,
-          "trigger_price": 79.05,
+          "trigger_price": 79.34,
           "drop_pct": 2.6,
-          "premium": 3.74
+          "premium": 3.68
         }
       ],
       "positions_context": {
@@ -796,7 +796,7 @@
         "live_chain_anchor_otm": 0.125,
         "live_chain_pick_method": "anchor_with_delta_cap",
         "live_chain_no_entry_reason": null,
-        "live_chain_note": "nasdaq FOC: 9 candidates (OI≥50); 1 pass |δ|≤0.24 cap (news_mode=CLEAR, source=vxn+cross_asset+bash); anchor=$67.85 (spot × (1 − 2.5% drop − 10.0% MoS)); picked closest to anchor among acceptable; actual δ=-0.103, IV=100.2%, OTM=29.1%, DTE=36; BS r=0.045",
+        "live_chain_note": "nasdaq FOC: 7 candidates (OI≥50); 1 pass |δ|≤0.24 cap (news_mode=CLEAR, source=vxn+cross_asset+bash); anchor=$67.85 (spot × (1 − 2.5% drop − 10.0% MoS)); picked closest to anchor among acceptable; actual δ=-0.103, IV=100.2%, OTM=29.1%, DTE=36; BS r=0.045",
         "news_mode": "CLEAR",
         "news_mode_source": "vxn+cross_asset+bash",
         "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.85 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.90%. Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-06-23T06:23:42Z",
+  "timestamp": "2026-06-23T06:30:52Z",
   "plan": {
     "as_of": "2026-06-23",
     "user_id": "you",
@@ -647,9 +647,9 @@
         "size_mult": 1.0
       },
       "news": {
-        "pass": true,
-        "reason": "v3.12 THROTTLE: soft caution: half size, tighter δ (news=SHOCK, risk_off=CLEAR 0/10) (news demoted: SHOCK→CAUTION uncorroborated by risk-off/Type-B) | legacy news_shock overridden by corroboration rule",
-        "size_mult": 0.5
+        "pass": false,
+        "reason": "NEWS SHOCK: news_shock_score=7 >=7",
+        "size_mult": 0
       }
     },
     "drawdown_brake": {
@@ -659,180 +659,20 @@
       "dd_pct": -0.0,
       "reason": "drawdown OK (-0.0% from anchor)"
     },
-    "atm_iv_source": "nasdaq chain",
-    "atm_iv": 72.8,
-    "hv_20d": 87.6,
-    "iv_hv": 0.83,
-    "iv_hv_mult": 0.5,
-    "iv_hv_flag": "underpaid",
-    "iv_percentile": 90.0,
-    "size_mult": 0.25,
-    "sizing_mode": "matrix",
-    "spot_reference": 82.58,
-    "spot_source": "live/pre-market",
-    "strike_source": "nasdaq chain",
-    "sizing_limiter": "matrix (regime×streak)",
-    "sizing_caps": {
-      "matrix (regime×streak)": 2,
-      "empirical cap (12)": 12,
-      "hard cap (50)": 50,
-      "buying power": 21,
-      "portfolio cap (open units)": 12
-    },
-    "sizing_mult_notes": [
-      "news SHOCK ×0.5",
-      "IV/HV 0.83 underpaid ×0.5"
+    "action": "NO ENTRY",
+    "size_mult": 0,
+    "recommended_units": 0,
+    "blocking_reasons": [
+      "NEWS SHOCK: news_shock_score=7 >=7"
     ],
-    "action": "GO at RALLY tier",
-    "recommended_units": 2,
+    "batches": [],
     "recommended_strike": 68.0,
-    "recommended_dte_days": 38,
-    "batches": [
-      {
-        "units": 1,
-        "trigger_price": 80.85,
-        "drop_pct": 2.1,
-        "premium": 2.95
-      },
-      {
-        "units": 1,
-        "trigger_price": 79.93,
-        "drop_pct": 3.2,
-        "premium": 3.1
-      }
-    ],
-    "capital": {
-      "mode": "cash_secured",
-      "reserve_pct": 0.3,
-      "cap_total": 147593.0,
-      "already_committed": 0,
-      "available_for_new": 147593.0,
-      "this_plan_will_use": 13600.0,
-      "pct_of_cap": 9.2
-    },
-    "trace_json": {
-      "version": "v2.6",
-      "inputs": {
-        "tqqq_close": 82.58,
-        "vxn": 27.7,
-        "rsi": 47.0,
-        "red_streak": 1,
-        "green_before_red": 1,
-        "high_10d": 85.11,
-        "high_40d": 87.22,
-        "low_40d": 60.74,
-        "ma_200": 56.31,
-        "vs_10d_high_pct": -3.0,
-        "ret_5d_pct": 6.5,
-        "ret_40d_pct": 39.4,
-        "above_ma_200_pct": 46.7,
-        "capital": 859085.83
-      },
-      "gates": {
-        "layer1_v7": {
-          "pass": true,
-          "reason": "v7 gates pass (mult=1.0)",
-          "size_mult": 1.0
-        },
-        "layer4_empirical": {
-          "pass": true,
-          "reason": "empirical gates pass"
-        },
-        "layer5_news": {
-          "pass": true,
-          "reason": "v3.12 THROTTLE: soft caution: half size, tighter δ (news=SHOCK, risk_off=CLEAR 0/10) (news demoted: SHOCK→CAUTION uncorroborated by risk-off/Type-B) | legacy news_shock overridden by corroboration rule",
-          "size_mult": 0.5
-        }
-      },
-      "sizing": {
-        "regime_locked": "RALLY",
-        "condition": "1R",
-        "base_units_from_matrix": 8,
-        "final_mult": 0.25,
-        "units_after_mult": 2,
-        "empirical_cap": 12,
-        "bp_cap_units": 21,
-        "portfolio_cap_units": 12,
-        "final_units": 2
-      },
-      "strike_derivation": {
-        "rule": "richest strike with |delta| ≤ 0.24 at spot (calibrated surface); live chain pick overrides",
-        "spot": 82.58,
-        "delta_cap": 0.24,
-        "plan_strike": 68.0,
-        "plan_strike_delta": -0.194,
-        "dte_target": 38
-      },
-      "batches": [
-        {
-          "units": 1,
-          "trigger_price": 80.85,
-          "drop_pct": 2.1,
-          "premium": 2.95
-        },
-        {
-          "units": 1,
-          "trigger_price": 79.93,
-          "drop_pct": 3.2,
-          "premium": 3.1
-        }
-      ],
-      "positions_context": {
-        "existing_open": 0,
-        "existing_units": 0
-      },
-      "confidence": {
-        "baseline_win_rate_pct": 87.7,
-        "rcp_win_rate_pct": 88.5,
-        "phase_b_win_rate_pct": 100.0,
-        "phase_c_win_rate_pct": 90.0,
-        "sample_size_trades": 60,
-        "backtest_period_years": 16
-      },
-      "live_data": {
-        "live_spot": 82.58,
-        "live_chain_atm_iv": 0.728463,
-        "live_chain_atm_strike": 83.0,
-        "live_put_call_ratio": 1.48,
-        "live_put_call_ratio_oi": 0.68,
-        "live_pcr_detail": {
-          "pcr_volume": 1.48,
-          "pcr_oi": 0.68,
-          "put_volume": 117566,
-          "call_volume": 79653,
-          "put_oi": 481138,
-          "call_oi": 707372
-        },
-        "live_chain_strike": 68.0,
-        "live_chain_bid": 2.75,
-        "live_chain_ask": 3.05,
-        "live_chain_mid": 2.9,
-        "live_chain_iv": 0.850518,
-        "live_chain_delta": -0.197411,
-        "live_chain_expiry": "2026-07-31",
-        "live_chain_identifier": "TQQQ  260731P00068000",
-        "live_chain_anchor_strike": 72.2575,
-        "live_chain_anchor_otm": 0.125,
-        "live_chain_pick_method": "tiger_native_delta",
-        "live_chain_no_entry_reason": null,
-        "live_chain_note": "tiger native δ: picked $68 (δ=-0.197, IV=85.1%, target 0.2, cap 0.20); spot $82.58; 44 strikes w/ greeks",
-        "news_mode": "SHOCK",
-        "news_mode_source": "vxn+cross_asset+bash",
-        "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 0.88 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: UUP +0.43%, TLT +0.49%; 3m/10y normal (+79bp). Combine: single-signal CAUTION. Bash[SHOCK]: news_shock_score=7 >=7. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=SHOCK → SHOCK.",
-        "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is calm — the fear-gauge term structure is normal (ratio 0.88). Some money is moving to safety (long bonds +0.49%, the dollar +0.43%). Headlines / overnight flagged SHOCK: news_shock_score=7 >=7. We take the most cautious of these signals to set the day.",
-        "news_size_mult": 0.0,
-        "news_delta_cap_applied": 0.2,
-        "data_source": "tiger_chain(native δ) + nasdaq_spot/pcr",
-        "data_age_seconds": 3,
-        "existing_units": 0,
-        "broker_snapshot_possibly_stale": true,
-        "broker_snapshot_note": "Tiger position snapshot likely pre-refresh — treat Sheet1 as authoritative"
-      }
-    },
     "live_premium_bid": 2.75,
     "live_premium_ask": 3.05,
     "live_premium_iv": 0.850518,
-    "live_premium_delta": -0.197411
+    "live_premium_delta": -0.197411,
+    "engine_run_at_iso": "2026-06-23T06:28:03Z",
+    "engine_run_at": 1782196083.080015
   },
   "pre_market": {
     "timestamp": "2026-06-22 12:30:05 UTC",

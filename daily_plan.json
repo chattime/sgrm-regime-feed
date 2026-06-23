@@ -1,24 +1,20 @@
 {
   "version": 1,
-  "timestamp": "2026-06-23T12:03:10Z",
+  "timestamp": "2026-06-23T14:05:28Z",
   "plan": {
     "as_of": "2026-06-23",
     "user_id": "you",
     "pt_overrides": {},
     "pt_overrides_meta": {
-      "intraday_strong": false,
-      "today_close": 82.58000183105469,
-      "today_open": 83.94999694824219,
+      "intraday_strong": true,
+      "today_close": 77.18000030517578,
+      "today_open": 75.12000274658203,
       "standard_pt": 0.15,
       "bumped_pt": 0.18,
       "bump_lower": 0.12,
       "enabled": true
     },
     "recent_closes": [
-      {
-        "date": "2026-04-24",
-        "close": 62.56
-      },
       {
         "date": "2026-04-27",
         "close": 62.64
@@ -174,18 +170,13 @@
       {
         "date": "2026-06-22",
         "close": 82.58
+      },
+      {
+        "date": "2026-06-23",
+        "close": 77.18
       }
     ],
     "recent_days": [
-      {
-        "date": "2026-05-08",
-        "day": "Fri",
-        "close": 76.28,
-        "chg_pct": 6.92,
-        "streak": 1,
-        "ma40": 53.17,
-        "rsi14": 84.2
-      },
       {
         "date": "2026-05-11",
         "day": "Mon",
@@ -446,6 +437,15 @@
         "streak": -1,
         "ma40": 75.51,
         "rsi14": 46.8
+      },
+      {
+        "date": "2026-06-23",
+        "day": "Tue",
+        "close": 77.18,
+        "chg_pct": -6.54,
+        "streak": -2,
+        "ma40": 75.87,
+        "rsi14": 41.3
       }
     ],
     "calendar": {
@@ -557,9 +557,22 @@
         {
           "rung": 1,
           "drop_pct": 5.0,
-          "entry": 78.45,
-          "strike": 69.0,
-          "otm_pct": 12.0,
+          "entry": 73.32,
+          "strike": 64.0,
+          "otm_pct": 12.7,
+          "delta": -0.25,
+          "credit": 3.03,
+          "exit_buyback": [
+            1.51,
+            2.12
+          ]
+        },
+        {
+          "rung": 2,
+          "drop_pct": 8.0,
+          "entry": 71.01,
+          "strike": 62.0,
+          "otm_pct": 12.7,
           "delta": -0.25,
           "credit": 2.93,
           "exit_buyback": [
@@ -568,29 +581,16 @@
           ]
         },
         {
-          "rung": 2,
-          "drop_pct": 8.0,
-          "entry": 75.97,
-          "strike": 66.5,
-          "otm_pct": 12.5,
-          "delta": -0.24,
-          "credit": 2.76,
-          "exit_buyback": [
-            1.38,
-            1.93
-          ]
-        },
-        {
           "rung": 3,
           "drop_pct": 11.0,
-          "entry": 73.5,
-          "strike": 64.5,
-          "otm_pct": 12.2,
-          "delta": -0.24,
-          "credit": 2.71,
+          "entry": 68.69,
+          "strike": 60.0,
+          "otm_pct": 12.7,
+          "delta": -0.25,
+          "credit": 2.85,
           "exit_buyback": [
-            1.36,
-            1.9
+            1.42,
+            1.99
           ]
         }
       ],
@@ -603,36 +603,37 @@
       "note": "Exit = buy-to-close at +30–50% of credit. Credit est uses current VXN; a real spike prints richer."
     },
     "market": {
-      "tqqq_close": 82.58,
-      "vxn": 27.7,
-      "rsi": 47.0,
-      "red_streak": 1,
+      "tqqq_close": 77.18,
+      "vxn": 31.4,
+      "rsi": 41.0,
+      "red_streak": 2,
       "green_streak": 0,
       "green_before_red": 1,
-      "up_days_10d": 5,
-      "down_days_10d": 5,
-      "up_days_20d": 11,
-      "down_days_20d": 9,
-      "condition": "1R",
-      "regime": "RALLY",
-      "vs_10d_high_pct": -3.0,
-      "ret_5d_pct": 6.5,
-      "ret_40d_pct": 39.4,
-      "above_ma_200_pct": 46.7
+      "up_days_10d": 4,
+      "down_days_10d": 6,
+      "up_days_20d": 10,
+      "down_days_20d": 10,
+      "condition": "2R",
+      "regime": "SIDEWAYS",
+      "vs_10d_high_pct": -9.1,
+      "ret_5d_pct": -8.8,
+      "ret_40d_pct": 23.4,
+      "above_ma_200_pct": 36.7
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": 0.19,
-      "news_shock_score": 7,
+      "qqq_overnight_gap_pct": -2.82,
+      "news_shock_score": 4,
       "news_top_stories": [
-        "China imposes trade curbs on dozens of U.S. firms in retaliation for Pentagon blacklist",
-        "A 40% market crash is lurking in the IPO pipeline. SpaceX and OpenAI could trigger it."
+        "Stock market today: Nasdaq, S&P 500 futures plunge as global chip sell-off spurs AI doubts",
+        "Nakamoto Shuts Its Last Healthcare Clinics to Go All-In on Bitcoin",
+        "RBC initiates GE HealthCare as it sees AI-led innovation cycle driving growth"
       ],
       "shock_level": "SHOCK"
     },
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-0.0% from anchor)",
+        "reason": "drawdown OK (-6.3% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -642,44 +643,46 @@
         "size_mult": 1.0
       },
       "empirical": {
-        "pass": true,
-        "reason": "empirical gates pass",
-        "size_mult": 1.0
+        "pass": false,
+        "reason": "empirical: 5d return -8.8% < -7.0%",
+        "size_mult": 0
       },
       "news": {
         "pass": false,
-        "reason": "NEWS SHOCK: news_shock_score=7 >=7",
-        "size_mult": 0
+        "reason": "v3.12 HALT: halt new entries (news=SHOCK, risk_off=CAUTION 3/10)",
+        "size_mult": 0.0
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 82.58,
-      "spot": 82.58,
-      "dd_pct": -0.0,
-      "reason": "drawdown OK (-0.0% from anchor)"
+      "spot": 77.38,
+      "dd_pct": -6.3,
+      "reason": "drawdown OK (-6.3% from anchor)"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "NEWS SHOCK: news_shock_score=7 >=7"
+      "empirical: 5d return -8.8% < -7.0%",
+      "v3.12 HALT: halt new entries (news=SHOCK, risk_off=CAUTION 3/10)"
     ],
     "batches": [],
     "recommended_strike": 68.0,
-    "live_premium_bid": 2.75,
-    "live_premium_ask": 3.05,
+    "live_premium_bid": 4.1,
+    "live_premium_ask": 4.9,
     "live_premium_iv": 0.850518,
     "live_premium_delta": -0.197411,
-    "engine_run_at_iso": "2026-06-23T06:28:03Z",
-    "engine_run_at": 1782196083.080015
+    "engine_run_at_iso": "2026-06-23T14:05:24Z",
+    "engine_run_at": 1782223524.258254
   },
   "pre_market": {
-    "timestamp": "2026-06-22 12:30:05 UTC",
-    "news_shock_score": 7,
+    "timestamp": "2026-06-23 12:30:06 UTC",
+    "news_shock_score": 4,
     "news_top_stories": [
-      "China imposes trade curbs on dozens of U.S. firms in retaliation for Pentagon blacklist",
-      "A 40% market crash is lurking in the IPO pipeline. SpaceX and OpenAI could trigger it."
+      "Stock market today: Nasdaq, S&P 500 futures plunge as global chip sell-off spurs AI doubts",
+      "Nakamoto Shuts Its Last Healthcare Clinics to Go All-In on Bitcoin",
+      "RBC initiates GE HealthCare as it sees AI-led innovation cycle driving growth"
     ],
     "event_alert": "",
     "regime": {
@@ -688,37 +691,37 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": 0.19,
+    "qqq_overnight_gap_pct": -2.82,
     "shock_level": "SHOCK",
-    "reason": "news_shock_score=7 >=7",
+    "reason": "qqq_gap=-2.82% < -1.5%",
     "delta_cap": 0.2,
     "size_mult": 0.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 0.88 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: UUP +0.43%, TLT +0.49%; 3m/10y normal (+79bp). Combine: single-signal CAUTION. Bash[SHOCK]: news_shock_score=7 >=7. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=SHOCK → SHOCK.",
-    "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is calm — the fear-gauge term structure is normal (ratio 0.88). Some money is moving to safety (long bonds +0.49%, the dollar +0.43%). Headlines / overnight flagged SHOCK: news_shock_score=7 >=7. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 1.00 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.21%; 3m/10y normal (+79bp). Combine: both signals CLEAR. Bash[SHOCK]: qqq_gap=-2.82% < -1.5%. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=SHOCK → SHOCK.",
+    "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is spiking — short-term fear is above the 3-month level (ratio 1.00), a stress sign. Some money is moving to safety (the dollar +0.21%). Headlines / overnight flagged SHOCK: qqq_gap=-2.82% < -1.5%. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 17.19,
+      "vix_front": 19.6,
       "vix3m_back": 19.57,
-      "term_ratio": 0.878,
-      "term_inverted": false
+      "term_ratio": 1.002,
+      "term_inverted": true
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 388.6,
-        "curr": 387.12,
-        "change_pct": -0.38
+        "prev": 387.12,
+        "curr": 384.59,
+        "change_pct": -0.65
       },
       "uup": {
-        "prev": 28.18,
-        "curr": 28.3,
-        "change_pct": 0.43
+        "prev": 28.3,
+        "curr": 28.36,
+        "change_pct": 0.21
       },
       "tlt": {
-        "prev": 86.33,
-        "curr": 86.75,
-        "change_pct": 0.49
+        "prev": 86.75,
+        "curr": 86.09,
+        "change_pct": -0.76
       },
       "yield_10y": 4.451,
       "yield_3m": 3.658,
@@ -727,6 +730,6 @@
       "spread_5y10y_bp": 23,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-06-22T12:30:06.946737+00:00"
+    "news_classifier_run_at": "2026-06-23T12:30:07.606575+00:00"
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-06-23T20:30:22Z",
+  "timestamp": "2026-06-24T12:03:53Z",
   "plan": {
-    "as_of": "2026-06-23",
+    "as_of": "2026-06-24",
     "user_id": "you",
     "pt_overrides": {},
     "pt_overrides_meta": {
@@ -450,58 +450,60 @@
     ],
     "calendar": {
       "next_opex": "2026-07-17",
-      "days_to_opex": 24,
+      "days_to_opex": 23,
       "next_witching": "2026-09-18",
-      "days_to_witching": 87,
+      "days_to_witching": 86,
       "next_nfp": "2026-07-02",
-      "days_to_nfp": 9,
+      "days_to_nfp": 8,
       "next_month_end": "2026-06-30",
-      "days_to_month_end": 7,
+      "days_to_month_end": 6,
       "next_quarter_end": "2026-06-30",
-      "days_to_quarter_end": 7,
+      "days_to_quarter_end": 6,
       "next_russell": "2026-06-26",
-      "days_to_russell": 3,
+      "days_to_russell": 2,
       "next_vix_expiry": "2026-07-15",
-      "days_to_vix_expiry": 22,
+      "days_to_vix_expiry": 21,
       "events": [
         {
           "event": "Russell reconstitution",
           "date": "2026-06-26",
-          "days": 3
+          "days": 2
         },
         {
           "event": "Month-end rebalance",
           "date": "2026-06-30",
-          "days": 7
+          "days": 6
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-06-30",
-          "days": 7
+          "days": 6
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-07-02",
-          "days": 9
+          "days": 8
         },
         {
           "event": "VIX expiry",
           "date": "2026-07-15",
-          "days": 22
+          "days": 21
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-07-17",
-          "days": 24
+          "days": 23
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 87
+          "days": 86
         }
       ],
-      "flags": [],
-      "days_to_rebalance": 7,
+      "flags": [
+        "Russell reconstitution in 2d (2026-06-26)"
+      ],
+      "days_to_rebalance": 6,
       "next_rebalance": "2026-06-30"
     },
     "econ_calendar": {
@@ -509,43 +511,43 @@
         {
           "event": "PCE",
           "date": "2026-06-26",
-          "days": 3
+          "days": 2
         },
         {
           "event": "CPI",
           "date": "2026-07-14",
-          "days": 21
+          "days": 20
         },
         {
           "event": "PPI",
           "date": "2026-07-15",
-          "days": 22
+          "days": 21
         },
         {
           "event": "FOMC decision",
           "date": "2026-07-29",
-          "days": 36
+          "days": 35
         },
         {
           "event": "PCE",
           "date": "2026-07-31",
-          "days": 38
+          "days": 37
         },
         {
           "event": "CPI",
           "date": "2026-08-12",
-          "days": 50
+          "days": 49
         }
       ],
       "flags": [
-        "PCE in 3d (2026-06-26)"
+        "PCE in 2d (2026-06-26)"
       ],
-      "summary": "PCE in 3d (2026-06-26)",
+      "summary": "PCE in 2d (2026-06-26)",
       "today": [],
       "next": {
         "event": "PCE",
         "date": "2026-06-26",
-        "days": 3
+        "days": 2
       }
     },
     "scalp_plan": {
@@ -615,7 +617,7 @@
       "down_days_20d": 10,
       "condition": "2R",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -11.8,
+      "vs_10d_high_pct": -11.5,
       "ret_5d_pct": -12.0,
       "ret_40d_pct": 19.0,
       "above_ma_200_pct": 31.9
@@ -633,7 +635,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-9.1% from anchor)",
+        "reason": "drawdown OK (-8.8% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -645,27 +647,27 @@
       "empirical": {
         "pass": false,
         "reason": "empirical: 5d return -12.0% < -7.0%",
-        "size_mult": 0
+        "size_mult": 0.0
       },
       "news": {
         "pass": false,
-        "reason": "v3.12 HALT: halt new entries (news=SHOCK, risk_off=CAUTION 3/10)",
-        "size_mult": 0.0
+        "reason": "NEWS SHOCK: qqq_gap=-2.82% < -1.5%",
+        "size_mult": 0
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 82.58,
-      "spot": 75.08,
-      "dd_pct": -9.1,
-      "reason": "drawdown OK (-9.1% from anchor)"
+      "spot": 75.35,
+      "dd_pct": -8.8,
+      "reason": "drawdown OK (-8.8% from anchor)"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
       "empirical: 5d return -12.0% < -7.0%",
-      "v3.12 HALT: halt new entries (news=SHOCK, risk_off=CAUTION 3/10)"
+      "NEWS SHOCK: qqq_gap=-2.82% < -1.5%"
     ],
     "batches": [],
     "recommended_strike": 60.0,
@@ -673,8 +675,8 @@
     "live_premium_ask": 3.1,
     "live_premium_iv": 0.9907890319824217,
     "live_premium_delta": -0.19055922413158877,
-    "engine_run_at_iso": "2026-06-23T20:30:18Z",
-    "engine_run_at": 1782246618.149087
+    "engine_run_at_iso": "2026-06-24T11:36:33Z",
+    "engine_run_at": 1782300993.03893
   },
   "pre_market": {
     "timestamp": "2026-06-23 12:30:06 UTC",

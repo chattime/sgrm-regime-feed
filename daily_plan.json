@@ -1,13 +1,13 @@
 {
   "version": 1,
-  "timestamp": "2026-06-24T14:05:26Z",
+  "timestamp": "2026-06-24T15:00:16Z",
   "plan": {
     "as_of": "2026-06-24",
     "user_id": "you",
     "pt_overrides": {},
     "pt_overrides_meta": {
-      "intraday_strong": false,
-      "today_close": 74.68990325927734,
+      "intraday_strong": true,
+      "today_close": 76.07980346679688,
       "today_open": 74.77999877929688,
       "standard_pt": 0.15,
       "bumped_pt": 0.18,
@@ -173,7 +173,7 @@
       },
       {
         "date": "2026-06-24",
-        "close": 74.69
+        "close": 76.08
       }
     ],
     "recent_days": [
@@ -441,11 +441,11 @@
       {
         "date": "2026-06-24",
         "day": "Wed",
-        "close": 74.69,
-        "chg_pct": 0.34,
+        "close": 76.08,
+        "chg_pct": 2.2,
         "streak": 1,
-        "ma40": 76.11,
-        "rsi14": 40.1
+        "ma40": 76.14,
+        "rsi14": 41.5
       }
     ],
     "calendar": {
@@ -559,40 +559,40 @@
         {
           "rung": 1,
           "drop_pct": 5.0,
-          "entry": 70.96,
-          "strike": 62.0,
-          "otm_pct": 12.6,
-          "delta": -0.25,
-          "credit": 2.96,
+          "entry": 72.28,
+          "strike": 63.0,
+          "otm_pct": 12.8,
+          "delta": -0.24,
+          "credit": 2.87,
           "exit_buyback": [
-            1.48,
-            2.07
+            1.43,
+            2.01
           ]
         },
         {
           "rung": 2,
           "drop_pct": 8.0,
-          "entry": 68.71,
-          "strike": 60.0,
-          "otm_pct": 12.7,
-          "delta": -0.25,
-          "credit": 2.86,
+          "entry": 69.99,
+          "strike": 61.0,
+          "otm_pct": 12.8,
+          "delta": -0.24,
+          "credit": 2.77,
           "exit_buyback": [
-            1.43,
-            2.0
+            1.39,
+            1.94
           ]
         },
         {
           "rung": 3,
           "drop_pct": 11.0,
-          "entry": 66.47,
-          "strike": 58.0,
-          "otm_pct": 12.7,
-          "delta": -0.25,
-          "credit": 2.76,
+          "entry": 67.71,
+          "strike": 59.0,
+          "otm_pct": 12.9,
+          "delta": -0.24,
+          "credit": 2.68,
           "exit_buyback": [
-            1.38,
-            1.93
+            1.34,
+            1.88
           ]
         }
       ],
@@ -605,9 +605,9 @@
       "note": "Exit = buy-to-close at +30–50% of credit. Credit est uses current VXN; a real spike prints richer."
     },
     "market": {
-      "tqqq_close": 74.69,
-      "vxn": 31.6,
-      "rsi": 40.0,
+      "tqqq_close": 76.08,
+      "vxn": 30.5,
+      "rsi": 41.0,
       "red_streak": 0,
       "green_streak": 1,
       "green_before_red": 1,
@@ -617,15 +617,17 @@
       "down_days_20d": 10,
       "condition": "GREEN",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -12.7,
-      "ret_5d_pct": -6.6,
-      "ret_40d_pct": 19.2,
-      "above_ma_200_pct": 32.0
+      "vs_10d_high_pct": -10.9,
+      "ret_5d_pct": -4.8,
+      "ret_40d_pct": 21.5,
+      "above_ma_200_pct": 34.4
     },
     "pre_market": {
       "qqq_overnight_gap_pct": 0.0,
-      "news_shock_score": 0,
-      "news_top_stories": [],
+      "news_shock_score": 2,
+      "news_top_stories": [
+        "Tech stocks live: Semiconductor stocks steady after sell-off, with Micron earnings on deck"
+      ],
       "shock_level": "CAUTION"
     },
     "gate_results": {
@@ -654,14 +656,14 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": null,
-      "spot": 74.29,
+      "spot": 75.85,
       "dd_pct": null,
       "reason": "no active streak (no anchor)"
     },
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 84.3,
-    "hv_20d": 92.9,
-    "iv_hv": 0.91,
+    "atm_iv": 82.3,
+    "hv_20d": 93.3,
+    "iv_hv": 0.88,
     "iv_hv_mult": 0.5,
     "iv_hv_flag": "underpaid",
     "iv_percentile": 98.0,
@@ -671,17 +673,19 @@
     "recommended_units": 0,
     "batches": [],
     "recommended_strike": 60.0,
-    "live_premium_bid": 2.44,
-    "live_premium_ask": 2.95,
+    "live_premium_bid": 2.2,
+    "live_premium_ask": 2.63,
     "live_premium_iv": 0.968475,
     "live_premium_delta": -0.195513,
-    "engine_run_at_iso": "2026-06-24T14:05:20Z",
-    "engine_run_at": 1782309920.327169
+    "engine_run_at_iso": "2026-06-24T15:00:11Z",
+    "engine_run_at": 1782313211.16305
   },
   "pre_market": {
-    "timestamp": "2026-06-24 13:49:32 UTC",
-    "news_shock_score": 0,
-    "news_top_stories": [],
+    "timestamp": "2026-06-24 14:59:41 UTC",
+    "news_shock_score": 2,
+    "news_top_stories": [
+      "Tech stocks live: Semiconductor stocks steady after sell-off, with Micron earnings on deck"
+    ],
     "event_alert": "",
     "regime": {
       "vxn": 0,
@@ -695,39 +699,39 @@
     "delta_cap": 0.27,
     "size_mult": 0.5,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.92 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: UUP +0.39%, TLT +1.14%; 3m/10y normal (+74bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
-    "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.92). Some money is moving to safety (long bonds +1.14%, the dollar +0.39%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.91 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: UUP +0.35%, TLT +1.34%; 3m/10y normal (+72bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
+    "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.91). Some money is moving to safety (long bonds +1.34%, the dollar +0.35%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 18.93,
-      "vix3m_back": 20.69,
-      "term_ratio": 0.915,
+      "vix_front": 18.54,
+      "vix3m_back": 20.43,
+      "term_ratio": 0.907,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
         "prev": 377.32,
-        "curr": 368.42,
-        "change_pct": -2.36
+        "curr": 367.655,
+        "change_pct": -2.56
       },
       "uup": {
         "prev": 28.45,
-        "curr": 28.5599,
-        "change_pct": 0.39
+        "curr": 28.5501,
+        "change_pct": 0.35
       },
       "tlt": {
         "prev": 86.2,
-        "curr": 87.185,
-        "change_pct": 1.14
+        "curr": 87.355,
+        "change_pct": 1.34
       },
-      "yield_10y": 4.428,
+      "yield_10y": 4.41,
       "yield_3m": 3.69,
-      "yield_5y": 4.209,
-      "spread_3m10y_bp": 74,
+      "yield_5y": 4.19,
+      "spread_3m10y_bp": 72,
       "spread_5y10y_bp": 22,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-06-24T13:49:34.338616+00:00"
+    "news_classifier_run_at": "2026-06-24T14:59:43.583418+00:00"
   }
 }

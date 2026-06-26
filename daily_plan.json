@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-06-26T12:30:32Z",
+  "timestamp": "2026-06-26T13:00:23Z",
   "plan": {
     "as_of": "2026-06-26",
     "user_id": "you",
@@ -619,7 +619,7 @@
       "down_days_20d": 10,
       "condition": "GREEN",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -15.0,
+      "vs_10d_high_pct": -15.7,
       "ret_5d_pct": -3.3,
       "ret_40d_pct": 23.4,
       "above_ma_200_pct": 32.1
@@ -633,7 +633,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": false,
-        "reason": "DRAWDOWN HARD-STOP: strike [position] within 8% of spot $72.34",
+        "reason": "DRAWDOWN HARD-STOP: strike [position] within 8% of spot $71.75",
         "size_mult": 0,
         "band": "HARD-STOP"
       },
@@ -644,30 +644,30 @@
       },
       "empirical": {
         "pass": false,
-        "reason": "empirical: vs 10d high -15.0% < -13.0%",
+        "reason": "empirical: vs 10d high -15.7% < -13.0%",
         "size_mult": 0.0
       },
       "news": {
         "pass": false,
-        "reason": "v3.12 HALT: halt new entries (TYPE-B HALT active 6.4d remaining: Type B: War funding confirms escalation. Fiscal commitment + geopolitical regime; news=CLEAR, risk_off=CLEAR 0/10)",
+        "reason": "v3.12 HALT: halt new entries (TYPE-B HALT active 6.4d remaining: Type B: War funding confirms escalation. Fiscal commitment + geopolitical regime; news=CLEAR, risk_off=CLEAR 1/10)",
         "size_mult": 0.0
       }
     },
     "drawdown_brake": {
       "band": "HARD-STOP",
       "anchor": null,
-      "spot": 72.34,
+      "spot": 71.75,
       "dd_pct": null,
-      "reason": "DRAWDOWN HARD-STOP: strike [position] within 8% of spot $72.34"
+      "reason": "DRAWDOWN HARD-STOP: strike [position] within 8% of spot $71.75"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "DRAWDOWN HARD-STOP: strike [position] within 8% of spot $72.34",
+      "DRAWDOWN HARD-STOP: strike [position] within 8% of spot $71.75",
       "10-day-high BRAKE active",
-      "empirical: vs 10d high -15.0% < -13.0%",
-      "v3.12 HALT: halt new entries (TYPE-B HALT active 6.4d remaining: Type B: War funding confirms escalation. Fiscal commitment + geopolitical regime; news=CLEAR, risk_off=CLEAR 0/10)"
+      "empirical: vs 10d high -15.7% < -13.0%",
+      "v3.12 HALT: halt new entries (TYPE-B HALT active 6.4d remaining: Type B: War funding confirms escalation. Fiscal commitment + geopolitical regime; news=CLEAR, risk_off=CLEAR 1/10)"
     ],
     "batches": [],
     "recommended_strike": 60.0,
@@ -675,8 +675,8 @@
     "live_premium_ask": 2.84,
     "live_premium_iv": 0.964485,
     "live_premium_delta": -0.184862,
-    "engine_run_at_iso": "2026-06-26T12:30:26Z",
-    "engine_run_at": 1782477026.913974
+    "engine_run_at_iso": "2026-06-26T13:00:18Z",
+    "engine_run_at": 1782478818.805924
   },
   "pre_market": {
     "timestamp": "2026-06-26 12:30:05 UTC",

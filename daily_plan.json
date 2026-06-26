@@ -1,24 +1,20 @@
 {
   "version": 1,
-  "timestamp": "2026-06-26T13:00:23Z",
+  "timestamp": "2026-06-26T14:05:24Z",
   "plan": {
     "as_of": "2026-06-26",
     "user_id": "you",
     "pt_overrides": {},
     "pt_overrides_meta": {
-      "intraday_strong": false,
-      "today_close": 74.94999694824219,
-      "today_open": 77.95999908447266,
+      "intraday_strong": true,
+      "today_close": 73.33100128173828,
+      "today_open": 72.06500244140625,
       "standard_pt": 0.15,
       "bumped_pt": 0.18,
       "bump_lower": 0.12,
       "enabled": true
     },
     "recent_closes": [
-      {
-        "date": "2026-04-29",
-        "close": 61.86
-      },
       {
         "date": "2026-04-30",
         "close": 63.54
@@ -174,18 +170,13 @@
       {
         "date": "2026-06-25",
         "close": 74.95
+      },
+      {
+        "date": "2026-06-26",
+        "close": 73.33
       }
     ],
     "recent_days": [
-      {
-        "date": "2026-05-13",
-        "day": "Wed",
-        "close": 77.24,
-        "chg_pct": 3.04,
-        "streak": 1,
-        "ma40": 55.36,
-        "rsi14": 83.3
-      },
       {
         "date": "2026-05-14",
         "day": "Thu",
@@ -446,6 +437,15 @@
         "streak": 1,
         "ma40": 76.43,
         "rsi14": 41.6
+      },
+      {
+        "date": "2026-06-26",
+        "day": "Fri",
+        "close": 73.33,
+        "chg_pct": -2.16,
+        "streak": -1,
+        "ma40": 76.72,
+        "rsi14": 50.3
       }
     ],
     "calendar": {
@@ -561,40 +561,40 @@
         {
           "rung": 1,
           "drop_pct": 5.0,
-          "entry": 71.2,
-          "strike": 62.0,
-          "otm_pct": 12.9,
-          "delta": -0.24,
-          "credit": 2.85,
+          "entry": 69.66,
+          "strike": 60.5,
+          "otm_pct": 13.1,
+          "delta": -0.25,
+          "credit": 2.93,
           "exit_buyback": [
-            1.43,
-            2.0
+            1.46,
+            2.05
           ]
         },
         {
           "rung": 2,
           "drop_pct": 8.0,
-          "entry": 68.95,
-          "strike": 60.0,
-          "otm_pct": 13.0,
+          "entry": 67.46,
+          "strike": 58.5,
+          "otm_pct": 13.3,
           "delta": -0.24,
-          "credit": 2.75,
+          "credit": 2.81,
           "exit_buyback": [
-            1.37,
-            1.92
+            1.4,
+            1.97
           ]
         },
         {
           "rung": 3,
           "drop_pct": 11.0,
-          "entry": 66.71,
-          "strike": 58.0,
-          "otm_pct": 13.1,
+          "entry": 65.26,
+          "strike": 56.5,
+          "otm_pct": 13.4,
           "delta": -0.24,
-          "credit": 2.65,
+          "credit": 2.69,
           "exit_buyback": [
-            1.32,
-            1.85
+            1.35,
+            1.89
           ]
         }
       ],
@@ -607,22 +607,22 @@
       "note": "Exit = buy-to-close at +30–50% of credit. Credit est uses current VXN; a real spike prints richer."
     },
     "market": {
-      "tqqq_close": 74.95,
-      "vxn": 30.9,
-      "rsi": 42.0,
-      "red_streak": 0,
-      "green_streak": 1,
+      "tqqq_close": 73.33,
+      "vxn": 32.7,
+      "rsi": 50.0,
+      "red_streak": 1,
+      "green_streak": 0,
       "green_before_red": 1,
-      "up_days_10d": 5,
-      "down_days_10d": 5,
-      "up_days_20d": 10,
-      "down_days_20d": 10,
-      "condition": "GREEN",
+      "up_days_10d": 4,
+      "down_days_10d": 6,
+      "up_days_20d": 9,
+      "down_days_20d": 11,
+      "condition": "1R",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -15.7,
-      "ret_5d_pct": -3.3,
-      "ret_40d_pct": 23.4,
-      "above_ma_200_pct": 32.1
+      "vs_10d_high_pct": -14.0,
+      "ret_5d_pct": -11.5,
+      "ret_40d_pct": 18.5,
+      "above_ma_200_pct": 29.0
     },
     "pre_market": {
       "qqq_overnight_gap_pct": -1.18,
@@ -633,50 +633,49 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": false,
-        "reason": "DRAWDOWN HARD-STOP: strike [position] within 8% of spot $71.75",
+        "reason": "DRAWDOWN HARD-STOP: strike [position] within 8% of spot $73.20",
         "size_mult": 0,
         "band": "HARD-STOP"
       },
       "v7": {
-        "pass": false,
-        "reason": "10-day-high BRAKE active",
-        "size_mult": 0
+        "pass": true,
+        "reason": "v7 gates pass (mult=1.0)",
+        "size_mult": 1.0
       },
       "empirical": {
         "pass": false,
-        "reason": "empirical: vs 10d high -15.7% < -13.0%",
+        "reason": "empirical: 5d return -11.5% < -7.0% + vs 10d high -14.0% < -13.0%",
         "size_mult": 0.0
       },
       "news": {
         "pass": false,
-        "reason": "v3.12 HALT: halt new entries (TYPE-B HALT active 6.4d remaining: Type B: War funding confirms escalation. Fiscal commitment + geopolitical regime; news=CLEAR, risk_off=CLEAR 1/10)",
+        "reason": "v3.12 HALT: halt new entries (TYPE-B HALT active 6.3d remaining: Type B: War funding confirms escalation. Fiscal commitment + geopolitical regime; news=CLEAR, risk_off=CAUTION 3/10)",
         "size_mult": 0.0
       }
     },
     "drawdown_brake": {
       "band": "HARD-STOP",
-      "anchor": null,
-      "spot": 71.75,
-      "dd_pct": null,
-      "reason": "DRAWDOWN HARD-STOP: strike [position] within 8% of spot $71.75"
+      "anchor": 73.33,
+      "spot": 73.2,
+      "dd_pct": -0.2,
+      "reason": "DRAWDOWN HARD-STOP: strike [position] within 8% of spot $73.20"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "DRAWDOWN HARD-STOP: strike [position] within 8% of spot $71.75",
-      "10-day-high BRAKE active",
-      "empirical: vs 10d high -15.7% < -13.0%",
-      "v3.12 HALT: halt new entries (TYPE-B HALT active 6.4d remaining: Type B: War funding confirms escalation. Fiscal commitment + geopolitical regime; news=CLEAR, risk_off=CLEAR 1/10)"
+      "DRAWDOWN HARD-STOP: strike [position] within 8% of spot $73.20",
+      "empirical: 5d return -11.5% < -7.0% + vs 10d high -14.0% < -13.0%",
+      "v3.12 HALT: halt new entries (TYPE-B HALT active 6.3d remaining: Type B: War funding confirms escalation. Fiscal commitment + geopolitical regime; news=CLEAR, risk_off=CAUTION 3/10)"
     ],
     "batches": [],
     "recommended_strike": 60.0,
-    "live_premium_bid": 2.49,
-    "live_premium_ask": 2.84,
+    "live_premium_bid": 2.64,
+    "live_premium_ask": 2.92,
     "live_premium_iv": 0.964485,
     "live_premium_delta": -0.184862,
-    "engine_run_at_iso": "2026-06-26T13:00:18Z",
-    "engine_run_at": 1782478818.805924
+    "engine_run_at_iso": "2026-06-26T14:05:20Z",
+    "engine_run_at": 1782482720.232421
   },
   "pre_market": {
     "timestamp": "2026-06-26 12:30:05 UTC",

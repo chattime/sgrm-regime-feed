@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-06-26T12:05:05Z",
+  "timestamp": "2026-06-26T12:30:32Z",
   "plan": {
-    "as_of": "2026-06-25",
+    "as_of": "2026-06-26",
     "user_id": "you",
     "pt_overrides": {},
     "pt_overrides_meta": {
@@ -450,60 +450,60 @@
     ],
     "calendar": {
       "next_opex": "2026-07-17",
-      "days_to_opex": 22,
+      "days_to_opex": 21,
       "next_witching": "2026-09-18",
-      "days_to_witching": 85,
+      "days_to_witching": 84,
       "next_nfp": "2026-07-02",
-      "days_to_nfp": 7,
+      "days_to_nfp": 6,
       "next_month_end": "2026-06-30",
-      "days_to_month_end": 5,
+      "days_to_month_end": 4,
       "next_quarter_end": "2026-06-30",
-      "days_to_quarter_end": 5,
+      "days_to_quarter_end": 4,
       "next_russell": "2026-06-26",
-      "days_to_russell": 1,
+      "days_to_russell": 0,
       "next_vix_expiry": "2026-07-15",
-      "days_to_vix_expiry": 20,
+      "days_to_vix_expiry": 19,
       "events": [
         {
           "event": "Russell reconstitution",
           "date": "2026-06-26",
-          "days": 1
+          "days": 0
         },
         {
           "event": "Month-end rebalance",
           "date": "2026-06-30",
-          "days": 5
+          "days": 4
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-06-30",
-          "days": 5
+          "days": 4
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-07-02",
-          "days": 7
+          "days": 6
         },
         {
           "event": "VIX expiry",
           "date": "2026-07-15",
-          "days": 20
+          "days": 19
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-07-17",
-          "days": 22
+          "days": 21
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 85
+          "days": 84
         }
       ],
       "flags": [
-        "Russell reconstitution in 1d (2026-06-26)"
+        "Russell reconstitution in 0d (2026-06-26)"
       ],
-      "days_to_rebalance": 5,
+      "days_to_rebalance": 4,
       "next_rebalance": "2026-06-30"
     },
     "econ_calendar": {
@@ -511,43 +511,45 @@
         {
           "event": "PCE",
           "date": "2026-06-26",
-          "days": 1
+          "days": 0
         },
         {
           "event": "CPI",
           "date": "2026-07-14",
-          "days": 19
+          "days": 18
         },
         {
           "event": "PPI",
           "date": "2026-07-15",
-          "days": 20
+          "days": 19
         },
         {
           "event": "FOMC decision",
           "date": "2026-07-29",
-          "days": 34
+          "days": 33
         },
         {
           "event": "PCE",
           "date": "2026-07-31",
-          "days": 36
+          "days": 35
         },
         {
           "event": "CPI",
           "date": "2026-08-12",
-          "days": 48
+          "days": 47
         }
       ],
       "flags": [
-        "PCE tomorrow (2026-06-26)"
+        "PCE today (2026-06-26)"
       ],
-      "summary": "PCE tomorrow (2026-06-26)",
-      "today": [],
+      "summary": "PCE today (2026-06-26)",
+      "today": [
+        "PCE"
+      ],
       "next": {
         "event": "PCE",
         "date": "2026-06-26",
-        "days": 1
+        "days": 0
       }
     },
     "scalp_plan": {
@@ -617,75 +619,69 @@
       "down_days_20d": 10,
       "condition": "GREEN",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -11.3,
+      "vs_10d_high_pct": -15.0,
       "ret_5d_pct": -3.3,
       "ret_40d_pct": 23.4,
       "above_ma_200_pct": 32.1
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": 2.06,
-      "news_shock_score": 1,
-      "news_top_stories": [
-        "GE Healthcare (GEHC) Gets Boost from Upbeat Rating, Double-Digit PT Hike"
-      ],
+      "qqq_overnight_gap_pct": -1.18,
+      "news_shock_score": 0,
+      "news_top_stories": [],
       "shock_level": "CAUTION"
     },
     "gate_results": {
       "drawdown_brake": {
-        "pass": true,
-        "reason": "no active streak (no anchor)",
-        "size_mult": 1.0,
-        "band": "GREEN"
+        "pass": false,
+        "reason": "DRAWDOWN HARD-STOP: strike [position] within 8% of spot $72.34",
+        "size_mult": 0,
+        "band": "HARD-STOP"
       },
       "v7": {
-        "pass": true,
-        "reason": "v7 gates pass (mult=1.0)",
-        "size_mult": 1.0
+        "pass": false,
+        "reason": "10-day-high BRAKE active",
+        "size_mult": 0
       },
       "empirical": {
-        "pass": true,
-        "reason": "empirical gates pass",
-        "size_mult": 1.0
+        "pass": false,
+        "reason": "empirical: vs 10d high -15.0% < -13.0%",
+        "size_mult": 0.0
       },
       "news": {
-        "pass": true,
-        "reason": "CAUTION: all clear",
-        "size_mult": 0.5
+        "pass": false,
+        "reason": "v3.12 HALT: halt new entries (TYPE-B HALT active 6.4d remaining: Type B: War funding confirms escalation. Fiscal commitment + geopolitical regime; news=CLEAR, risk_off=CLEAR 0/10)",
+        "size_mult": 0.0
       }
     },
     "drawdown_brake": {
-      "band": "GREEN",
+      "band": "HARD-STOP",
       "anchor": null,
-      "spot": 75.48,
+      "spot": 72.34,
       "dd_pct": null,
-      "reason": "no active streak (no anchor)"
+      "reason": "DRAWDOWN HARD-STOP: strike [position] within 8% of spot $72.34"
     },
-    "atm_iv_source": "nasdaq chain",
-    "atm_iv": 84.2,
-    "hv_20d": 93.4,
-    "iv_hv": 0.9,
-    "iv_hv_mult": 0.5,
-    "iv_hv_flag": "underpaid",
-    "iv_percentile": 98.0,
-    "size_mult": 0.25,
-    "sizing_mode": "matrix",
-    "action": "GREEN DAY — EXIT MODE",
+    "action": "NO ENTRY",
+    "size_mult": 0,
     "recommended_units": 0,
+    "blocking_reasons": [
+      "DRAWDOWN HARD-STOP: strike [position] within 8% of spot $72.34",
+      "10-day-high BRAKE active",
+      "empirical: vs 10d high -15.0% < -13.0%",
+      "v3.12 HALT: halt new entries (TYPE-B HALT active 6.4d remaining: Type B: War funding confirms escalation. Fiscal commitment + geopolitical regime; news=CLEAR, risk_off=CLEAR 0/10)"
+    ],
     "batches": [],
-    "recommended_strike": 65.5,
-    "live_premium_bid": 3.55,
-    "live_premium_ask": 4.6,
-    "live_premium_iv": 0.918281555175781,
-    "live_premium_delta": -0.2653601273425006,
-    "engine_run_at_iso": "2026-06-25T20:30:18Z",
-    "engine_run_at": 1782419418.723173
+    "recommended_strike": 60.0,
+    "live_premium_bid": 2.49,
+    "live_premium_ask": 2.84,
+    "live_premium_iv": 0.964485,
+    "live_premium_delta": -0.184862,
+    "engine_run_at_iso": "2026-06-26T12:30:26Z",
+    "engine_run_at": 1782477026.913974
   },
   "pre_market": {
-    "timestamp": "2026-06-25 12:30:06 UTC",
-    "news_shock_score": 1,
-    "news_top_stories": [
-      "GE Healthcare (GEHC) Gets Boost from Upbeat Rating, Double-Digit PT Hike"
-    ],
+    "timestamp": "2026-06-26 12:30:05 UTC",
+    "news_shock_score": 0,
+    "news_top_stories": [],
     "event_alert": "",
     "regime": {
       "vxn": 0,
@@ -693,37 +689,37 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": 2.06,
+    "qqq_overnight_gap_pct": -1.18,
     "shock_level": "CAUTION",
-    "reason": "all clear",
+    "reason": "qqq_gap=-1.18% < -1.0%",
     "delta_cap": 0.27,
     "size_mult": 0.5,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.92 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: UUP +0.28%, TLT +1.37%. Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
-    "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.92). Some money is moving to safety (long bonds +1.37%, the dollar +0.28%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 1.01 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: GLD +0.97%. Combine: both signals CLEAR. Bash[CAUTION]: qqq_gap=-1.18% < -1.0%. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CAUTION → CAUTION.",
+    "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is spiking — short-term fear is above the 3-month level (ratio 1.01), a stress sign. Some money is moving to safety (gold +0.97%). Headlines / overnight flagged CAUTION: qqq_gap=-1.18% < -1.0%. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 18.05,
+      "vix_front": 19.84,
       "vix3m_back": 19.57,
-      "term_ratio": 0.922,
-      "term_inverted": false
+      "term_ratio": 1.014,
+      "term_inverted": true
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 377.32,
-        "curr": 365.92,
-        "change_pct": -3.02
+        "prev": 365.92,
+        "curr": 369.46,
+        "change_pct": 0.97
       },
       "uup": {
-        "prev": 28.45,
-        "curr": 28.53,
-        "change_pct": 0.28
+        "prev": 28.53,
+        "curr": 28.48,
+        "change_pct": -0.18
       },
       "tlt": {
-        "prev": 86.2,
-        "curr": 87.38,
-        "change_pct": 1.37
+        "prev": 87.38,
+        "curr": 87.35,
+        "change_pct": -0.03
       },
       "yield_10y": null,
       "yield_3m": null,
@@ -732,6 +728,6 @@
       "spread_5y10y_bp": null,
       "curve_inverted_3m10y": null
     },
-    "news_classifier_run_at": "2026-06-25T12:30:08.385958+00:00"
+    "news_classifier_run_at": "2026-06-26T12:30:06.579013+00:00"
   }
 }

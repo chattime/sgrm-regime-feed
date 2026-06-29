@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-06-29T12:30:35Z",
+  "timestamp": "2026-06-29T13:00:25Z",
   "plan": {
     "as_of": "2026-06-29",
     "user_id": "you",
@@ -673,8 +673,8 @@
     "live_premium_ask": 3.6,
     "live_premium_iv": 0.869041,
     "live_premium_delta": -0.220621,
-    "engine_run_at_iso": "2026-06-29T12:30:28Z",
-    "engine_run_at": 1782736228.944451
+    "engine_run_at_iso": "2026-06-29T13:00:21Z",
+    "engine_run_at": 1782738021.363332
   },
   "pre_market": {
     "timestamp": "2026-06-29 12:30:07 UTC",

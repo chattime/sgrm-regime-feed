@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-06-30T12:05:47Z",
+  "timestamp": "2026-06-30T12:30:39Z",
   "plan": {
-    "as_of": "2026-06-29",
+    "as_of": "2026-06-30",
     "user_id": "you",
     "profit_target": {
       "model": "M5",
@@ -446,61 +446,62 @@
     ],
     "calendar": {
       "next_opex": "2026-07-17",
-      "days_to_opex": 18,
+      "days_to_opex": 17,
       "next_witching": "2026-09-18",
-      "days_to_witching": 81,
+      "days_to_witching": 80,
       "next_nfp": "2026-07-02",
-      "days_to_nfp": 3,
+      "days_to_nfp": 2,
       "next_month_end": "2026-06-30",
-      "days_to_month_end": 1,
+      "days_to_month_end": 0,
       "next_quarter_end": "2026-06-30",
-      "days_to_quarter_end": 1,
+      "days_to_quarter_end": 0,
       "next_russell": "2027-06-25",
-      "days_to_russell": 361,
+      "days_to_russell": 360,
       "next_vix_expiry": "2026-07-15",
-      "days_to_vix_expiry": 16,
+      "days_to_vix_expiry": 15,
       "events": [
         {
           "event": "Month-end rebalance",
           "date": "2026-06-30",
-          "days": 1
+          "days": 0
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-06-30",
-          "days": 1
+          "days": 0
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-07-02",
-          "days": 3
+          "days": 2
         },
         {
           "event": "VIX expiry",
           "date": "2026-07-15",
-          "days": 16
+          "days": 15
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-07-17",
-          "days": 18
+          "days": 17
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 81
+          "days": 80
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 361
+          "days": 360
         }
       ],
       "flags": [
-        "Month-end rebalance in 1d (2026-06-30)",
-        "Quarter-end rebalance in 1d (2026-06-30)"
+        "NFP (jobs) in 2d (2026-07-02)",
+        "Month-end rebalance in 0d (2026-06-30)",
+        "Quarter-end rebalance in 0d (2026-06-30)"
       ],
-      "days_to_rebalance": 1,
+      "days_to_rebalance": 0,
       "next_rebalance": "2026-06-30"
     },
     "econ_calendar": {
@@ -508,32 +509,32 @@
         {
           "event": "CPI",
           "date": "2026-07-14",
-          "days": 15
+          "days": 14
         },
         {
           "event": "PPI",
           "date": "2026-07-15",
-          "days": 16
+          "days": 15
         },
         {
           "event": "FOMC decision",
           "date": "2026-07-29",
-          "days": 30
+          "days": 29
         },
         {
           "event": "PCE",
           "date": "2026-07-31",
-          "days": 32
+          "days": 31
         },
         {
           "event": "CPI",
           "date": "2026-08-12",
-          "days": 44
+          "days": 43
         },
         {
           "event": "PPI",
           "date": "2026-08-13",
-          "days": 45
+          "days": 44
         }
       ],
       "flags": [],
@@ -542,7 +543,7 @@
       "next": {
         "event": "CPI",
         "date": "2026-07-14",
-        "days": 15
+        "days": 14
       }
     },
     "scalp_plan": {
@@ -618,10 +619,11 @@
       "above_ma_200_pct": 35.4
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": 1.31,
-      "news_shock_score": 2,
+      "qqq_overnight_gap_pct": -0.01,
+      "news_shock_score": 4,
       "news_top_stories": [
-        "The central bank of central  banks warns AI frenzy could trigger stock-market slump and jeopardize economy"
+        "20 stocks in the S&P 500 that plunged the most in 2026’s first half",
+        "Sable Offshore stock tumbles 23% on equity and debt offerings"
       ],
       "shock_level": "CLEAR"
     },
@@ -651,12 +653,12 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": null,
-      "spot": 77.19,
+      "spot": 77.23,
       "dd_pct": null,
       "reason": "no active streak (no anchor)"
     },
-    "atm_iv_source": "model surface",
-    "atm_iv": 76.7,
+    "atm_iv_source": "nasdaq chain",
+    "atm_iv": 76.4,
     "hv_20d": 98.0,
     "iv_hv": 0.78,
     "iv_hv_mult": 0.5,
@@ -667,14 +669,20 @@
     "action": "GREEN DAY — EXIT MODE",
     "recommended_units": 0,
     "batches": [],
-    "engine_run_at_iso": "2026-06-30T11:25:23Z",
-    "engine_run_at": 1782818723.226566
+    "recommended_strike": 64.0,
+    "live_premium_bid": 2.53,
+    "live_premium_ask": 3.8,
+    "live_premium_iv": 0.896011,
+    "live_premium_delta": -0.212295,
+    "engine_run_at_iso": "2026-06-30T12:30:32Z",
+    "engine_run_at": 1782822632.41289
   },
   "pre_market": {
-    "timestamp": "2026-06-29 12:30:07 UTC",
-    "news_shock_score": 2,
+    "timestamp": "2026-06-30 12:30:06 UTC",
+    "news_shock_score": 4,
     "news_top_stories": [
-      "The central bank of central  banks warns AI frenzy could trigger stock-market slump and jeopardize economy"
+      "20 stocks in the S&P 500 that plunged the most in 2026’s first half",
+      "Sable Offshore stock tumbles 23% on equity and debt offerings"
     ],
     "event_alert": "",
     "regime": {
@@ -683,37 +691,37 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": 1.31,
+    "qqq_overnight_gap_pct": -0.01,
     "shock_level": "CLEAR",
     "reason": "all clear",
     "delta_cap": 0.24,
     "size_mult": 1.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.91 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: GLD +1.13%; 3m/10y normal (+71bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
-    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.91). Some money is moving to safety (gold +1.13%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.87 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD-1.35%/UUP-0.32%/TLT+0.10%); 3m/10y normal (+71bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
+    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.87). No real flight to safety in gold / bonds / dollar. Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 18.29,
+      "vix_front": 17.58,
       "vix3m_back": 20.13,
-      "term_ratio": 0.909,
+      "term_ratio": 0.873,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 369.46,
-        "curr": 373.63,
-        "change_pct": 1.13
+        "prev": 373.63,
+        "curr": 368.58,
+        "change_pct": -1.35
       },
       "uup": {
-        "prev": 28.48,
-        "curr": 28.46,
-        "change_pct": -0.07
+        "prev": 28.46,
+        "curr": 28.37,
+        "change_pct": -0.32
       },
       "tlt": {
-        "prev": 87.35,
-        "curr": 87.36,
-        "change_pct": 0.01
+        "prev": 87.36,
+        "curr": 87.45,
+        "change_pct": 0.1
       },
       "yield_10y": 4.372,
       "yield_3m": 3.663,
@@ -722,6 +730,6 @@
       "spread_5y10y_bp": 24,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-06-29T12:30:08.586704+00:00"
+    "news_classifier_run_at": "2026-06-30T12:30:11.440044+00:00"
   }
 }

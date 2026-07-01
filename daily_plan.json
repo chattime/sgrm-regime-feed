@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-06-30T20:30:14Z",
+  "timestamp": "2026-07-01T12:04:01Z",
   "plan": {
-    "as_of": "2026-06-30",
+    "as_of": "2026-07-01",
     "user_id": "you",
     "profit_target": {
       "model": "M5",
@@ -446,95 +446,93 @@
     ],
     "calendar": {
       "next_opex": "2026-07-17",
-      "days_to_opex": 17,
+      "days_to_opex": 16,
       "next_witching": "2026-09-18",
-      "days_to_witching": 80,
+      "days_to_witching": 79,
       "next_nfp": "2026-07-02",
-      "days_to_nfp": 2,
-      "next_month_end": "2026-06-30",
-      "days_to_month_end": 0,
-      "next_quarter_end": "2026-06-30",
-      "days_to_quarter_end": 0,
+      "days_to_nfp": 1,
+      "next_month_end": "2026-07-31",
+      "days_to_month_end": 30,
+      "next_quarter_end": "2026-09-30",
+      "days_to_quarter_end": 91,
       "next_russell": "2027-06-25",
-      "days_to_russell": 360,
+      "days_to_russell": 359,
       "next_vix_expiry": "2026-07-15",
-      "days_to_vix_expiry": 15,
+      "days_to_vix_expiry": 14,
       "events": [
-        {
-          "event": "Month-end rebalance",
-          "date": "2026-06-30",
-          "days": 0
-        },
-        {
-          "event": "Quarter-end rebalance",
-          "date": "2026-06-30",
-          "days": 0
-        },
         {
           "event": "NFP (jobs)",
           "date": "2026-07-02",
-          "days": 2
+          "days": 1
         },
         {
           "event": "VIX expiry",
           "date": "2026-07-15",
-          "days": 15
+          "days": 14
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-07-17",
-          "days": 17
+          "days": 16
+        },
+        {
+          "event": "Month-end rebalance",
+          "date": "2026-07-31",
+          "days": 30
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 80
+          "days": 79
+        },
+        {
+          "event": "Quarter-end rebalance",
+          "date": "2026-09-30",
+          "days": 91
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 360
+          "days": 359
         }
       ],
       "flags": [
-        "NFP (jobs) in 2d (2026-07-02)",
-        "Month-end rebalance in 0d (2026-06-30)",
-        "Quarter-end rebalance in 0d (2026-06-30)"
+        "NFP (jobs) in 1d (2026-07-02)"
       ],
-      "days_to_rebalance": 0,
-      "next_rebalance": "2026-06-30"
+      "days_to_rebalance": 91,
+      "next_rebalance": "2026-09-30"
     },
     "econ_calendar": {
       "upcoming": [
         {
           "event": "CPI",
           "date": "2026-07-14",
-          "days": 14
+          "days": 13
         },
         {
           "event": "PPI",
           "date": "2026-07-15",
-          "days": 15
+          "days": 14
         },
         {
           "event": "FOMC decision",
           "date": "2026-07-29",
-          "days": 29
+          "days": 28
         },
         {
           "event": "PCE",
           "date": "2026-07-31",
-          "days": 31
+          "days": 30
         },
         {
           "event": "CPI",
           "date": "2026-08-12",
-          "days": 43
+          "days": 42
         },
         {
           "event": "PPI",
           "date": "2026-08-13",
-          "days": 44
+          "days": 43
         }
       ],
       "flags": [],
@@ -543,7 +541,7 @@
       "next": {
         "event": "CPI",
         "date": "2026-07-14",
-        "days": 14
+        "days": 13
       }
     },
     "scalp_plan": {
@@ -613,19 +611,18 @@
       "down_days_20d": 11,
       "condition": "GREEN",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -5.0,
+      "vs_10d_high_pct": -5.9,
       "ret_5d_pct": 8.8,
       "ret_40d_pct": 24.0,
       "above_ma_200_pct": 41.7
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": -0.01,
-      "news_shock_score": 4,
+      "qqq_overnight_gap_pct": 0,
+      "news_shock_score": 9,
       "news_top_stories": [
-        "20 stocks in the S&P 500 that plunged the most in 2026’s first half",
-        "Sable Offshore stock tumbles 23% on equity and debt offerings"
+        "Surprise tariffs imposed; equities plunge"
       ],
-      "shock_level": "CLEAR"
+      "shock_level": "SHOCK"
     },
     "gate_results": {
       "drawdown_brake": {
@@ -645,91 +642,38 @@
         "size_mult": 1.0
       },
       "news": {
-        "pass": true,
-        "reason": "no news shock",
-        "size_mult": 1.0
+        "pass": false,
+        "reason": "NEWS SHOCK: ",
+        "size_mult": 0
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": null,
-      "spot": 80.87,
+      "spot": 80.09,
       "dd_pct": null,
       "reason": "no active streak (no anchor)"
     },
-    "atm_iv_source": "nasdaq chain",
-    "atm_iv": 80.7,
-    "hv_20d": 99.5,
-    "iv_hv": 0.81,
-    "iv_hv_mult": 0.5,
-    "iv_hv_flag": "underpaid",
-    "iv_percentile": 85.0,
-    "size_mult": 0.5,
-    "sizing_mode": "matrix",
-    "action": "GREEN DAY — EXIT MODE",
+    "action": "NO ENTRY",
+    "size_mult": 0,
     "recommended_units": 0,
+    "blocking_reasons": [
+      "NEWS SHOCK: "
+    ],
     "batches": [],
-    "recommended_strike": 70.0,
-    "live_premium_bid": 3.3,
-    "live_premium_ask": 3.5,
-    "live_premium_iv": 0.806898498535156,
-    "live_premium_delta": -0.23923380288491125,
-    "engine_run_at_iso": "2026-06-30T20:30:10Z",
-    "engine_run_at": 1782851410.054026
+    "recommended_strike": 67.5,
+    "live_premium_bid": 1.92,
+    "live_premium_ask": 3.55,
+    "live_premium_iv": 0.815113,
+    "live_premium_delta": -0.201066,
+    "engine_run_at_iso": "2026-07-01T11:26:06Z",
+    "engine_run_at": 1782905166.442936
   },
   "pre_market": {
-    "timestamp": "2026-06-30 12:30:06 UTC",
-    "news_shock_score": 4,
+    "shock_level": "SHOCK",
+    "news_shock_score": 9,
     "news_top_stories": [
-      "20 stocks in the S&P 500 that plunged the most in 2026’s first half",
-      "Sable Offshore stock tumbles 23% on equity and debt offerings"
-    ],
-    "event_alert": "",
-    "regime": {
-      "vxn": 0,
-      "tqqq": 0,
-      "stage": 0,
-      "climate": ""
-    },
-    "qqq_overnight_gap_pct": -0.01,
-    "shock_level": "CLEAR",
-    "reason": "all clear",
-    "delta_cap": 0.24,
-    "size_mult": 1.0,
-    "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.87 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD-1.35%/UUP-0.32%/TLT+0.10%); 3m/10y normal (+71bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
-    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.87). No real flight to safety in gold / bonds / dollar. Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
-    "vxn_term": {
-      "ok": true,
-      "vix_front": 17.58,
-      "vix3m_back": 20.13,
-      "term_ratio": 0.873,
-      "term_inverted": false
-    },
-    "cross_asset": {
-      "ok": true,
-      "gld": {
-        "prev": 373.63,
-        "curr": 368.58,
-        "change_pct": -1.35
-      },
-      "uup": {
-        "prev": 28.46,
-        "curr": 28.37,
-        "change_pct": -0.32
-      },
-      "tlt": {
-        "prev": 87.36,
-        "curr": 87.45,
-        "change_pct": 0.1
-      },
-      "yield_10y": 4.372,
-      "yield_3m": 3.663,
-      "yield_5y": 4.13,
-      "spread_3m10y_bp": 71,
-      "spread_5y10y_bp": 24,
-      "curve_inverted_3m10y": false
-    },
-    "news_classifier_run_at": "2026-06-30T12:30:11.440044+00:00"
+      "Surprise tariffs imposed; equities plunge"
+    ]
   }
 }

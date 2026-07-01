@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-01T12:04:01Z",
+  "timestamp": "2026-07-01T12:30:38Z",
   "plan": {
     "as_of": "2026-07-01",
     "user_id": "you",
@@ -611,18 +611,18 @@
       "down_days_20d": 11,
       "condition": "GREEN",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -5.9,
+      "vs_10d_high_pct": -6.3,
       "ret_5d_pct": 8.8,
       "ret_40d_pct": 24.0,
       "above_ma_200_pct": 41.7
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": 0,
-      "news_shock_score": 9,
+      "qqq_overnight_gap_pct": -0.55,
+      "news_shock_score": 2,
       "news_top_stories": [
-        "Surprise tariffs imposed; equities plunge"
+        "Palantir stock has crashed this year, but there may be upside ahead"
       ],
-      "shock_level": "SHOCK"
+      "shock_level": "CLEAR"
     },
     "gate_results": {
       "drawdown_brake": {
@@ -642,38 +642,90 @@
         "size_mult": 1.0
       },
       "news": {
-        "pass": false,
-        "reason": "NEWS SHOCK: ",
-        "size_mult": 0
+        "pass": true,
+        "reason": "no news shock",
+        "size_mult": 1.0
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": null,
-      "spot": 80.09,
+      "spot": 79.76,
       "dd_pct": null,
       "reason": "no active streak (no anchor)"
     },
-    "action": "NO ENTRY",
-    "size_mult": 0,
+    "atm_iv_source": "nasdaq chain",
+    "atm_iv": 69.9,
+    "hv_20d": 99.5,
+    "iv_hv": 0.7,
+    "iv_hv_mult": 0.5,
+    "iv_hv_flag": "underpaid",
+    "iv_percentile": 85.0,
+    "size_mult": 0.5,
+    "sizing_mode": "matrix",
+    "action": "GREEN DAY — EXIT MODE",
     "recommended_units": 0,
-    "blocking_reasons": [
-      "NEWS SHOCK: "
-    ],
     "batches": [],
     "recommended_strike": 67.5,
     "live_premium_bid": 1.92,
     "live_premium_ask": 3.55,
     "live_premium_iv": 0.815113,
     "live_premium_delta": -0.201066,
-    "engine_run_at_iso": "2026-07-01T11:26:06Z",
-    "engine_run_at": 1782905166.442936
+    "engine_run_at_iso": "2026-07-01T12:30:30Z",
+    "engine_run_at": 1782909030.404019
   },
   "pre_market": {
-    "shock_level": "SHOCK",
-    "news_shock_score": 9,
+    "timestamp": "2026-07-01 12:30:06 UTC",
+    "news_shock_score": 2,
     "news_top_stories": [
-      "Surprise tariffs imposed; equities plunge"
-    ]
+      "Palantir stock has crashed this year, but there may be upside ahead"
+    ],
+    "event_alert": "",
+    "regime": {
+      "vxn": 0,
+      "tqqq": 0,
+      "stage": 0,
+      "climate": ""
+    },
+    "qqq_overnight_gap_pct": -0.55,
+    "shock_level": "CLEAR",
+    "reason": "all clear",
+    "delta_cap": 0.24,
+    "size_mult": 1.0,
+    "news_mode_source": "vxn+cross_asset+bash",
+    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.83 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.14%; 3m/10y normal (+71bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
+    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.83). Some money is moving to safety (the dollar +0.14%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "vxn_term": {
+      "ok": true,
+      "vix_front": 16.74,
+      "vix3m_back": 20.13,
+      "term_ratio": 0.832,
+      "term_inverted": false
+    },
+    "cross_asset": {
+      "ok": true,
+      "gld": {
+        "prev": 368.58,
+        "curr": 368.38,
+        "change_pct": -0.05
+      },
+      "uup": {
+        "prev": 28.37,
+        "curr": 28.41,
+        "change_pct": 0.14
+      },
+      "tlt": {
+        "prev": 87.45,
+        "curr": 86.42,
+        "change_pct": -1.18
+      },
+      "yield_10y": 4.372,
+      "yield_3m": 3.663,
+      "yield_5y": 4.13,
+      "spread_3m10y_bp": 71,
+      "spread_5y10y_bp": 24,
+      "curve_inverted_3m10y": false
+    },
+    "news_classifier_run_at": "2026-07-01T12:30:07.761666+00:00"
   }
 }

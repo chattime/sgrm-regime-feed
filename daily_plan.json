@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-07-02T12:03:57Z",
+  "timestamp": "2026-07-02T12:30:33Z",
   "plan": {
-    "as_of": "2026-07-01",
+    "as_of": "2026-07-02",
     "user_id": "you",
     "profit_target": {
       "model": "M5",
@@ -446,60 +446,60 @@
     ],
     "calendar": {
       "next_opex": "2026-07-17",
-      "days_to_opex": 16,
+      "days_to_opex": 15,
       "next_witching": "2026-09-18",
-      "days_to_witching": 79,
+      "days_to_witching": 78,
       "next_nfp": "2026-07-02",
-      "days_to_nfp": 1,
+      "days_to_nfp": 0,
       "next_month_end": "2026-07-31",
-      "days_to_month_end": 30,
+      "days_to_month_end": 29,
       "next_quarter_end": "2026-09-30",
-      "days_to_quarter_end": 91,
+      "days_to_quarter_end": 90,
       "next_russell": "2027-06-25",
-      "days_to_russell": 359,
+      "days_to_russell": 358,
       "next_vix_expiry": "2026-07-15",
-      "days_to_vix_expiry": 14,
+      "days_to_vix_expiry": 13,
       "events": [
         {
           "event": "NFP (jobs)",
           "date": "2026-07-02",
-          "days": 1
+          "days": 0
         },
         {
           "event": "VIX expiry",
           "date": "2026-07-15",
-          "days": 14
+          "days": 13
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-07-17",
-          "days": 16
+          "days": 15
         },
         {
           "event": "Month-end rebalance",
           "date": "2026-07-31",
-          "days": 30
+          "days": 29
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 79
+          "days": 78
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-09-30",
-          "days": 91
+          "days": 90
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 359
+          "days": 358
         }
       ],
       "flags": [
-        "NFP (jobs) in 1d (2026-07-02)"
+        "NFP (jobs) in 0d (2026-07-02)"
       ],
-      "days_to_rebalance": 91,
+      "days_to_rebalance": 90,
       "next_rebalance": "2026-09-30"
     },
     "econ_calendar": {
@@ -507,32 +507,32 @@
         {
           "event": "CPI",
           "date": "2026-07-14",
-          "days": 13
+          "days": 12
         },
         {
           "event": "PPI",
           "date": "2026-07-15",
-          "days": 14
+          "days": 13
         },
         {
           "event": "FOMC decision",
           "date": "2026-07-29",
-          "days": 28
+          "days": 27
         },
         {
           "event": "PCE",
           "date": "2026-07-31",
-          "days": 30
+          "days": 29
         },
         {
           "event": "CPI",
           "date": "2026-08-12",
-          "days": 42
+          "days": 41
         },
         {
           "event": "PPI",
           "date": "2026-08-13",
-          "days": 43
+          "days": 42
         }
       ],
       "flags": [],
@@ -541,7 +541,7 @@
       "next": {
         "event": "CPI",
         "date": "2026-07-14",
-        "days": 13
+        "days": 12
       }
     },
     "scalp_plan": {
@@ -611,23 +611,21 @@
       "down_days_20d": 12,
       "condition": "1R",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -9.3,
+      "vs_10d_high_pct": -7.7,
       "ret_5d_pct": 5.7,
       "ret_40d_pct": 19.3,
       "above_ma_200_pct": 35.1
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": -0.55,
-      "news_shock_score": 2,
-      "news_top_stories": [
-        "Palantir stock has crashed this year, but there may be upside ahead"
-      ],
-      "shock_level": "CLEAR"
+      "qqq_overnight_gap_pct": 0.5,
+      "news_shock_score": 0,
+      "news_top_stories": [],
+      "shock_level": "CAUTION"
     },
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-0.3% from anchor)",
+        "reason": "drawdown OK (1.4% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -643,57 +641,56 @@
       },
       "news": {
         "pass": true,
-        "reason": "no news shock",
-        "size_mult": 1.0
+        "reason": "CAUTION: all clear",
+        "size_mult": 0.5
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 77.46,
-      "spot": 77.23,
-      "dd_pct": -0.3,
-      "reason": "drawdown OK (-0.3% from anchor)"
+      "spot": 78.57,
+      "dd_pct": 1.4,
+      "reason": "drawdown OK (1.4% from anchor)"
     },
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 73.3,
+    "atm_iv": 71.2,
     "hv_20d": 100.4,
-    "iv_hv": 0.73,
+    "iv_hv": 0.71,
     "iv_hv_mult": 0.5,
     "iv_hv_flag": "underpaid",
     "iv_percentile": 88.0,
-    "size_mult": 0.5,
+    "size_mult": 0.25,
     "sizing_mode": "matrix",
-    "spot_reference": 77.23,
+    "spot_reference": 78.57,
     "spot_source": "live/pre-market",
     "strike_source": "nasdaq chain",
-    "sizing_limiter": "buying power",
+    "sizing_limiter": "portfolio cap (open units)",
     "sizing_caps": {
-      "matrix (regime×streak)": 5,
+      "matrix (regime×streak)": 2,
       "empirical cap (12)": 12,
       "hard cap (50)": 50,
-      "buying power": 0,
+      "buying power": 1,
       "portfolio cap (open units)": 0
     },
     "sizing_mult_notes": [
-      "IV/HV 0.73 underpaid ×0.5"
+      "news CAUTION ×0.5",
+      "IV/HV 0.71 underpaid ×0.5"
     ],
     "action": "NO ENTRY (sized to 0)",
     "recommended_units": 0,
     "batches": [],
-    "recommended_strike": 66.0,
-    "live_premium_bid": 2.77,
-    "live_premium_ask": 3.15,
-    "live_premium_iv": 0.8181694030761719,
-    "live_premium_delta": -0.22291464003381856,
-    "engine_run_at_iso": "2026-07-01T20:30:11Z",
-    "engine_run_at": 1782937811.198653
+    "recommended_strike": 64.0,
+    "live_premium_bid": 2.41,
+    "live_premium_ask": 2.8,
+    "live_premium_iv": 0.846787,
+    "live_premium_delta": -0.196174,
+    "engine_run_at_iso": "2026-07-02T12:30:26Z",
+    "engine_run_at": 1782995426.993282
   },
   "pre_market": {
-    "timestamp": "2026-07-01 12:30:06 UTC",
-    "news_shock_score": 2,
-    "news_top_stories": [
-      "Palantir stock has crashed this year, but there may be upside ahead"
-    ],
+    "timestamp": "2026-07-02 12:30:08 UTC",
+    "news_shock_score": 0,
+    "news_top_stories": [],
     "event_alert": "",
     "regime": {
       "vxn": 0,
@@ -701,45 +698,45 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": -0.55,
-    "shock_level": "CLEAR",
+    "qqq_overnight_gap_pct": 0.5,
+    "shock_level": "CAUTION",
     "reason": "all clear",
-    "delta_cap": 0.24,
-    "size_mult": 1.0,
+    "delta_cap": 0.27,
+    "size_mult": 0.5,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.83 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.14%; 3m/10y normal (+71bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
-    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.83). Some money is moving to safety (the dollar +0.14%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.82 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: GLD +0.60%, UUP +0.28%. Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
+    "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.82). Some money is moving to safety (gold +0.60%, the dollar +0.28%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 16.74,
+      "vix_front": 16.51,
       "vix3m_back": 20.13,
-      "term_ratio": 0.832,
+      "term_ratio": 0.82,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 368.58,
-        "curr": 368.38,
-        "change_pct": -0.05
+        "prev": 368.38,
+        "curr": 370.6,
+        "change_pct": 0.6
       },
       "uup": {
-        "prev": 28.37,
-        "curr": 28.41,
-        "change_pct": 0.14
+        "prev": 28.41,
+        "curr": 28.49,
+        "change_pct": 0.28
       },
       "tlt": {
-        "prev": 87.45,
-        "curr": 86.42,
-        "change_pct": -1.18
+        "prev": 86.102,
+        "curr": 85.52,
+        "change_pct": -0.68
       },
-      "yield_10y": 4.372,
-      "yield_3m": 3.663,
-      "yield_5y": 4.13,
-      "spread_3m10y_bp": 71,
-      "spread_5y10y_bp": 24,
-      "curve_inverted_3m10y": false
+      "yield_10y": null,
+      "yield_3m": null,
+      "yield_5y": null,
+      "spread_3m10y_bp": null,
+      "spread_5y10y_bp": null,
+      "curve_inverted_3m10y": null
     },
-    "news_classifier_run_at": "2026-07-01T12:30:07.761666+00:00"
+    "news_classifier_run_at": "2026-07-02T12:30:10.240445+00:00"
   }
 }

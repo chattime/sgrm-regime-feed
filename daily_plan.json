@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-02T12:30:33Z",
+  "timestamp": "2026-07-02T13:00:23Z",
   "plan": {
     "as_of": "2026-07-02",
     "user_id": "you",
@@ -611,7 +611,7 @@
       "down_days_20d": 12,
       "condition": "1R",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -7.7,
+      "vs_10d_high_pct": -8.0,
       "ret_5d_pct": 5.7,
       "ret_40d_pct": 19.3,
       "above_ma_200_pct": 35.1
@@ -625,7 +625,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (1.4% from anchor)",
+        "reason": "drawdown OK (1.1% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -648,9 +648,9 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 77.46,
-      "spot": 78.57,
-      "dd_pct": 1.4,
-      "reason": "drawdown OK (1.4% from anchor)"
+      "spot": 78.29,
+      "dd_pct": 1.1,
+      "reason": "drawdown OK (1.1% from anchor)"
     },
     "atm_iv_source": "nasdaq chain",
     "atm_iv": 71.2,
@@ -661,7 +661,7 @@
     "iv_percentile": 88.0,
     "size_mult": 0.25,
     "sizing_mode": "matrix",
-    "spot_reference": 78.57,
+    "spot_reference": 78.29,
     "spot_source": "live/pre-market",
     "strike_source": "nasdaq chain",
     "sizing_limiter": "portfolio cap (open units)",
@@ -684,8 +684,8 @@
     "live_premium_ask": 2.8,
     "live_premium_iv": 0.846787,
     "live_premium_delta": -0.196174,
-    "engine_run_at_iso": "2026-07-02T12:30:26Z",
-    "engine_run_at": 1782995426.993282
+    "engine_run_at_iso": "2026-07-02T13:00:16Z",
+    "engine_run_at": 1782997216.170837
   },
   "pre_market": {
     "timestamp": "2026-07-02 12:30:08 UTC",

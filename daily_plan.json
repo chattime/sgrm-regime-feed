@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-07-02T20:30:18Z",
+  "timestamp": "2026-07-03T12:30:35Z",
   "plan": {
-    "as_of": "2026-07-02",
+    "as_of": "2026-07-03",
     "user_id": "you",
     "profit_target": {
       "model": "M5",
@@ -446,60 +446,58 @@
     ],
     "calendar": {
       "next_opex": "2026-07-17",
-      "days_to_opex": 15,
+      "days_to_opex": 14,
       "next_witching": "2026-09-18",
-      "days_to_witching": 78,
-      "next_nfp": "2026-07-02",
-      "days_to_nfp": 0,
+      "days_to_witching": 77,
+      "next_nfp": "2026-08-07",
+      "days_to_nfp": 35,
       "next_month_end": "2026-07-31",
-      "days_to_month_end": 29,
+      "days_to_month_end": 28,
       "next_quarter_end": "2026-09-30",
-      "days_to_quarter_end": 90,
+      "days_to_quarter_end": 89,
       "next_russell": "2027-06-25",
-      "days_to_russell": 358,
+      "days_to_russell": 357,
       "next_vix_expiry": "2026-07-15",
-      "days_to_vix_expiry": 13,
+      "days_to_vix_expiry": 12,
       "events": [
-        {
-          "event": "NFP (jobs)",
-          "date": "2026-07-02",
-          "days": 0
-        },
         {
           "event": "VIX expiry",
           "date": "2026-07-15",
-          "days": 13
+          "days": 12
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-07-17",
-          "days": 15
+          "days": 14
         },
         {
           "event": "Month-end rebalance",
           "date": "2026-07-31",
-          "days": 29
+          "days": 28
+        },
+        {
+          "event": "NFP (jobs)",
+          "date": "2026-08-07",
+          "days": 35
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 78
+          "days": 77
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-09-30",
-          "days": 90
+          "days": 89
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 358
+          "days": 357
         }
       ],
-      "flags": [
-        "NFP (jobs) in 0d (2026-07-02)"
-      ],
-      "days_to_rebalance": 90,
+      "flags": [],
+      "days_to_rebalance": 89,
       "next_rebalance": "2026-09-30"
     },
     "econ_calendar": {
@@ -507,32 +505,32 @@
         {
           "event": "CPI",
           "date": "2026-07-14",
-          "days": 12
+          "days": 11
         },
         {
           "event": "PPI",
           "date": "2026-07-15",
-          "days": 13
+          "days": 12
         },
         {
           "event": "FOMC decision",
           "date": "2026-07-29",
-          "days": 27
+          "days": 26
         },
         {
           "event": "PCE",
           "date": "2026-07-31",
-          "days": 29
+          "days": 28
         },
         {
           "event": "CPI",
           "date": "2026-08-12",
-          "days": 41
+          "days": 40
         },
         {
           "event": "PPI",
           "date": "2026-08-13",
-          "days": 42
+          "days": 41
         }
       ],
       "flags": [],
@@ -541,7 +539,7 @@
       "next": {
         "event": "CPI",
         "date": "2026-07-14",
-        "days": 12
+        "days": 11
       }
     },
     "scalp_plan": {
@@ -617,15 +615,15 @@
       "above_ma_200_pct": 27.7
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": 0.5,
+      "qqq_overnight_gap_pct": 0.22,
       "news_shock_score": 0,
       "news_top_stories": [],
-      "shock_level": "CAUTION"
+      "shock_level": "CLEAR"
     },
     "gate_results": {
       "drawdown_brake": {
         "pass": false,
-        "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $73.36",
+        "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $73.35",
         "size_mult": 0,
         "band": "HARD-STOP"
       },
@@ -641,34 +639,34 @@
       },
       "news": {
         "pass": true,
-        "reason": "v3.12 THROTTLE: soft caution: half size, tighter δ (news=SHOCK, risk_off=CAUTION 4/10) (news demoted: SHOCK→CAUTION uncorroborated by risk-off/Type-B) | legacy news_shock overridden by corroboration rule",
-        "size_mult": 0.5
+        "reason": "no news shock",
+        "size_mult": 1.0
       }
     },
     "drawdown_brake": {
       "band": "HARD-STOP",
       "anchor": 77.46,
-      "spot": 73.36,
+      "spot": 73.35,
       "dd_pct": -5.3,
-      "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $73.36"
+      "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $73.35"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $73.36"
+      "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $73.35"
     ],
     "batches": [],
-    "recommended_strike": 64.0,
-    "live_premium_bid": 2.78,
-    "live_premium_ask": 3.6,
-    "live_premium_iv": 0.8157283782958984,
-    "live_premium_delta": -0.24898420389875897,
-    "engine_run_at_iso": "2026-07-02T20:30:12Z",
-    "engine_run_at": 1783024212.101425
+    "recommended_strike": 60.0,
+    "live_premium_bid": 2.25,
+    "live_premium_ask": 2.65,
+    "live_premium_iv": 0.88223,
+    "live_premium_delta": -0.190594,
+    "engine_run_at_iso": "2026-07-03T12:30:28Z",
+    "engine_run_at": 1783081828.076416
   },
   "pre_market": {
-    "timestamp": "2026-07-02 12:30:08 UTC",
+    "timestamp": "2026-07-03 12:30:07 UTC",
     "news_shock_score": 0,
     "news_top_stories": [],
     "event_alert": "",
@@ -678,37 +676,37 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": 0.5,
-    "shock_level": "CAUTION",
+    "qqq_overnight_gap_pct": 0.22,
+    "shock_level": "CLEAR",
     "reason": "all clear",
-    "delta_cap": 0.27,
-    "size_mult": 0.5,
+    "delta_cap": 0.24,
+    "size_mult": 1.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.82 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: GLD +0.60%, UUP +0.28%. Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
-    "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.82). Some money is moving to safety (gold +0.60%, the dollar +0.28%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.79 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: GLD +2.03%. Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
+    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.79). Some money is moving to safety (gold +2.03%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 16.51,
+      "vix_front": 15.96,
       "vix3m_back": 20.13,
-      "term_ratio": 0.82,
+      "term_ratio": 0.793,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 368.38,
-        "curr": 370.6,
-        "change_pct": 0.6
+        "prev": 370.6,
+        "curr": 378.13,
+        "change_pct": 2.03
       },
       "uup": {
-        "prev": 28.41,
-        "curr": 28.49,
-        "change_pct": 0.28
+        "prev": 28.49,
+        "curr": 28.34,
+        "change_pct": -0.53
       },
       "tlt": {
-        "prev": 86.102,
-        "curr": 85.52,
-        "change_pct": -0.68
+        "prev": 85.52,
+        "curr": 85.51,
+        "change_pct": -0.01
       },
       "yield_10y": null,
       "yield_3m": null,
@@ -717,6 +715,6 @@
       "spread_5y10y_bp": null,
       "curve_inverted_3m10y": null
     },
-    "news_classifier_run_at": "2026-07-02T12:30:10.240445+00:00"
+    "news_classifier_run_at": "2026-07-03T12:30:09.014539+00:00"
   }
 }

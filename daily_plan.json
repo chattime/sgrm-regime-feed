@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-06T12:30:31Z",
+  "timestamp": "2026-07-06T13:00:21Z",
   "plan": {
     "as_of": "2026-07-06",
     "user_id": "you",
@@ -610,7 +610,7 @@
       "down_days_20d": 12,
       "condition": "2R",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -10.7,
+      "vs_10d_high_pct": -10.4,
       "ret_5d_pct": -2.1,
       "ret_40d_pct": 8.8,
       "above_ma_200_pct": 27.7
@@ -624,7 +624,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-1.9% from anchor)",
+        "reason": "drawdown OK (-1.5% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -640,38 +640,39 @@
       },
       "news": {
         "pass": true,
-        "reason": "no news shock",
-        "size_mult": 1.0
+        "reason": "no news shock | v3.12 THROTTLE: soft caution: half size, tighter δ (news=CLEAR, risk_off=CAUTION 3/10)",
+        "size_mult": 0.5
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 77.46,
-      "spot": 75.99,
-      "dd_pct": -1.9,
-      "reason": "drawdown OK (-1.9% from anchor)"
+      "spot": 76.26,
+      "dd_pct": -1.5,
+      "reason": "drawdown OK (-1.5% from anchor)"
     },
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 86.5,
+    "atm_iv": 87.7,
     "hv_20d": 101.9,
-    "iv_hv": 0.85,
+    "iv_hv": 0.86,
     "iv_hv_mult": 0.5,
     "iv_hv_flag": "underpaid",
     "iv_percentile": 89.0,
-    "size_mult": 0.5,
-    "spot_reference": 75.99,
+    "size_mult": 0.25,
+    "spot_reference": 76.26,
     "spot_source": "live/pre-market",
     "strike_source": "nasdaq chain",
     "sizing_limiter": "buying power",
     "sizing_caps": {
-      "matrix (regime×streak)": 5,
+      "matrix (regime×streak)": 2,
       "empirical cap (12)": 12,
       "hard cap (50)": 50,
       "buying power": 0,
       "portfolio cap (open units)": 0
     },
     "sizing_mult_notes": [
-      "IV/HV 0.85 underpaid ×0.5"
+      "news CLEAR ×0.5",
+      "IV/HV 0.86 underpaid ×0.5"
     ],
     "action": "NO ENTRY (sized to 0)",
     "recommended_units": 0,
@@ -679,10 +680,10 @@
     "recommended_strike": 76.5,
     "live_premium_bid": 7.25,
     "live_premium_ask": 10.0,
-    "live_premium_iv": 0.8652118682861327,
-    "live_premium_delta": -0.4464010783605206,
-    "engine_run_at_iso": "2026-07-06T12:30:25Z",
-    "engine_run_at": 1783341025.215503
+    "live_premium_iv": 0.8773868560791015,
+    "live_premium_delta": -0.44069461227553686,
+    "engine_run_at_iso": "2026-07-06T13:00:15Z",
+    "engine_run_at": 1783342815.651822
   },
   "pre_market": {
     "timestamp": "2026-07-06 12:30:05 UTC",

@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-07-03T20:30:19Z",
+  "timestamp": "2026-07-06T12:04:35Z",
   "plan": {
-    "as_of": "2026-07-03",
+    "as_of": "2026-07-04",
     "user_id": "you",
     "sizing_mode": "matrix",
     "profit_target": {
@@ -447,58 +447,58 @@
     ],
     "calendar": {
       "next_opex": "2026-07-17",
-      "days_to_opex": 14,
+      "days_to_opex": 13,
       "next_witching": "2026-09-18",
-      "days_to_witching": 77,
+      "days_to_witching": 76,
       "next_nfp": "2026-08-07",
-      "days_to_nfp": 35,
+      "days_to_nfp": 34,
       "next_month_end": "2026-07-31",
-      "days_to_month_end": 28,
+      "days_to_month_end": 27,
       "next_quarter_end": "2026-09-30",
-      "days_to_quarter_end": 89,
+      "days_to_quarter_end": 88,
       "next_russell": "2027-06-25",
-      "days_to_russell": 357,
+      "days_to_russell": 356,
       "next_vix_expiry": "2026-07-15",
-      "days_to_vix_expiry": 12,
+      "days_to_vix_expiry": 11,
       "events": [
         {
           "event": "VIX expiry",
           "date": "2026-07-15",
-          "days": 12
+          "days": 11
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-07-17",
-          "days": 14
+          "days": 13
         },
         {
           "event": "Month-end rebalance",
           "date": "2026-07-31",
-          "days": 28
+          "days": 27
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-08-07",
-          "days": 35
+          "days": 34
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 77
+          "days": 76
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-09-30",
-          "days": 89
+          "days": 88
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 357
+          "days": 356
         }
       ],
       "flags": [],
-      "days_to_rebalance": 89,
+      "days_to_rebalance": 88,
       "next_rebalance": "2026-09-30"
     },
     "econ_calendar": {
@@ -506,32 +506,32 @@
         {
           "event": "CPI",
           "date": "2026-07-14",
-          "days": 11
+          "days": 10
         },
         {
           "event": "PPI",
           "date": "2026-07-15",
-          "days": 12
+          "days": 11
         },
         {
           "event": "FOMC decision",
           "date": "2026-07-29",
-          "days": 26
+          "days": 25
         },
         {
           "event": "PCE",
           "date": "2026-07-31",
-          "days": 28
+          "days": 27
         },
         {
           "event": "CPI",
           "date": "2026-08-12",
-          "days": 40
+          "days": 39
         },
         {
           "event": "PPI",
           "date": "2026-08-13",
-          "days": 41
+          "days": 40
         }
       ],
       "flags": [],
@@ -540,7 +540,7 @@
       "next": {
         "event": "CPI",
         "date": "2026-07-14",
-        "days": 11
+        "days": 10
       }
     },
     "scalp_plan": {
@@ -640,8 +640,8 @@
       },
       "news": {
         "pass": true,
-        "reason": "no news shock | v3.12 THROTTLE: soft caution: half size, tighter δ (news=CLEAR, risk_off=CAUTION 3/10)",
-        "size_mult": 0.5
+        "reason": "no news shock",
+        "size_mult": 1.0
       }
     },
     "drawdown_brake": {
@@ -663,8 +663,8 @@
     "live_premium_ask": 2.65,
     "live_premium_iv": 0.88223,
     "live_premium_delta": -0.190594,
-    "engine_run_at_iso": "2026-07-03T20:30:13Z",
-    "engine_run_at": 1783110613.291859
+    "engine_run_at_iso": "2026-07-04T04:39:40Z",
+    "engine_run_at": 1783139980.937645
   },
   "pre_market": {
     "timestamp": "2026-07-03 12:30:07 UTC",

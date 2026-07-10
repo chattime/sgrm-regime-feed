@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-10T12:30:32Z",
+  "timestamp": "2026-07-10T13:00:21Z",
   "plan": {
     "as_of": "2026-07-10",
     "user_id": "you",
@@ -613,7 +613,7 @@
       "down_days_20d": 10,
       "condition": "GREEN",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -7.3,
+      "vs_10d_high_pct": -7.7,
       "ret_5d_pct": -1.4,
       "ret_40d_pct": -0.6,
       "above_ma_200_pct": 32.1
@@ -650,7 +650,7 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": null,
-      "spot": 75.62,
+      "spot": 75.29,
       "dd_pct": null,
       "reason": "no active streak (no anchor)"
     },
@@ -670,8 +670,8 @@
     "live_premium_ask": 2.85,
     "live_premium_iv": 0.823046,
     "live_premium_delta": -0.20488,
-    "engine_run_at_iso": "2026-07-10T12:30:27Z",
-    "engine_run_at": 1783686627.081693
+    "engine_run_at_iso": "2026-07-10T13:00:15Z",
+    "engine_run_at": 1783688415.413443
   },
   "pre_market": {
     "timestamp": "2026-07-10 12:30:05 UTC",

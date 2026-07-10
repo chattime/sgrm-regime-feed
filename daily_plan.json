@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-07-10T12:04:56Z",
+  "timestamp": "2026-07-10T12:30:32Z",
   "plan": {
-    "as_of": "2026-07-09",
+    "as_of": "2026-07-10",
     "user_id": "you",
     "sizing_mode": "matrix",
     "profit_target": {
@@ -447,58 +447,58 @@
     ],
     "calendar": {
       "next_opex": "2026-07-17",
-      "days_to_opex": 8,
+      "days_to_opex": 7,
       "next_witching": "2026-09-18",
-      "days_to_witching": 71,
+      "days_to_witching": 70,
       "next_nfp": "2026-08-07",
-      "days_to_nfp": 29,
+      "days_to_nfp": 28,
       "next_month_end": "2026-07-31",
-      "days_to_month_end": 22,
+      "days_to_month_end": 21,
       "next_quarter_end": "2026-09-30",
-      "days_to_quarter_end": 83,
+      "days_to_quarter_end": 82,
       "next_russell": "2027-06-25",
-      "days_to_russell": 351,
+      "days_to_russell": 350,
       "next_vix_expiry": "2026-07-15",
-      "days_to_vix_expiry": 6,
+      "days_to_vix_expiry": 5,
       "events": [
         {
           "event": "VIX expiry",
           "date": "2026-07-15",
-          "days": 6
+          "days": 5
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-07-17",
-          "days": 8
+          "days": 7
         },
         {
           "event": "Month-end rebalance",
           "date": "2026-07-31",
-          "days": 22
+          "days": 21
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-08-07",
-          "days": 29
+          "days": 28
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 71
+          "days": 70
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-09-30",
-          "days": 83
+          "days": 82
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 351
+          "days": 350
         }
       ],
       "flags": [],
-      "days_to_rebalance": 83,
+      "days_to_rebalance": 82,
       "next_rebalance": "2026-09-30"
     },
     "econ_calendar": {
@@ -506,43 +506,44 @@
         {
           "event": "CPI",
           "date": "2026-07-14",
-          "days": 5
+          "days": 4
         },
         {
           "event": "PPI",
           "date": "2026-07-15",
-          "days": 6
+          "days": 5
         },
         {
           "event": "FOMC decision",
           "date": "2026-07-29",
-          "days": 20
+          "days": 19
         },
         {
           "event": "PCE",
           "date": "2026-07-31",
-          "days": 22
+          "days": 21
         },
         {
           "event": "CPI",
           "date": "2026-08-12",
-          "days": 34
+          "days": 33
         },
         {
           "event": "PPI",
           "date": "2026-08-13",
-          "days": 35
+          "days": 34
         }
       ],
       "flags": [
-        "CPI in 5d (2026-07-14)"
+        "CPI in 4d (2026-07-14)",
+        "PPI in 5d (2026-07-15)"
       ],
-      "summary": "CPI in 5d (2026-07-14)",
+      "summary": "CPI in 4d (2026-07-14) · PPI in 5d (2026-07-15)",
       "today": [],
       "next": {
         "event": "CPI",
         "date": "2026-07-14",
-        "days": 5
+        "days": 4
       }
     },
     "scalp_plan": {
@@ -612,17 +613,15 @@
       "down_days_20d": 10,
       "condition": "GREEN",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -6.4,
+      "vs_10d_high_pct": -7.3,
       "ret_5d_pct": -1.4,
       "ret_40d_pct": -0.6,
       "above_ma_200_pct": 32.1
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": 0.99,
-      "news_shock_score": 1,
-      "news_top_stories": [
-        "Oracle’s (ORCL) Has An Enormous Backlog Concentration Risk. Here’s How Healthcare AI Push Could Help Diversify Away"
-      ],
+      "qqq_overnight_gap_pct": -0.3,
+      "news_shock_score": 0,
+      "news_top_stories": [],
       "shock_level": "CLEAR"
     },
     "gate_results": {
@@ -644,42 +643,40 @@
       },
       "news": {
         "pass": true,
-        "reason": "no news shock | v3.12 THROTTLE: soft caution: half size, tighter δ (news=CAUTION, risk_off=CLEAR 2/10)",
-        "size_mult": 0.5
+        "reason": "no news shock",
+        "size_mult": 1.0
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": null,
-      "spot": 76.28,
+      "spot": 75.62,
       "dd_pct": null,
       "reason": "no active streak (no anchor)"
     },
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 72.5,
+    "atm_iv": 73.1,
     "hv_20d": 91.0,
     "iv_hv": 0.8,
     "iv_hv_mult": 0.5,
     "iv_hv_flag": "underpaid",
     "iv_percentile": 82.0,
-    "size_mult": 0.25,
+    "size_mult": 0.5,
     "action": "GREEN DAY — EXIT MODE",
     "recommended_units": 0,
     "batches": [],
-    "recommended_strike": 66.0,
-    "live_premium_bid": 2.78,
-    "live_premium_ask": 3.1,
-    "live_premium_iv": 0.7913482666015623,
-    "live_premium_delta": -0.23338550260929103,
-    "engine_run_at_iso": "2026-07-09T20:30:13Z",
-    "engine_run_at": 1783629013.718063
+    "recommended_strike": 64.0,
+    "live_premium_bid": 2.33,
+    "live_premium_ask": 2.85,
+    "live_premium_iv": 0.823046,
+    "live_premium_delta": -0.20488,
+    "engine_run_at_iso": "2026-07-10T12:30:27Z",
+    "engine_run_at": 1783686627.081693
   },
   "pre_market": {
-    "timestamp": "2026-07-09 12:30:08 UTC",
-    "news_shock_score": 1,
-    "news_top_stories": [
-      "Oracle’s (ORCL) Has An Enormous Backlog Concentration Risk. Here’s How Healthcare AI Push Could Help Diversify Away"
-    ],
+    "timestamp": "2026-07-10 12:30:05 UTC",
+    "news_shock_score": 0,
+    "news_top_stories": [],
     "event_alert": "",
     "regime": {
       "vxn": 0,
@@ -687,45 +684,45 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": 0.99,
+    "qqq_overnight_gap_pct": -0.3,
     "shock_level": "CLEAR",
     "reason": "all clear",
     "delta_cap": 0.3,
     "size_mult": 1.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.88 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD-0.81%/UUP-0.14%/TLT-0.22%); 3m/10y normal (+85bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
-    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.88). No real flight to safety in gold / bonds / dollar. Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.83 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: GLD +1.00%; 3m/10y normal (+86bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
+    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.83). Some money is moving to safety (gold +1.00%, long bonds +0.15%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 16.81,
+      "vix_front": 15.8,
       "vix3m_back": 19.04,
-      "term_ratio": 0.883,
+      "term_ratio": 0.83,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 377.49,
-        "curr": 374.45,
-        "change_pct": -0.81
+        "prev": 374.45,
+        "curr": 378.18,
+        "change_pct": 1.0
       },
       "uup": {
-        "prev": 28.4,
+        "prev": 28.36,
         "curr": 28.36,
-        "change_pct": -0.14
+        "change_pct": 0.0
       },
       "tlt": {
-        "prev": 84.55,
-        "curr": 84.36,
-        "change_pct": -0.22
+        "prev": 84.36,
+        "curr": 84.49,
+        "change_pct": 0.15
       },
-      "yield_10y": 4.569,
-      "yield_3m": 3.723,
-      "yield_5y": 4.308,
-      "spread_3m10y_bp": 85,
-      "spread_5y10y_bp": 26,
+      "yield_10y": 4.539,
+      "yield_3m": 3.682,
+      "yield_5y": 4.269,
+      "spread_3m10y_bp": 86,
+      "spread_5y10y_bp": 27,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-07-09T12:30:09.857212+00:00"
+    "news_classifier_run_at": "2026-07-10T12:30:07.069557+00:00"
   }
 }

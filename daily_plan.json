@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-13T12:30:33Z",
+  "timestamp": "2026-07-13T13:00:24Z",
   "plan": {
     "as_of": "2026-07-13",
     "user_id": "you",
@@ -615,7 +615,7 @@
       "down_days_20d": 9,
       "condition": "GREEN",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -8.9,
+      "vs_10d_high_pct": -8.5,
       "ret_5d_pct": 5.0,
       "ret_40d_pct": 3.0,
       "above_ma_200_pct": 33.0
@@ -654,14 +654,14 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": null,
-      "spot": 74.31,
+      "spot": 74.62,
       "dd_pct": null,
       "reason": "no active streak (no anchor)"
     },
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 59.4,
+    "atm_iv": 68.5,
     "hv_20d": 87.8,
-    "iv_hv": 0.68,
+    "iv_hv": 0.78,
     "iv_hv_mult": 0.5,
     "iv_hv_flag": "underpaid",
     "iv_percentile": 73.0,
@@ -672,10 +672,10 @@
     "recommended_strike": 65.0,
     "live_premium_bid": 2.74,
     "live_premium_ask": 2.83,
-    "live_premium_iv": 0.7193229675292967,
-    "live_premium_delta": -0.23965230598332027,
-    "engine_run_at_iso": "2026-07-13T12:30:27Z",
-    "engine_run_at": 1783945827.723204
+    "live_premium_iv": 0.770373,
+    "live_premium_delta": -0.213175,
+    "engine_run_at_iso": "2026-07-13T13:00:17Z",
+    "engine_run_at": 1783947617.703425
   },
   "pre_market": {
     "timestamp": "2026-07-13 12:30:06 UTC",

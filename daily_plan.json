@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-14T12:30:31Z",
+  "timestamp": "2026-07-14T13:00:26Z",
   "plan": {
     "as_of": "2026-07-14",
     "user_id": "you",
@@ -617,7 +617,7 @@
       "down_days_20d": 10,
       "condition": "1R",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -7.7,
+      "vs_10d_high_pct": -8.1,
       "ret_5d_pct": -4.9,
       "ret_40d_pct": -5.7,
       "above_ma_200_pct": 25.2
@@ -633,7 +633,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (3.6% from anchor)",
+        "reason": "drawdown OK (3.1% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -656,19 +656,19 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 72.64,
-      "spot": 75.27,
-      "dd_pct": 3.6,
-      "reason": "drawdown OK (3.6% from anchor)"
+      "spot": 74.92,
+      "dd_pct": 3.1,
+      "reason": "drawdown OK (3.1% from anchor)"
     },
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 83.2,
+    "atm_iv": 68.2,
     "hv_20d": 83.7,
-    "iv_hv": 0.99,
+    "iv_hv": 0.82,
     "iv_hv_mult": 0.5,
     "iv_hv_flag": "underpaid",
     "iv_percentile": 84.0,
     "size_mult": 0.5,
-    "spot_reference": 75.27,
+    "spot_reference": 74.92,
     "spot_source": "live/pre-market",
     "strike_source": "nasdaq chain",
     "sizing_limiter": "buying power",
@@ -680,18 +680,18 @@
       "portfolio cap (open units)": 0
     },
     "sizing_mult_notes": [
-      "IV/HV 0.99 underpaid ×0.5"
+      "IV/HV 0.82 underpaid ×0.5"
     ],
     "action": "NO ENTRY (sized to 0)",
     "recommended_units": 0,
     "batches": [],
-    "recommended_strike": 65.0,
-    "live_premium_bid": 3.7,
-    "live_premium_ask": 3.85,
-    "live_premium_iv": 0.8895769119262693,
-    "live_premium_delta": -0.25113812980866596,
-    "engine_run_at_iso": "2026-07-14T12:30:23Z",
-    "engine_run_at": 1784032223.955535
+    "recommended_strike": 60.0,
+    "live_premium_bid": 2.48,
+    "live_premium_ask": 2.6,
+    "live_premium_iv": 0.840821,
+    "live_premium_delta": -0.198731,
+    "engine_run_at_iso": "2026-07-14T13:00:16Z",
+    "engine_run_at": 1784034016.867445
   },
   "pre_market": {
     "timestamp": "2026-07-14 12:30:05 UTC",

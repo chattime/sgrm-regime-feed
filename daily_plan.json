@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-07-14T12:04:38Z",
+  "timestamp": "2026-07-14T12:30:31Z",
   "plan": {
-    "as_of": "2026-07-13",
+    "as_of": "2026-07-14",
     "user_id": "you",
     "sizing_mode": "matrix",
     "profit_target": {
@@ -447,60 +447,60 @@
     ],
     "calendar": {
       "next_opex": "2026-07-17",
-      "days_to_opex": 4,
+      "days_to_opex": 3,
       "next_witching": "2026-09-18",
-      "days_to_witching": 67,
+      "days_to_witching": 66,
       "next_nfp": "2026-08-07",
-      "days_to_nfp": 25,
+      "days_to_nfp": 24,
       "next_month_end": "2026-07-31",
-      "days_to_month_end": 18,
+      "days_to_month_end": 17,
       "next_quarter_end": "2026-09-30",
-      "days_to_quarter_end": 79,
+      "days_to_quarter_end": 78,
       "next_russell": "2027-06-25",
-      "days_to_russell": 347,
+      "days_to_russell": 346,
       "next_vix_expiry": "2026-07-15",
-      "days_to_vix_expiry": 2,
+      "days_to_vix_expiry": 1,
       "events": [
         {
           "event": "VIX expiry",
           "date": "2026-07-15",
-          "days": 2
+          "days": 1
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-07-17",
-          "days": 4
+          "days": 3
         },
         {
           "event": "Month-end rebalance",
           "date": "2026-07-31",
-          "days": 18
+          "days": 17
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-08-07",
-          "days": 25
+          "days": 24
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 67
+          "days": 66
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-09-30",
-          "days": 79
+          "days": 78
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 347
+          "days": 346
         }
       ],
       "flags": [
-        "VIX expiry in 2d (2026-07-15)"
+        "VIX expiry in 1d (2026-07-15)"
       ],
-      "days_to_rebalance": 79,
+      "days_to_rebalance": 78,
       "next_rebalance": "2026-09-30"
     },
     "econ_calendar": {
@@ -508,44 +508,46 @@
         {
           "event": "CPI",
           "date": "2026-07-14",
-          "days": 1
+          "days": 0
         },
         {
           "event": "PPI",
           "date": "2026-07-15",
-          "days": 2
+          "days": 1
         },
         {
           "event": "FOMC decision",
           "date": "2026-07-29",
-          "days": 16
+          "days": 15
         },
         {
           "event": "PCE",
           "date": "2026-07-31",
-          "days": 18
+          "days": 17
         },
         {
           "event": "CPI",
           "date": "2026-08-12",
-          "days": 30
+          "days": 29
         },
         {
           "event": "PPI",
           "date": "2026-08-13",
-          "days": 31
+          "days": 30
         }
       ],
       "flags": [
-        "CPI tomorrow (2026-07-14)",
-        "PPI in 2d (2026-07-15)"
+        "CPI today (2026-07-14)",
+        "PPI tomorrow (2026-07-15)"
       ],
-      "summary": "CPI tomorrow (2026-07-14) · PPI in 2d (2026-07-15)",
-      "today": [],
+      "summary": "CPI today (2026-07-14) · PPI tomorrow (2026-07-15)",
+      "today": [
+        "CPI"
+      ],
       "next": {
         "event": "CPI",
         "date": "2026-07-14",
-        "days": 1
+        "days": 0
       }
     },
     "scalp_plan": {
@@ -615,25 +617,25 @@
       "down_days_20d": 10,
       "condition": "1R",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -11.2,
+      "vs_10d_high_pct": -7.7,
       "ret_5d_pct": -4.9,
       "ret_40d_pct": -5.7,
       "above_ma_200_pct": 25.2
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": -1.17,
+      "qqq_overnight_gap_pct": 1.3,
       "news_shock_score": 2,
       "news_top_stories": [
-        "A Fed interest-rate hike could trigger a short-term stock selloff, but history points to a big silver lining"
+        "IBM stock crashes after major warning"
       ],
-      "shock_level": "CAUTION"
+      "shock_level": "CLEAR"
     },
     "gate_results": {
       "drawdown_brake": {
-        "pass": false,
-        "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $72.41",
-        "size_mult": 0,
-        "band": "HARD-STOP"
+        "pass": true,
+        "reason": "drawdown OK (3.6% from anchor)",
+        "size_mult": 1.0,
+        "band": "GREEN"
       },
       "v7": {
         "pass": true,
@@ -647,37 +649,55 @@
       },
       "news": {
         "pass": true,
-        "reason": "CAUTION: qqq_gap=-1.17% < -1.0%",
-        "size_mult": 0.5
+        "reason": "no news shock",
+        "size_mult": 1.0
       }
     },
     "drawdown_brake": {
-      "band": "HARD-STOP",
+      "band": "GREEN",
       "anchor": 72.64,
-      "spot": 72.41,
-      "dd_pct": -0.3,
-      "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $72.41"
+      "spot": 75.27,
+      "dd_pct": 3.6,
+      "reason": "drawdown OK (3.6% from anchor)"
     },
-    "action": "NO ENTRY",
-    "size_mult": 0,
-    "recommended_units": 0,
-    "blocking_reasons": [
-      "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $72.41"
+    "atm_iv_source": "nasdaq chain",
+    "atm_iv": 83.2,
+    "hv_20d": 83.7,
+    "iv_hv": 0.99,
+    "iv_hv_mult": 0.5,
+    "iv_hv_flag": "underpaid",
+    "iv_percentile": 84.0,
+    "size_mult": 0.5,
+    "spot_reference": 75.27,
+    "spot_source": "live/pre-market",
+    "strike_source": "nasdaq chain",
+    "sizing_limiter": "buying power",
+    "sizing_caps": {
+      "matrix (regime×streak)": 5,
+      "empirical cap (12)": 12,
+      "hard cap (50)": 50,
+      "buying power": 0,
+      "portfolio cap (open units)": 0
+    },
+    "sizing_mult_notes": [
+      "IV/HV 0.99 underpaid ×0.5"
     ],
+    "action": "NO ENTRY (sized to 0)",
+    "recommended_units": 0,
     "batches": [],
-    "recommended_strike": 60.0,
-    "live_premium_bid": 2.48,
-    "live_premium_ask": 2.6,
-    "live_premium_iv": 0.8444480895996094,
-    "live_premium_delta": -0.1982176752700009,
-    "engine_run_at_iso": "2026-07-13T20:30:14Z",
-    "engine_run_at": 1783974614.380789
+    "recommended_strike": 65.0,
+    "live_premium_bid": 3.7,
+    "live_premium_ask": 3.85,
+    "live_premium_iv": 0.8895769119262693,
+    "live_premium_delta": -0.25113812980866596,
+    "engine_run_at_iso": "2026-07-14T12:30:23Z",
+    "engine_run_at": 1784032223.955535
   },
   "pre_market": {
-    "timestamp": "2026-07-13 12:30:06 UTC",
+    "timestamp": "2026-07-14 12:30:05 UTC",
     "news_shock_score": 2,
     "news_top_stories": [
-      "A Fed interest-rate hike could trigger a short-term stock selloff, but history points to a big silver lining"
+      "IBM stock crashes after major warning"
     ],
     "event_alert": "",
     "regime": {
@@ -686,45 +706,45 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": -1.17,
-    "shock_level": "CAUTION",
-    "reason": "qqq_gap=-1.17% < -1.0%",
-    "delta_cap": 0.27,
-    "size_mult": 0.5,
+    "qqq_overnight_gap_pct": 1.3,
+    "shock_level": "CLEAR",
+    "reason": "all clear",
+    "delta_cap": 0.3,
+    "size_mult": 1.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.88 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.11%; 3m/10y normal (+87bp). Combine: both signals CLEAR. Bash[CAUTION]: qqq_gap=-1.17% < -1.0%. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CAUTION → CAUTION.",
-    "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.88). Some money is moving to safety (the dollar +0.11%). Headlines / overnight flagged CAUTION: qqq_gap=-1.17% < -1.0%. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.94 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.39%; 3m/10y normal (+88bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
+    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.94). Some money is moving to safety (the dollar +0.39%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 16.41,
+      "vix_front": 17.51,
       "vix3m_back": 18.57,
-      "term_ratio": 0.884,
+      "term_ratio": 0.943,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 378.18,
-        "curr": 377.01,
-        "change_pct": -0.31
+        "prev": 377.01,
+        "curr": 367.13,
+        "change_pct": -2.62
       },
       "uup": {
-        "prev": 28.36,
-        "curr": 28.39,
-        "change_pct": 0.11
+        "prev": 28.39,
+        "curr": 28.5,
+        "change_pct": 0.39
       },
       "tlt": {
-        "prev": 84.49,
-        "curr": 84.47,
-        "change_pct": -0.02
+        "prev": 84.47,
+        "curr": 83.97,
+        "change_pct": -0.59
       },
-      "yield_10y": 4.569,
-      "yield_3m": 3.695,
-      "yield_5y": 4.308,
-      "spread_3m10y_bp": 87,
-      "spread_5y10y_bp": 26,
+      "yield_10y": 4.609,
+      "yield_3m": 3.728,
+      "yield_5y": 4.363,
+      "spread_3m10y_bp": 88,
+      "spread_5y10y_bp": 25,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-07-13T12:30:08.305401+00:00"
+    "news_classifier_run_at": "2026-07-14T12:30:07.508978+00:00"
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-15T12:06:55Z",
+  "timestamp": "2026-07-15T12:30:28Z",
   "plan": {
     "as_of": "2026-07-14",
     "user_id": "you",
@@ -680,10 +680,10 @@
     "engine_run_at": 1784061012.358675
   },
   "pre_market": {
-    "timestamp": "2026-07-14 12:30:05 UTC",
+    "timestamp": "2026-07-15 12:30:07 UTC",
     "news_shock_score": 2,
     "news_top_stories": [
-      "IBM stock crashes after major warning"
+      "Traders Bet There's An 88% Chance The S&P 500 Will Plunge Soon"
     ],
     "event_alert": "",
     "regime": {
@@ -692,37 +692,37 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": 1.3,
-    "shock_level": "CLEAR",
-    "reason": "all clear",
-    "delta_cap": 0.3,
-    "size_mult": 1.0,
+    "qqq_overnight_gap_pct": null,
+    "shock_level": "SHOCK",
+    "reason": "qqq_gap=null% < -1.5%",
+    "delta_cap": 0.2,
+    "size_mult": 0.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.94 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.39%; 3m/10y normal (+88bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
-    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.94). Some money is moving to safety (the dollar +0.39%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 0.88 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD+nan%/UUP+nan%/TLT+nan%); 3m/10y normal (+88bp). Combine: both signals CLEAR. Bash[SHOCK]: qqq_gap=null% < -1.5%. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=SHOCK → SHOCK.",
+    "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is calm — the fear-gauge term structure is normal (ratio 0.88). No real flight to safety in gold / bonds / dollar. Headlines / overnight flagged SHOCK: qqq_gap=null% < -1.5%. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 17.51,
+      "vix_front": 16.41,
       "vix3m_back": 18.57,
-      "term_ratio": 0.943,
+      "term_ratio": 0.884,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 377.01,
-        "curr": 367.13,
-        "change_pct": -2.62
+        "prev": 367.13,
+        "curr": null,
+        "change_pct": null
       },
       "uup": {
-        "prev": 28.39,
-        "curr": 28.5,
-        "change_pct": 0.39
+        "prev": 28.5,
+        "curr": null,
+        "change_pct": null
       },
       "tlt": {
-        "prev": 84.47,
-        "curr": 83.97,
-        "change_pct": -0.59
+        "prev": 83.97,
+        "curr": null,
+        "change_pct": null
       },
       "yield_10y": 4.609,
       "yield_3m": 3.728,
@@ -731,6 +731,6 @@
       "spread_5y10y_bp": 25,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-07-14T12:30:07.508978+00:00"
+    "news_classifier_run_at": "2026-07-15T12:30:08.929969+00:00"
   }
 }

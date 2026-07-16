@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-07-16T12:05:48Z",
+  "timestamp": "2026-07-16T12:30:32Z",
   "plan": {
-    "as_of": "2026-07-15",
+    "as_of": "2026-07-16",
     "user_id": "you",
     "sizing_mode": "matrix",
     "profit_target": {
@@ -447,107 +447,102 @@
     ],
     "calendar": {
       "next_opex": "2026-07-17",
-      "days_to_opex": 2,
+      "days_to_opex": 1,
       "next_witching": "2026-09-18",
-      "days_to_witching": 65,
+      "days_to_witching": 64,
       "next_nfp": "2026-08-07",
-      "days_to_nfp": 23,
+      "days_to_nfp": 22,
       "next_month_end": "2026-07-31",
-      "days_to_month_end": 16,
+      "days_to_month_end": 15,
       "next_quarter_end": "2026-09-30",
-      "days_to_quarter_end": 77,
+      "days_to_quarter_end": 76,
       "next_russell": "2027-06-25",
-      "days_to_russell": 345,
-      "next_vix_expiry": "2026-07-15",
-      "days_to_vix_expiry": 0,
+      "days_to_russell": 344,
+      "next_vix_expiry": "2026-08-19",
+      "days_to_vix_expiry": 34,
       "events": [
-        {
-          "event": "VIX expiry",
-          "date": "2026-07-15",
-          "days": 0
-        },
         {
           "event": "Monthly OPEX",
           "date": "2026-07-17",
-          "days": 2
+          "days": 1
         },
         {
           "event": "Month-end rebalance",
           "date": "2026-07-31",
-          "days": 16
+          "days": 15
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-08-07",
-          "days": 23
+          "days": 22
+        },
+        {
+          "event": "VIX expiry",
+          "date": "2026-08-19",
+          "days": 34
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 65
+          "days": 64
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-09-30",
-          "days": 77
+          "days": 76
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 345
+          "days": 344
         }
       ],
       "flags": [
-        "Monthly OPEX in 2d (2026-07-17)",
-        "VIX expiry in 0d (2026-07-15)"
+        "Monthly OPEX in 1d (2026-07-17)"
       ],
-      "days_to_rebalance": 77,
+      "days_to_rebalance": 76,
       "next_rebalance": "2026-09-30"
     },
     "econ_calendar": {
       "upcoming": [
         {
-          "event": "PPI",
-          "date": "2026-07-15",
-          "days": 0
-        },
-        {
           "event": "FOMC decision",
           "date": "2026-07-29",
-          "days": 14
+          "days": 13
         },
         {
           "event": "PCE",
           "date": "2026-07-31",
-          "days": 16
+          "days": 15
         },
         {
           "event": "CPI",
           "date": "2026-08-12",
-          "days": 28
+          "days": 27
         },
         {
           "event": "PPI",
           "date": "2026-08-13",
-          "days": 29
+          "days": 28
         },
         {
           "event": "Jackson Hole",
           "date": "2026-08-20",
-          "days": 36
+          "days": 35
+        },
+        {
+          "event": "PCE",
+          "date": "2026-08-28",
+          "days": 43
         }
       ],
-      "flags": [
-        "PPI today (2026-07-15)"
-      ],
-      "summary": "PPI today (2026-07-15)",
-      "today": [
-        "PPI"
-      ],
+      "flags": [],
+      "summary": "no major macro events in the next 5d",
+      "today": [],
       "next": {
-        "event": "PPI",
-        "date": "2026-07-15",
-        "days": 0
+        "event": "FOMC decision",
+        "date": "2026-07-29",
+        "days": 13
       }
     },
     "scalp_plan": {
@@ -617,25 +612,28 @@
       "down_days_20d": 11,
       "condition": "1R",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -6.4,
+      "vs_10d_high_pct": -9.3,
       "ret_5d_pct": 2.4,
       "ret_40d_pct": -1.0,
       "above_ma_200_pct": 27.7
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": null,
-      "news_shock_score": 2,
+      "qqq_overnight_gap_pct": -0.94,
+      "news_shock_score": 10,
       "news_top_stories": [
-        "Traders Bet There's An 88% Chance The S&P 500 Will Plunge Soon"
+        "U.S. slaps 25% tariff on most Brazilian goods over 'unfair trade practices'",
+        "US imposes new 25% tariffs on Brazil, expands exemptions list",
+        "Iran warns U.S. of Hormuz ‘red line,’ says it will retaliate to Trump’s strike threats",
+        "Will the housing market crash in 2026? Here's what experts say"
       ],
       "shock_level": "SHOCK"
     },
     "gate_results": {
       "drawdown_brake": {
-        "pass": true,
-        "reason": "drawdown OK (0.1% from anchor)",
-        "size_mult": 1.0,
-        "band": "GREEN"
+        "pass": false,
+        "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $72.27",
+        "size_mult": 0,
+        "band": "HARD-STOP"
       },
       "v7": {
         "pass": true,
@@ -648,57 +646,42 @@
         "size_mult": 1.0
       },
       "news": {
-        "pass": true,
-        "reason": "v3.12 THROTTLE: soft caution: half size, tighter δ (news=SHOCK, risk_off=CLEAR 0/10) (news demoted: SHOCK→CAUTION uncorroborated by risk-off/Type-B) | legacy news_shock overridden by corroboration rule",
-        "size_mult": 0.5
+        "pass": false,
+        "reason": "NEWS SHOCK: news_shock_score=10 >=7",
+        "size_mult": 0
       }
     },
     "drawdown_brake": {
-      "band": "GREEN",
+      "band": "HARD-STOP",
       "anchor": 74.44,
-      "spot": 74.51,
-      "dd_pct": 0.1,
-      "reason": "drawdown OK (0.1% from anchor)"
+      "spot": 72.27,
+      "dd_pct": -2.9,
+      "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $72.27"
     },
-    "atm_iv_source": "nasdaq chain",
-    "atm_iv": 68.0,
-    "hv_20d": 77.0,
-    "iv_hv": 0.88,
-    "iv_hv_mult": 0.5,
-    "iv_hv_flag": "underpaid",
-    "iv_percentile": 75.0,
-    "size_mult": 0.25,
-    "spot_reference": 74.51,
-    "spot_source": "live/pre-market",
-    "strike_source": "nasdaq chain",
-    "sizing_limiter": "buying power",
-    "sizing_caps": {
-      "matrix (regime×streak)": 2,
-      "empirical cap (12)": 12,
-      "hard cap (50)": 50,
-      "buying power": 0,
-      "portfolio cap (open units)": 0
-    },
-    "sizing_mult_notes": [
-      "news SHOCK ×0.5",
-      "IV/HV 0.88 underpaid ×0.5"
-    ],
-    "action": "NO ENTRY (sized to 0)",
+    "action": "NO ENTRY",
+    "size_mult": 0,
     "recommended_units": 0,
+    "blocking_reasons": [
+      "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $72.27",
+      "NEWS SHOCK: news_shock_score=10 >=7"
+    ],
     "batches": [],
-    "recommended_strike": 60.0,
-    "live_premium_bid": 1.92,
-    "live_premium_ask": 2.04,
-    "live_premium_iv": 0.8289581298828124,
-    "live_premium_delta": -0.1669420684268197,
-    "engine_run_at_iso": "2026-07-15T20:30:12Z",
-    "engine_run_at": 1784147412.016315
+    "recommended_strike": 80.0,
+    "live_premium_bid": 8.65,
+    "live_premium_ask": 9.7,
+    "live_premium_iv": 0.48121757507324214,
+    "live_premium_delta": -0.7147989302570634,
+    "engine_run_at_iso": "2026-07-16T12:30:25Z",
+    "engine_run_at": 1784205025.974502
   },
   "pre_market": {
-    "timestamp": "2026-07-15 12:30:07 UTC",
-    "news_shock_score": 2,
+    "timestamp": "2026-07-16 12:30:05 UTC",
+    "news_shock_score": 10,
     "news_top_stories": [
-      "Traders Bet There's An 88% Chance The S&P 500 Will Plunge Soon"
+      "U.S. slaps 25% tariff on most Brazilian goods over 'unfair trade practices'",
+      "US imposes new 25% tariffs on Brazil, expands exemptions list",
+      "Iran warns U.S. of Hormuz ‘red line,’ says it will retaliate to Trump’s strike threats",
+      "Will the housing market crash in 2026? Here's what experts say"
     ],
     "event_alert": "",
     "regime": {
@@ -707,45 +690,45 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": null,
+    "qqq_overnight_gap_pct": -0.94,
     "shock_level": "SHOCK",
-    "reason": "qqq_gap=null% < -1.5%",
+    "reason": "news_shock_score=10 >=7",
     "delta_cap": 0.2,
     "size_mult": 0.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 0.88 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD+nan%/UUP+nan%/TLT+nan%); 3m/10y normal (+88bp). Combine: both signals CLEAR. Bash[SHOCK]: qqq_gap=null% < -1.5%. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=SHOCK → SHOCK.",
-    "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is calm — the fear-gauge term structure is normal (ratio 0.88). No real flight to safety in gold / bonds / dollar. Headlines / overnight flagged SHOCK: qqq_gap=null% < -1.5%. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 0.88 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD+0.05%/UUP-0.49%/TLT+0.19%); 3m/10y normal (+86bp). Combine: both signals CLEAR. Bash[SHOCK]: news_shock_score=10 >=7. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=SHOCK → SHOCK.",
+    "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is calm — the fear-gauge term structure is normal (ratio 0.88). Some money is moving to safety (long bonds +0.19%). Headlines / overnight flagged SHOCK: news_shock_score=10 >=7. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 16.41,
+      "vix_front": 16.28,
       "vix3m_back": 18.57,
-      "term_ratio": 0.884,
+      "term_ratio": 0.877,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 367.13,
-        "curr": null,
-        "change_pct": null
+        "prev": 372.15,
+        "curr": 372.35,
+        "change_pct": 0.05
       },
       "uup": {
-        "prev": 28.5,
-        "curr": null,
-        "change_pct": null
+        "prev": 28.39,
+        "curr": 28.25,
+        "change_pct": -0.49
       },
       "tlt": {
-        "prev": 83.97,
-        "curr": null,
-        "change_pct": null
+        "prev": 84.08,
+        "curr": 84.24,
+        "change_pct": 0.19
       },
-      "yield_10y": 4.609,
-      "yield_3m": 3.728,
-      "yield_5y": 4.363,
-      "spread_3m10y_bp": 88,
-      "spread_5y10y_bp": 25,
+      "yield_10y": 4.545,
+      "yield_3m": 3.688,
+      "yield_5y": 4.255,
+      "spread_3m10y_bp": 86,
+      "spread_5y10y_bp": 28,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-07-15T12:30:08.929969+00:00"
+    "news_classifier_run_at": "2026-07-16T12:30:07.581260+00:00"
   }
 }

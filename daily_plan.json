@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-16T12:30:32Z",
+  "timestamp": "2026-07-16T13:00:21Z",
   "plan": {
     "as_of": "2026-07-16",
     "user_id": "you",
@@ -612,7 +612,7 @@
       "down_days_20d": 11,
       "condition": "1R",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -9.3,
+      "vs_10d_high_pct": -9.5,
       "ret_5d_pct": 2.4,
       "ret_40d_pct": -1.0,
       "above_ma_200_pct": 27.7
@@ -631,7 +631,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": false,
-        "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $72.27",
+        "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $72.11",
         "size_mult": 0,
         "band": "HARD-STOP"
       },
@@ -654,25 +654,25 @@
     "drawdown_brake": {
       "band": "HARD-STOP",
       "anchor": 74.44,
-      "spot": 72.27,
-      "dd_pct": -2.9,
-      "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $72.27"
+      "spot": 72.11,
+      "dd_pct": -3.1,
+      "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $72.11"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $72.27",
+      "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $72.11",
       "NEWS SHOCK: news_shock_score=10 >=7"
     ],
     "batches": [],
-    "recommended_strike": 80.0,
-    "live_premium_bid": 8.65,
-    "live_premium_ask": 9.7,
-    "live_premium_iv": 0.48121757507324214,
-    "live_premium_delta": -0.7147989302570634,
-    "engine_run_at_iso": "2026-07-16T12:30:25Z",
-    "engine_run_at": 1784205025.974502
+    "recommended_strike": 60.0,
+    "live_premium_bid": 1.92,
+    "live_premium_ask": 2.04,
+    "live_premium_iv": 0.826057,
+    "live_premium_delta": -0.167289,
+    "engine_run_at_iso": "2026-07-16T13:00:13Z",
+    "engine_run_at": 1784206813.843215
   },
   "pre_market": {
     "timestamp": "2026-07-16 12:30:05 UTC",

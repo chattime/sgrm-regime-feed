@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-17T12:30:40Z",
+  "timestamp": "2026-07-17T13:00:21Z",
   "plan": {
     "as_of": "2026-07-17",
     "user_id": "you",
@@ -612,7 +612,7 @@
       "down_days_20d": 11,
       "condition": "2R",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -15.6,
+      "vs_10d_high_pct": -15.7,
       "ret_5d_pct": -7.3,
       "ret_40d_pct": -4.6,
       "above_ma_200_pct": 21.2
@@ -628,7 +628,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": false,
-        "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $66.80",
+        "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $66.75",
         "size_mult": 0,
         "band": "HARD-STOP"
       },
@@ -639,7 +639,7 @@
       },
       "empirical": {
         "pass": false,
-        "reason": "empirical: 5d return -7.3% < -7.0% + vs 10d high -15.6% < -13.0%",
+        "reason": "empirical: 5d return -7.3% < -7.0% + vs 10d high -15.7% < -13.0%",
         "size_mult": 0.0
       },
       "news": {
@@ -651,27 +651,27 @@
     "drawdown_brake": {
       "band": "HARD-STOP",
       "anchor": 74.44,
-      "spot": 66.8,
+      "spot": 66.75,
       "dd_pct": -10.3,
-      "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $66.80"
+      "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $66.75"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $66.80",
+      "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $66.75",
       "10-day-high BRAKE active",
-      "empirical: 5d return -7.3% < -7.0% + vs 10d high -15.6% < -13.0%",
+      "empirical: 5d return -7.3% < -7.0% + vs 10d high -15.7% < -13.0%",
       "NEWS SHOCK: qqq_gap=-1.82% < -1.5%"
     ],
     "batches": [],
     "recommended_strike": 55.0,
     "live_premium_bid": 1.51,
     "live_premium_ask": 1.81,
-    "live_premium_iv": 0.7762199401855467,
-    "live_premium_delta": -0.17187607951329276,
-    "engine_run_at_iso": "2026-07-17T12:30:29Z",
-    "engine_run_at": 1784291429.661279
+    "live_premium_iv": 0.882279,
+    "live_premium_delta": -0.144697,
+    "engine_run_at_iso": "2026-07-17T13:00:15Z",
+    "engine_run_at": 1784293215.968421
   },
   "pre_market": {
     "timestamp": "2026-07-17 12:30:06 UTC",

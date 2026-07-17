@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-07-17T12:07:55Z",
+  "timestamp": "2026-07-17T12:30:40Z",
   "plan": {
-    "as_of": "2026-07-16",
+    "as_of": "2026-07-17",
     "user_id": "you",
     "sizing_mode": "matrix",
     "profit_target": {
@@ -447,60 +447,60 @@
     ],
     "calendar": {
       "next_opex": "2026-07-17",
-      "days_to_opex": 1,
+      "days_to_opex": 0,
       "next_witching": "2026-09-18",
-      "days_to_witching": 64,
+      "days_to_witching": 63,
       "next_nfp": "2026-08-07",
-      "days_to_nfp": 22,
+      "days_to_nfp": 21,
       "next_month_end": "2026-07-31",
-      "days_to_month_end": 15,
+      "days_to_month_end": 14,
       "next_quarter_end": "2026-09-30",
-      "days_to_quarter_end": 76,
+      "days_to_quarter_end": 75,
       "next_russell": "2027-06-25",
-      "days_to_russell": 344,
+      "days_to_russell": 343,
       "next_vix_expiry": "2026-08-19",
-      "days_to_vix_expiry": 34,
+      "days_to_vix_expiry": 33,
       "events": [
         {
           "event": "Monthly OPEX",
           "date": "2026-07-17",
-          "days": 1
+          "days": 0
         },
         {
           "event": "Month-end rebalance",
           "date": "2026-07-31",
-          "days": 15
+          "days": 14
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-08-07",
-          "days": 22
+          "days": 21
         },
         {
           "event": "VIX expiry",
           "date": "2026-08-19",
-          "days": 34
+          "days": 33
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 64
+          "days": 63
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-09-30",
-          "days": 76
+          "days": 75
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 344
+          "days": 343
         }
       ],
       "flags": [
-        "Monthly OPEX in 1d (2026-07-17)"
+        "Monthly OPEX in 0d (2026-07-17)"
       ],
-      "days_to_rebalance": 76,
+      "days_to_rebalance": 75,
       "next_rebalance": "2026-09-30"
     },
     "econ_calendar": {
@@ -508,32 +508,32 @@
         {
           "event": "FOMC decision",
           "date": "2026-07-29",
-          "days": 13
+          "days": 12
         },
         {
           "event": "PCE",
           "date": "2026-07-31",
-          "days": 15
+          "days": 14
         },
         {
           "event": "CPI",
           "date": "2026-08-12",
-          "days": 27
+          "days": 26
         },
         {
           "event": "PPI",
           "date": "2026-08-13",
-          "days": 28
+          "days": 27
         },
         {
           "event": "Jackson Hole",
           "date": "2026-08-20",
-          "days": 35
+          "days": 34
         },
         {
           "event": "PCE",
           "date": "2026-08-28",
-          "days": 43
+          "days": 42
         }
       ],
       "flags": [],
@@ -542,7 +542,7 @@
       "next": {
         "event": "FOMC decision",
         "date": "2026-07-29",
-        "days": 13
+        "days": 12
       }
     },
     "scalp_plan": {
@@ -612,76 +612,72 @@
       "down_days_20d": 11,
       "condition": "2R",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -10.9,
+      "vs_10d_high_pct": -15.6,
       "ret_5d_pct": -7.3,
       "ret_40d_pct": -4.6,
       "above_ma_200_pct": 21.2
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": -0.94,
-      "news_shock_score": 10,
+      "qqq_overnight_gap_pct": -1.82,
+      "news_shock_score": 2,
       "news_top_stories": [
-        "U.S. slaps 25% tariff on most Brazilian goods over 'unfair trade practices'",
-        "US imposes new 25% tariffs on Brazil, expands exemptions list",
-        "Iran warns U.S. of Hormuz ‘red line,’ says it will retaliate to Trump’s strike threats",
-        "Will the housing market crash in 2026? Here's what experts say"
+        "As semiconductor stocks slump, one AI-adjacent sector is thriving — and these are the stocks to buy there"
       ],
       "shock_level": "SHOCK"
     },
     "gate_results": {
       "drawdown_brake": {
         "pass": false,
-        "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $70.49",
+        "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $66.80",
         "size_mult": 0,
         "band": "HARD-STOP"
       },
       "v7": {
-        "pass": true,
-        "reason": "v7 gates pass (mult=1.0)",
-        "size_mult": 1.0
+        "pass": false,
+        "reason": "10-day-high BRAKE active",
+        "size_mult": 0
       },
       "empirical": {
         "pass": false,
-        "reason": "empirical: 5d return -7.3% < -7.0%",
+        "reason": "empirical: 5d return -7.3% < -7.0% + vs 10d high -15.6% < -13.0%",
         "size_mult": 0.0
       },
       "news": {
-        "pass": true,
-        "reason": "v3.12 THROTTLE: soft caution: half size, tighter δ (news=SHOCK, risk_off=CLEAR 1/10) (news demoted: SHOCK→CAUTION uncorroborated by risk-off/Type-B) | legacy news_shock overridden by corroboration rule",
-        "size_mult": 0.5
+        "pass": false,
+        "reason": "NEWS SHOCK: qqq_gap=-1.82% < -1.5%",
+        "size_mult": 0
       }
     },
     "drawdown_brake": {
       "band": "HARD-STOP",
       "anchor": 74.44,
-      "spot": 70.49,
-      "dd_pct": -5.3,
-      "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $70.49"
+      "spot": 66.8,
+      "dd_pct": -10.3,
+      "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $66.80"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $70.49",
-      "empirical: 5d return -7.3% < -7.0%"
+      "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $66.80",
+      "10-day-high BRAKE active",
+      "empirical: 5d return -7.3% < -7.0% + vs 10d high -15.6% < -13.0%",
+      "NEWS SHOCK: qqq_gap=-1.82% < -1.5%"
     ],
     "batches": [],
     "recommended_strike": 55.0,
     "live_premium_bid": 1.51,
     "live_premium_ask": 1.81,
-    "live_premium_iv": 0.8850112915039061,
-    "live_premium_delta": -0.14447087653424323,
-    "engine_run_at_iso": "2026-07-16T20:30:12Z",
-    "engine_run_at": 1784233812.591547
+    "live_premium_iv": 0.7762199401855467,
+    "live_premium_delta": -0.17187607951329276,
+    "engine_run_at_iso": "2026-07-17T12:30:29Z",
+    "engine_run_at": 1784291429.661279
   },
   "pre_market": {
-    "timestamp": "2026-07-16 12:30:05 UTC",
-    "news_shock_score": 10,
+    "timestamp": "2026-07-17 12:30:06 UTC",
+    "news_shock_score": 2,
     "news_top_stories": [
-      "U.S. slaps 25% tariff on most Brazilian goods over 'unfair trade practices'",
-      "US imposes new 25% tariffs on Brazil, expands exemptions list",
-      "Iran warns U.S. of Hormuz ‘red line,’ says it will retaliate to Trump’s strike threats",
-      "Will the housing market crash in 2026? Here's what experts say"
+      "As semiconductor stocks slump, one AI-adjacent sector is thriving — and these are the stocks to buy there"
     ],
     "event_alert": "",
     "regime": {
@@ -690,45 +686,45 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": -0.94,
+    "qqq_overnight_gap_pct": -1.82,
     "shock_level": "SHOCK",
-    "reason": "news_shock_score=10 >=7",
+    "reason": "qqq_gap=-1.82% < -1.5%",
     "delta_cap": 0.2,
     "size_mult": 0.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 0.88 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD+0.05%/UUP-0.49%/TLT+0.19%); 3m/10y normal (+86bp). Combine: both signals CLEAR. Bash[SHOCK]: news_shock_score=10 >=7. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=SHOCK → SHOCK.",
-    "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is calm — the fear-gauge term structure is normal (ratio 0.88). Some money is moving to safety (long bonds +0.19%). Headlines / overnight flagged SHOCK: news_shock_score=10 >=7. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 0.99 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.32%; 3m/10y normal (+87bp). Combine: both signals CLEAR. Bash[SHOCK]: qqq_gap=-1.82% < -1.5%. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=SHOCK → SHOCK.",
+    "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is calm — the fear-gauge term structure is normal (ratio 0.99). Some money is moving to safety (the dollar +0.32%). Headlines / overnight flagged SHOCK: qqq_gap=-1.82% < -1.5%. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 16.28,
+      "vix_front": 18.32,
       "vix3m_back": 18.57,
-      "term_ratio": 0.877,
+      "term_ratio": 0.987,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 372.15,
-        "curr": 372.35,
-        "change_pct": 0.05
+        "prev": 372.35,
+        "curr": 364.96,
+        "change_pct": -1.98
       },
       "uup": {
-        "prev": 28.39,
-        "curr": 28.25,
-        "change_pct": -0.49
+        "prev": 28.25,
+        "curr": 28.34,
+        "change_pct": 0.32
       },
       "tlt": {
-        "prev": 84.08,
-        "curr": 84.24,
-        "change_pct": 0.19
+        "prev": 84.24,
+        "curr": 84.21,
+        "change_pct": -0.04
       },
-      "yield_10y": 4.545,
-      "yield_3m": 3.688,
-      "yield_5y": 4.255,
-      "spread_3m10y_bp": 86,
+      "yield_10y": 4.569,
+      "yield_3m": 3.697,
+      "yield_5y": 4.282,
+      "spread_3m10y_bp": 87,
       "spread_5y10y_bp": 28,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-07-16T12:30:07.581260+00:00"
+    "news_classifier_run_at": "2026-07-17T12:30:08.137280+00:00"
   }
 }

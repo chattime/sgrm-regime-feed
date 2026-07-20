@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-20T14:05:19Z",
+  "timestamp": "2026-07-20T20:30:17Z",
   "plan": {
     "as_of": "2026-07-20",
     "user_id": "you",
@@ -170,7 +170,7 @@
       },
       {
         "date": "2026-07-20",
-        "close": 69.32
+        "close": 67.65
       }
     ],
     "recent_days": [
@@ -438,11 +438,11 @@
       {
         "date": "2026-07-20",
         "day": "Mon",
-        "close": 69.32,
-        "chg_pct": 2.66,
+        "close": 67.65,
+        "chg_pct": 0.18,
         "streak": 1,
-        "ma40": 77.22,
-        "rsi14": 40.1
+        "ma40": 77.18,
+        "rsi14": 37.4
       }
     ],
     "calendar": {
@@ -552,40 +552,40 @@
         {
           "rung": 1,
           "drop_pct": 5.0,
-          "entry": 65.86,
-          "strike": 57.5,
-          "otm_pct": 12.7,
-          "delta": -0.24,
-          "credit": 2.43,
+          "entry": 64.27,
+          "strike": 56.5,
+          "otm_pct": 12.1,
+          "delta": -0.25,
+          "credit": 2.48,
           "exit_buyback": [
-            1.22,
-            1.7
+            1.24,
+            1.74
           ]
         },
         {
           "rung": 2,
           "drop_pct": 8.0,
-          "entry": 63.78,
-          "strike": 56.0,
-          "otm_pct": 12.2,
-          "delta": -0.25,
-          "credit": 2.44,
+          "entry": 62.24,
+          "strike": 54.5,
+          "otm_pct": 12.4,
+          "delta": -0.24,
+          "credit": 2.35,
           "exit_buyback": [
-            1.22,
-            1.71
+            1.17,
+            1.64
           ]
         },
         {
           "rung": 3,
           "drop_pct": 11.0,
-          "entry": 61.7,
-          "strike": 54.0,
-          "otm_pct": 12.5,
+          "entry": 60.21,
+          "strike": 52.5,
+          "otm_pct": 12.8,
           "delta": -0.24,
-          "credit": 2.31,
+          "credit": 2.21,
           "exit_buyback": [
-            1.16,
-            1.62
+            1.11,
+            1.55
           ]
         }
       ],
@@ -598,9 +598,9 @@
       "note": "Exit = buy-to-close at +30–50% of credit. Credit est uses current VXN; a real spike prints richer."
     },
     "market": {
-      "tqqq_close": 69.32,
+      "tqqq_close": 67.65,
       "vxn": 28.5,
-      "rsi": 40.0,
+      "rsi": 37.0,
       "red_streak": 0,
       "green_streak": 1,
       "green_before_red": 1,
@@ -610,10 +610,10 @@
       "down_days_20d": 11,
       "condition": "GREEN",
       "regime": "DOWN",
-      "vs_10d_high_pct": -10.4,
-      "ret_5d_pct": -4.6,
-      "ret_40d_pct": -9.2,
-      "above_ma_200_pct": 18.4
+      "vs_10d_high_pct": -12.8,
+      "ret_5d_pct": -6.9,
+      "ret_40d_pct": -11.4,
+      "above_ma_200_pct": 15.5
     },
     "pre_market": {
       "qqq_overnight_gap_pct": 0.96,
@@ -624,7 +624,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": false,
-        "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $69.27",
+        "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot [position]",
         "size_mult": 0,
         "band": "HARD-STOP"
       },
@@ -647,24 +647,24 @@
     "drawdown_brake": {
       "band": "HARD-STOP",
       "anchor": null,
-      "spot": 69.27,
+      "spot": 67.42,
       "dd_pct": null,
-      "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $69.27"
+      "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot [position]"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $69.27"
+      "DRAWDOWN HARD-STOP: strike $68 within 8% of spot [position]"
     ],
     "batches": [],
     "recommended_strike": 55.0,
-    "live_premium_bid": 2.08,
-    "live_premium_ask": 2.4,
-    "live_premium_iv": 0.886062,
-    "live_premium_delta": -0.198883,
-    "engine_run_at_iso": "2026-07-20T14:05:12Z",
-    "engine_run_at": 1784556312.930101
+    "live_premium_bid": 2.39,
+    "live_premium_ask": 2.6,
+    "live_premium_iv": 0.9062572479248046,
+    "live_premium_delta": -0.19402344198167687,
+    "engine_run_at_iso": "2026-07-20T20:30:12Z",
+    "engine_run_at": 1784579412.603088
   },
   "pre_market": {
     "timestamp": "2026-07-20 12:30:07 UTC",

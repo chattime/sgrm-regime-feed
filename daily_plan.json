@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-21T14:05:23Z",
+  "timestamp": "",
   "plan": {
     "as_of": "2026-07-21",
     "user_id": "you",
@@ -172,7 +172,7 @@
       },
       {
         "date": "2026-07-21",
-        "close": 69.93
+        "close": 71.37
       }
     ],
     "recent_days": [
@@ -440,11 +440,11 @@
       {
         "date": "2026-07-21",
         "day": "Tue",
-        "close": 69.93,
-        "chg_pct": 3.36,
+        "close": 71.37,
+        "chg_pct": 5.5,
         "streak": 2,
-        "ma40": 77.01,
-        "rsi14": 34.8
+        "ma40": 77.05,
+        "rsi14": 37.3
       }
     ],
     "calendar": {
@@ -554,40 +554,40 @@
         {
           "rung": 1,
           "drop_pct": 5.0,
-          "entry": 66.43,
-          "strike": 58.5,
-          "otm_pct": 11.9,
-          "delta": -0.25,
-          "credit": 2.48,
+          "entry": 67.8,
+          "strike": 59.5,
+          "otm_pct": 12.2,
+          "delta": -0.24,
+          "credit": 2.4,
           "exit_buyback": [
-            1.24,
-            1.74
+            1.2,
+            1.68
           ]
         },
         {
           "rung": 2,
           "drop_pct": 8.0,
-          "entry": 64.33,
-          "strike": 56.5,
-          "otm_pct": 12.2,
-          "delta": -0.24,
-          "credit": 2.37,
+          "entry": 65.66,
+          "strike": 58.0,
+          "otm_pct": 11.7,
+          "delta": -0.25,
+          "credit": 2.42,
           "exit_buyback": [
-            1.18,
-            1.66
+            1.21,
+            1.69
           ]
         },
         {
           "rung": 3,
           "drop_pct": 11.0,
-          "entry": 62.23,
-          "strike": 54.5,
-          "otm_pct": 12.4,
-          "delta": -0.24,
-          "credit": 2.25,
+          "entry": 63.52,
+          "strike": 56.0,
+          "otm_pct": 11.8,
+          "delta": -0.25,
+          "credit": 2.31,
           "exit_buyback": [
-            1.13,
-            1.58
+            1.16,
+            1.62
           ]
         }
       ],
@@ -600,9 +600,9 @@
       "note": "Exit = buy-to-close at +30–50% of credit. Credit est uses current VXN; a real spike prints richer."
     },
     "market": {
-      "tqqq_close": 69.93,
-      "vxn": 27.5,
-      "rsi": 35.0,
+      "tqqq_close": 71.37,
+      "vxn": 26.7,
+      "rsi": 37.0,
       "red_streak": 0,
       "green_streak": 2,
       "green_before_red": 2,
@@ -612,13 +612,13 @@
       "down_days_20d": 10,
       "condition": "GREEN",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -9.6,
-      "ret_5d_pct": -6.8,
-      "ret_40d_pct": -8.9,
-      "above_ma_200_pct": 19.2
+      "vs_10d_high_pct": -7.9,
+      "ret_5d_pct": -4.9,
+      "ret_40d_pct": -7.0,
+      "above_ma_200_pct": 21.7
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": 1.22,
+      "qqq_overnight_gap_pct": 0,
       "news_shock_score": 0,
       "news_top_stories": [],
       "shock_level": "CLEAR"
@@ -626,14 +626,14 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": false,
-        "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $69.92",
+        "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $71.24",
         "size_mult": 0,
         "band": "HARD-STOP"
       },
       "v7": {
-        "pass": false,
-        "reason": "Gate 1 FAIL: RSI 35 < 35 (oversold)",
-        "size_mult": 0
+        "pass": true,
+        "reason": "v7 gates pass (mult=1.0)",
+        "size_mult": 1.0
       },
       "empirical": {
         "pass": true,
@@ -649,76 +649,24 @@
     "drawdown_brake": {
       "band": "HARD-STOP",
       "anchor": null,
-      "spot": 69.92,
+      "spot": 71.24,
       "dd_pct": null,
-      "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $69.92"
+      "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $71.24"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $69.92",
-      "Gate 1 FAIL: RSI 35 < 35 (oversold)"
+      "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $71.24"
     ],
     "batches": [],
-    "recommended_strike": 55.0,
-    "live_premium_bid": 1.9,
-    "live_premium_ask": 2.12,
-    "live_premium_iv": 0.902375,
-    "live_premium_delta": -0.194538,
-    "engine_run_at_iso": "2026-07-21T14:05:15Z",
-    "engine_run_at": 1784642715.138207
+    "recommended_strike": 64.0,
+    "live_premium_bid": 3.5,
+    "live_premium_ask": 3.75,
+    "live_premium_iv": 0.7829101562499999,
+    "live_premium_delta": -0.2821995353895558,
+    "engine_run_at_iso": "2026-07-21T20:30:12Z",
+    "engine_run_at": 1784665812.502275
   },
-  "pre_market": {
-    "timestamp": "2026-07-21 12:30:07 UTC",
-    "news_shock_score": 0,
-    "news_top_stories": [],
-    "event_alert": "",
-    "regime": {
-      "vxn": 0,
-      "tqqq": 0,
-      "stage": 0,
-      "climate": ""
-    },
-    "qqq_overnight_gap_pct": 1.22,
-    "shock_level": "CLEAR",
-    "reason": "all clear",
-    "delta_cap": 0.3,
-    "size_mult": 1.0,
-    "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.86 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.21%; 3m/10y normal (+89bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
-    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.86). Some money is moving to safety (the dollar +0.21%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
-    "vxn_term": {
-      "ok": true,
-      "vix_front": 17.73,
-      "vix3m_back": 20.54,
-      "term_ratio": 0.863,
-      "term_inverted": false
-    },
-    "cross_asset": {
-      "ok": true,
-      "gld": {
-        "prev": 368.41,
-        "curr": 367.6,
-        "change_pct": -0.22
-      },
-      "uup": {
-        "prev": 28.33,
-        "curr": 28.39,
-        "change_pct": 0.21
-      },
-      "tlt": {
-        "prev": 84.52,
-        "curr": 83.89,
-        "change_pct": -0.75
-      },
-      "yield_10y": 4.598,
-      "yield_3m": 3.705,
-      "yield_5y": 4.328,
-      "spread_3m10y_bp": 89,
-      "spread_5y10y_bp": 27,
-      "curve_inverted_3m10y": false
-    },
-    "news_classifier_run_at": "2026-07-21T12:30:08.975625+00:00"
-  }
+  "pre_market": null
 }

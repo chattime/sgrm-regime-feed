@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "",
+  "timestamp": "2026-07-22T12:30:39Z",
   "plan": {
-    "as_of": "2026-07-21",
+    "as_of": "2026-07-22",
     "user_id": "you",
     "sizing_mode": "matrix",
     "profit_target": {
@@ -449,58 +449,58 @@
     ],
     "calendar": {
       "next_opex": "2026-08-21",
-      "days_to_opex": 31,
+      "days_to_opex": 30,
       "next_witching": "2026-09-18",
-      "days_to_witching": 59,
+      "days_to_witching": 58,
       "next_nfp": "2026-08-07",
-      "days_to_nfp": 17,
+      "days_to_nfp": 16,
       "next_month_end": "2026-07-31",
-      "days_to_month_end": 10,
+      "days_to_month_end": 9,
       "next_quarter_end": "2026-09-30",
-      "days_to_quarter_end": 71,
+      "days_to_quarter_end": 70,
       "next_russell": "2027-06-25",
-      "days_to_russell": 339,
+      "days_to_russell": 338,
       "next_vix_expiry": "2026-08-19",
-      "days_to_vix_expiry": 29,
+      "days_to_vix_expiry": 28,
       "events": [
         {
           "event": "Month-end rebalance",
           "date": "2026-07-31",
-          "days": 10
+          "days": 9
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-08-07",
-          "days": 17
+          "days": 16
         },
         {
           "event": "VIX expiry",
           "date": "2026-08-19",
-          "days": 29
+          "days": 28
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-08-21",
-          "days": 31
+          "days": 30
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 59
+          "days": 58
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-09-30",
-          "days": 71
+          "days": 70
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 339
+          "days": 338
         }
       ],
       "flags": [],
-      "days_to_rebalance": 71,
+      "days_to_rebalance": 70,
       "next_rebalance": "2026-09-30"
     },
     "econ_calendar": {
@@ -508,32 +508,32 @@
         {
           "event": "FOMC decision",
           "date": "2026-07-29",
-          "days": 8
+          "days": 7
         },
         {
           "event": "PCE",
           "date": "2026-07-31",
-          "days": 10
+          "days": 9
         },
         {
           "event": "CPI",
           "date": "2026-08-12",
-          "days": 22
+          "days": 21
         },
         {
           "event": "PPI",
           "date": "2026-08-13",
-          "days": 23
+          "days": 22
         },
         {
           "event": "Jackson Hole",
           "date": "2026-08-20",
-          "days": 30
+          "days": 29
         },
         {
           "event": "PCE",
           "date": "2026-08-28",
-          "days": 38
+          "days": 37
         }
       ],
       "flags": [],
@@ -542,7 +542,7 @@
       "next": {
         "event": "FOMC decision",
         "date": "2026-07-29",
-        "days": 8
+        "days": 7
       }
     },
     "scalp_plan": {
@@ -612,21 +612,23 @@
       "down_days_20d": 10,
       "condition": "GREEN",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -7.9,
+      "vs_10d_high_pct": -10.2,
       "ret_5d_pct": -4.9,
       "ret_40d_pct": -7.0,
       "above_ma_200_pct": 21.7
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": 0,
-      "news_shock_score": 0,
-      "news_top_stories": [],
-      "shock_level": "CLEAR"
+      "qqq_overnight_gap_pct": -0.94,
+      "news_shock_score": 1,
+      "news_top_stories": [
+        "Retirees may need nearly $186,000 for healthcare — and counting"
+      ],
+      "shock_level": "CAUTION"
     },
     "gate_results": {
       "drawdown_brake": {
         "pass": false,
-        "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $71.24",
+        "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $69.41",
         "size_mult": 0,
         "band": "HARD-STOP"
       },
@@ -642,31 +644,84 @@
       },
       "news": {
         "pass": true,
-        "reason": "v3.12 THROTTLE: soft caution: half size, tighter δ (news=SHOCK, risk_off=CLEAR 2/10) (news demoted: SHOCK→CAUTION uncorroborated by risk-off/Type-B) | legacy news_shock overridden by corroboration rule",
+        "reason": "CAUTION: all clear",
         "size_mult": 0.5
       }
     },
     "drawdown_brake": {
       "band": "HARD-STOP",
       "anchor": null,
-      "spot": 71.24,
+      "spot": 69.41,
       "dd_pct": null,
-      "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $71.24"
+      "reason": "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $69.41"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $71.24"
+      "DRAWDOWN HARD-STOP: strike $68 within 8% of spot $69.41"
     ],
     "batches": [],
-    "recommended_strike": 64.0,
-    "live_premium_bid": 3.5,
-    "live_premium_ask": 3.75,
-    "live_premium_iv": 0.7829101562499999,
-    "live_premium_delta": -0.2821995353895558,
-    "engine_run_at_iso": "2026-07-21T20:30:12Z",
-    "engine_run_at": 1784665812.502275
+    "recommended_strike": 50.0,
+    "live_premium_bid": 1.01,
+    "live_premium_ask": 1.23,
+    "live_premium_iv": 0.9269004821777342,
+    "live_premium_delta": -0.10122918008308501,
+    "engine_run_at_iso": "2026-07-22T12:30:33Z",
+    "engine_run_at": 1784723433.079425
   },
-  "pre_market": null
+  "pre_market": {
+    "timestamp": "2026-07-22 12:30:09 UTC",
+    "news_shock_score": 1,
+    "news_top_stories": [
+      "Retirees may need nearly $186,000 for healthcare — and counting"
+    ],
+    "event_alert": "",
+    "regime": {
+      "vxn": 0,
+      "tqqq": 0,
+      "stage": 0,
+      "climate": ""
+    },
+    "qqq_overnight_gap_pct": -0.94,
+    "shock_level": "CAUTION",
+    "reason": "all clear",
+    "delta_cap": 0.27,
+    "size_mult": 0.5,
+    "news_mode_source": "vxn+cross_asset+bash",
+    "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.86 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: GLD +1.96%, UUP +0.32%; 3m/10y normal (+90bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
+    "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.86). Some money is moving to safety (gold +1.96%, the dollar +0.32%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "vxn_term": {
+      "ok": true,
+      "vix_front": 17.61,
+      "vix3m_back": 20.54,
+      "term_ratio": 0.857,
+      "term_inverted": false
+    },
+    "cross_asset": {
+      "ok": true,
+      "gld": {
+        "prev": 367.6,
+        "curr": 374.81,
+        "change_pct": 1.96
+      },
+      "uup": {
+        "prev": 28.39,
+        "curr": 28.48,
+        "change_pct": 0.32
+      },
+      "tlt": {
+        "prev": 83.89,
+        "curr": 83.66,
+        "change_pct": -0.27
+      },
+      "yield_10y": 4.628,
+      "yield_3m": 3.73,
+      "yield_5y": 4.37,
+      "spread_3m10y_bp": 90,
+      "spread_5y10y_bp": 26,
+      "curve_inverted_3m10y": false
+    },
+    "news_classifier_run_at": "2026-07-22T12:30:13.430104+00:00"
+  }
 }

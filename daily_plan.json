@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-23T12:30:41Z",
+  "timestamp": "2026-07-23T13:00:25Z",
   "plan": {
     "as_of": "2026-07-23",
     "user_id": "you",
@@ -612,7 +612,7 @@
       "down_days_20d": 10,
       "condition": "1R",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -11.8,
+      "vs_10d_high_pct": -12.7,
       "ret_5d_pct": -5.6,
       "ret_40d_pct": -9.5,
       "above_ma_200_pct": 19.7
@@ -629,7 +629,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-2.9% from anchor)",
+        "reason": "drawdown OK (-3.9% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -652,9 +652,9 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 70.28,
-      "spot": 68.22,
-      "dd_pct": -2.9,
-      "reason": "drawdown OK (-2.9% from anchor)"
+      "spot": 67.53,
+      "dd_pct": -3.9,
+      "reason": "drawdown OK (-3.9% from anchor)"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
@@ -666,10 +666,10 @@
     "recommended_strike": 55.0,
     "live_premium_bid": 1.72,
     "live_premium_ask": 1.88,
-    "live_premium_iv": 0.8366127014160156,
-    "live_premium_delta": -0.1665620688455292,
-    "engine_run_at_iso": "2026-07-23T12:30:35Z",
-    "engine_run_at": 1784809835.752676
+    "live_premium_iv": 0.88366,
+    "live_premium_delta": -0.152831,
+    "engine_run_at_iso": "2026-07-23T13:00:21Z",
+    "engine_run_at": 1784811621.686016
   },
   "pre_market": {
     "timestamp": "2026-07-23 12:30:07 UTC",

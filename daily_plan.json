@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-23T13:00:25Z",
+  "timestamp": "2026-07-23T14:05:25Z",
   "plan": {
     "as_of": "2026-07-23",
     "user_id": "you",
@@ -14,10 +14,6 @@
     "greed_day": false,
     "greed_brake_bypassed": false,
     "recent_closes": [
-      {
-        "date": "2026-05-26",
-        "close": 81.76
-      },
       {
         "date": "2026-05-27",
         "close": 81.48
@@ -173,18 +169,13 @@
       {
         "date": "2026-07-22",
         "close": 70.28
+      },
+      {
+        "date": "2026-07-23",
+        "close": 67.4
       }
     ],
     "recent_days": [
-      {
-        "date": "2026-06-09",
-        "day": "Tue",
-        "close": 73.55,
-        "chg_pct": -3.34,
-        "streak": -1,
-        "ma40": 71.06,
-        "rsi14": 51.1
-      },
       {
         "date": "2026-06-10",
         "day": "Wed",
@@ -445,6 +436,15 @@
         "streak": -1,
         "ma40": 76.86,
         "rsi14": 39.8
+      },
+      {
+        "date": "2026-07-23",
+        "day": "Thu",
+        "close": 67.4,
+        "chg_pct": -4.1,
+        "streak": -2,
+        "ma40": 76.5,
+        "rsi14": 41.3
       }
     ],
     "calendar": {
@@ -554,40 +554,40 @@
         {
           "rung": 1,
           "drop_pct": 5.0,
-          "entry": 66.77,
-          "strike": 58.5,
-          "otm_pct": 12.4,
+          "entry": 64.03,
+          "strike": 56.0,
+          "otm_pct": 12.5,
           "delta": -0.24,
-          "credit": 2.34,
+          "credit": 2.42,
           "exit_buyback": [
-            1.17,
-            1.64
+            1.21,
+            1.7
           ]
         },
         {
           "rung": 2,
           "drop_pct": 8.0,
-          "entry": 64.66,
-          "strike": 57.0,
-          "otm_pct": 11.8,
+          "entry": 62.01,
+          "strike": 54.5,
+          "otm_pct": 12.1,
           "delta": -0.25,
-          "credit": 2.36,
+          "credit": 2.42,
           "exit_buyback": [
-            1.18,
-            1.65
+            1.21,
+            1.69
           ]
         },
         {
           "rung": 3,
           "drop_pct": 11.0,
-          "entry": 62.55,
-          "strike": 55.0,
-          "otm_pct": 12.1,
+          "entry": 59.99,
+          "strike": 52.5,
+          "otm_pct": 12.5,
           "delta": -0.24,
-          "credit": 2.25,
+          "credit": 2.28,
           "exit_buyback": [
-            1.12,
-            1.57
+            1.14,
+            1.6
           ]
         }
       ],
@@ -600,22 +600,22 @@
       "note": "Exit = buy-to-close at +30–50% of credit. Credit est uses current VXN; a real spike prints richer."
     },
     "market": {
-      "tqqq_close": 70.28,
-      "vxn": 26.7,
-      "rsi": 40.0,
-      "red_streak": 1,
+      "tqqq_close": 67.4,
+      "vxn": 28.8,
+      "rsi": 41.0,
+      "red_streak": 2,
       "green_streak": 0,
       "green_before_red": 2,
-      "up_days_10d": 5,
-      "down_days_10d": 5,
+      "up_days_10d": 4,
+      "down_days_10d": 6,
       "up_days_20d": 10,
       "down_days_20d": 10,
-      "condition": "1R",
-      "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -12.7,
-      "ret_5d_pct": -5.6,
-      "ret_40d_pct": -9.5,
-      "above_ma_200_pct": 19.7
+      "condition": "2R",
+      "regime": "DOWN",
+      "vs_10d_high_pct": -12.9,
+      "ret_5d_pct": -4.7,
+      "ret_40d_pct": -17.6,
+      "above_ma_200_pct": 14.6
     },
     "pre_market": {
       "qqq_overnight_gap_pct": -1.03,
@@ -629,14 +629,14 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-3.9% from anchor)",
+        "reason": "drawdown OK (-4.2% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
       "v7": {
         "pass": true,
-        "reason": "v7 gates pass (mult=1.0)",
-        "size_mult": 1.0
+        "reason": "v7 gates pass (mult=0.5)",
+        "size_mult": 0.5
       },
       "empirical": {
         "pass": true,
@@ -644,32 +644,51 @@
         "size_mult": 1.0
       },
       "news": {
-        "pass": false,
-        "reason": "NEWS SHOCK: news_shock_score=7 >=7; qqq_gap=-1.03% < -1.0%",
-        "size_mult": 0
+        "pass": true,
+        "reason": "v3.12 THROTTLE: soft caution: half size, tighter δ (news=SHOCK, risk_off=CLEAR 2/10) (news demoted: SHOCK→CAUTION uncorroborated by risk-off/Type-B) | legacy news_shock overridden by corroboration rule",
+        "size_mult": 0.5
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 70.28,
-      "spot": 67.53,
-      "dd_pct": -3.9,
-      "reason": "drawdown OK (-3.9% from anchor)"
+      "spot": 67.31,
+      "dd_pct": -4.2,
+      "reason": "drawdown OK (-4.2% from anchor)"
     },
-    "action": "NO ENTRY",
-    "size_mult": 0,
-    "recommended_units": 0,
-    "blocking_reasons": [
-      "NEWS SHOCK: news_shock_score=7 >=7; qqq_gap=-1.03% < -1.0%"
+    "atm_iv_source": "nasdaq chain",
+    "atm_iv": 68.0,
+    "hv_20d": 69.1,
+    "iv_hv": 0.98,
+    "iv_hv_mult": 0.5,
+    "iv_hv_flag": "underpaid",
+    "iv_percentile": 91.0,
+    "size_mult": 0.125,
+    "spot_reference": 67.31,
+    "spot_source": "live/pre-market",
+    "strike_source": "nasdaq chain",
+    "sizing_limiter": "buying power",
+    "sizing_caps": {
+      "matrix (regime×streak)": 1,
+      "empirical cap (12)": 12,
+      "hard cap (50)": 50,
+      "buying power": 0,
+      "portfolio cap (open units)": 0
+    },
+    "sizing_mult_notes": [
+      "news SHOCK ×0.5",
+      "IV/HV 0.98 underpaid ×0.5"
     ],
+    "action": "NO ENTRY (sized to 0)",
+    "recommended_units": 0,
     "batches": [],
     "recommended_strike": 55.0,
-    "live_premium_bid": 1.72,
-    "live_premium_ask": 1.88,
+    "live_premium_bid": 2.41,
+    "live_premium_ask": 2.47,
     "live_premium_iv": 0.88366,
     "live_premium_delta": -0.152831,
-    "engine_run_at_iso": "2026-07-23T13:00:21Z",
-    "engine_run_at": 1784811621.686016
+    "engine_run_at_iso": "2026-07-23T14:05:20Z",
+    "engine_run_at": 1784815520.595754
   },
   "pre_market": {
     "timestamp": "2026-07-23 12:30:07 UTC",

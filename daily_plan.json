@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-07-23T12:06:25Z",
+  "timestamp": "2026-07-23T12:30:41Z",
   "plan": {
-    "as_of": "2026-07-22",
+    "as_of": "2026-07-23",
     "user_id": "you",
     "sizing_mode": "matrix",
     "profit_target": {
@@ -449,58 +449,58 @@
     ],
     "calendar": {
       "next_opex": "2026-08-21",
-      "days_to_opex": 30,
+      "days_to_opex": 29,
       "next_witching": "2026-09-18",
-      "days_to_witching": 58,
+      "days_to_witching": 57,
       "next_nfp": "2026-08-07",
-      "days_to_nfp": 16,
+      "days_to_nfp": 15,
       "next_month_end": "2026-07-31",
-      "days_to_month_end": 9,
+      "days_to_month_end": 8,
       "next_quarter_end": "2026-09-30",
-      "days_to_quarter_end": 70,
+      "days_to_quarter_end": 69,
       "next_russell": "2027-06-25",
-      "days_to_russell": 338,
+      "days_to_russell": 337,
       "next_vix_expiry": "2026-08-19",
-      "days_to_vix_expiry": 28,
+      "days_to_vix_expiry": 27,
       "events": [
         {
           "event": "Month-end rebalance",
           "date": "2026-07-31",
-          "days": 9
+          "days": 8
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-08-07",
-          "days": 16
+          "days": 15
         },
         {
           "event": "VIX expiry",
           "date": "2026-08-19",
-          "days": 28
+          "days": 27
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-08-21",
-          "days": 30
+          "days": 29
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 58
+          "days": 57
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-09-30",
-          "days": 70
+          "days": 69
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 338
+          "days": 337
         }
       ],
       "flags": [],
-      "days_to_rebalance": 70,
+      "days_to_rebalance": 69,
       "next_rebalance": "2026-09-30"
     },
     "econ_calendar": {
@@ -508,32 +508,32 @@
         {
           "event": "FOMC decision",
           "date": "2026-07-29",
-          "days": 7
+          "days": 6
         },
         {
           "event": "PCE",
           "date": "2026-07-31",
-          "days": 9
+          "days": 8
         },
         {
           "event": "CPI",
           "date": "2026-08-12",
-          "days": 21
+          "days": 20
         },
         {
           "event": "PPI",
           "date": "2026-08-13",
-          "days": 22
+          "days": 21
         },
         {
           "event": "Jackson Hole",
           "date": "2026-08-20",
-          "days": 29
+          "days": 28
         },
         {
           "event": "PCE",
           "date": "2026-08-28",
-          "days": 37
+          "days": 36
         }
       ],
       "flags": [],
@@ -542,7 +542,7 @@
       "next": {
         "event": "FOMC decision",
         "date": "2026-07-29",
-        "days": 7
+        "days": 6
       }
     },
     "scalp_plan": {
@@ -612,23 +612,24 @@
       "down_days_20d": 10,
       "condition": "1R",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -8.7,
+      "vs_10d_high_pct": -11.8,
       "ret_5d_pct": -5.6,
       "ret_40d_pct": -9.5,
       "above_ma_200_pct": 19.7
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": -0.94,
-      "news_shock_score": 1,
+      "qqq_overnight_gap_pct": -1.03,
+      "news_shock_score": 7,
       "news_top_stories": [
-        "Retirees may need nearly $186,000 for healthcare — and counting"
+        "Moonshot AI accessed Nvidia's chips despite Chinese export ban, White House official says",
+        "Which iShares Healthcare ETF Is the Better Buy: Diversified IXJ or Biotech-Focused IBB?"
       ],
-      "shock_level": "CAUTION"
+      "shock_level": "SHOCK"
     },
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (0.5% from anchor)",
+        "reason": "drawdown OK (-2.9% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -643,56 +644,39 @@
         "size_mult": 1.0
       },
       "news": {
-        "pass": true,
-        "reason": "v3.12 THROTTLE: soft caution: half size, tighter δ (news=SHOCK, risk_off=CLEAR 2/10) (news demoted: SHOCK→CAUTION uncorroborated by risk-off/Type-B) | legacy news_shock overridden by corroboration rule",
-        "size_mult": 0.5
+        "pass": false,
+        "reason": "NEWS SHOCK: news_shock_score=7 >=7; qqq_gap=-1.03% < -1.0%",
+        "size_mult": 0
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 70.28,
-      "spot": 70.6,
-      "dd_pct": 0.5,
-      "reason": "drawdown OK (0.5% from anchor)"
+      "spot": 68.22,
+      "dd_pct": -2.9,
+      "reason": "drawdown OK (-2.9% from anchor)"
     },
-    "atm_iv_source": "nasdaq chain",
-    "atm_iv": 69.8,
-    "hv_20d": 67.7,
-    "iv_hv": 1.03,
-    "iv_hv_mult": 1.0,
-    "iv_hv_flag": "fair",
-    "iv_percentile": 78.0,
-    "size_mult": 0.5,
-    "spot_reference": 70.6,
-    "spot_source": "live/pre-market",
-    "strike_source": "nasdaq chain",
-    "sizing_limiter": "buying power",
-    "sizing_caps": {
-      "matrix (regime×streak)": 5,
-      "empirical cap (12)": 12,
-      "hard cap (50)": 50,
-      "buying power": 0,
-      "portfolio cap (open units)": 0
-    },
-    "sizing_mult_notes": [
-      "news CAUTION ×0.5"
-    ],
-    "action": "NO ENTRY (sized to 0)",
+    "action": "NO ENTRY",
+    "size_mult": 0,
     "recommended_units": 0,
+    "blocking_reasons": [
+      "NEWS SHOCK: news_shock_score=7 >=7; qqq_gap=-1.03% < -1.0%"
+    ],
     "batches": [],
-    "recommended_strike": 60.0,
-    "live_premium_bid": 2.69,
-    "live_premium_ask": 2.9,
-    "live_premium_iv": 0.8290184020996092,
-    "live_premium_delta": -0.22710963096781428,
-    "engine_run_at_iso": "2026-07-22T20:30:15Z",
-    "engine_run_at": 1784752215.271752
+    "recommended_strike": 55.0,
+    "live_premium_bid": 1.72,
+    "live_premium_ask": 1.88,
+    "live_premium_iv": 0.8366127014160156,
+    "live_premium_delta": -0.1665620688455292,
+    "engine_run_at_iso": "2026-07-23T12:30:35Z",
+    "engine_run_at": 1784809835.752676
   },
   "pre_market": {
-    "timestamp": "2026-07-22 12:30:09 UTC",
-    "news_shock_score": 1,
+    "timestamp": "2026-07-23 12:30:07 UTC",
+    "news_shock_score": 7,
     "news_top_stories": [
-      "Retirees may need nearly $186,000 for healthcare — and counting"
+      "Moonshot AI accessed Nvidia's chips despite Chinese export ban, White House official says",
+      "Which iShares Healthcare ETF Is the Better Buy: Diversified IXJ or Biotech-Focused IBB?"
     ],
     "event_alert": "",
     "regime": {
@@ -701,45 +685,45 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": -0.94,
-    "shock_level": "CAUTION",
-    "reason": "all clear",
-    "delta_cap": 0.27,
-    "size_mult": 0.5,
+    "qqq_overnight_gap_pct": -1.03,
+    "shock_level": "SHOCK",
+    "reason": "news_shock_score=7 >=7; qqq_gap=-1.03% < -1.0%",
+    "delta_cap": 0.2,
+    "size_mult": 0.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.86 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: GLD +1.96%, UUP +0.32%; 3m/10y normal (+90bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
-    "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.86). Some money is moving to safety (gold +1.96%, the dollar +0.32%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 0.89 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: GLD +1.15%; 3m/10y normal (+91bp). Combine: both signals CLEAR. Bash[SHOCK]: news_shock_score=7 >=7; qqq_gap=-1.03% < -1.0%. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=SHOCK → SHOCK.",
+    "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is calm — the fear-gauge term structure is normal (ratio 0.89). Some money is moving to safety (gold +1.15%). Headlines / overnight flagged SHOCK: news_shock_score=7 >=7; qqq_gap=-1.03% < -1.0%. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 17.61,
+      "vix_front": 18.28,
       "vix3m_back": 20.54,
-      "term_ratio": 0.857,
+      "term_ratio": 0.89,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 367.6,
-        "curr": 374.81,
-        "change_pct": 1.96
+        "prev": 374.81,
+        "curr": 379.12,
+        "change_pct": 1.15
       },
       "uup": {
-        "prev": 28.39,
-        "curr": 28.48,
-        "change_pct": 0.32
+        "prev": 28.48,
+        "curr": 28.45,
+        "change_pct": -0.11
       },
       "tlt": {
-        "prev": 83.89,
-        "curr": 83.66,
-        "change_pct": -0.27
+        "prev": 83.66,
+        "curr": 83.44,
+        "change_pct": -0.26
       },
-      "yield_10y": 4.628,
-      "yield_3m": 3.73,
-      "yield_5y": 4.37,
-      "spread_3m10y_bp": 90,
-      "spread_5y10y_bp": 26,
+      "yield_10y": 4.657,
+      "yield_3m": 3.745,
+      "yield_5y": 4.407,
+      "spread_3m10y_bp": 91,
+      "spread_5y10y_bp": 25,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-07-22T12:30:13.430104+00:00"
+    "news_classifier_run_at": "2026-07-23T12:30:10.167439+00:00"
   }
 }

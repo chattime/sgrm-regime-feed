@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-23T20:30:20Z",
+  "timestamp": "2026-07-24T12:05:49Z",
   "plan": {
     "as_of": "2026-07-23",
     "user_id": "you",
@@ -612,7 +612,7 @@
       "down_days_20d": 10,
       "condition": "2R",
       "regime": "DOWN",
-      "vs_10d_high_pct": -12.9,
+      "vs_10d_high_pct": -13.5,
       "ret_5d_pct": -6.3,
       "ret_40d_pct": -18.9,
       "above_ma_200_pct": 12.7
@@ -629,7 +629,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-4.2% from anchor)",
+        "reason": "drawdown OK (-4.9% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -639,55 +639,37 @@
         "size_mult": 0.5
       },
       "empirical": {
-        "pass": true,
-        "reason": "empirical gates pass",
-        "size_mult": 1.0
+        "pass": false,
+        "reason": "empirical: vs 10d high -13.5% < -13.0%",
+        "size_mult": 0.0
       },
       "news": {
         "pass": true,
-        "reason": "v3.12 THROTTLE: soft caution: half size, tighter δ (news=SHOCK, risk_off=CLEAR 2/10) (news demoted: SHOCK→CAUTION uncorroborated by risk-off/Type-B) | legacy news_shock overridden by corroboration rule",
-        "size_mult": 0.5
+        "reason": "news SHOCK (control OFF — informational only): news_shock_score=7 >=7; qqq_gap=-1.03% < -1.0%",
+        "size_mult": 1.0
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 70.28,
-      "spot": 67.31,
-      "dd_pct": -4.2,
-      "reason": "drawdown OK (-4.2% from anchor)"
+      "spot": 66.85,
+      "dd_pct": -4.9,
+      "reason": "drawdown OK (-4.9% from anchor)"
     },
-    "atm_iv_source": "nasdaq chain",
-    "atm_iv": 78.2,
-    "hv_20d": 70.4,
-    "iv_hv": 1.11,
-    "iv_hv_mult": 1.0,
-    "iv_hv_flag": "rich",
-    "iv_percentile": 88.0,
-    "size_mult": 0.25,
-    "spot_reference": 67.31,
-    "spot_source": "live/pre-market",
-    "strike_source": "nasdaq chain",
-    "sizing_limiter": "buying power",
-    "sizing_caps": {
-      "matrix (regime×streak)": 2,
-      "empirical cap (12)": 12,
-      "hard cap (50)": 50,
-      "buying power": 0,
-      "portfolio cap (open units)": 0
-    },
-    "sizing_mult_notes": [
-      "news SHOCK ×0.5"
-    ],
-    "action": "NO ENTRY (sized to 0)",
+    "action": "NO ENTRY",
+    "size_mult": 0,
     "recommended_units": 0,
+    "blocking_reasons": [
+      "empirical: vs 10d high -13.5% < -13.0%"
+    ],
     "batches": [],
     "recommended_strike": 50.0,
     "live_premium_bid": 1.6,
     "live_premium_ask": 1.7,
-    "live_premium_iv": 0.9769264221191405,
-    "live_premium_delta": -0.13839558899111404,
-    "engine_run_at_iso": "2026-07-23T20:30:15Z",
-    "engine_run_at": 1784838615.033717
+    "live_premium_iv": 0.9739,
+    "live_premium_delta": -0.138552,
+    "engine_run_at_iso": "2026-07-23T21:58:40Z",
+    "engine_run_at": 1784843920.373405
   },
   "pre_market": {
     "timestamp": "2026-07-23 12:30:07 UTC",

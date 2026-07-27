@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-07-24T20:30:23Z",
+  "timestamp": "2026-07-27T12:30:42Z",
   "plan": {
-    "as_of": "2026-07-24",
+    "as_of": "2026-07-27",
     "user_id": "you",
     "sizing_mode": "matrix",
     "profit_target": {
@@ -449,58 +449,58 @@
     ],
     "calendar": {
       "next_opex": "2026-08-21",
-      "days_to_opex": 28,
+      "days_to_opex": 25,
       "next_witching": "2026-09-18",
-      "days_to_witching": 56,
+      "days_to_witching": 53,
       "next_nfp": "2026-08-07",
-      "days_to_nfp": 14,
+      "days_to_nfp": 11,
       "next_month_end": "2026-07-31",
-      "days_to_month_end": 7,
+      "days_to_month_end": 4,
       "next_quarter_end": "2026-09-30",
-      "days_to_quarter_end": 68,
+      "days_to_quarter_end": 65,
       "next_russell": "2027-06-25",
-      "days_to_russell": 336,
+      "days_to_russell": 333,
       "next_vix_expiry": "2026-08-19",
-      "days_to_vix_expiry": 26,
+      "days_to_vix_expiry": 23,
       "events": [
         {
           "event": "Month-end rebalance",
           "date": "2026-07-31",
-          "days": 7
+          "days": 4
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-08-07",
-          "days": 14
+          "days": 11
         },
         {
           "event": "VIX expiry",
           "date": "2026-08-19",
-          "days": 26
+          "days": 23
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-08-21",
-          "days": 28
+          "days": 25
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 56
+          "days": 53
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-09-30",
-          "days": 68
+          "days": 65
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 336
+          "days": 333
         }
       ],
       "flags": [],
-      "days_to_rebalance": 68,
+      "days_to_rebalance": 65,
       "next_rebalance": "2026-09-30"
     },
     "econ_calendar": {
@@ -508,43 +508,44 @@
         {
           "event": "FOMC decision",
           "date": "2026-07-29",
-          "days": 5
+          "days": 2
         },
         {
           "event": "PCE",
           "date": "2026-07-31",
-          "days": 7
+          "days": 4
         },
         {
           "event": "CPI",
           "date": "2026-08-12",
-          "days": 19
+          "days": 16
         },
         {
           "event": "PPI",
           "date": "2026-08-13",
-          "days": 20
+          "days": 17
         },
         {
           "event": "Jackson Hole",
           "date": "2026-08-20",
-          "days": 27
+          "days": 24
         },
         {
           "event": "PCE",
           "date": "2026-08-28",
-          "days": 35
+          "days": 32
         }
       ],
       "flags": [
-        "FOMC decision in 5d (2026-07-29)"
+        "FOMC decision in 2d (2026-07-29)",
+        "PCE in 4d (2026-07-31)"
       ],
-      "summary": "FOMC decision in 5d (2026-07-29)",
+      "summary": "FOMC decision in 2d (2026-07-29) · PCE in 4d (2026-07-31)",
       "today": [],
       "next": {
         "event": "FOMC decision",
         "date": "2026-07-29",
-        "days": 5
+        "days": 2
       }
     },
     "scalp_plan": {
@@ -614,30 +615,31 @@
       "down_days_20d": 11,
       "condition": "3R",
       "regime": "DOWN",
-      "vs_10d_high_pct": -16.2,
+      "vs_10d_high_pct": -13.1,
       "ret_5d_pct": -5.2,
       "ret_40d_pct": -21.5,
       "above_ma_200_pct": 8.7
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": 0.29,
+      "qqq_overnight_gap_pct": 1.31,
       "news_shock_score": 10,
       "news_top_stories": [
-        "Trump to slap 'sweeping' new tariffs on [position] trade partners as global duties expire",
-        "Trump's new global tariff draws rebukes from trade partners over forced labor justification"
+        "Why Trump's new tariff blitz is very different this time around",
+        "New tariff ‘textile mechanism’ clause to disadvantage US textile makers",
+        "Oracle Stock Just Plunged to a 52-Week Low, but Should You Buy the Dip? The Answer Might Surprise You."
       ],
       "shock_level": "SHOCK"
     },
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-8.8% from anchor)",
+        "reason": "drawdown OK (-5.4% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
       "v7": {
         "pass": false,
-        "reason": "10-day-high BRAKE active",
+        "reason": "Gate 1 FAIL: RSI 32 < 35 (oversold)",
         "size_mult": 0
       },
       "empirical": {
@@ -654,31 +656,32 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 70.28,
-      "spot": 64.1,
-      "dd_pct": -8.8,
-      "reason": "drawdown OK (-8.8% from anchor)"
+      "spot": 66.47,
+      "dd_pct": -5.4,
+      "reason": "drawdown OK (-5.4% from anchor)"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "10-day-high BRAKE active"
+      "Gate 1 FAIL: RSI 32 < 35 (oversold)"
     ],
     "batches": [],
     "recommended_strike": 50.0,
     "live_premium_bid": 1.7,
     "live_premium_ask": 1.81,
-    "live_premium_iv": 0.9401905059814453,
-    "live_premium_delta": -0.15665590928703232,
-    "engine_run_at_iso": "2026-07-24T20:30:18Z",
-    "engine_run_at": 1784925018.408872
+    "live_premium_iv": 1.064381408691406,
+    "live_premium_delta": -0.1415131301929392,
+    "engine_run_at_iso": "2026-07-27T12:30:37Z",
+    "engine_run_at": 1785155437.142952
   },
   "pre_market": {
-    "timestamp": "2026-07-24 12:30:08 UTC",
+    "timestamp": "2026-07-27 12:30:06 UTC",
     "news_shock_score": 10,
     "news_top_stories": [
-      "Trump to slap 'sweeping' new tariffs on [position] trade partners as global duties expire",
-      "Trump's new global tariff draws rebukes from trade partners over forced labor justification"
+      "Why Trump's new tariff blitz is very different this time around",
+      "New tariff ‘textile mechanism’ clause to disadvantage US textile makers",
+      "Oracle Stock Just Plunged to a 52-Week Low, but Should You Buy the Dip? The Answer Might Surprise You."
     ],
     "event_alert": "",
     "regime": {
@@ -687,45 +690,45 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": 0.29,
+    "qqq_overnight_gap_pct": 1.31,
     "shock_level": "SHOCK",
     "reason": "news_shock_score=10 >=7",
     "delta_cap": 0.2,
     "size_mult": 0.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 0.90 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.39%; 3m/10y normal (+90bp). Combine: both signals CLEAR. Bash[SHOCK]: news_shock_score=10 >=7. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=SHOCK → SHOCK.",
-    "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is calm — the fear-gauge term structure is normal (ratio 0.90). Some money is moving to safety (the dollar +0.39%). Headlines / overnight flagged SHOCK: news_shock_score=10 >=7. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 0.87 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD+0.10%/UUP+0.07%/TLT+0.10%); 3m/10y normal (+87bp). Combine: both signals CLEAR. Bash[SHOCK]: news_shock_score=10 >=7. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=SHOCK → SHOCK.",
+    "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is calm — the fear-gauge term structure is normal (ratio 0.87). No real flight to safety in gold / bonds / dollar. Headlines / overnight flagged SHOCK: news_shock_score=10 >=7. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 18.55,
-      "vix3m_back": 20.54,
-      "term_ratio": 0.903,
+      "vix_front": 17.89,
+      "vix3m_back": 20.51,
+      "term_ratio": 0.872,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 379.12,
-        "curr": 371.52,
-        "change_pct": -2.0
+        "prev": 371.52,
+        "curr": 371.9,
+        "change_pct": 0.1
       },
       "uup": {
-        "prev": 28.45,
-        "curr": 28.56,
-        "change_pct": 0.39
+        "prev": 28.56,
+        "curr": 28.58,
+        "change_pct": 0.07
       },
       "tlt": {
-        "prev": 83.44,
-        "curr": 83.17,
-        "change_pct": -0.32
+        "prev": 83.17,
+        "curr": 83.25,
+        "change_pct": 0.1
       },
-      "yield_10y": 4.703,
-      "yield_3m": 3.8,
-      "yield_5y": 4.461,
-      "spread_3m10y_bp": 90,
-      "spread_5y10y_bp": 24,
+      "yield_10y": 4.679,
+      "yield_3m": 3.805,
+      "yield_5y": 4.426,
+      "spread_3m10y_bp": 87,
+      "spread_5y10y_bp": 25,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-07-24T12:30:10.038119+00:00"
+    "news_classifier_run_at": "2026-07-27T12:30:08.308732+00:00"
   }
 }

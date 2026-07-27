@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-27T12:30:42Z",
+  "timestamp": "2026-07-27T13:00:24Z",
   "plan": {
     "as_of": "2026-07-27",
     "user_id": "you",
@@ -615,7 +615,7 @@
       "down_days_20d": 11,
       "condition": "3R",
       "regime": "DOWN",
-      "vs_10d_high_pct": -13.1,
+      "vs_10d_high_pct": -12.7,
       "ret_5d_pct": -5.2,
       "ret_40d_pct": -21.5,
       "above_ma_200_pct": 8.7
@@ -633,7 +633,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-5.4% from anchor)",
+        "reason": "drawdown OK (-5.0% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -656,9 +656,9 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 70.28,
-      "spot": 66.47,
-      "dd_pct": -5.4,
-      "reason": "drawdown OK (-5.4% from anchor)"
+      "spot": 66.75,
+      "dd_pct": -5.0,
+      "reason": "drawdown OK (-5.0% from anchor)"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
@@ -670,10 +670,10 @@
     "recommended_strike": 50.0,
     "live_premium_bid": 1.7,
     "live_premium_ask": 1.81,
-    "live_premium_iv": 1.064381408691406,
-    "live_premium_delta": -0.1415131301929392,
-    "engine_run_at_iso": "2026-07-27T12:30:37Z",
-    "engine_run_at": 1785155437.142952
+    "live_premium_iv": 0.936924,
+    "live_premium_delta": -0.156881,
+    "engine_run_at_iso": "2026-07-27T13:00:20Z",
+    "engine_run_at": 1785157220.021297
   },
   "pre_market": {
     "timestamp": "2026-07-27 12:30:06 UTC",

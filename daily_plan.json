@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-07-28T12:03:40Z",
+  "timestamp": "2026-07-28T12:30:41Z",
   "plan": {
-    "as_of": "2026-07-27",
+    "as_of": "2026-07-28",
     "user_id": "you",
     "sizing_mode": "matrix",
     "profit_target": {
@@ -449,58 +449,58 @@
     ],
     "calendar": {
       "next_opex": "2026-08-21",
-      "days_to_opex": 25,
+      "days_to_opex": 24,
       "next_witching": "2026-09-18",
-      "days_to_witching": 53,
+      "days_to_witching": 52,
       "next_nfp": "2026-08-07",
-      "days_to_nfp": 11,
+      "days_to_nfp": 10,
       "next_month_end": "2026-07-31",
-      "days_to_month_end": 4,
+      "days_to_month_end": 3,
       "next_quarter_end": "2026-09-30",
-      "days_to_quarter_end": 65,
+      "days_to_quarter_end": 64,
       "next_russell": "2027-06-25",
-      "days_to_russell": 333,
+      "days_to_russell": 332,
       "next_vix_expiry": "2026-08-19",
-      "days_to_vix_expiry": 23,
+      "days_to_vix_expiry": 22,
       "events": [
         {
           "event": "Month-end rebalance",
           "date": "2026-07-31",
-          "days": 4
+          "days": 3
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-08-07",
-          "days": 11
+          "days": 10
         },
         {
           "event": "VIX expiry",
           "date": "2026-08-19",
-          "days": 23
+          "days": 22
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-08-21",
-          "days": 25
+          "days": 24
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 53
+          "days": 52
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-09-30",
-          "days": 65
+          "days": 64
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 333
+          "days": 332
         }
       ],
       "flags": [],
-      "days_to_rebalance": 65,
+      "days_to_rebalance": 64,
       "next_rebalance": "2026-09-30"
     },
     "econ_calendar": {
@@ -508,44 +508,44 @@
         {
           "event": "FOMC decision",
           "date": "2026-07-29",
-          "days": 2
+          "days": 1
         },
         {
           "event": "PCE",
           "date": "2026-07-31",
-          "days": 4
+          "days": 3
         },
         {
           "event": "CPI",
           "date": "2026-08-12",
-          "days": 16
+          "days": 15
         },
         {
           "event": "PPI",
           "date": "2026-08-13",
-          "days": 17
+          "days": 16
         },
         {
           "event": "Jackson Hole",
           "date": "2026-08-20",
-          "days": 24
+          "days": 23
         },
         {
           "event": "PCE",
           "date": "2026-08-28",
-          "days": 32
+          "days": 31
         }
       ],
       "flags": [
-        "FOMC decision in 2d (2026-07-29)",
-        "PCE in 4d (2026-07-31)"
+        "FOMC Day 1 today — decision tomorrow (2026-07-29)",
+        "PCE in 3d (2026-07-31)"
       ],
-      "summary": "FOMC decision in 2d (2026-07-29) · PCE in 4d (2026-07-31)",
+      "summary": "FOMC Day 1 today — decision tomorrow (2026-07-29) · PCE in 3d (2026-07-31)",
       "today": [],
       "next": {
         "event": "FOMC decision",
         "date": "2026-07-29",
-        "days": 2
+        "days": 1
       }
     },
     "scalp_plan": {
@@ -615,25 +615,21 @@
       "down_days_20d": 11,
       "condition": "4R+",
       "regime": "DOWN",
-      "vs_10d_high_pct": -17.1,
+      "vs_10d_high_pct": -18.7,
       "ret_5d_pct": -6.3,
       "ret_40d_pct": -24.1,
       "above_ma_200_pct": 7.6
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": 1.31,
-      "news_shock_score": 10,
-      "news_top_stories": [
-        "Why Trump's new tariff blitz is very different this time around",
-        "New tariff ‘textile mechanism’ clause to disadvantage US textile makers",
-        "Oracle Stock Just Plunged to a 52-Week Low, but Should You Buy the Dip? The Answer Might Surprise You."
-      ],
-      "shock_level": "SHOCK"
+      "qqq_overnight_gap_pct": -0.66,
+      "news_shock_score": 0,
+      "news_top_stories": [],
+      "shock_level": "CAUTION"
     },
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-9.8% from anchor)",
+        "reason": "drawdown OK (-11.6% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -644,21 +640,21 @@
       },
       "empirical": {
         "pass": true,
-        "reason": "empirical gates pass",
+        "reason": "empirical: vs 10d high -18.7% < -18.0% BUT momentum 2/5 confirms turn (RSI rising in 3/5 bars; mild capitulation (4d down + VXN 29)) → FULL SIZE (capitulation is high-quality entry per backtest)",
         "size_mult": 1.0
       },
       "news": {
         "pass": true,
-        "reason": "news SHOCK (control OFF — informational only): news_shock_score=10 >=7",
-        "size_mult": 1.0
+        "reason": "CAUTION: all clear",
+        "size_mult": 0.5
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 70.28,
-      "spot": 63.38,
-      "dd_pct": -9.8,
-      "reason": "drawdown OK (-9.8% from anchor)"
+      "spot": 62.15,
+      "dd_pct": -11.6,
+      "reason": "drawdown OK (-11.6% from anchor)"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
@@ -667,22 +663,18 @@
       "10-day-high BRAKE active"
     ],
     "batches": [],
-    "recommended_strike": 50.0,
-    "live_premium_bid": 1.81,
-    "live_premium_ask": 2.06,
-    "live_premium_iv": 0.9080352783203125,
-    "live_premium_delta": -0.16738132061630656,
-    "engine_run_at_iso": "2026-07-27T20:30:15Z",
-    "engine_run_at": 1785184215.707839
+    "recommended_strike": 66.0,
+    "live_premium_bid": 6.8,
+    "live_premium_ask": 8.2,
+    "live_premium_iv": 0.676077651977539,
+    "live_premium_delta": -0.5576354288726938,
+    "engine_run_at_iso": "2026-07-28T12:30:36Z",
+    "engine_run_at": 1785241836.075867
   },
   "pre_market": {
-    "timestamp": "2026-07-27 12:30:06 UTC",
-    "news_shock_score": 10,
-    "news_top_stories": [
-      "Why Trump's new tariff blitz is very different this time around",
-      "New tariff ‘textile mechanism’ clause to disadvantage US textile makers",
-      "Oracle Stock Just Plunged to a 52-Week Low, but Should You Buy the Dip? The Answer Might Surprise You."
-    ],
+    "timestamp": "2026-07-28 12:30:06 UTC",
+    "news_shock_score": 0,
+    "news_top_stories": [],
     "event_alert": "",
     "regime": {
       "vxn": 0,
@@ -690,45 +682,45 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": 1.31,
-    "shock_level": "SHOCK",
-    "reason": "news_shock_score=10 >=7",
-    "delta_cap": 0.2,
-    "size_mult": 0.0,
+    "qqq_overnight_gap_pct": -0.66,
+    "shock_level": "CAUTION",
+    "reason": "all clear",
+    "delta_cap": 0.27,
+    "size_mult": 0.5,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 0.87 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD+0.10%/UUP+0.07%/TLT+0.10%); 3m/10y normal (+87bp). Combine: both signals CLEAR. Bash[SHOCK]: news_shock_score=10 >=7. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=SHOCK → SHOCK.",
-    "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is calm — the fear-gauge term structure is normal (ratio 0.87). No real flight to safety in gold / bonds / dollar. Headlines / overnight flagged SHOCK: news_shock_score=10 >=7. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.93 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: GLD +0.73%, TLT +0.[position]%; 3m/10y normal (+84bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
+    "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.93). Some money is moving to safety (gold +0.73%, long bonds +0.[position]%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 17.89,
-      "vix3m_back": 20.51,
-      "term_ratio": 0.872,
+      "vix_front": 18.8,
+      "vix3m_back": 20.2,
+      "term_ratio": 0.931,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 371.52,
-        "curr": 371.9,
-        "change_pct": 0.1
+        "prev": 371.9,
+        "curr": 374.63,
+        "change_pct": 0.73
       },
       "uup": {
-        "prev": 28.56,
-        "curr": 28.58,
+        "prev": 28.58,
+        "curr": 28.6,
         "change_pct": 0.07
       },
       "tlt": {
-        "prev": 83.17,
-        "curr": 83.25,
-        "change_pct": 0.1
+        "prev": 83.25,
+        "curr": 83.75,
+        "change_pct": 0.6
       },
-      "yield_10y": 4.679,
-      "yield_3m": 3.805,
-      "yield_5y": 4.426,
-      "spread_3m10y_bp": 87,
-      "spread_5y10y_bp": 25,
+      "yield_10y": 4.641,
+      "yield_3m": 3.797,
+      "yield_5y": 4.397,
+      "spread_3m10y_bp": 84,
+      "spread_5y10y_bp": 24,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-07-27T12:30:08.308732+00:00"
+    "news_classifier_run_at": "2026-07-28T12:30:08.9419[position]+00:00"
   }
 }

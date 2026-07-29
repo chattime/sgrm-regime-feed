@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-29T14:05:20Z",
+  "timestamp": "2026-07-29T20:30:19Z",
   "plan": {
     "as_of": "2026-07-29",
     "user_id": "you",
@@ -12,7 +12,7 @@
       "adaptive": false
     },
     "greed_day": true,
-    "greed_brake_bypassed": false,
+    "greed_brake_bypassed": true,
     "recent_closes": [
       {
         "date": "2026-06-02",
@@ -172,7 +172,7 @@
       },
       {
         "date": "2026-07-29",
-        "close": 60.83
+        "close": 57.75
       }
     ],
     "recent_days": [
@@ -440,11 +440,11 @@
       {
         "date": "2026-07-29",
         "day": "Wed",
-        "close": 60.83,
-        "chg_pct": -1.19,
+        "close": 57.75,
+        "chg_pct": -6.19,
         "streak": -6,
-        "ma40": 74.34,
-        "rsi14": 23.6
+        "ma40": 74.26,
+        "rsi14": 21.3
       }
     ],
     "calendar": {
@@ -561,11 +561,11 @@
         {
           "rung": 1,
           "drop_pct": 5.0,
-          "entry": 57.79,
-          "strike": 50.5,
-          "otm_pct": 12.6,
+          "entry": 54.86,
+          "strike": 48.0,
+          "otm_pct": 12.5,
           "delta": -0.25,
-          "credit": 2.26,
+          "credit": 2.25,
           "exit_buyback": [
             1.13,
             1.58
@@ -574,27 +574,27 @@
         {
           "rung": 2,
           "drop_pct": 8.0,
-          "entry": 55.96,
-          "strike": 49.0,
-          "otm_pct": 12.4,
-          "delta": -0.25,
-          "credit": 2.21,
+          "entry": 53.13,
+          "strike": 46.0,
+          "otm_pct": 13.4,
+          "delta": -0.24,
+          "credit": 2.05,
           "exit_buyback": [
-            1.11,
-            1.55
+            1.03,
+            1.44
           ]
         },
         {
           "rung": 3,
           "drop_pct": 11.0,
-          "entry": 54.14,
-          "strike": 47.5,
-          "otm_pct": 12.3,
-          "delta": -0.25,
-          "credit": 2.17,
+          "entry": 51.4,
+          "strike": 44.5,
+          "otm_pct": 13.4,
+          "delta": -0.24,
+          "credit": 1.99,
           "exit_buyback": [
-            1.08,
-            1.52
+            0.99,
+            1.39
           ]
         }
       ],
@@ -607,9 +607,9 @@
       "note": "Exit = buy-to-close at +30–50% of credit. Credit est uses current VXN; a real spike prints richer."
     },
     "market": {
-      "tqqq_close": 60.83,
-      "vxn": 29.8,
-      "rsi": 24.0,
+      "tqqq_close": 57.75,
+      "vxn": 30.8,
+      "rsi": 21.0,
       "red_streak": 6,
       "green_streak": 0,
       "green_before_red": 2,
@@ -619,10 +619,10 @@
       "down_days_20d": 13,
       "condition": "4R+",
       "regime": "DOWN",
-      "vs_10d_high_pct": -17.0,
-      "ret_5d_pct": -13.4,
-      "ret_40d_pct": -29.1,
-      "above_ma_200_pct": 3.1
+      "vs_10d_high_pct": -22.0,
+      "ret_5d_pct": -17.8,
+      "ret_40d_pct": -32.7,
+      "above_ma_200_pct": -2.1
     },
     "pre_market": {
       "qqq_overnight_gap_pct": -0.17,
@@ -636,9 +636,9 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-13.6% from anchor)",
+        "reason": "GREED bypass (streak 6 ≥ 3): DRAWDOWN AMBER-block: -18.8% below anchor, OTM buffer -6.9% ≤ 12% — overridden, fast-PT fear harvest",
         "size_mult": 1.0,
-        "band": "GREEN"
+        "band": "AMBER"
       },
       "v7": {
         "pass": false,
@@ -647,21 +647,21 @@
       },
       "empirical": {
         "pass": true,
-        "reason": "empirical: 5d return -13.4% < -7.0% + RSI 24 < 35 + red streak 6 BUT momentum 2/5 confirms turn (DEEP capitulation (6d down + VXN 30)) → FULL SIZE (capitulation is high-quality entry per backtest)",
+        "reason": "empirical: 5d return -17.8% < -7.0% + vs 10d high -22.0% < -18.0% + RSI 21 < 35 + red streak 6 BUT momentum 2/5 confirms turn (DEEP capitulation (6d down + VXN 31)) → FULL SIZE (capitulation is high-quality entry per backtest)",
         "size_mult": 1.0
       },
       "news": {
         "pass": true,
-        "reason": "no news shock",
-        "size_mult": 1.0
+        "reason": "no news shock | v3.12 THROTTLE: soft caution: half size, tighter δ (news=SHOCK, risk_off=CAUTION 4/10)",
+        "size_mult": 0.5
       }
     },
     "drawdown_brake": {
-      "band": "GREEN",
+      "band": "AMBER",
       "anchor": 70.28,
-      "spot": 60.7,
-      "dd_pct": -13.6,
-      "reason": "drawdown OK (-13.6% from anchor)"
+      "spot": 57.06,
+      "dd_pct": -18.8,
+      "reason": "GREED bypass (streak 6 ≥ 3): DRAWDOWN AMBER-block: -18.8% below anchor, OTM buffer -6.9% ≤ 12% — overridden, fast-PT fear harvest"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
@@ -670,13 +670,13 @@
       "10-day-high BRAKE active"
     ],
     "batches": [],
-    "recommended_strike": 51.0,
-    "live_premium_bid": 2.49,
-    "live_premium_ask": 2.87,
-    "live_premium_iv": 0.879149,
-    "live_premium_delta": -0.206763,
-    "engine_run_at_iso": "2026-07-29T14:05:16Z",
-    "engine_run_at": 1785333916.572477
+    "recommended_strike": 50.0,
+    "live_premium_bid": 2.62,
+    "live_premium_ask": 3.4,
+    "live_premium_iv": 0.9127063751220702,
+    "live_premium_delta": -0.2556297982796969,
+    "engine_run_at_iso": "2026-07-29T20:30:15Z",
+    "engine_run_at": 1785357015.529676
   },
   "pre_market": {
     "timestamp": "2026-07-29 12:30:06 UTC",

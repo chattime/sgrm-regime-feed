@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-29T12:30:38Z",
+  "timestamp": "2026-07-29T13:00:27Z",
   "plan": {
     "as_of": "2026-07-29",
     "user_id": "you",
@@ -619,7 +619,7 @@
       "down_days_20d": 12,
       "condition": "4R+",
       "regime": "DOWN",
-      "vs_10d_high_pct": -20.1,
+      "vs_10d_high_pct": -19.6,
       "ret_5d_pct": -13.7,
       "ret_40d_pct": -27.0,
       "above_ma_200_pct": 4.4
@@ -636,7 +636,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-13.1% from anchor)",
+        "reason": "drawdown OK (-12.5% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -647,7 +647,7 @@
       },
       "empirical": {
         "pass": true,
-        "reason": "empirical: 5d return -13.7% < -7.0% + vs 10d high -20.1% < -18.0% + RSI 33 < 35 + red streak 5 BUT momentum 3/5 confirms turn (RSI rising in 3/5 bars; DEEP capitulation (5d down + VXN 29)) → FULL SIZE (capitulation is high-quality entry per backtest)",
+        "reason": "empirical: 5d return -13.7% < -7.0% + vs 10d high -19.6% < -18.0% + RSI 33 < 35 + red streak 5 BUT momentum 3/5 confirms turn (RSI rising in 3/5 bars; DEEP capitulation (5d down + VXN 29)) → FULL SIZE (capitulation is high-quality entry per backtest)",
         "size_mult": 1.0
       },
       "news": {
@@ -659,9 +659,9 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 70.28,
-      "spot": 61.09,
-      "dd_pct": -13.1,
-      "reason": "drawdown OK (-13.1% from anchor)"
+      "spot": 61.46,
+      "dd_pct": -12.5,
+      "reason": "drawdown OK (-12.5% from anchor)"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
@@ -670,13 +670,13 @@
       "10-day-high BRAKE active"
     ],
     "batches": [],
-    "recommended_strike": 45.0,
-    "live_premium_bid": 1.26,
-    "live_premium_ask": 1.38,
-    "live_premium_iv": 0.9689102172851561,
-    "live_premium_delta": -0.12303612720955243,
-    "engine_run_at_iso": "2026-07-29T12:30:34Z",
-    "engine_run_at": 1785328234.087762
+    "recommended_strike": 51.0,
+    "live_premium_bid": 2.1,
+    "live_premium_ask": 2.6,
+    "live_premium_iv": 0.879149,
+    "live_premium_delta": -0.206763,
+    "engine_run_at_iso": "2026-07-29T13:00:22Z",
+    "engine_run_at": 1785330022.772881
   },
   "pre_market": {
     "timestamp": "2026-07-29 12:30:06 UTC",

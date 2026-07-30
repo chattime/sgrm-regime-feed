@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-30T12:30:43Z",
+  "timestamp": "2026-07-30T13:00:24Z",
   "plan": {
     "as_of": "2026-07-30",
     "user_id": "you",
@@ -616,7 +616,7 @@
       "down_days_20d": 13,
       "condition": "4R+",
       "regime": "DOWN",
-      "vs_10d_high_pct": -17.2,
+      "vs_10d_high_pct": -17.0,
       "ret_5d_pct": -17.8,
       "ret_40d_pct": -32.7,
       "above_ma_200_pct": -2.1
@@ -634,7 +634,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-13.9% from anchor)",
+        "reason": "drawdown OK (-13.6% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -650,16 +650,16 @@
       },
       "news": {
         "pass": true,
-        "reason": "news SHOCK (control OFF — informational only): news_shock_score=9 >=7",
-        "size_mult": 1.0
+        "reason": "news SHOCK (control OFF — informational only): news_shock_score=9 >=7 | v3.12 THROTTLE: soft caution: half size, tighter δ (news=CLEAR, risk_off=CAUTION 3/10)",
+        "size_mult": 0.5
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 70.28,
-      "spot": 60.52,
-      "dd_pct": -13.9,
-      "reason": "drawdown OK (-13.9% from anchor)"
+      "spot": 60.71,
+      "dd_pct": -13.6,
+      "reason": "drawdown OK (-13.6% from anchor)"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
@@ -668,13 +668,13 @@
       "10-day-high BRAKE active"
     ],
     "batches": [],
-    "recommended_strike": 56.0,
-    "live_premium_bid": 4.25,
-    "live_premium_ask": 5.15,
-    "live_premium_iv": 0.9387741088867188,
-    "live_premium_delta": -0.3357933305168802,
-    "engine_run_at_iso": "2026-07-30T12:30:38Z",
-    "engine_run_at": 1785414638.505702
+    "recommended_strike": 47.0,
+    "live_premium_bid": 1.04,
+    "live_premium_ask": 2.38,
+    "live_premium_iv": 0.838412,
+    "live_premium_delta": -0.179387,
+    "engine_run_at_iso": "2026-07-30T13:00:20Z",
+    "engine_run_at": 1785416420.291149
   },
   "pre_market": {
     "timestamp": "2026-07-30 12:30:07 UTC",

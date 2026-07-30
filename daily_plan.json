@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-07-30T12:07:04Z",
+  "timestamp": "2026-07-30T12:30:43Z",
   "plan": {
-    "as_of": "2026-07-29",
+    "as_of": "2026-07-30",
     "user_id": "you",
     "sizing_mode": "matrix",
     "profit_target": {
@@ -12,7 +12,7 @@
       "adaptive": false
     },
     "greed_day": true,
-    "greed_brake_bypassed": true,
+    "greed_brake_bypassed": false,
     "recent_closes": [
       {
         "date": "2026-06-02",
@@ -449,107 +449,104 @@
     ],
     "calendar": {
       "next_opex": "2026-08-21",
-      "days_to_opex": 23,
+      "days_to_opex": 22,
       "next_witching": "2026-09-18",
-      "days_to_witching": 51,
+      "days_to_witching": 50,
       "next_nfp": "2026-08-07",
-      "days_to_nfp": 9,
+      "days_to_nfp": 8,
       "next_month_end": "2026-07-31",
-      "days_to_month_end": 2,
+      "days_to_month_end": 1,
       "next_quarter_end": "2026-09-30",
-      "days_to_quarter_end": 63,
+      "days_to_quarter_end": 62,
       "next_russell": "2027-06-25",
-      "days_to_russell": 331,
+      "days_to_russell": 330,
       "next_vix_expiry": "2026-08-19",
-      "days_to_vix_expiry": 21,
+      "days_to_vix_expiry": 20,
       "events": [
         {
           "event": "Month-end rebalance",
           "date": "2026-07-31",
-          "days": 2
+          "days": 1
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-08-07",
-          "days": 9
+          "days": 8
         },
         {
           "event": "VIX expiry",
           "date": "2026-08-19",
-          "days": 21
+          "days": 20
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-08-21",
-          "days": 23
+          "days": 22
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 51
+          "days": 50
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-09-30",
-          "days": 63
+          "days": 62
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 331
+          "days": 330
         }
       ],
       "flags": [
-        "Month-end rebalance in 2d (2026-07-31)"
+        "Month-end rebalance in 1d (2026-07-31)"
       ],
-      "days_to_rebalance": 63,
+      "days_to_rebalance": 62,
       "next_rebalance": "2026-09-30"
     },
     "econ_calendar": {
       "upcoming": [
         {
-          "event": "FOMC decision",
-          "date": "2026-07-29",
-          "days": 0
-        },
-        {
           "event": "PCE",
           "date": "2026-07-31",
-          "days": 2
+          "days": 1
         },
         {
           "event": "CPI",
           "date": "2026-08-12",
-          "days": 14
+          "days": 13
         },
         {
           "event": "PPI",
           "date": "2026-08-13",
-          "days": 15
+          "days": 14
         },
         {
           "event": "Jackson Hole",
           "date": "2026-08-20",
-          "days": 22
+          "days": 21
         },
         {
           "event": "PCE",
           "date": "2026-08-28",
-          "days": 30
+          "days": 29
+        },
+        {
+          "event": "CPI",
+          "date": "2026-09-11",
+          "days": 43
         }
       ],
       "flags": [
-        "FOMC decision today (2026-07-29)",
-        "PCE in 2d (2026-07-31)"
+        "PCE tomorrow (2026-07-31)"
       ],
-      "summary": "FOMC decision today (2026-07-29) · PCE in 2d (2026-07-31)",
-      "today": [
-        "FOMC decision"
-      ],
+      "summary": "PCE tomorrow (2026-07-31)",
+      "today": [],
       "next": {
-        "event": "FOMC decision",
-        "date": "2026-07-29",
-        "days": 0
+        "event": "PCE",
+        "date": "2026-07-31",
+        "days": 1
       }
     },
     "scalp_plan": {
@@ -619,26 +616,27 @@
       "down_days_20d": 13,
       "condition": "4R+",
       "regime": "DOWN",
-      "vs_10d_high_pct": -22.0,
+      "vs_10d_high_pct": -17.2,
       "ret_5d_pct": -17.8,
       "ret_40d_pct": -32.7,
       "above_ma_200_pct": -2.1
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": -0.17,
-      "news_shock_score": 3,
+      "qqq_overnight_gap_pct": 1.6,
+      "news_shock_score": 9,
       "news_top_stories": [
-        "Buffett's Berkshire Hathaway holds a record $397 billion in cash. Is a market crash coming — should you follow his lead?",
-        "GE HealthCare beats quarterly profit estimates on strong imaging demand, tariff refunds"
+        "China threatens retaliation against U.S. humanoid robot ban, says it 'severely damages' relations",
+        "Dow Jones Futures Rise; Microsoft, Meta Lead Big Earnings After Market Tumbles, Oil Prices Soar",
+        "Meta Stock Tumbles As Disappointing Sales Guidance Adds To AI Spending Anxiety"
       ],
-      "shock_level": "CLEAR"
+      "shock_level": "SHOCK"
     },
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "GREED bypass (streak 6 ≥ 3): DRAWDOWN AMBER-block: -18.8% below anchor, OTM buffer -6.9% ≤ 12% — overridden, fast-PT fear harvest",
+        "reason": "drawdown OK (-13.9% from anchor)",
         "size_mult": 1.0,
-        "band": "AMBER"
+        "band": "GREEN"
       },
       "v7": {
         "pass": false,
@@ -647,21 +645,21 @@
       },
       "empirical": {
         "pass": true,
-        "reason": "empirical: 5d return -17.8% < -7.0% + vs 10d high -22.0% < -18.0% + RSI 21 < 35 + red streak 6 BUT momentum 2/5 confirms turn (DEEP capitulation (6d down + VXN 31)) → FULL SIZE (capitulation is high-quality entry per backtest)",
+        "reason": "empirical: 5d return -17.8% < -7.0% + RSI 21 < 35 + red streak 6 BUT momentum 2/5 confirms turn (DEEP capitulation (6d down + VXN 31)) → FULL SIZE (capitulation is high-quality entry per backtest)",
         "size_mult": 1.0
       },
       "news": {
         "pass": true,
-        "reason": "no news shock | v3.12 THROTTLE: soft caution: half size, tighter δ (news=SHOCK, risk_off=CAUTION 4/10)",
-        "size_mult": 0.5
+        "reason": "news SHOCK (control OFF — informational only): news_shock_score=9 >=7",
+        "size_mult": 1.0
       }
     },
     "drawdown_brake": {
-      "band": "AMBER",
+      "band": "GREEN",
       "anchor": 70.28,
-      "spot": 57.06,
-      "dd_pct": -18.8,
-      "reason": "GREED bypass (streak 6 ≥ 3): DRAWDOWN AMBER-block: -18.8% below anchor, OTM buffer -6.9% ≤ 12% — overridden, fast-PT fear harvest"
+      "spot": 60.52,
+      "dd_pct": -13.9,
+      "reason": "drawdown OK (-13.9% from anchor)"
     },
     "action": "NO ENTRY",
     "size_mult": 0,
@@ -670,20 +668,21 @@
       "10-day-high BRAKE active"
     ],
     "batches": [],
-    "recommended_strike": 50.0,
-    "live_premium_bid": 2.62,
-    "live_premium_ask": 3.4,
-    "live_premium_iv": 0.9127063751220702,
-    "live_premium_delta": -0.2556297982796969,
-    "engine_run_at_iso": "2026-07-29T20:30:15Z",
-    "engine_run_at": 1785357015.529676
+    "recommended_strike": 56.0,
+    "live_premium_bid": 4.25,
+    "live_premium_ask": 5.15,
+    "live_premium_iv": 0.9387741088867188,
+    "live_premium_delta": -0.3357933305168802,
+    "engine_run_at_iso": "2026-07-30T12:30:38Z",
+    "engine_run_at": 1785414638.505702
   },
   "pre_market": {
-    "timestamp": "2026-07-29 12:30:06 UTC",
-    "news_shock_score": 3,
+    "timestamp": "2026-07-30 12:30:07 UTC",
+    "news_shock_score": 9,
     "news_top_stories": [
-      "Buffett's Berkshire Hathaway holds a record $397 billion in cash. Is a market crash coming — should you follow his lead?",
-      "GE HealthCare beats quarterly profit estimates on strong imaging demand, tariff refunds"
+      "China threatens retaliation against U.S. humanoid robot ban, says it 'severely damages' relations",
+      "Dow Jones Futures Rise; Microsoft, Meta Lead Big Earnings After Market Tumbles, Oil Prices Soar",
+      "Meta Stock Tumbles As Disappointing Sales Guidance Adds To AI Spending Anxiety"
     ],
     "event_alert": "",
     "regime": {
@@ -692,45 +691,45 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": -0.17,
-    "shock_level": "CLEAR",
-    "reason": "all clear",
-    "delta_cap": 0.3,
-    "size_mult": 1.0,
+    "qqq_overnight_gap_pct": 1.6,
+    "shock_level": "SHOCK",
+    "reason": "news_shock_score=9 >=7",
+    "delta_cap": 0.2,
+    "size_mult": 0.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.93 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: TLT +0.59%; 3m/10y normal (+84bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
-    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.93). Some money is moving to safety (long bonds +0.59%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 0.88 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: GLD +0.46%; 3m/10y normal (+96bp). Combine: both signals CLEAR. Bash[SHOCK]: news_shock_score=9 >=7. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=SHOCK → SHOCK.",
+    "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is calm — the fear-gauge term structure is normal (ratio 0.88). Some money is moving to safety (gold +0.46%). Headlines / overnight flagged SHOCK: news_shock_score=9 >=7. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 18.53,
-      "vix3m_back": 19.86,
-      "term_ratio": 0.933,
+      "vix_front": 18.95,
+      "vix3m_back": 21.5,
+      "term_ratio": 0.881,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 374.63,
-        "curr": 369.37,
-        "change_pct": -1.4
+        "prev": 369.37,
+        "curr": 371.08,
+        "change_pct": 0.46
       },
       "uup": {
-        "prev": 28.6,
-        "curr": 28.58,
-        "change_pct": -0.07
+        "prev": 28.58,
+        "curr": 28.42,
+        "change_pct": -0.56
       },
       "tlt": {
-        "prev": 83.75,
-        "curr": 84.24,
-        "change_pct": 0.59
+        "prev": 84.24,
+        "curr": 82.85,
+        "change_pct": -1.65
       },
-      "yield_10y": 4.604,
-      "yield_3m": 3.76,
-      "yield_5y": 4.361,
-      "spread_3m10y_bp": 84,
-      "spread_5y10y_bp": 24,
+      "yield_10y": 4.622,
+      "yield_3m": 3.658,
+      "yield_5y": 4.352,
+      "spread_3m10y_bp": 96,
+      "spread_5y10y_bp": 27,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-07-29T12:30:11.045869+00:00"
+    "news_classifier_run_at": "2026-07-30T12:30:08.765540+00:00"
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-07-31T12:30:51Z",
+  "timestamp": "2026-07-31T13:00:28Z",
   "plan": {
     "as_of": "2026-07-31",
     "user_id": "you",
@@ -657,7 +657,7 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": null,
-      "spot": 65.06,
+      "spot": 65.05,
       "dd_pct": null,
       "reason": "no active streak (no anchor)"
     },
@@ -668,13 +668,13 @@
       "Gate 1 FAIL: RSI 32 < 35 (oversold)"
     ],
     "batches": [],
-    "recommended_strike": 56.0,
-    "live_premium_bid": 2.58,
-    "live_premium_ask": 3.4,
-    "live_premium_iv": 0.8981506347656248,
-    "live_premium_delta": -0.241500227651257,
-    "engine_run_at_iso": "2026-07-31T12:30:46Z",
-    "engine_run_at": 1785501046.521575
+    "recommended_strike": 53.0,
+    "live_premium_bid": 2.08,
+    "live_premium_ask": 2.32,
+    "live_premium_iv": 0.835525,
+    "live_premium_delta": -0.205981,
+    "engine_run_at_iso": "2026-07-31T13:00:22Z",
+    "engine_run_at": 1785502822.965971
   },
   "pre_market": {
     "timestamp": "2026-07-31 12:30:11 UTC",

@@ -1,6 +1,909 @@
 {
   "version": 1,
-  "timestamp": "",
-  "plan": null,
-  "pre_market": null
+  "timestamp": "2026-08-10T12:30:31Z",
+  "plan": {
+    "as_of": "2026-08-10",
+    "user_id": "you",
+    "sizing_mode": "matrix",
+    "profit_target": {
+      "model": "M5",
+      "pt_pct": 0.4,
+      "stop_mult": 1.6,
+      "adaptive": false
+    },
+    "greed_day": false,
+    "greed_brake_bypassed": false,
+    "recent_closes": [
+      {
+        "date": "2026-06-11",
+        "close": 75.84
+      },
+      {
+        "date": "2026-06-12",
+        "close": 77.34
+      },
+      {
+        "date": "2026-06-15",
+        "close": 84.4
+      },
+      {
+        "date": "2026-06-16",
+        "close": 79.75
+      },
+      {
+        "date": "2026-06-17",
+        "close": 77.36
+      },
+      {
+        "date": "2026-06-18",
+        "close": 82.68
+      },
+      {
+        "date": "2026-06-22",
+        "close": 82.39
+      },
+      {
+        "date": "2026-06-23",
+        "close": 74.27
+      },
+      {
+        "date": "2026-06-24",
+        "close": 73.3
+      },
+      {
+        "date": "2026-06-25",
+        "close": 74.95
+      },
+      {
+        "date": "2026-06-26",
+        "close": 71.83
+      },
+      {
+        "date": "2026-06-29",
+        "close": 77.19
+      },
+      {
+        "date": "2026-06-30",
+        "close": 81.0
+      },
+      {
+        "date": "2026-07-01",
+        "close": 77.46
+      },
+      {
+        "date": "2026-07-02",
+        "close": 73.35
+      },
+      {
+        "date": "2026-07-06",
+        "close": 76.42
+      },
+      {
+        "date": "2026-07-07",
+        "close": 72.23
+      },
+      {
+        "date": "2026-07-08",
+        "close": 72.72
+      },
+      {
+        "date": "2026-07-09",
+        "close": 76.34
+      },
+      {
+        "date": "2026-07-10",
+        "close": 77.03
+      },
+      {
+        "date": "2026-07-13",
+        "close": 72.64
+      },
+      {
+        "date": "2026-07-14",
+        "close": 75.02
+      },
+      {
+        "date": "2026-07-15",
+        "close": 74.44
+      },
+      {
+        "date": "2026-07-16",
+        "close": 70.74
+      },
+      {
+        "date": "2026-07-17",
+        "close": 67.53
+      },
+      {
+        "date": "2026-07-20",
+        "close": 67.65
+      },
+      {
+        "date": "2026-07-21",
+        "close": 71.37
+      },
+      {
+        "date": "2026-07-22",
+        "close": 70.28
+      },
+      {
+        "date": "2026-07-23",
+        "close": 66.3
+      },
+      {
+        "date": "2026-07-24",
+        "close": 64.0
+      },
+      {
+        "date": "2026-07-27",
+        "close": 63.4
+      },
+      {
+        "date": "2026-07-28",
+        "close": 61.56
+      },
+      {
+        "date": "2026-07-29",
+        "close": 57.75
+      },
+      {
+        "date": "2026-07-30",
+        "close": 63.3
+      },
+      {
+        "date": "2026-07-31",
+        "close": 64.62
+      },
+      {
+        "date": "2026-08-03",
+        "close": 67.96
+      },
+      {
+        "date": "2026-08-04",
+        "close": 74.82
+      },
+      {
+        "date": "2026-08-05",
+        "close": 72.84
+      },
+      {
+        "date": "2026-08-06",
+        "close": 72.03
+      },
+      {
+        "date": "2026-08-07",
+        "close": 74.47
+      }
+    ],
+    "recent_days": [
+      {
+        "date": "2026-06-26",
+        "day": "Fri",
+        "close": 71.83,
+        "chg_pct": -4.16,
+        "streak": -1,
+        "ma40": 76.51,
+        "rsi14": 49.0
+      },
+      {
+        "date": "2026-06-29",
+        "day": "Mon",
+        "close": 77.19,
+        "chg_pct": 7.46,
+        "streak": 1,
+        "ma40": 76.86,
+        "rsi14": 51.0
+      },
+      {
+        "date": "2026-06-30",
+        "day": "Tue",
+        "close": 81.0,
+        "chg_pct": 4.94,
+        "streak": 2,
+        "ma40": 77.26,
+        "rsi14": 56.7
+      },
+      {
+        "date": "2026-07-01",
+        "day": "Wed",
+        "close": 77.46,
+        "chg_pct": -4.37,
+        "streak": -1,
+        "ma40": 77.57,
+        "rsi14": 57.7
+      },
+      {
+        "date": "2026-07-02",
+        "day": "Thu",
+        "close": 73.35,
+        "chg_pct": -5.31,
+        "streak": -2,
+        "ma40": 77.73,
+        "rsi14": 47.6
+      },
+      {
+        "date": "2026-07-06",
+        "day": "Mon",
+        "close": 76.42,
+        "chg_pct": 4.19,
+        "streak": 1,
+        "ma40": 77.85,
+        "rsi14": 49.1
+      },
+      {
+        "date": "2026-07-07",
+        "day": "Tue",
+        "close": 72.23,
+        "chg_pct": -5.48,
+        "streak": -1,
+        "ma40": 77.88,
+        "rsi14": 38.0
+      },
+      {
+        "date": "2026-07-08",
+        "day": "Wed",
+        "close": 72.72,
+        "chg_pct": 0.68,
+        "streak": 1,
+        "ma40": 77.79,
+        "rsi14": 42.4
+      },
+      {
+        "date": "2026-07-09",
+        "day": "Thu",
+        "close": 76.34,
+        "chg_pct": 4.98,
+        "streak": 2,
+        "ma40": 77.78,
+        "rsi14": 48.9
+      },
+      {
+        "date": "2026-07-10",
+        "day": "Fri",
+        "close": 77.03,
+        "chg_pct": 0.9,
+        "streak": 3,
+        "ma40": 77.84,
+        "rsi14": 43.4
+      },
+      {
+        "date": "2026-07-13",
+        "day": "Mon",
+        "close": 72.64,
+        "chg_pct": -5.7,
+        "streak": -1,
+        "ma40": 77.73,
+        "rsi14": 39.7
+      },
+      {
+        "date": "2026-07-14",
+        "day": "Tue",
+        "close": 75.02,
+        "chg_pct": 3.28,
+        "streak": 1,
+        "ma40": 77.63,
+        "rsi14": 50.9
+      },
+      {
+        "date": "2026-07-15",
+        "day": "Wed",
+        "close": 74.44,
+        "chg_pct": -0.77,
+        "streak": -1,
+        "ma40": 77.62,
+        "rsi14": 51.4
+      },
+      {
+        "date": "2026-07-16",
+        "day": "Thu",
+        "close": 70.74,
+        "chg_pct": -4.97,
+        "streak": -2,
+        "ma40": 77.53,
+        "rsi14": 45.1
+      },
+      {
+        "date": "2026-07-17",
+        "day": "Fri",
+        "close": 67.53,
+        "chg_pct": -4.54,
+        "streak": -3,
+        "ma40": 77.4,
+        "rsi14": 45.0
+      },
+      {
+        "date": "2026-07-20",
+        "day": "Mon",
+        "close": 67.65,
+        "chg_pct": 0.18,
+        "streak": 1,
+        "ma40": 77.18,
+        "rsi14": 37.4
+      },
+      {
+        "date": "2026-07-21",
+        "day": "Tue",
+        "close": 71.37,
+        "chg_pct": 5.5,
+        "streak": 2,
+        "ma40": 77.05,
+        "rsi14": 37.3
+      },
+      {
+        "date": "2026-07-22",
+        "day": "Wed",
+        "close": 70.28,
+        "chg_pct": -1.53,
+        "streak": -1,
+        "ma40": 76.86,
+        "rsi14": 39.8
+      },
+      {
+        "date": "2026-07-23",
+        "day": "Thu",
+        "close": 66.3,
+        "chg_pct": -5.66,
+        "streak": -2,
+        "ma40": 76.48,
+        "rsi14": 40.0
+      },
+      {
+        "date": "2026-07-24",
+        "day": "Fri",
+        "close": 64.0,
+        "chg_pct": -3.47,
+        "streak": -3,
+        "ma40": 76.04,
+        "rsi14": 32.0
+      },
+      {
+        "date": "2026-07-27",
+        "day": "Mon",
+        "close": 63.4,
+        "chg_pct": -0.94,
+        "streak": -4,
+        "ma40": 75.54,
+        "rsi14": 35.7
+      },
+      {
+        "date": "2026-07-28",
+        "day": "Tue",
+        "close": 61.56,
+        "chg_pct": -2.9,
+        "streak": -5,
+        "ma40": 74.97,
+        "rsi14": 32.7
+      },
+      {
+        "date": "2026-07-29",
+        "day": "Wed",
+        "close": 57.75,
+        "chg_pct": -6.19,
+        "streak": -6,
+        "ma40": 74.26,
+        "rsi14": 21.3
+      },
+      {
+        "date": "2026-07-30",
+        "day": "Thu",
+        "close": 63.3,
+        "chg_pct": 9.61,
+        "streak": 1,
+        "ma40": 73.67,
+        "rsi14": 31.6
+      },
+      {
+        "date": "2026-07-31",
+        "day": "Fri",
+        "close": 64.62,
+        "chg_pct": 2.09,
+        "streak": 2,
+        "ma40": 73.13,
+        "rsi14": 38.3
+      },
+      {
+        "date": "2026-08-03",
+        "day": "Mon",
+        "close": 67.96,
+        "chg_pct": 5.17,
+        "streak": 3,
+        "ma40": 72.7,
+        "rsi14": 40.0
+      },
+      {
+        "date": "2026-08-04",
+        "day": "Tue",
+        "close": 74.82,
+        "chg_pct": 10.09,
+        "streak": 4,
+        "ma40": 72.75,
+        "rsi14": 50.5
+      },
+      {
+        "date": "2026-08-05",
+        "day": "Wed",
+        "close": 72.84,
+        "chg_pct": -2.65,
+        "streak": -1,
+        "ma40": 72.67,
+        "rsi14": 52.6
+      },
+      {
+        "date": "2026-08-06",
+        "day": "Thu",
+        "close": 72.03,
+        "chg_pct": -1.11,
+        "streak": -2,
+        "ma40": 72.63,
+        "rsi14": 56.0
+      },
+      {
+        "date": "2026-08-07",
+        "day": "Fri",
+        "close": 74.47,
+        "chg_pct": 3.39,
+        "streak": 1,
+        "ma40": 72.76,
+        "rsi14": 58.6
+      }
+    ],
+    "calendar": {
+      "next_opex": "2026-08-21",
+      "days_to_opex": 11,
+      "next_witching": "2026-09-18",
+      "days_to_witching": 39,
+      "next_nfp": "2026-09-04",
+      "days_to_nfp": 25,
+      "next_month_end": "2026-08-31",
+      "days_to_month_end": 21,
+      "next_quarter_end": "2026-09-30",
+      "days_to_quarter_end": 51,
+      "next_russell": "2027-06-25",
+      "days_to_russell": 319,
+      "next_vix_expiry": "2026-08-19",
+      "days_to_vix_expiry": 9,
+      "events": [
+        {
+          "event": "VIX expiry",
+          "date": "2026-08-19",
+          "days": 9
+        },
+        {
+          "event": "Monthly OPEX",
+          "date": "2026-08-21",
+          "days": 11
+        },
+        {
+          "event": "Month-end rebalance",
+          "date": "2026-08-31",
+          "days": 21
+        },
+        {
+          "event": "NFP (jobs)",
+          "date": "2026-09-04",
+          "days": 25
+        },
+        {
+          "event": "Quad-witching",
+          "date": "2026-09-18",
+          "days": 39
+        },
+        {
+          "event": "Quarter-end rebalance",
+          "date": "2026-09-30",
+          "days": 51
+        },
+        {
+          "event": "Russell reconstitution",
+          "date": "2027-06-25",
+          "days": 319
+        }
+      ],
+      "flags": [],
+      "days_to_rebalance": 51,
+      "next_rebalance": "2026-09-30"
+    },
+    "econ_calendar": {
+      "upcoming": [
+        {
+          "event": "CPI",
+          "date": "2026-08-12",
+          "days": 2
+        },
+        {
+          "event": "PPI",
+          "date": "2026-08-13",
+          "days": 3
+        },
+        {
+          "event": "Jackson Hole",
+          "date": "2026-08-20",
+          "days": 10
+        },
+        {
+          "event": "PCE",
+          "date": "2026-08-28",
+          "days": 18
+        },
+        {
+          "event": "CPI",
+          "date": "2026-09-11",
+          "days": 32
+        },
+        {
+          "event": "PPI",
+          "date": "2026-09-15",
+          "days": 36
+        }
+      ],
+      "flags": [
+        "CPI in 2d (2026-08-12)",
+        "PPI in 3d (2026-08-13)"
+      ],
+      "summary": "CPI in 2d (2026-08-12) · PPI in 3d (2026-08-13)",
+      "today": [],
+      "next": {
+        "event": "CPI",
+        "date": "2026-08-12",
+        "days": 2
+      }
+    },
+    "scalp_plan": {
+      "signal": "SELL-to-open puts if TQQQ drops ≥ 3% intraday on a ONE-OFF shock (IV spike = rich premium)",
+      "trigger_drop_pct": 3.0,
+      "delta_cap": 0.25,
+      "dte": 30,
+      "rungs": [
+        {
+          "rung": 1,
+          "drop_pct": 5.0,
+          "entry": 70.75,
+          "strike": 63.0,
+          "otm_pct": 11.0,
+          "delta": -0.25,
+          "credit": 2.3,
+          "exit_buyback": [
+            1.15,
+            1.61
+          ]
+        },
+        {
+          "rung": 2,
+          "drop_pct": 8.0,
+          "entry": 68.51,
+          "strike": 61.0,
+          "otm_pct": 11.0,
+          "delta": -0.25,
+          "credit": 2.22,
+          "exit_buyback": [
+            1.11,
+            1.56
+          ]
+        },
+        {
+          "rung": 3,
+          "drop_pct": 11.0,
+          "entry": 66.28,
+          "strike": 59.0,
+          "otm_pct": 11.0,
+          "delta": -0.25,
+          "credit": 2.15,
+          "exit_buyback": [
+            1.07,
+            1.5
+          ]
+        }
+      ],
+      "sizing": "STO 2–5 contracts per rung · ≤30 DTE · NOT counted toward the daily unit cap",
+      "profit_target_pct": [
+        30,
+        50
+      ],
+      "guard": "One-off noise spike only. Stand down if structural: drawdown brake, news SHOCK, or 10d-high brake.",
+      "note": "Exit = buy-to-close at +30–50% of credit. Credit est uses current VXN; a real spike prints richer."
+    },
+    "market": {
+      "tqqq_close": 74.47,
+      "vxn": 22.8,
+      "rsi": 59.0,
+      "red_streak": 0,
+      "green_streak": 1,
+      "green_before_red": 1,
+      "up_days_10d": 5,
+      "down_days_10d": 5,
+      "up_days_20d": 8,
+      "down_days_20d": 12,
+      "condition": "GREEN",
+      "regime": "SIDEWAYS",
+      "vs_10d_high_pct": -2.5,
+      "ret_5d_pct": 15.2,
+      "ret_40d_pct": 7.8,
+      "above_ma_200_pct": 24.9
+    },
+    "pre_market": {
+      "qqq_overnight_gap_pct": -0.02,
+      "news_shock_score": 1,
+      "news_top_stories": [
+        "3 Beaten-Down Healthcare Stocks to Buy in August"
+      ],
+      "shock_level": "CAUTION"
+    },
+    "gate_results": {
+      "drawdown_brake": {
+        "pass": true,
+        "reason": "no active streak (no anchor)",
+        "size_mult": 1.0,
+        "band": "GREEN"
+      },
+      "v7": {
+        "pass": true,
+        "reason": "v7 gates pass (mult=1.0)",
+        "size_mult": 1.0
+      },
+      "empirical": {
+        "pass": true,
+        "reason": "empirical gates pass",
+        "size_mult": 1.0
+      },
+      "news": {
+        "pass": true,
+        "reason": "CAUTION: all clear",
+        "size_mult": 0.5
+      }
+    },
+    "drawdown_brake": {
+      "band": "GREEN",
+      "anchor": null,
+      "spot": 74.4,
+      "dd_pct": null,
+      "reason": "no active streak (no anchor)"
+    },
+    "flat_book": true,
+    "atm_iv_source": "nasdaq chain",
+    "atm_iv": 61.1,
+    "hv_20d": 78.0,
+    "iv_hv": 0.78,
+    "iv_hv_mult": 0.5,
+    "iv_hv_flag": "underpaid",
+    "iv_percentile": 45.0,
+    "size_mult": 0.25,
+    "dip_armed": true,
+    "spot_reference": 74.4,
+    "spot_source": "live/pre-market",
+    "ladder_base": 74.4,
+    "ladder_base_alt": 74.47,
+    "ladder_base_source": "live/pre-market",
+    "strike_source": "nasdaq chain",
+    "sizing_limiter": "matrix (regime×streak)",
+    "sizing_caps": {
+      "matrix (regime×streak)": 2,
+      "empirical cap (12)": 12,
+      "hard cap (50)": 50,
+      "buying power": 26,
+      "portfolio cap (open units)": 12
+    },
+    "sizing_mult_notes": [
+      "news CAUTION ×0.5",
+      "IV/HV 0.78 underpaid ×0.5"
+    ],
+    "action": "GO at SIDEWAYS tier",
+    "recommended_units": 2,
+    "recommended_strike": 63.0,
+    "recommended_dte_days": 39,
+    "batches": [
+      {
+        "units": 1,
+        "trigger_price": 73.66,
+        "trigger_price_alt": 73.73,
+        "drop_pct": 1.0,
+        "premium": 2.38
+      },
+      {
+        "units": 1,
+        "trigger_price": 72.17,
+        "trigger_price_alt": 72.24,
+        "drop_pct": 3.0,
+        "premium": 2.64
+      }
+    ],
+    "capital": {
+      "mode": "cash_secured",
+      "reserve_pct": 0.3,
+      "cap_total": 164994.0,
+      "already_committed": 0,
+      "available_for_new": 164994.0,
+      "this_plan_will_use": 12600.0,
+      "pct_of_cap": 7.6
+    },
+    "trace_json": {
+      "version": "v2.6",
+      "inputs": {
+        "tqqq_close": 74.47,
+        "vxn": 22.8,
+        "rsi": 59.0,
+        "red_streak": 0,
+        "green_before_red": 1,
+        "high_10d": 76.33,
+        "high_40d": 84.4,
+        "low_40d": 57.75,
+        "ma_200": 59.64,
+        "vs_10d_high_pct": -2.5,
+        "ret_5d_pct": 15.2,
+        "ret_40d_pct": 7.8,
+        "above_ma_200_pct": 24.9,
+        "capital": 738077.58
+      },
+      "gates": {
+        "layer1_v7": {
+          "pass": true,
+          "reason": "v7 gates pass (mult=1.0)",
+          "size_mult": 1.0
+        },
+        "layer4_empirical": {
+          "pass": true,
+          "reason": "empirical gates pass"
+        },
+        "layer5_news": {
+          "pass": true,
+          "reason": "CAUTION: all clear",
+          "size_mult": 0.5
+        }
+      },
+      "sizing": {
+        "regime_locked": "SIDEWAYS",
+        "condition": "1RG",
+        "base_units_from_matrix": 10,
+        "final_mult": 0.25,
+        "units_after_mult": 2,
+        "empirical_cap": 12,
+        "bp_cap_units": 26,
+        "portfolio_cap_units": 12,
+        "final_units": 2
+      },
+      "strike_derivation": {
+        "rule": "richest strike with |delta| ≤ 0.3 at spot (calibrated surface); live chain pick overrides",
+        "spot": 74.4,
+        "delta_cap": 0.3,
+        "plan_strike": 63.0,
+        "plan_strike_delta": -0.204,
+        "dte_target": 39
+      },
+      "batches": [
+        {
+          "units": 1,
+          "trigger_price": 73.66,
+          "trigger_price_alt": 73.73,
+          "drop_pct": 1.0,
+          "premium": 2.38
+        },
+        {
+          "units": 1,
+          "trigger_price": 72.17,
+          "trigger_price_alt": 72.24,
+          "drop_pct": 3.0,
+          "premium": 2.64
+        }
+      ],
+      "positions_context": {
+        "existing_open": 0,
+        "existing_units": 0
+      },
+      "confidence": {
+        "baseline_win_rate_pct": 87.7,
+        "rcp_win_rate_pct": 88.5,
+        "phase_b_win_rate_pct": 100.0,
+        "phase_c_win_rate_pct": 90.0,
+        "sample_size_trades": 60,
+        "backtest_period_years": 16
+      },
+      "live_data": {
+        "live_spot": 74.4,
+        "live_spot_source": "nasdaq_live_premarket",
+        "live_chain_atm_iv": 0.610745,
+        "live_chain_atm_strike": 74.0,
+        "live_put_call_ratio": 1.27,
+        "live_put_call_ratio_oi": 0.71,
+        "live_pcr_detail": {
+          "pcr_volume": 1.27,
+          "pcr_oi": 0.71,
+          "put_volume": 110686,
+          "call_volume": 87135,
+          "put_oi": 599237,
+          "call_oi": 838856
+        },
+        "live_chain_strike": 63.0,
+        "live_chain_bid": 2.05,
+        "live_chain_ask": 2.55,
+        "live_chain_mid": 2.3,
+        "live_chain_iv": 0.709296,
+        "live_chain_delta": -0.202887,
+        "live_chain_expiry": "2026-09-18",
+        "live_chain_identifier": "TQQQ  260918P00063000",
+        "live_chain_anchor_strike": 65.10000000000001,
+        "live_chain_anchor_otm": 0.125,
+        "live_chain_pick_method": "tiger_native_delta",
+        "live_chain_no_entry_reason": null,
+        "live_chain_note": "tiger native δ: picked $63 (δ=-0.203, IV=70.9%, target 0.2, cap 0.27); spot $74.40; 71 strikes w/ greeks",
+        "news_mode": "CAUTION",
+        "news_mode_source": "vxn+cross_asset+bash",
+        "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.83 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: GLD +2.26%, TLT +0.29%; 3m/10y normal (+95bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
+        "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.83). Some money is moving to safety (gold +2.26%, long bonds +0.29%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+        "news_size_mult": 0.5,
+        "news_delta_cap_applied": 0.27,
+        "live_chain_delta_cap": 0.27,
+        "live_chain_delta_target": 0.2,
+        "data_source": "tiger_chain(native δ) + nasdaq_spot/pcr",
+        "data_age_seconds": 5,
+        "live_ts_ratio": 0.826,
+        "live_ts_vix": 15.46,
+        "live_ts_vix3m": 18.72,
+        "live_ts_error": null,
+        "existing_units": 0,
+        "broker_snapshot_possibly_stale": false,
+        "broker_snapshot_note": "Tiger position snapshot within refresh window",
+        "fetched_at_iso": "2026-08-10T12:30:24Z",
+        "fetched_at": 1786365024.395302
+      }
+    },
+    "live_premium_bid": 2.05,
+    "live_premium_ask": 2.55,
+    "live_premium_iv": 0.709296,
+    "live_premium_delta": -0.202887,
+    "engine_run_at_iso": "2026-08-10T12:30:30Z",
+    "engine_run_at": 1786365030.23909
+  },
+  "pre_market": {
+    "timestamp": "2026-08-10 12:30:06 UTC",
+    "news_shock_score": 1,
+    "news_top_stories": [
+      "3 Beaten-Down Healthcare Stocks to Buy in August"
+    ],
+    "event_alert": "",
+    "regime": {
+      "vxn": 0,
+      "tqqq": 0,
+      "stage": 0,
+      "climate": ""
+    },
+    "qqq_overnight_gap_pct": -0.02,
+    "shock_level": "CAUTION",
+    "reason": "all clear",
+    "delta_cap": 0.27,
+    "size_mult": 0.5,
+    "news_mode_source": "vxn+cross_asset+bash",
+    "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.83 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: GLD +2.26%, TLT +0.29%; 3m/10y normal (+95bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
+    "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.83). Some money is moving to safety (gold +2.26%, long bonds +0.29%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "vxn_term": {
+      "ok": true,
+      "vix_front": 15.46,
+      "vix3m_back": 18.72,
+      "term_ratio": 0.826,
+      "term_inverted": false
+    },
+    "cross_asset": {
+      "ok": true,
+      "gld": {
+        "prev": 389.67,
+        "curr": 398.47,
+        "change_pct": 2.26
+      },
+      "uup": {
+        "prev": 28.19,
+        "curr": 28.07,
+        "change_pct": -0.43
+      },
+      "tlt": {
+        "prev": 82.52,
+        "curr": 82.76,
+        "change_pct": 0.29
+      },
+      "yield_10y": 4.66,
+      "yield_3m": 3.71,
+      "yield_5y": 4.362,
+      "spread_3m10y_bp": 95,
+      "spread_5y10y_bp": 30,
+      "curve_inverted_3m10y": false
+    },
+    "news_classifier_run_at": "2026-08-10T12:30:08.061143+00:00"
+  }
 }

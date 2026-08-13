@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-08-13T12:06:09Z",
+  "timestamp": "2026-08-13T12:30:48Z",
   "plan": {
-    "as_of": "2026-08-12",
+    "as_of": "2026-08-13",
     "user_id": "you",
     "sizing_mode": "matrix",
     "profit_target": {
@@ -449,104 +449,103 @@
     ],
     "calendar": {
       "next_opex": "2026-08-21",
-      "days_to_opex": 9,
+      "days_to_opex": 8,
       "next_witching": "2026-09-18",
-      "days_to_witching": 37,
+      "days_to_witching": 36,
       "next_nfp": "2026-09-04",
-      "days_to_nfp": 23,
+      "days_to_nfp": 22,
       "next_month_end": "2026-08-31",
-      "days_to_month_end": 19,
+      "days_to_month_end": 18,
       "next_quarter_end": "2026-09-30",
-      "days_to_quarter_end": 49,
+      "days_to_quarter_end": 48,
       "next_russell": "2027-06-25",
-      "days_to_russell": 317,
+      "days_to_russell": 316,
       "next_vix_expiry": "2026-08-19",
-      "days_to_vix_expiry": 7,
+      "days_to_vix_expiry": 6,
       "events": [
         {
           "event": "VIX expiry",
           "date": "2026-08-19",
-          "days": 7
+          "days": 6
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-08-21",
-          "days": 9
+          "days": 8
         },
         {
           "event": "Month-end rebalance",
           "date": "2026-08-31",
-          "days": 19
+          "days": 18
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-09-04",
-          "days": 23
+          "days": 22
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 37
+          "days": 36
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-09-30",
-          "days": 49
+          "days": 48
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 317
+          "days": 316
         }
       ],
       "flags": [],
-      "days_to_rebalance": 49,
+      "days_to_rebalance": 48,
       "next_rebalance": "2026-09-30"
     },
     "econ_calendar": {
       "upcoming": [
         {
-          "event": "CPI",
-          "date": "2026-08-12",
-          "days": 0
-        },
-        {
           "event": "PPI",
           "date": "2026-08-13",
-          "days": 1
+          "days": 0
         },
         {
           "event": "Jackson Hole",
           "date": "2026-08-20",
-          "days": 8
+          "days": 7
         },
         {
           "event": "PCE",
           "date": "2026-08-28",
-          "days": 16
+          "days": 15
         },
         {
           "event": "CPI",
           "date": "2026-09-11",
-          "days": 30
+          "days": 29
         },
         {
           "event": "PPI",
           "date": "2026-09-15",
+          "days": 33
+        },
+        {
+          "event": "FOMC decision",
+          "date": "2026-09-16",
           "days": 34
         }
       ],
       "flags": [
-        "CPI today (2026-08-12)",
-        "PPI tomorrow (2026-08-13)"
+        "PPI today (2026-08-13)"
       ],
-      "summary": "CPI today (2026-08-12) · PPI tomorrow (2026-08-13)",
+      "summary": "PPI today (2026-08-13)",
       "today": [
-        "CPI"
+        "PPI"
       ],
       "next": {
-        "event": "CPI",
-        "date": "2026-08-12",
+        "event": "PPI",
+        "date": "2026-08-13",
         "days": 0
       }
     },
@@ -617,16 +616,18 @@
       "down_days_20d": 12,
       "condition": "GREEN",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -2.6,
+      "vs_10d_high_pct": -2.0,
       "ret_5d_pct": 2.4,
       "ret_40d_pct": -11.6,
       "above_ma_200_pct": 24.4
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": 0.78,
-      "news_shock_score": 0,
-      "news_top_stories": [],
-      "shock_level": "CLEAR"
+      "qqq_overnight_gap_pct": 0.09,
+      "news_shock_score": 1,
+      "news_top_stories": [
+        "Healthcare Triangle reports 158% revenue growth in Q2 2026"
+      ],
+      "shock_level": "CAUTION"
     },
     "gate_results": {
       "drawdown_brake": {
@@ -647,79 +648,73 @@
       },
       "news": {
         "pass": true,
-        "reason": "no news shock",
-        "size_mult": 1.0
+        "reason": "CAUTION: all clear",
+        "size_mult": 0.5
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": null,
-      "spot": 74.37,
+      "spot": 74.78,
       "dd_pct": null,
       "reason": "no active streak (no anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 56.5,
+    "atm_iv": 56.0,
     "hv_20d": 74.7,
-    "iv_hv": 0.76,
+    "iv_hv": 0.75,
     "iv_hv_mult": 0.5,
     "iv_hv_flag": "underpaid",
     "iv_percentile": 31.0,
-    "size_mult": 0.5,
+    "size_mult": 0.25,
     "dip_armed": true,
-    "spot_reference": 74.37,
+    "spot_reference": 74.78,
     "spot_source": "live/pre-market",
-    "ladder_base": 74.37,
-    "ladder_base_alt": 74.6,
-    "ladder_base_source": "live/pre-market",
+    "ladder_base": 74.6,
+    "ladder_base_alt": 74.78,
+    "ladder_base_source": "prior close",
     "strike_source": "nasdaq chain",
     "sizing_limiter": "matrix (regime×streak)",
     "sizing_caps": {
-      "matrix (regime×streak)": 5,
+      "matrix (regime×streak)": 2,
       "empirical cap (12)": 12,
       "hard cap (50)": 50,
       "buying power": 23,
       "portfolio cap (open units)": 12
     },
     "sizing_mult_notes": [
-      "IV/HV 0.76 underpaid ×0.5"
+      "news CAUTION ×0.5",
+      "IV/HV 0.75 underpaid ×0.5"
     ],
     "action": "GO at SIDEWAYS tier",
-    "recommended_units": 5,
-    "recommended_strike": 65.0,
-    "recommended_dte_days": 37,
+    "recommended_units": 2,
+    "recommended_strike": 64.0,
+    "recommended_dte_days": 36,
     "batches": [
       {
-        "units": 2,
-        "trigger_price": 73.63,
-        "trigger_price_alt": 73.85,
+        "units": 1,
+        "trigger_price": 73.85,
+        "trigger_price_alt": 74.03,
         "drop_pct": 1.0,
-        "premium": 2.49
+        "premium": 2.15
       },
       {
         "units": 1,
-        "trigger_price": 72.98,
-        "trigger_price_alt": 73.11,
-        "drop_pct": 1.9,
-        "premium": 2.61
-      },
-      {
-        "units": 2,
-        "trigger_price": 72.14,
-        "trigger_price_alt": 72.36,
+        "trigger_price": 72.36,
+        "trigger_price_alt": 72.54,
         "drop_pct": 3.0,
-        "premium": 2.79
+        "premium": 2.41
       }
     ],
     "capital": {
       "mode": "cash_secured",
       "reserve_pct": 0.3,
-      "cap_total": 151695.0,
+      "cap_total": 152193.0,
       "already_committed": 0,
-      "available_for_new": 151695.0,
-      "this_plan_will_use": 32500.0,
-      "pct_of_cap": 21.4
+      "available_for_new": 152193.0,
+      "this_plan_will_use": 12800.0,
+      "pct_of_cap": 8.4
     },
     "trace_json": {
       "version": "v2.6",
@@ -733,11 +728,11 @@
         "high_40d": 82.68,
         "low_40d": 57.75,
         "ma_200": 59.95,
-        "vs_10d_high_pct": -2.6,
+        "vs_10d_high_pct": -2.0,
         "ret_5d_pct": 2.4,
         "ret_40d_pct": -11.6,
         "above_ma_200_pct": 24.4,
-        "capital": 656238.13
+        "capital": 658749.81
       },
       "gates": {
         "layer1_v7": {
@@ -751,50 +746,43 @@
         },
         "layer5_news": {
           "pass": true,
-          "reason": "no news shock",
-          "size_mult": 1.0
+          "reason": "CAUTION: all clear",
+          "size_mult": 0.5
         }
       },
       "sizing": {
         "regime_locked": "SIDEWAYS",
         "condition": "1RG",
         "base_units_from_matrix": 10,
-        "final_mult": 0.5,
-        "units_after_mult": 5,
+        "final_mult": 0.25,
+        "units_after_mult": 2,
         "empirical_cap": 12,
         "bp_cap_units": 23,
         "portfolio_cap_units": 12,
-        "final_units": 5
+        "final_units": 2
       },
       "strike_derivation": {
         "rule": "richest strike with |delta| ≤ 0.3 at spot (calibrated surface); live chain pick overrides",
-        "spot": 74.37,
+        "spot": 74.78,
         "delta_cap": 0.3,
-        "plan_strike": 65.0,
-        "plan_strike_delta": -0.229,
-        "dte_target": 37
+        "plan_strike": 64.0,
+        "plan_strike_delta": -0.201,
+        "dte_target": 36
       },
       "batches": [
         {
-          "units": 2,
-          "trigger_price": 73.63,
-          "trigger_price_alt": 73.85,
+          "units": 1,
+          "trigger_price": 73.85,
+          "trigger_price_alt": 74.03,
           "drop_pct": 1.0,
-          "premium": 2.49
+          "premium": 2.15
         },
         {
           "units": 1,
-          "trigger_price": 72.98,
-          "trigger_price_alt": 73.11,
-          "drop_pct": 1.9,
-          "premium": 2.61
-        },
-        {
-          "units": 2,
-          "trigger_price": 72.14,
-          "trigger_price_alt": 72.36,
+          "trigger_price": 72.36,
+          "trigger_price_alt": 72.54,
           "drop_pct": 3.0,
-          "premium": 2.79
+          "premium": 2.41
         }
       ],
       "positions_context": {
@@ -810,65 +798,67 @@
         "backtest_period_years": 16
       },
       "live_data": {
-        "live_spot": 74.5999984741211,
-        "live_spot_source": "yfinance_settled_close (post-close window)",
-        "live_chain_atm_iv": 0.5646945953369141,
+        "live_spot": 74.78,
+        "live_spot_source": "nasdaq_live_premarket",
+        "live_chain_atm_iv": 0.5595,
         "live_chain_atm_strike": 75.0,
         "live_put_call_ratio": 1.16,
-        "live_put_call_ratio_oi": 0.75,
+        "live_put_call_ratio_oi": 0.76,
         "live_pcr_detail": {
           "pcr_volume": 1.16,
-          "pcr_oi": 0.75,
+          "pcr_oi": 0.76,
           "put_volume": 99728,
           "call_volume": 85627,
-          "put_oi": 656739,
-          "call_oi": 876107
+          "put_oi": 672024,
+          "call_oi": 888086
         },
-        "live_chain_strike": 65.0,
-        "live_chain_bid": 1.9,
-        "live_chain_ask": 2.1,
-        "live_chain_mid": 2.0,
-        "live_chain_iv": 0.6367650985717772,
-        "live_chain_delta": -0.2108904358999945,
+        "live_chain_strike": 64.0,
+        "live_chain_bid": 1.61,
+        "live_chain_ask": 1.86,
+        "live_chain_mid": 1.735,
+        "live_chain_iv": 0.633502,
+        "live_chain_delta": -0.18977,
         "live_chain_expiry": "2026-09-18",
-        "live_chain_identifier": "TQQQ  260918P00065000",
-        "live_chain_anchor_strike": 65.27499866485596,
+        "live_chain_identifier": "TQQQ  260918P00064000",
+        "live_chain_anchor_strike": 65.4325,
         "live_chain_anchor_otm": 0.125,
-        "live_chain_pick_method": "anchor_with_delta_cap",
+        "live_chain_pick_method": "tiger_native_delta",
         "live_chain_no_entry_reason": null,
-        "live_chain_note": "nasdaq FOC: 58 candidates (OI≥50); 43 pass |δ|≤0.30 cap (news_mode=CLEAR, source=vxn+cross_asset+bash); anchor=$65.27 (spot × (1 − 2.5% drop − 10.0% MoS)); picked closest to anchor among acceptable; actual δ=-0.211, IV=63.7%, OTM=12.9%, DTE=37; BS r=0.045",
-        "news_mode": "CLEAR",
+        "live_chain_note": "tiger native δ: picked $64 (δ=-0.190, IV=63.4%, target 0.2, cap 0.27); spot $74.78; 68 strikes w/ greeks",
+        "news_mode": "CAUTION",
         "news_mode_source": "vxn+cross_asset+bash",
-        "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.81 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD-0.39%/UUP+0.00%/TLT+0.16%); 3m/10y normal (+95bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
-        "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.81). Some money is moving to safety (long bonds +0.16%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
-        "news_size_mult": 1.0,
-        "news_delta_cap_applied": 0.3,
-        "live_chain_delta_cap": 0.3,
+        "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.79 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: GLD +0.99%, UUP +0.21%; 3m/10y normal (+98bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
+        "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.79). Some money is moving to safety (gold +0.99%, the dollar +0.21%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+        "news_size_mult": 0.5,
+        "news_delta_cap_applied": 0.27,
+        "live_chain_delta_cap": 0.27,
         "live_chain_delta_target": 0.2,
-        "data_source": "nasdaq_foc + local_bs",
-        "data_age_seconds": 3,
-        "live_ts_ratio": 0.785,
-        "live_ts_vix": 14.55,
+        "data_source": "tiger_chain(native δ) + nasdaq_spot/pcr",
+        "data_age_seconds": 5,
+        "live_ts_ratio": 0.786,
+        "live_ts_vix": 14.57,
         "live_ts_vix3m": 18.53,
         "live_ts_error": null,
         "existing_units": 0,
-        "broker_snapshot_possibly_stale": true,
-        "broker_snapshot_note": "Tiger position snapshot likely pre-refresh — treat Sheet1 as authoritative",
-        "fetched_at_iso": "2026-08-12T20:30:08Z",
-        "fetched_at": 1786566608.809749
+        "broker_snapshot_possibly_stale": false,
+        "broker_snapshot_note": "Tiger position snapshot within refresh window",
+        "fetched_at_iso": "2026-08-13T12:30:36Z",
+        "fetched_at": 1786624236.601458
       }
     },
-    "live_premium_bid": 1.9,
-    "live_premium_ask": 2.1,
-    "live_premium_iv": 0.6367650985717772,
-    "live_premium_delta": -0.2108904358999945,
-    "engine_run_at_iso": "2026-08-12T20:30:14Z",
-    "engine_run_at": 1786566614.184907
+    "live_premium_bid": 1.61,
+    "live_premium_ask": 1.86,
+    "live_premium_iv": 0.633502,
+    "live_premium_delta": -0.18977,
+    "engine_run_at_iso": "2026-08-13T12:30:46Z",
+    "engine_run_at": 1786624246.303177
   },
   "pre_market": {
-    "timestamp": "2026-08-12 12:30:06 UTC",
-    "news_shock_score": 0,
-    "news_top_stories": [],
+    "timestamp": "2026-08-13 12:30:10 UTC",
+    "news_shock_score": 1,
+    "news_top_stories": [
+      "Healthcare Triangle reports 158% revenue growth in Q2 2026"
+    ],
     "event_alert": "",
     "regime": {
       "vxn": 0,
@@ -876,45 +866,45 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": 0.78,
-    "shock_level": "CLEAR",
+    "qqq_overnight_gap_pct": 0.09,
+    "shock_level": "CAUTION",
     "reason": "all clear",
-    "delta_cap": 0.3,
-    "size_mult": 1.0,
+    "delta_cap": 0.27,
+    "size_mult": 0.5,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.81 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD-0.39%/UUP+0.00%/TLT+0.16%); 3m/10y normal (+95bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
-    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.81). Some money is moving to safety (long bonds +0.16%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.79 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: GLD +0.99%, UUP +0.21%; 3m/10y normal (+98bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
+    "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.79). Some money is moving to safety (gold +0.99%, the dollar +0.21%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 15.37,
-      "vix3m_back": 18.91,
-      "term_ratio": 0.813,
+      "vix_front": 14.57,
+      "vix3m_back": 18.53,
+      "term_ratio": 0.786,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 402.54,
-        "curr": 400.96,
-        "change_pct": -0.39
+        "prev": 400.96,
+        "curr": 404.92,
+        "change_pct": 0.99
       },
       "uup": {
         "prev": 28.14,
-        "curr": 28.14,
-        "change_pct": 0.0
+        "curr": 28.2,
+        "change_pct": 0.21
       },
       "tlt": {
-        "prev": 82.06,
-        "curr": 82.19,
-        "change_pct": 0.16
+        "prev": 82.19,
+        "curr": 82.11,
+        "change_pct": -0.1
       },
-      "yield_10y": 4.684,
-      "yield_3m": 3.73,
-      "yield_5y": 4.385,
-      "spread_3m10y_bp": 95,
-      "spread_5y10y_bp": 30,
+      "yield_10y": 4.682,
+      "yield_3m": 3.707,
+      "yield_5y": 4.375,
+      "spread_3m10y_bp": 98,
+      "spread_5y10y_bp": 31,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-08-12T12:30:08.461622+00:00"
+    "news_classifier_run_at": "2026-08-13T12:30:14.778894+00:00"
   }
 }

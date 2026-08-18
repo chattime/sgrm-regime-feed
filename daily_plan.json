@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-08-18T12:05:19Z",
+  "timestamp": "2026-08-18T12:30:26Z",
   "plan": {
     "as_of": "2026-08-17",
     "user_id": "you",
@@ -865,9 +865,12 @@
     "engine_run_at": 1786998614.225959
   },
   "pre_market": {
-    "timestamp": "2026-08-17 12:30:04 UTC",
-    "news_shock_score": 0,
-    "news_top_stories": [],
+    "timestamp": "2026-08-18 12:30:05 UTC",
+    "news_shock_score": 4,
+    "news_top_stories": [
+      "Earnings live updates: Klarna stock plunges on trimmed guidance, Home Depot gains",
+      "Klarna Stock Plunges 20% as Financial Chief Departure Adds to Earnings Pain"
+    ],
     "event_alert": "",
     "regime": {
       "vxn": 0,
@@ -875,37 +878,37 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": 0.31,
+    "qqq_overnight_gap_pct": null,
     "shock_level": "CLEAR",
     "reason": "all clear",
     "delta_cap": 0.3,
     "size_mult": 1.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.81 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: GLD +0.63%; 3m/10y normal (+100bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
-    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.81). Some money is moving to safety (gold +0.63%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.82 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD+nan%/UUP+nan%/TLT+nan%); 3m/10y normal (+100bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
+    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.82). No real flight to safety in gold / bonds / dollar. Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 14.93,
-      "vix3m_back": 18.46,
-      "term_ratio": 0.809,
+      "vix_front": 15.7,
+      "vix3m_back": 19.04,
+      "term_ratio": 0.825,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 398.96,
-        "curr": 401.48,
-        "change_pct": 0.63
+        "prev": 401.48,
+        "curr": null,
+        "change_pct": null
       },
       "uup": {
-        "prev": 28.18,
-        "curr": 28.11,
-        "change_pct": -0.25
+        "prev": 28.11,
+        "curr": null,
+        "change_pct": null
       },
       "tlt": {
-        "prev": 82.59,
-        "curr": 82.04,
-        "change_pct": -0.67
+        "prev": 82.04,
+        "curr": null,
+        "change_pct": null
       },
       "yield_10y": 4.696,
       "yield_3m": 3.697,
@@ -914,6 +917,6 @@
       "spread_5y10y_bp": 33,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-08-17T12:30:06.322942+00:00"
+    "news_classifier_run_at": "2026-08-18T12:30:07.382553+00:00"
   }
 }

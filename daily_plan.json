@@ -1,6 +1,60 @@
 {
   "version": 1,
-  "timestamp": "",
+  "timestamp": "2026-08-31T12:30:27Z",
   "plan": null,
-  "pre_market": null
+  "pre_market": {
+    "timestamp": "2026-08-31 12:30:06 UTC",
+    "news_shock_score": 10,
+    "news_top_stories": [
+      "Coupang dispute fuels new U.S. tariff pressure on South Korea",
+      "Coupang dispute fuels new U.S. tariff pressure on South Korea"
+    ],
+    "event_alert": "",
+    "regime": {
+      "vxn": 0,
+      "tqqq": 0,
+      "stage": 0,
+      "climate": ""
+    },
+    "qqq_overnight_gap_pct": null,
+    "shock_level": "SHOCK",
+    "reason": "news_shock_score=10 >=7",
+    "delta_cap": 0.2,
+    "size_mult": 0.0,
+    "news_mode_source": "vxn+cross_asset+bash",
+    "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 0.87 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD+nan%/UUP+nan%/TLT+nan%); 3m/10y normal (+99bp). Combine: both signals CLEAR. Bash[SHOCK]: news_shock_score=10 >=7. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=SHOCK → SHOCK.",
+    "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is calm — the fear-gauge term structure is normal (ratio 0.87). No real flight to safety in gold / bonds / dollar. Headlines / overnight flagged SHOCK: news_shock_score=10 >=7. We take the most cautious of these signals to set the day.",
+    "vxn_term": {
+      "ok": true,
+      "vix_front": 15.26,
+      "vix3m_back": 17.48,
+      "term_ratio": 0.873,
+      "term_inverted": false
+    },
+    "cross_asset": {
+      "ok": true,
+      "gld": {
+        "prev": 422.6,
+        "curr": null,
+        "change_pct": null
+      },
+      "uup": {
+        "prev": 28.02,
+        "curr": null,
+        "change_pct": null
+      },
+      "tlt": {
+        "prev": 83.13,
+        "curr": null,
+        "change_pct": null
+      },
+      "yield_10y": 4.672,
+      "yield_3m": 3.678,
+      "yield_5y": 4.396,
+      "spread_3m10y_bp": 99,
+      "spread_5y10y_bp": 28,
+      "curve_inverted_3m10y": false
+    },
+    "news_classifier_run_at": "2026-08-31T12:30:07.766191+00:00"
+  }
 }

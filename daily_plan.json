@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-09-17T14:05:12Z",
+  "timestamp": "2026-09-18T12:30:26Z",
   "plan": {
-    "as_of": "2026-09-17",
+    "as_of": "2026-09-18",
     "user_id": "you",
     "close_backfill": null,
     "sizing_mode": "matrix",
@@ -173,7 +173,7 @@
       },
       {
         "date": "2026-09-17",
-        "close": 70.84
+        "close": 71.38
       }
     ],
     "recent_days": [
@@ -441,70 +441,70 @@
       {
         "date": "2026-09-17",
         "day": "Thu",
-        "close": 70.84,
-        "chg_pct": 4.28,
+        "close": 71.38,
+        "chg_pct": 5.08,
         "streak": 2,
-        "ma40": 70.27,
-        "rsi14": 43.3
+        "ma40": 70.29,
+        "rsi14": 44.9
       }
     ],
     "calendar": {
       "next_opex": "2026-09-18",
-      "days_to_opex": 1,
+      "days_to_opex": 0,
       "next_witching": "2026-09-18",
-      "days_to_witching": 1,
+      "days_to_witching": 0,
       "next_nfp": "2026-10-02",
-      "days_to_nfp": 15,
+      "days_to_nfp": 14,
       "next_month_end": "2026-09-30",
-      "days_to_month_end": 13,
+      "days_to_month_end": 12,
       "next_quarter_end": "2026-09-30",
-      "days_to_quarter_end": 13,
+      "days_to_quarter_end": 12,
       "next_russell": "2027-06-25",
-      "days_to_russell": 281,
+      "days_to_russell": 280,
       "next_vix_expiry": "2026-10-14",
-      "days_to_vix_expiry": 27,
+      "days_to_vix_expiry": 26,
       "events": [
         {
           "event": "Monthly OPEX",
           "date": "2026-09-18",
-          "days": 1
+          "days": 0
         },
         {
           "event": "Quad-witching",
           "date": "2026-09-18",
-          "days": 1
+          "days": 0
         },
         {
           "event": "Month-end rebalance",
           "date": "2026-09-30",
-          "days": 13
+          "days": 12
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-09-30",
-          "days": 13
+          "days": 12
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-10-02",
-          "days": 15
+          "days": 14
         },
         {
           "event": "VIX expiry",
           "date": "2026-10-14",
-          "days": 27
+          "days": 26
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 281
+          "days": 280
         }
       ],
       "flags": [
-        "Monthly OPEX in 1d (2026-09-18)",
-        "Quad-witching in 1d (2026-09-18)"
+        "Monthly OPEX in 0d (2026-09-18)",
+        "Quad-witching in 0d (2026-09-18)"
       ],
-      "days_to_rebalance": 13,
+      "days_to_rebalance": 12,
       "next_rebalance": "2026-09-30"
     },
     "econ_calendar": {
@@ -512,32 +512,32 @@
         {
           "event": "PCE",
           "date": "2026-09-25",
-          "days": 8
+          "days": 7
         },
         {
           "event": "CPI",
           "date": "2026-10-13",
-          "days": 26
+          "days": 25
         },
         {
           "event": "PPI",
           "date": "2026-10-14",
-          "days": 27
+          "days": 26
         },
         {
           "event": "FOMC decision",
           "date": "2026-10-28",
-          "days": 41
+          "days": 40
         },
         {
           "event": "PCE",
           "date": "2026-10-30",
-          "days": 43
+          "days": 42
         },
         {
           "event": "CPI",
           "date": "2026-11-12",
-          "days": 56
+          "days": 55
         }
       ],
       "flags": [],
@@ -546,7 +546,7 @@
       "next": {
         "event": "PCE",
         "date": "2026-09-25",
-        "days": 8
+        "days": 7
       }
     },
     "scalp_plan": {
@@ -558,39 +558,39 @@
         {
           "rung": 1,
           "drop_pct": 5.0,
-          "entry": 67.3,
-          "strike": 60.0,
-          "otm_pct": 10.8,
-          "delta": -0.24,
-          "credit": 1.93,
+          "entry": 67.81,
+          "strike": 61.0,
+          "otm_pct": 10.0,
+          "delta": -0.25,
+          "credit": 2.03,
           "exit_buyback": [
-            0.96,
-            1.35
+            1.02,
+            1.42
           ]
         },
         {
           "rung": 2,
           "drop_pct": 8.0,
-          "entry": 65.17,
-          "strike": 58.5,
+          "entry": 65.67,
+          "strike": 59.0,
           "otm_pct": 10.2,
           "delta": -0.25,
-          "credit": 1.97,
+          "credit": 1.95,
           "exit_buyback": [
-            0.98,
-            1.38
+            0.97,
+            1.36
           ]
         },
         {
           "rung": 3,
           "drop_pct": 11.0,
-          "entry": 63.05,
-          "strike": 56.5,
-          "otm_pct": 10.4,
+          "entry": 63.53,
+          "strike": 57.0,
+          "otm_pct": 10.3,
           "delta": -0.25,
-          "credit": 1.88,
+          "credit": 1.87,
           "exit_buyback": [
-            0.94,
+            0.93,
             1.31
           ]
         }
@@ -604,9 +604,9 @@
       "note": "Exit = buy-to-close at +30–50% of credit. Credit est uses current VXN; a real spike prints richer."
     },
     "market": {
-      "tqqq_close": 70.84,
-      "vxn": 20.4,
-      "rsi": 43.0,
+      "tqqq_close": 71.38,
+      "vxn": 20.0,
+      "rsi": 45.0,
       "red_streak": 0,
       "green_streak": 2,
       "green_before_red": 2,
@@ -616,16 +616,17 @@
       "down_days_20d": 9,
       "condition": "GREEN",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -3.2,
-      "ret_5d_pct": 2.4,
-      "ret_40d_pct": 0.8,
-      "above_ma_200_pct": 14.0
+      "vs_10d_high_pct": -2.1,
+      "ret_5d_pct": 3.1,
+      "ret_40d_pct": 1.6,
+      "above_ma_200_pct": 14.9
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": 1.6,
-      "news_shock_score": 2,
+      "qqq_overnight_gap_pct": 0.14,
+      "news_shock_score": 4,
       "news_top_stories": [
-        "How To Protect Yourself From The Looming AI-Stock Crash"
+        "Fed’s Hawkish Hike to Pressure Asian Currencies, Strategists Say",
+        "GE HealthCare (GEHC) Reportedly Eyes $1B Sofie Deal. What Would Ownership Add?"
       ],
       "shock_level": "CAUTION"
     },
@@ -655,24 +656,24 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": null,
-      "spot": 70.89,
+      "spot": 71.67,
       "dd_pct": null,
       "reason": "no active streak (no anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 54.6,
-    "hv_20d": 38.6,
-    "iv_hv": 1.41,
+    "atm_iv": 51.6,
+    "hv_20d": 39.8,
+    "iv_hv": 1.3,
     "iv_hv_mult": 1.0,
     "iv_hv_flag": "rich",
-    "iv_percentile": 17.0,
+    "iv_percentile": 10.0,
     "size_mult": 0.5,
     "dip_armed": true,
-    "spot_reference": 70.89,
+    "spot_reference": 71.67,
     "spot_source": "live/pre-market",
-    "ladder_base": 70.84,
-    "ladder_base_alt": 70.89,
+    "ladder_base": 71.38,
+    "ladder_base_alt": 71.67,
     "ladder_base_source": "prior close",
     "strike_source": "nasdaq chain",
     "sizing_limiter": "matrix (regime×streak)",
@@ -680,7 +681,7 @@
       "matrix (regime×streak)": 5,
       "empirical cap (12)": 12,
       "hard cap (50)": 50,
-      "buying power": 30,
+      "buying power": 29,
       "portfolio cap (open units)": 12
     },
     "sizing_mult_notes": [
@@ -688,57 +689,57 @@
     ],
     "action": "GO at SIDEWAYS tier",
     "recommended_units": 5,
-    "recommended_strike": 60.0,
-    "recommended_dte_days": 36,
+    "recommended_strike": 63.5,
+    "recommended_dte_days": 35,
     "batches": [
       {
         "units": 2,
-        "trigger_price": 70.13,
-        "trigger_price_alt": 70.18,
+        "trigger_price": 70.67,
+        "trigger_price_alt": 70.95,
         "drop_pct": 1.0,
-        "premium": 1.8
+        "premium": 2.42
       },
       {
         "units": 1,
-        "trigger_price": 69.55,
-        "trigger_price_alt": 69.47,
+        "trigger_price": 70.09,
+        "trigger_price_alt": 70.24,
         "drop_pct": 1.8,
-        "premium": 1.89
+        "premium": 2.54
       },
       {
         "units": 2,
-        "trigger_price": 68.71,
-        "trigger_price_alt": 68.76,
+        "trigger_price": 69.24,
+        "trigger_price_alt": 69.52,
         "drop_pct": 3.0,
-        "premium": 2.03
+        "premium": 2.73
       }
     ],
     "capital": {
       "mode": "cash_secured",
       "reserve_pct": 0.3,
-      "cap_total": 182442.0,
+      "cap_total": 185789.0,
       "already_committed": 0,
-      "available_for_new": 182442.0,
-      "this_plan_will_use": 30000.0,
-      "pct_of_cap": 16.4
+      "available_for_new": 185789.0,
+      "this_plan_will_use": 31750.0,
+      "pct_of_cap": 17.1
     },
     "trace_json": {
       "version": "v2.6",
       "inputs": {
-        "tqqq_close": 70.84,
-        "vxn": 20.4,
-        "rsi": 43.0,
+        "tqqq_close": 71.38,
+        "vxn": 20.0,
+        "rsi": 45.0,
         "red_streak": 0,
         "green_before_red": 2,
         "high_10d": 73.24,
         "high_40d": 77.15,
         "low_40d": 57.75,
-        "ma_200": 62.14,
-        "vs_10d_high_pct": -3.2,
-        "ret_5d_pct": 2.4,
-        "ret_40d_pct": 0.8,
-        "above_ma_200_pct": 14.0,
-        "capital": 627231.69
+        "ma_200": 62.15,
+        "vs_10d_high_pct": -2.1,
+        "ret_5d_pct": 3.1,
+        "ret_40d_pct": 1.6,
+        "above_ma_200_pct": 14.9,
+        "capital": 664687.97
       },
       "gates": {
         "layer1_v7": {
@@ -763,39 +764,39 @@
         "final_mult": 0.5,
         "units_after_mult": 5,
         "empirical_cap": 12,
-        "bp_cap_units": 30,
+        "bp_cap_units": 29,
         "portfolio_cap_units": 12,
         "final_units": 5
       },
       "strike_derivation": {
         "rule": "richest strike with |delta| ≤ 0.3 at spot (calibrated surface); live chain pick overrides",
-        "spot": 70.89,
+        "spot": 71.67,
         "delta_cap": 0.3,
-        "plan_strike": 60.0,
-        "plan_strike_delta": -0.185,
-        "dte_target": 36
+        "plan_strike": 63.5,
+        "plan_strike_delta": -0.238,
+        "dte_target": 35
       },
       "batches": [
         {
           "units": 2,
-          "trigger_price": 70.13,
-          "trigger_price_alt": 70.18,
+          "trigger_price": 70.67,
+          "trigger_price_alt": 70.95,
           "drop_pct": 1.0,
-          "premium": 1.8
+          "premium": 2.42
         },
         {
           "units": 1,
-          "trigger_price": 69.55,
-          "trigger_price_alt": 69.47,
+          "trigger_price": 70.09,
+          "trigger_price_alt": 70.24,
           "drop_pct": 1.8,
-          "premium": 1.89
+          "premium": 2.54
         },
         {
           "units": 2,
-          "trigger_price": 68.71,
-          "trigger_price_alt": 68.76,
+          "trigger_price": 69.24,
+          "trigger_price_alt": 69.52,
           "drop_pct": 3.0,
-          "premium": 2.03
+          "premium": 2.73
         }
       ],
       "positions_context": {
@@ -811,185 +812,240 @@
         "backtest_period_years": 16
       },
       "live_data": {
-        "live_spot": 70.885,
+        "live_spot": 71.67,
         "live_spot_source": "nasdaq_live_premarket",
-        "live_chain_atm_iv": 0.545624,
-        "live_chain_atm_strike": 71.0,
-        "live_put_call_ratio": 1.25,
-        "live_put_call_ratio_oi": 0.77,
+        "live_chain_atm_iv": 0.516445,
+        "live_chain_atm_strike": 71.5,
+        "live_put_call_ratio": 1.22,
+        "live_put_call_ratio_oi": 0.78,
         "live_pcr_detail": {
-          "pcr_volume": 1.25,
-          "pcr_oi": 0.77,
-          "put_volume": 35320,
-          "call_volume": 28216,
-          "put_oi": 769762,
-          "call_oi": 1001090
+          "pcr_volume": 1.22,
+          "pcr_oi": 0.78,
+          "put_volume": 187858,
+          "call_volume": 154550,
+          "put_oi": 810024,
+          "call_oi": 1038513
         },
-        "live_chain_strike": 60.0,
-        "live_chain_bid": 1.55,
-        "live_chain_ask": 1.61,
-        "live_chain_mid": 1.58,
-        "live_chain_iv": 0.673754,
-        "live_chain_delta": -0.241085,
+        "live_chain_strike": 63.5,
+        "live_chain_bid": 1.3,
+        "live_chain_ask": 2.34,
+        "live_chain_mid": 1.8199999999999998,
+        "live_chain_iv": 0.57371,
+        "live_chain_delta": -0.223912,
         "live_chain_expiry": "2026-10-23",
-        "live_chain_identifier": "TQQQ  261023P00060000",
-        "live_chain_anchor_strike": 62.024375000000006,
+        "live_chain_identifier": "TQQQ  261023P00063500",
+        "live_chain_anchor_strike": 62.71125,
         "live_chain_anchor_otm": 0.125,
         "live_chain_pick_method": "tiger_native_delta",
         "live_chain_no_entry_reason": null,
-        "live_chain_note": "tiger native δ: picked $60 (δ=-0.241, IV=67.4%, target 0.2, cap 0.27); spot $70.89; 43 strikes w/ greeks",
+        "live_chain_note": "tiger native δ: picked $64 (δ=-0.224, IV=57.4%, target 0.2, cap 0.27); spot $71.67; 42 strikes w/ greeks",
         "news_mode": "CAUTION",
         "news_mode_source": "vxn+cross_asset+bash",
-        "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.80 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: UUP +0.64%, TLT +0.21%; 3m/10y normal (+104bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
-        "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.80). Some money is moving to safety (long bonds +0.21%, the dollar +0.64%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+        "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.84 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: GLD +1.69%, TLT +1.11%; 3m/10y normal (+98bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
+        "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.84). Some money is moving to safety (gold +1.69%, long bonds +1.11%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
         "news_size_mult": 0.5,
         "news_delta_cap_applied": 0.27,
         "live_chain_delta_cap": 0.27,
         "live_chain_delta_target": 0.2,
         "data_source": "tiger_chain(native δ) + nasdaq_spot/pcr",
-        "data_age_seconds": 4,
-        "live_ts_ratio": 0.844,
-        "live_ts_vix": 15.69,
-        "live_ts_vix3m": 18.6,
+        "data_age_seconds": 5,
+        "live_ts_ratio": 0.837,
+        "live_ts_vix": 15.53,
+        "live_ts_vix3m": 18.55,
         "live_ts_error": null,
         "live_chain_candidates": [
           {
-            "strike": 45.0,
-            "bid": 0.35,
-            "ask": 0.37,
-            "mid": 0.36,
-            "iv": 0.9289,
-            "delta": -0.0602,
-            "oi": 854
-          },
-          {
             "strike": 50.0,
-            "bid": 0.57,
-            "ask": 0.59,
-            "mid": 0.58,
-            "iv": 0.823,
-            "delta": -0.0942,
-            "oi": 1889
+            "bid": 0.53,
+            "ask": 0.55,
+            "mid": 0.54,
+            "iv": 0.8104,
+            "delta": -0.0617,
+            "oi": 1909
           },
           {
             "strike": 55.0,
-            "bid": 0.91,
-            "ask": 0.96,
-            "mid": 0.94,
-            "iv": 0.7518,
-            "delta": -0.1545,
-            "oi": 1643
+            "bid": 0.86,
+            "ask": 0.92,
+            "mid": 0.89,
+            "iv": 0.7315,
+            "delta": -0.1028,
+            "oi": 1595
           },
           {
             "strike": 60.0,
-            "bid": 1.55,
-            "ask": 1.61,
-            "mid": 1.58,
-            "iv": 0.6738,
-            "delta": -0.2411,
-            "oi": 1398
+            "bid": 1.39,
+            "ask": 1.5,
+            "mid": 1.44,
+            "iv": 0.6557,
+            "delta": -0.1674,
+            "oi": 1530
           },
           {
             "strike": 63.5,
-            "bid": 2.15,
-            "ask": 2.29,
-            "mid": 2.22,
-            "iv": 0.6315,
-            "delta": -0.3254,
-            "oi": 239
+            "bid": 1.3,
+            "ask": 2.34,
+            "mid": 1.82,
+            "iv": 0.5737,
+            "delta": -0.2239,
+            "oi": 280
           },
           {
             "strike": 64.0,
-            "bid": 2.2,
-            "ask": 2.45,
-            "mid": 2.33,
-            "iv": 0.603,
-            "delta": -0.3358,
-            "oi": 308
+            "bid": 1.87,
+            "ask": 2.28,
+            "mid": 2.08,
+            "iv": 0.5899,
+            "delta": -0.2417,
+            "oi": 384
           },
           {
             "strike": 64.5,
-            "bid": 1.94,
+            "bid": 1.42,
             "ask": 2.62,
-            "mid": 2.28,
-            "iv": 0.6265,
-            "delta": -0.3534,
-            "oi": 20
+            "mid": 2.02,
+            "iv": 0.5605,
+            "delta": -0.247,
+            "oi": 25
           },
           {
             "strike": 65.0,
-            "bid": 2.51,
-            "ask": 2.7,
-            "mid": 2.6,
-            "iv": 0.6063,
-            "delta": -0.3662,
+            "bid": 2.26,
+            "ask": 2.5,
+            "mid": 2.38,
+            "iv": 0.5882,
+            "delta": -0.2682,
             "oi": 412
           },
           {
             "strike": 65.5,
-            "bid": 2.05,
-            "ask": 3.25,
-            "mid": 2.65,
-            "iv": 0.606,
-            "delta": -0.3813,
+            "bid": 2.22,
+            "ask": 2.65,
+            "mid": 2.44,
+            "iv": 0.573,
+            "delta": -0.2786,
             "oi": 35
           },
           {
             "strike": 66.0,
-            "bid": 2.75,
-            "ask": 2.98,
-            "mid": 2.87,
-            "iv": 0.6025,
-            "delta": -0.3963,
-            "oi": 163
+            "bid": 2.59,
+            "ask": 2.75,
+            "mid": 2.67,
+            "iv": 0.5807,
+            "delta": -0.2947,
+            "oi": 182
           },
           {
             "strike": 66.5,
-            "bid": 2.88,
-            "ask": 3.05,
-            "mid": 2.96,
-            "iv": 0.5977,
-            "delta": -0.4116,
-            "oi": 27
+            "bid": 2.54,
+            "ask": 2.89,
+            "mid": 2.71,
+            "iv": 0.5635,
+            "delta": -0.3057,
+            "oi": 29
           },
           {
             "strike": 67.0,
-            "bid": 2.98,
-            "ask": 3.15,
-            "mid": 3.06,
-            "iv": 0.604,
-            "delta": -0.427,
-            "oi": 112
+            "bid": 2.58,
+            "ask": 3.05,
+            "mid": 2.81,
+            "iv": 0.552,
+            "delta": -0.3187,
+            "oi": 128
           },
           {
             "strike": 67.5,
-            "bid": 2.6,
+            "bid": 2.78,
+            "ask": 3.5,
+            "mid": 3.14,
+            "iv": 0.5685,
+            "delta": -0.3368,
+            "oi": 59
+          },
+          {
+            "strike": 68.0,
+            "bid": 3.05,
             "ask": 3.35,
-            "mid": 2.98,
-            "iv": 0.5803,
-            "delta": -0.4431,
-            "oi": 48
+            "mid": 3.2,
+            "iv": 0.5505,
+            "delta": -0.3497,
+            "oi": 324
+          },
+          {
+            "strike": 68.5,
+            "bid": 2.84,
+            "ask": 3.8,
+            "mid": 3.32,
+            "iv": 0.5398,
+            "delta": -0.3643,
+            "oi": 28
+          },
+          {
+            "strike": 69.0,
+            "bid": 2.3,
+            "ask": 4.9,
+            "mid": 3.6,
+            "iv": 0.5469,
+            "delta": -0.3813,
+            "oi": 71
+          },
+          {
+            "strike": 69.5,
+            "bid": 3.45,
+            "ask": 5.1,
+            "mid": 4.28,
+            "iv": 0.599,
+            "delta": -0.4002,
+            "oi": 33
+          },
+          {
+            "strike": 70.0,
+            "bid": 3.85,
+            "ask": 4.45,
+            "mid": 4.15,
+            "iv": 0.5569,
+            "delta": -0.4141,
+            "oi": 205
+          },
+          {
+            "strike": 70.5,
+            "bid": 3.8,
+            "ask": 4.35,
+            "mid": 4.07,
+            "iv": 0.5205,
+            "delta": -0.43,
+            "oi": 15
+          },
+          {
+            "strike": 71.0,
+            "bid": 3.05,
+            "ask": 5.05,
+            "mid": 4.05,
+            "iv": 0.4895,
+            "delta": -0.4479,
+            "oi": 124
           }
         ],
         "existing_units": 0,
         "broker_snapshot_possibly_stale": false,
         "broker_snapshot_note": "Tiger position snapshot within refresh window",
-        "fetched_at_iso": "2026-09-17T14:05:08Z",
-        "fetched_at": 1789653908.744922
+        "fetched_at_iso": "2026-09-18T12:30:21Z",
+        "fetched_at": 1789734621.154138
       }
     },
-    "live_premium_bid": 1.55,
-    "live_premium_ask": 1.61,
-    "live_premium_iv": 0.673754,
-    "live_premium_delta": -0.241085,
-    "engine_run_at_iso": "2026-09-17T14:05:12Z",
-    "engine_run_at": 1789653912.274195
+    "live_premium_bid": 1.3,
+    "live_premium_ask": 2.34,
+    "live_premium_iv": 0.57371,
+    "live_premium_delta": -0.223912,
+    "engine_run_at_iso": "2026-09-18T12:30:25Z",
+    "engine_run_at": 1789734625.306032
   },
   "pre_market": {
-    "timestamp": "2026-09-17 12:30:05 UTC",
-    "news_shock_score": 2,
+    "timestamp": "2026-09-18 12:30:05 UTC",
+    "news_shock_score": 4,
     "news_top_stories": [
-      "How To Protect Yourself From The Looming AI-Stock Crash"
+      "Fed’s Hawkish Hike to Pressure Asian Currencies, Strategists Say",
+      "GE HealthCare (GEHC) Reportedly Eyes $1B Sofie Deal. What Would Ownership Add?"
     ],
     "event_alert": "",
     "regime": {
@@ -998,45 +1054,45 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": 1.6,
+    "qqq_overnight_gap_pct": 0.14,
     "shock_level": "CAUTION",
     "reason": "all clear",
     "delta_cap": 0.27,
     "size_mult": 0.5,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.80 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: UUP +0.64%, TLT +0.21%; 3m/10y normal (+104bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
-    "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.80). Some money is moving to safety (long bonds +0.21%, the dollar +0.64%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.84 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: GLD +1.69%, TLT +1.11%; 3m/10y normal (+98bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
+    "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.84). Some money is moving to safety (gold +1.69%, long bonds +1.11%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 15.7,
-      "vix3m_back": 19.73,
-      "term_ratio": 0.796,
+      "vix_front": 15.53,
+      "vix3m_back": 18.55,
+      "term_ratio": 0.837,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 394.15,
-        "curr": 391.74,
-        "change_pct": -0.61
+        "prev": 391.74,
+        "curr": 398.36,
+        "change_pct": 1.69
       },
       "uup": {
-        "prev": 28.22,
-        "curr": 28.4,
-        "change_pct": 0.64
+        "prev": 28.4,
+        "curr": 28.38,
+        "change_pct": -0.07
       },
       "tlt": {
-        "prev": 80.71,
-        "curr": 80.88,
-        "change_pct": 0.21
+        "prev": 80.88,
+        "curr": 81.78,
+        "change_pct": 1.11
       },
-      "yield_10y": 5.006,
-      "yield_3m": 3.97,
-      "yield_5y": 4.859,
-      "spread_3m10y_bp": 104,
+      "yield_10y": 4.947,
+      "yield_3m": 3.965,
+      "yield_5y": 4.801,
+      "spread_3m10y_bp": 98,
       "spread_5y10y_bp": 15,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-09-17T12:30:07.183145+00:00"
+    "news_classifier_run_at": "2026-09-18T12:30:07.137416+00:00"
   }
 }

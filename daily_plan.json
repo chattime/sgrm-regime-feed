@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-09-22T12:30:30Z",
+  "timestamp": "2026-09-22T13:00:15Z",
   "plan": {
     "as_of": "2026-09-22",
     "user_id": "you",
@@ -615,7 +615,7 @@
       "down_days_20d": 8,
       "condition": "GREEN",
       "regime": "RALLY",
-      "vs_10d_high_pct": -0.8,
+      "vs_10d_high_pct": -1.0,
       "ret_5d_pct": 13.9,
       "ret_40d_pct": 23.3,
       "above_ma_200_pct": 26.5
@@ -652,7 +652,7 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": null,
-      "spot": 78.89,
+      "spot": 78.69,
       "dd_pct": null,
       "reason": "no active streak (no anchor)"
     },
@@ -666,9 +666,9 @@
     "iv_percentile": 18.0,
     "size_mult": 0.5,
     "dip_armed": true,
-    "spot_reference": 78.89,
+    "spot_reference": 78.69,
     "spot_source": "live/pre-market",
-    "ladder_base": 78.89,
+    "ladder_base": 78.69,
     "ladder_base_alt": 78.91,
     "ladder_base_source": "live/pre-market",
     "strike_source": "nasdaq chain",
@@ -690,32 +690,32 @@
     "batches": [
       {
         "units": 2,
-        "trigger_price": 78.1,
+        "trigger_price": 77.9,
         "trigger_price_alt": 78.12,
         "drop_pct": 1.0,
-        "premium": 2.27
+        "premium": 2.31
       },
       {
         "units": 1,
-        "trigger_price": 77.43,
+        "trigger_price": 77.23,
         "trigger_price_alt": 77.33,
         "drop_pct": 1.9,
-        "premium": 2.39
+        "premium": 2.42
       },
       {
         "units": 1,
-        "trigger_price": 76.52,
+        "trigger_price": 76.33,
         "trigger_price_alt": 76.54,
         "drop_pct": 3.0,
-        "premium": 2.55
+        "premium": 2.59
       }
     ],
     "capital": {
       "mode": "cash_secured",
       "reserve_pct": 0.3,
-      "cap_total": 188441.0,
+      "cap_total": 188360.0,
       "already_committed": 0,
-      "available_for_new": 188441.0,
+      "available_for_new": 188360.0,
       "this_plan_will_use": 27000.0,
       "pct_of_cap": 14.3
     },
@@ -731,11 +731,11 @@
         "high_40d": 78.91,
         "low_40d": 57.75,
         "ma_200": 62.36,
-        "vs_10d_high_pct": -0.8,
+        "vs_10d_high_pct": -1.0,
         "ret_5d_pct": 13.9,
         "ret_40d_pct": 23.3,
         "above_ma_200_pct": 26.5,
-        "capital": 703029.5
+        "capital": 702679.27
       },
       "gates": {
         "layer1_v7": {
@@ -766,33 +766,33 @@
       },
       "strike_derivation": {
         "rule": "richest strike with |delta| ≤ 0.3 at spot (calibrated surface); live chain pick overrides",
-        "spot": 78.89,
+        "spot": 78.69,
         "delta_cap": 0.3,
         "plan_strike": 67.5,
-        "plan_strike_delta": -0.202,
+        "plan_strike_delta": -0.205,
         "dte_target": 38
       },
       "batches": [
         {
           "units": 2,
-          "trigger_price": 78.1,
+          "trigger_price": 77.9,
           "trigger_price_alt": 78.12,
           "drop_pct": 1.0,
-          "premium": 2.27
+          "premium": 2.31
         },
         {
           "units": 1,
-          "trigger_price": 77.43,
+          "trigger_price": 77.23,
           "trigger_price_alt": 77.33,
           "drop_pct": 1.9,
-          "premium": 2.39
+          "premium": 2.42
         },
         {
           "units": 1,
-          "trigger_price": 76.52,
+          "trigger_price": 76.33,
           "trigger_price_alt": 76.54,
           "drop_pct": 3.0,
-          "premium": 2.55
+          "premium": 2.59
         }
       ],
       "positions_context": {
@@ -808,7 +808,7 @@
         "backtest_period_years": 16
       },
       "live_data": {
-        "live_spot": 78.89,
+        "live_spot": 78.69,
         "live_spot_source": "nasdaq_live_premarket",
         "live_chain_atm_iv": 0.555304,
         "live_chain_atm_strike": 79.0,
@@ -830,11 +830,11 @@
         "live_chain_delta": -0.197673,
         "live_chain_expiry": "2026-10-30",
         "live_chain_identifier": "TQQQ  261030P00067500",
-        "live_chain_anchor_strike": 69.02875,
+        "live_chain_anchor_strike": 68.85374999999999,
         "live_chain_anchor_otm": 0.125,
         "live_chain_pick_method": "tiger_native_delta",
         "live_chain_no_entry_reason": null,
-        "live_chain_note": "tiger native δ: picked $68 (δ=-0.198, IV=66.0%, target 0.2, cap 0.27); spot $78.89; 41 strikes w/ greeks",
+        "live_chain_note": "tiger native δ: picked $68 (δ=-0.198, IV=66.0%, target 0.2, cap 0.27); spot $78.69; 41 strikes w/ greeks",
         "news_mode": "CAUTION",
         "news_mode_source": "vxn+cross_asset+bash",
         "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.81 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: UUP +0.32%, TLT +0.68%; 3m/10y normal (+98bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
@@ -844,9 +844,9 @@
         "live_chain_delta_cap": 0.27,
         "live_chain_delta_target": 0.2,
         "data_source": "tiger_chain(native δ) + nasdaq_spot/pcr",
-        "data_age_seconds": 4,
+        "data_age_seconds": 5,
         "live_ts_ratio": 0.811,
-        "live_ts_vix": 14.66,
+        "live_ts_vix": 14.67,
         "live_ts_vix3m": 18.08,
         "live_ts_error": null,
         "live_chain_candidates": [
@@ -1133,16 +1133,16 @@
         "existing_units": 0,
         "broker_snapshot_possibly_stale": false,
         "broker_snapshot_note": "Tiger position snapshot within refresh window",
-        "fetched_at_iso": "2026-09-22T12:30:24Z",
-        "fetched_at": 1790080224.412117
+        "fetched_at_iso": "2026-09-22T13:00:09Z",
+        "fetched_at": 1790082009.671307
       }
     },
     "live_premium_bid": 1.9,
     "live_premium_ask": 2.27,
     "live_premium_iv": 0.660027,
     "live_premium_delta": -0.197673,
-    "engine_run_at_iso": "2026-09-22T12:30:28Z",
-    "engine_run_at": 1790080228.479904
+    "engine_run_at_iso": "2026-09-22T13:00:15Z",
+    "engine_run_at": 1790082015.170363
   },
   "pre_market": {
     "timestamp": "2026-09-22 12:30:05 UTC",

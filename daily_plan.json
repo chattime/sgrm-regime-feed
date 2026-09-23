@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-09-23T12:03:02Z",
+  "timestamp": "2026-09-23T12:30:30Z",
   "plan": {
     "as_of": "2026-09-22",
     "user_id": "you",
@@ -1073,9 +1073,13 @@
     "engine_run_at": 1790109014.907446
   },
   "pre_market": {
-    "timestamp": "2026-09-22 12:30:05 UTC",
-    "news_shock_score": 0,
-    "news_top_stories": [],
+    "timestamp": "2026-09-23 12:30:05 UTC",
+    "news_shock_score": 10,
+    "news_top_stories": [
+      "Trump administration is examining whether a diesel export ban is feasible, Treasury secretary says",
+      "Why analysts say a diesel export ban could backfire",
+      "Will the housing market crash this year? What to expect for the rest of 2026."
+    ],
     "event_alert": "",
     "regime": {
       "vxn": 0,
@@ -1083,37 +1087,37 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": -0.02,
-    "shock_level": "CAUTION",
-    "reason": "all clear",
-    "delta_cap": 0.27,
-    "size_mult": 0.5,
+    "qqq_overnight_gap_pct": null,
+    "shock_level": "SHOCK",
+    "reason": "news_shock_score=10 >=7",
+    "delta_cap": 0.2,
+    "size_mult": 0.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.81 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: UUP +0.32%, TLT +0.68%; 3m/10y normal (+98bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
-    "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.81). Some money is moving to safety (long bonds +0.68%, the dollar +0.32%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 0.79 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD+nan%/UUP+nan%/TLT+nan%); 3m/10y normal (+98bp). Combine: both signals CLEAR. Bash[SHOCK]: news_shock_score=10 >=7. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=SHOCK → SHOCK.",
+    "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is calm — the fear-gauge term structure is normal (ratio 0.79). No real flight to safety in gold / bonds / dollar. Headlines / overnight flagged SHOCK: news_shock_score=10 >=7. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 14.66,
+      "vix_front": 14.33,
       "vix3m_back": 18.08,
-      "term_ratio": 0.811,
+      "term_ratio": 0.793,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 401.17,
-        "curr": 398.38,
-        "change_pct": -0.7
+        "prev": 398.38,
+        "curr": null,
+        "change_pct": null
       },
       "uup": {
-        "prev": 28.39,
-        "curr": 28.48,
-        "change_pct": 0.32
+        "prev": 28.48,
+        "curr": null,
+        "change_pct": null
       },
       "tlt": {
-        "prev": 81.25,
-        "curr": 81.8,
-        "change_pct": 0.68
+        "prev": 81.8,
+        "curr": null,
+        "change_pct": null
       },
       "yield_10y": 4.963,
       "yield_3m": 3.982,
@@ -1122,6 +1126,6 @@
       "spread_5y10y_bp": 13,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-09-22T12:30:06.838016+00:00"
+    "news_classifier_run_at": "2026-09-23T12:30:07.529897+00:00"
   }
 }

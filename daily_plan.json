@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-09-28T12:02:30Z",
+  "timestamp": "2026-09-28T12:30:35Z",
   "plan": {
-    "as_of": "2026-09-25",
+    "as_of": "2026-09-28",
     "user_id": "you",
     "close_backfill": null,
     "sizing_mode": "matrix",
@@ -450,104 +450,103 @@
     ],
     "calendar": {
       "next_opex": "2026-10-16",
-      "days_to_opex": 21,
+      "days_to_opex": 18,
       "next_witching": "2026-12-18",
-      "days_to_witching": 84,
+      "days_to_witching": 81,
       "next_nfp": "2026-10-02",
-      "days_to_nfp": 7,
+      "days_to_nfp": 4,
       "next_month_end": "2026-09-30",
-      "days_to_month_end": 5,
+      "days_to_month_end": 2,
       "next_quarter_end": "2026-09-30",
-      "days_to_quarter_end": 5,
+      "days_to_quarter_end": 2,
       "next_russell": "2027-06-25",
-      "days_to_russell": 273,
+      "days_to_russell": 270,
       "next_vix_expiry": "2026-10-14",
-      "days_to_vix_expiry": 19,
+      "days_to_vix_expiry": 16,
       "events": [
         {
           "event": "Month-end rebalance",
           "date": "2026-09-30",
-          "days": 5
+          "days": 2
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-09-30",
-          "days": 5
+          "days": 2
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-10-02",
-          "days": 7
+          "days": 4
         },
         {
           "event": "VIX expiry",
           "date": "2026-10-14",
-          "days": 19
+          "days": 16
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-10-16",
-          "days": 21
+          "days": 18
         },
         {
           "event": "Quad-witching",
           "date": "2026-12-18",
-          "days": 84
+          "days": 81
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 273
+          "days": 270
         }
       ],
-      "flags": [],
-      "days_to_rebalance": 5,
+      "flags": [
+        "Month-end rebalance in 2d (2026-09-30)",
+        "Quarter-end rebalance in 2d (2026-09-30)"
+      ],
+      "days_to_rebalance": 2,
       "next_rebalance": "2026-09-30"
     },
     "econ_calendar": {
       "upcoming": [
         {
-          "event": "PCE",
-          "date": "2026-09-25",
-          "days": 0
-        },
-        {
           "event": "CPI",
           "date": "2026-10-13",
-          "days": 18
+          "days": 15
         },
         {
           "event": "PPI",
           "date": "2026-10-14",
-          "days": 19
+          "days": 16
         },
         {
           "event": "FOMC decision",
           "date": "2026-10-28",
-          "days": 33
+          "days": 30
         },
         {
           "event": "PCE",
           "date": "2026-10-30",
-          "days": 35
+          "days": 32
         },
         {
           "event": "CPI",
           "date": "2026-11-12",
-          "days": 48
+          "days": 45
+        },
+        {
+          "event": "PPI",
+          "date": "2026-11-13",
+          "days": 46
         }
       ],
-      "flags": [
-        "PCE today (2026-09-25)"
-      ],
-      "summary": "PCE today (2026-09-25)",
-      "today": [
-        "PCE"
-      ],
+      "flags": [],
+      "summary": "no major macro events in the next 5d",
+      "today": [],
       "next": {
-        "event": "PCE",
-        "date": "2026-09-25",
-        "days": 0
+        "event": "CPI",
+        "date": "2026-10-13",
+        "days": 15
       }
     },
     "scalp_plan": {
@@ -617,16 +616,19 @@
       "down_days_20d": 9,
       "condition": "GREEN",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -1.6,
+      "vs_10d_high_pct": -3.5,
       "ret_5d_pct": 9.8,
       "ret_40d_pct": 26.0,
       "above_ma_200_pct": 26.9
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": 0.6,
-      "news_shock_score": 0,
-      "news_top_stories": [],
-      "shock_level": "CLEAR"
+      "qqq_overnight_gap_pct": -0.62,
+      "news_shock_score": 10,
+      "news_top_stories": [
+        "Trump ‘very seriously’ considering diesel export ban as global supply crunch worsens",
+        "How a U.S. diesel export ban would play out, according to Goldman Sachs"
+      ],
+      "shock_level": "SHOCK"
     },
     "gate_results": {
       "drawdown_brake": {
@@ -647,32 +649,32 @@
       },
       "news": {
         "pass": true,
-        "reason": "no news shock",
+        "reason": "news SHOCK (control OFF — informational only): news_shock_score=10 >=7",
         "size_mult": 1.0
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": null,
-      "spot": 79.65,
+      "spot": 78.17,
       "dd_pct": null,
       "reason": "no active streak (no anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 55.4,
+    "atm_iv": 56.2,
     "hv_20d": 47.8,
-    "iv_hv": 1.16,
+    "iv_hv": 1.18,
     "iv_hv_mult": 1.0,
     "iv_hv_flag": "rich",
     "iv_percentile": 23.0,
     "size_mult": 1.0,
     "dip_armed": true,
-    "spot_reference": 79.65,
+    "spot_reference": 78.17,
     "spot_source": "live/pre-market",
-    "ladder_base": 79.6,
-    "ladder_base_alt": 79.65,
-    "ladder_base_source": "prior close",
+    "ladder_base": 78.17,
+    "ladder_base_alt": 79.6,
+    "ladder_base_source": "live/pre-market",
     "strike_source": "nasdaq chain",
     "sizing_limiter": "matrix (regime×streak)",
     "sizing_caps": {
@@ -685,39 +687,39 @@
     "sizing_mult_notes": [],
     "action": "GO at SIDEWAYS tier",
     "recommended_units": 10,
-    "recommended_strike": 69.5,
-    "recommended_dte_days": 35,
+    "recommended_strike": 68.5,
+    "recommended_dte_days": 32,
     "batches": [
       {
         "units": 3,
-        "trigger_price": 78.8,
-        "trigger_price_alt": 78.85,
+        "trigger_price": 77.39,
+        "trigger_price_alt": 78.8,
         "drop_pct": 1.0,
-        "premium": 2.5
+        "premium": 2.3
       },
       {
         "units": 3,
-        "trigger_price": 78.14,
-        "trigger_price_alt": 78.06,
+        "trigger_price": 76.78,
+        "trigger_price_alt": 78.01,
         "drop_pct": 1.8,
-        "premium": 2.62
+        "premium": 2.42
       },
       {
         "units": 4,
-        "trigger_price": 77.21,
-        "trigger_price_alt": 77.26,
+        "trigger_price": 75.82,
+        "trigger_price_alt": 77.21,
         "drop_pct": 3.0,
-        "premium": 2.81
+        "premium": 2.62
       }
     ],
     "capital": {
       "mode": "cash_secured",
       "reserve_pct": 0.3,
-      "cap_total": 175420.0,
+      "cap_total": 174865.0,
       "already_committed": 0,
-      "available_for_new": 175420.0,
-      "this_plan_will_use": 69500.0,
-      "pct_of_cap": 39.6
+      "available_for_new": 174865.0,
+      "this_plan_will_use": 68500.0,
+      "pct_of_cap": 39.2
     },
     "trace_json": {
       "version": "v2.6",
@@ -731,11 +733,11 @@
         "high_40d": 80.67,
         "low_40d": 64.5,
         "ma_200": 62.72,
-        "vs_10d_high_pct": -1.6,
+        "vs_10d_high_pct": -3.5,
         "ret_5d_pct": 9.8,
         "ret_40d_pct": 26.0,
         "above_ma_200_pct": 26.9,
-        "capital": 661418.95
+        "capital": 657613.84
       },
       "gates": {
         "layer1_v7": {
@@ -749,7 +751,7 @@
         },
         "layer5_news": {
           "pass": true,
-          "reason": "no news shock",
+          "reason": "news SHOCK (control OFF — informational only): news_shock_score=10 >=7",
           "size_mult": 1.0
         }
       },
@@ -766,33 +768,33 @@
       },
       "strike_derivation": {
         "rule": "richest strike with |delta| ≤ 0.3 at spot (calibrated surface); live chain pick overrides",
-        "spot": 79.65,
+        "spot": 78.17,
         "delta_cap": 0.3,
-        "plan_strike": 69.5,
-        "plan_strike_delta": -0.222,
-        "dte_target": 35
+        "plan_strike": 68.5,
+        "plan_strike_delta": -0.221,
+        "dte_target": 32
       },
       "batches": [
         {
           "units": 3,
-          "trigger_price": 78.8,
-          "trigger_price_alt": 78.85,
+          "trigger_price": 77.39,
+          "trigger_price_alt": 78.8,
           "drop_pct": 1.0,
-          "premium": 2.5
+          "premium": 2.3
         },
         {
           "units": 3,
-          "trigger_price": 78.14,
-          "trigger_price_alt": 78.06,
+          "trigger_price": 76.78,
+          "trigger_price_alt": 78.01,
           "drop_pct": 1.8,
-          "premium": 2.62
+          "premium": 2.42
         },
         {
           "units": 4,
-          "trigger_price": 77.21,
-          "trigger_price_alt": 77.26,
+          "trigger_price": 75.82,
+          "trigger_price_alt": 77.21,
           "drop_pct": 3.0,
-          "premium": 2.81
+          "premium": 2.62
         }
       ],
       "positions_context": {
@@ -808,310 +810,358 @@
         "backtest_period_years": 16
       },
       "live_data": {
-        "live_spot": 79.5999984741211,
-        "live_spot_source": "yfinance_settled_close (post-close window)",
-        "live_chain_atm_iv": 0.5544181823730467,
-        "live_chain_atm_strike": 80.0,
-        "live_put_call_ratio": 0.93,
-        "live_put_call_ratio_oi": 0.89,
+        "live_spot": 78.1686,
+        "live_spot_source": "nasdaq_live_premarket",
+        "live_chain_atm_iv": 0.561784,
+        "live_chain_atm_strike": 78.0,
+        "live_put_call_ratio": 1.41,
+        "live_put_call_ratio_oi": 0.86,
         "live_pcr_detail": {
-          "pcr_volume": 0.93,
-          "pcr_oi": 0.89,
-          "put_volume": 164199,
-          "call_volume": 176314,
-          "put_oi": 761905,
-          "call_oi": 855953
+          "pcr_volume": 1.41,
+          "pcr_oi": 0.86,
+          "put_volume": 114903,
+          "call_volume": 81748,
+          "put_oi": 670325,
+          "call_oi": 781555
         },
-        "live_chain_strike": 69.5,
-        "live_chain_bid": 1.78,
-        "live_chain_ask": 2.2,
-        "live_chain_mid": 1.9900000000000002,
-        "live_chain_iv": 0.6282667160034179,
-        "live_chain_delta": -0.20699391652111682,
+        "live_chain_strike": 68.5,
+        "live_chain_bid": 1.83,
+        "live_chain_ask": 1.94,
+        "live_chain_mid": 1.885,
+        "live_chain_iv": 0.648272,
+        "live_chain_delta": -0.193232,
         "live_chain_expiry": "2026-10-30",
-        "live_chain_identifier": "TQQQ  261030P00069500",
-        "live_chain_anchor_strike": 69.64999866485596,
+        "live_chain_identifier": "TQQQ  261030P00068500",
+        "live_chain_anchor_strike": 68.397525,
         "live_chain_anchor_otm": 0.125,
-        "live_chain_pick_method": "anchor_with_delta_cap",
+        "live_chain_pick_method": "tiger_native_delta",
         "live_chain_no_entry_reason": null,
-        "live_chain_note": "nasdaq FOC: 32 candidates (OI≥50); 23 pass |δ|≤0.30 cap (news_mode=CLEAR, source=vxn+cross_asset+bash); anchor=$69.65 (spot × (1 − 2.5% drop − 10.0% MoS)); picked closest to anchor among acceptable; actual δ=-0.207, IV=62.8%, OTM=12.7%, DTE=35; BS r=0.045",
-        "news_mode": "CLEAR",
+        "live_chain_note": "tiger native δ: picked $68 (δ=-0.193, IV=64.8%, target 0.2, cap 0.20); spot $78.17; 49 strikes w/ greeks",
+        "news_mode": "SHOCK",
         "news_mode_source": "vxn+cross_asset+bash",
-        "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.82 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.14%; 3m/10y normal (+109bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
-        "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.82). Some money is moving to safety (the dollar +0.14%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
-        "news_size_mult": 1.0,
-        "news_delta_cap_applied": 0.3,
-        "live_chain_delta_cap": 0.3,
+        "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 0.90 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: GLD +0.44%; 3m/10y normal (+111bp). Combine: both signals CLEAR. Bash[SHOCK]: news_shock_score=10 >=7. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=SHOCK → SHOCK.",
+        "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is calm — the fear-gauge term structure is normal (ratio 0.90). Some money is moving to safety (gold +0.44%). Headlines / overnight flagged SHOCK: news_shock_score=10 >=7. We take the most cautious of these signals to set the day.",
+        "news_size_mult": 0.0,
+        "news_delta_cap_applied": 0.2,
+        "live_chain_delta_cap": 0.2,
         "live_chain_delta_target": 0.2,
-        "data_source": "nasdaq_foc + local_bs",
-        "data_age_seconds": 3,
-        "live_ts_ratio": 0.829,
-        "live_ts_vix": 14.87,
+        "data_source": "tiger_chain(native δ) + nasdaq_spot/pcr",
+        "data_age_seconds": 4,
+        "live_ts_ratio": 0.901,
+        "live_ts_vix": 16.15,
         "live_ts_vix3m": 17.93,
         "live_ts_error": null,
-        "existing_units": 0,
-        "broker_snapshot_possibly_stale": true,
-        "broker_snapshot_note": "Tiger position snapshot likely pre-refresh — treat Sheet1 as authoritative",
         "live_chain_candidates": [
           {
             "strike": 55.0,
             "bid": 0.52,
             "ask": 0.56,
             "mid": 0.54,
-            "iv": 0.8274,
-            "delta": -0.0562,
-            "oi": 6277
+            "iv": 0.8255,
+            "delta": -0.0561,
+            "oi": 6416
           },
           {
             "strike": 60.0,
             "bid": 0.82,
             "ask": 0.86,
             "mid": 0.84,
-            "iv": 0.7523,
-            "delta": -0.0888,
-            "oi": 4497
+            "iv": 0.7499,
+            "delta": -0.0887,
+            "oi": 4715
           },
           {
             "strike": 63.5,
             "bid": 1.12,
             "ask": 1.18,
             "mid": 1.15,
-            "iv": 0.7037,
-            "delta": -0.1218,
-            "oi": 1082
+            "iv": 0.7013,
+            "delta": -0.1219,
+            "oi": 1100
           },
           {
             "strike": 64.5,
             "bid": 0.93,
             "ask": 1.45,
             "mid": 1.19,
-            "iv": 0.6773,
-            "delta": -0.1296,
-            "oi": 424
+            "iv": 0.6751,
+            "delta": -0.1297,
+            "oi": 420
           },
           {
             "strike": 65.0,
             "bid": 1.27,
             "ask": 1.35,
             "mid": 1.31,
-            "iv": 0.6825,
-            "delta": -0.139,
-            "oi": 3409
+            "iv": 0.68,
+            "delta": -0.1391,
+            "oi": 3647
           },
           {
             "strike": 65.5,
             "bid": 1.38,
             "ask": 1.49,
             "mid": 1.44,
-            "iv": 0.6873,
-            "delta": -0.1485,
-            "oi": 152
+            "iv": 0.6852,
+            "delta": -0.1487,
+            "oi": 154
           },
           {
             "strike": 66.0,
             "bid": 1.33,
             "ask": 1.52,
             "mid": 1.43,
-            "iv": 0.6679,
-            "delta": -0.1515,
-            "oi": 845
+            "iv": 0.6655,
+            "delta": -0.1517,
+            "oi": 640
           },
           {
             "strike": 66.5,
             "bid": 1.42,
             "ask": 1.66,
             "mid": 1.54,
-            "iv": 0.6695,
-            "delta": -0.1607,
-            "oi": 189
+            "iv": 0.6671,
+            "delta": -0.1609,
+            "oi": 179
           },
           {
             "strike": 67.0,
             "bid": 1.48,
             "ask": 1.65,
             "mid": 1.56,
-            "iv": 0.6557,
-            "delta": -0.1657,
-            "oi": 220
+            "iv": 0.6536,
+            "delta": -0.166,
+            "oi": 222
           },
           {
             "strike": 67.5,
             "bid": 1.65,
             "ask": 1.82,
             "mid": 1.73,
-            "iv": 0.6647,
-            "delta": -0.1775,
-            "oi": 200
+            "iv": 0.6621,
+            "delta": -0.1778,
+            "oi": 203
           },
           {
             "strike": 68.0,
             "bid": 1.66,
             "ask": 1.82,
             "mid": 1.74,
-            "iv": 0.6471,
-            "delta": -0.182,
-            "oi": 563
+            "iv": 0.6445,
+            "delta": -0.1824,
+            "oi": 616
           },
           {
             "strike": 68.5,
             "bid": 1.83,
             "ask": 1.94,
             "mid": 1.89,
-            "iv": 0.6505,
-            "delta": -0.1928,
-            "oi": 101
+            "iv": 0.6483,
+            "delta": -0.1932,
+            "oi": 124
           },
           {
             "strike": 69.0,
             "bid": 1.94,
             "ask": 1.99,
             "mid": 1.96,
-            "iv": 0.6435,
-            "delta": -0.2009,
-            "oi": 225
+            "iv": 0.6408,
+            "delta": -0.2014,
+            "oi": 246
           },
           {
             "strike": 69.5,
             "bid": 1.78,
             "ask": 2.2,
             "mid": 1.99,
-            "iv": 0.6283,
-            "delta": -0.207,
-            "oi": 92
+            "iv": 0.6256,
+            "delta": -0.2075,
+            "oi": 97
           },
           {
             "strike": 70.0,
             "bid": 2.1,
             "ask": 2.2,
             "mid": 2.15,
-            "iv": 0.6316,
-            "delta": -0.2186,
-            "oi": 962
+            "iv": 0.6292,
+            "delta": -0.2192,
+            "oi": 1267
+          },
+          {
+            "strike": 70.5,
+            "bid": 2.13,
+            "ask": 2.38,
+            "mid": 2.25,
+            "iv": 0.6237,
+            "delta": -0.2288,
+            "oi": 44
           },
           {
             "strike": 71.0,
             "bid": 2.35,
             "ask": 2.46,
             "mid": 2.41,
-            "iv": 0.6268,
-            "delta": -0.2394,
-            "oi": 369
+            "iv": 0.6242,
+            "delta": -0.2402,
+            "oi": 346
           },
           {
             "strike": 71.5,
             "bid": 2.29,
             "ask": 2.74,
             "mid": 2.52,
-            "iv": 0.6211,
-            "delta": -0.2493,
-            "oi": 69
+            "iv": 0.6184,
+            "delta": -0.2502,
+            "oi": 161
           },
           {
             "strike": 72.0,
             "bid": 2.5,
             "ask": 2.82,
             "mid": 2.66,
-            "iv": 0.6193,
-            "delta": -0.2606,
-            "oi": 428
+            "iv": 0.6163,
+            "delta": -0.2615,
+            "oi": 451
           },
           {
             "strike": 72.5,
             "bid": 2.7,
             "ask": 2.87,
             "mid": 2.79,
-            "iv": 0.6143,
-            "delta": -0.2713,
-            "oi": 52
+            "iv": 0.6118,
+            "delta": -0.2724,
+            "oi": 54
           },
           {
             "strike": 73.0,
             "bid": 2.7,
             "ask": 3.0,
             "mid": 2.85,
-            "iv": 0.6016,
-            "delta": -0.2806,
-            "oi": 250
+            "iv": 0.5985,
+            "delta": -0.2818,
+            "oi": 259
+          },
+          {
+            "strike": 73.5,
+            "bid": 2.93,
+            "ask": 3.15,
+            "mid": 3.04,
+            "iv": 0.6001,
+            "delta": -0.2947,
+            "oi": 20
           },
           {
             "strike": 74.0,
             "bid": 3.05,
             "ask": 3.3,
             "mid": 3.17,
-            "iv": 0.5977,
-            "delta": -0.305,
-            "oi": 411
+            "iv": 0.5947,
+            "delta": -0.3064,
+            "oi": 404
           },
           {
             "strike": 74.5,
             "bid": 3.25,
             "ask": 3.4,
             "mid": 3.33,
-            "iv": 0.5932,
-            "delta": -0.3171,
-            "oi": 206
+            "iv": 0.5898,
+            "delta": -0.3186,
+            "oi": 268
           },
           {
             "strike": 75.0,
             "bid": 3.45,
             "ask": 3.55,
             "mid": 3.5,
-            "iv": 0.591,
-            "delta": -0.3298,
-            "oi": 800
+            "iv": 0.5878,
+            "delta": -0.3315,
+            "oi": 778
+          },
+          {
+            "strike": 75.5,
+            "bid": 3.25,
+            "ask": 3.75,
+            "mid": 3.5,
+            "iv": 0.5654,
+            "delta": -0.3417,
+            "oi": 23
           },
           {
             "strike": 76.0,
             "bid": 3.6,
             "ask": 4.2,
             "mid": 3.9,
-            "iv": 0.5898,
-            "delta": -0.3563,
-            "oi": 114
+            "iv": 0.5862,
+            "delta": -0.3583,
+            "oi": 126
+          },
+          {
+            "strike": 76.5,
+            "bid": 3.8,
+            "ask": 4.1,
+            "mid": 3.95,
+            "iv": 0.5687,
+            "delta": -0.3702,
+            "oi": 60
           },
           {
             "strike": 77.0,
             "bid": 3.9,
             "ask": 4.3,
             "mid": 4.1,
-            "iv": 0.5644,
-            "delta": -0.3813,
-            "oi": 237
+            "iv": 0.5605,
+            "delta": -0.3837,
+            "oi": 245
+          },
+          {
+            "strike": 77.5,
+            "bid": 4.0,
+            "ask": 4.75,
+            "mid": 4.38,
+            "iv": 0.5656,
+            "delta": -0.3984,
+            "oi": 48
           },
           {
             "strike": 78.0,
             "bid": 4.4,
             "ask": 4.75,
             "mid": 4.58,
-            "iv": 0.5658,
-            "delta": -0.4098,
-            "oi": 187
+            "iv": 0.5618,
+            "delta": -0.4126,
+            "oi": 199
           },
           {
             "strike": 79.0,
             "bid": 4.95,
             "ask": 5.1,
             "mid": 5.03,
-            "iv": 0.5615,
-            "delta": -0.4383,
-            "oi": 82
+            "iv": 0.5575,
+            "delta": -0.4416,
+            "oi": 302
           }
         ],
-        "fetched_at_iso": "2026-09-25T20:30:08Z",
-        "fetched_at": 1790368208.797422
+        "existing_units": 0,
+        "broker_snapshot_possibly_stale": false,
+        "broker_snapshot_note": "Tiger position snapshot within refresh window",
+        "fetched_at_iso": "2026-09-28T12:30:27Z",
+        "fetched_at": 1790598627.859476
       }
     },
-    "live_premium_bid": 1.78,
-    "live_premium_ask": 2.2,
-    "live_premium_iv": 0.6282667160034179,
-    "live_premium_delta": -0.20699391652111682,
-    "engine_run_at_iso": "2026-09-25T20:30:11Z",
-    "engine_run_at": 1790368211.898682
+    "live_premium_bid": 1.83,
+    "live_premium_ask": 1.94,
+    "live_premium_iv": 0.648272,
+    "live_premium_delta": -0.193232,
+    "engine_run_at_iso": "2026-09-28T12:30:33Z",
+    "engine_run_at": 1790598633.585978
   },
   "pre_market": {
-    "timestamp": "2026-09-25 12:30:05 UTC",
-    "news_shock_score": 0,
-    "news_top_stories": [],
+    "timestamp": "2026-09-28 12:30:08 UTC",
+    "news_shock_score": 10,
+    "news_top_stories": [
+      "Trump ‘very seriously’ considering diesel export ban as global supply crunch worsens",
+      "How a U.S. diesel export ban would play out, according to Goldman Sachs"
+    ],
     "event_alert": "",
     "regime": {
       "vxn": 0,
@@ -1119,45 +1169,45 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": 0.6,
-    "shock_level": "CLEAR",
-    "reason": "all clear",
-    "delta_cap": 0.3,
-    "size_mult": 1.0,
+    "qqq_overnight_gap_pct": -0.62,
+    "shock_level": "SHOCK",
+    "reason": "news_shock_score=10 >=7",
+    "delta_cap": 0.2,
+    "size_mult": 0.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.82 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.14%; 3m/10y normal (+109bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
-    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.82). Some money is moving to safety (the dollar +0.14%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 0.90 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: GLD +0.44%; 3m/10y normal (+111bp). Combine: both signals CLEAR. Bash[SHOCK]: news_shock_score=10 >=7. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=SHOCK → SHOCK.",
+    "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is calm — the fear-gauge term structure is normal (ratio 0.90). Some money is moving to safety (gold +0.44%). Headlines / overnight flagged SHOCK: news_shock_score=10 >=7. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 15.08,
-      "vix3m_back": 18.43,
-      "term_ratio": 0.818,
+      "vix_front": 16.15,
+      "vix3m_back": 17.93,
+      "term_ratio": 0.901,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 392.88,
-        "curr": 391.69,
-        "change_pct": -0.3
+        "prev": 391.69,
+        "curr": 393.41,
+        "change_pct": 0.44
       },
       "uup": {
-        "prev": 28.65,
-        "curr": 28.69,
-        "change_pct": 0.14
+        "prev": 28.69,
+        "curr": 28.62,
+        "change_pct": -0.24
       },
       "tlt": {
-        "prev": 80.46,
-        "curr": 79.42,
-        "change_pct": -1.29
+        "prev": 79.42,
+        "curr": 79.32,
+        "change_pct": -0.13
       },
-      "yield_10y": 5.162,
-      "yield_3m": 4.068,
-      "yield_5y": 5.025,
-      "spread_3m10y_bp": 109,
-      "spread_5y10y_bp": 14,
+      "yield_10y": 5.184,
+      "yield_3m": 4.07,
+      "yield_5y": 5.007,
+      "spread_3m10y_bp": 111,
+      "spread_5y10y_bp": 18,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-09-25T12:30:06.388853+00:00"
+    "news_classifier_run_at": "2026-09-28T12:30:10.042278+00:00"
   }
 }

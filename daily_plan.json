@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-10-08T13:00:22Z",
+  "timestamp": "2026-10-08T14:05:14Z",
   "plan": {
     "as_of": "2026-10-08",
     "user_id": "you",
@@ -15,10 +15,6 @@
     "greed_day": false,
     "greed_brake_bypassed": false,
     "recent_closes": [
-      {
-        "date": "2026-08-12",
-        "close": 74.46
-      },
       {
         "date": "2026-08-13",
         "close": 77.0
@@ -174,18 +170,13 @@
       {
         "date": "2026-10-07",
         "close": 83.62
+      },
+      {
+        "date": "2026-10-08",
+        "close": 82.28
       }
     ],
     "recent_days": [
-      {
-        "date": "2026-08-26",
-        "day": "Wed",
-        "close": 70.33,
-        "chg_pct": 0.28,
-        "streak": 2,
-        "ma40": 71.01,
-        "rsi14": 45.9
-      },
       {
         "date": "2026-08-27",
         "day": "Thu",
@@ -446,6 +437,15 @@
         "streak": -1,
         "ma40": 74.25,
         "rsi14": 77.0
+      },
+      {
+        "date": "2026-10-08",
+        "day": "Thu",
+        "close": 82.28,
+        "chg_pct": -1.61,
+        "streak": -2,
+        "ma40": 74.44,
+        "rsi14": 71.2
       }
     ],
     "calendar": {
@@ -557,40 +557,40 @@
         {
           "rung": 1,
           "drop_pct": 5.0,
-          "entry": 79.44,
-          "strike": 71.0,
-          "otm_pct": 10.6,
-          "delta": -0.24,
-          "credit": 2.4,
+          "entry": 78.16,
+          "strike": 70.0,
+          "otm_pct": 10.4,
+          "delta": -0.25,
+          "credit": 2.47,
           "exit_buyback": [
-            1.2,
-            1.68
+            1.23,
+            1.73
           ]
         },
         {
           "rung": 2,
           "drop_pct": 8.0,
-          "entry": 76.93,
-          "strike": 69.0,
-          "otm_pct": 10.3,
-          "delta": -0.25,
-          "credit": 2.39,
+          "entry": 75.69,
+          "strike": 67.5,
+          "otm_pct": 10.8,
+          "delta": -0.24,
+          "credit": 2.31,
           "exit_buyback": [
-            1.2,
-            1.67
+            1.16,
+            1.62
           ]
         },
         {
           "rung": 3,
           "drop_pct": 11.0,
-          "entry": 74.42,
-          "strike": 66.5,
+          "entry": 73.23,
+          "strike": 65.5,
           "otm_pct": 10.6,
-          "delta": -0.24,
-          "credit": 2.25,
+          "delta": -0.25,
+          "credit": 2.29,
           "exit_buyback": [
-            1.12,
-            1.57
+            1.14,
+            1.6
           ]
         }
       ],
@@ -603,22 +603,22 @@
       "note": "Exit = buy-to-close at +30–50% of credit. Credit est uses current VXN; a real spike prints richer."
     },
     "market": {
-      "tqqq_close": 83.62,
-      "vxn": 21.0,
-      "rsi": 77.0,
-      "red_streak": 1,
+      "tqqq_close": 82.28,
+      "vxn": 21.5,
+      "rsi": 71.0,
+      "red_streak": 2,
       "green_streak": 0,
       "green_before_red": 6,
       "up_days_10d": 7,
       "down_days_10d": 3,
       "up_days_20d": 13,
       "down_days_20d": 7,
-      "condition": "1RG",
+      "condition": "2R",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -3.8,
-      "ret_5d_pct": 7.2,
-      "ret_40d_pct": 14.7,
-      "above_ma_200_pct": 31.0
+      "vs_10d_high_pct": -3.7,
+      "ret_5d_pct": 4.5,
+      "ret_40d_pct": 10.5,
+      "above_ma_200_pct": 28.6
     },
     "pre_market": {
       "qqq_overnight_gap_pct": -0.56,
@@ -629,14 +629,14 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-1.9% from anchor)",
+        "reason": "drawdown OK (-1.7% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
       "v7": {
-        "pass": false,
-        "reason": "Gate 1 FAIL: RSI 77 > 75",
-        "size_mult": 0
+        "pass": true,
+        "reason": "v7 gates pass (mult=1.0)",
+        "size_mult": 1.0
       },
       "empirical": {
         "pass": true,
@@ -652,24 +652,24 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 83.62,
-      "spot": 82.04,
-      "dd_pct": -1.9,
-      "reason": "drawdown OK (-1.9% from anchor)"
+      "spot": 82.17,
+      "dd_pct": -1.7,
+      "reason": "drawdown OK (-1.7% from anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
     "atm_iv": 58.5,
-    "hv_20d": 46.1,
-    "iv_hv": 1.27,
+    "hv_20d": 44.4,
+    "iv_hv": 1.32,
     "iv_hv_mult": 1.0,
     "iv_hv_flag": "rich",
-    "iv_percentile": 21.0,
+    "iv_percentile": 27.0,
     "size_mult": 1.0,
     "dip_armed": false,
-    "spot_reference": 82.04,
+    "spot_reference": 82.17,
     "spot_source": "live/pre-market",
-    "ladder_base": 82.04,
-    "ladder_base_alt": 83.62,
+    "ladder_base": 82.17,
+    "ladder_base_alt": 82.28,
     "ladder_base_source": "live/pre-market",
     "strike_source": "nasdaq chain",
     "sizing_limiter": "matrix (regime×streak)",
@@ -688,58 +688,58 @@
     "batches": [
       {
         "units": 3,
-        "trigger_price": 81.22,
-        "trigger_price_alt": 82.78,
-        "drop_pct": 1.0,
-        "premium": 2.75
+        "trigger_price": 80.94,
+        "trigger_price_alt": 81.05,
+        "drop_pct": 1.5,
+        "premium": 2.88
       },
       {
         "units": 3,
-        "trigger_price": 80.52,
-        "trigger_price_alt": 81.95,
-        "drop_pct": 1.9,
-        "premium": 2.89
+        "trigger_price": 80.23,
+        "trigger_price_alt": 80.22,
+        "drop_pct": 2.4,
+        "premium": 3.02
       },
       {
         "units": 4,
-        "trigger_price": 79.58,
-        "trigger_price_alt": 81.11,
-        "drop_pct": 3.0,
-        "premium": 3.09
+        "trigger_price": 79.29,
+        "trigger_price_alt": 79.4,
+        "drop_pct": 3.5,
+        "premium": 3.23
       }
     ],
     "capital": {
       "mode": "cash_secured",
       "reserve_pct": 0.3,
-      "cap_total": 178409.0,
+      "cap_total": 178435.0,
       "already_committed": 0,
-      "available_for_new": 178409.0,
+      "available_for_new": 178435.0,
       "this_plan_will_use": 72000.0,
       "pct_of_cap": 40.4
     },
     "trace_json": {
       "version": "v2.6",
       "inputs": {
-        "tqqq_close": 83.62,
-        "vxn": 21.0,
-        "rsi": 77.0,
-        "red_streak": 1,
+        "tqqq_close": 82.28,
+        "vxn": 21.5,
+        "rsi": 71.0,
+        "red_streak": 2,
         "green_before_red": 6,
         "high_10d": 85.32,
         "high_40d": 84.25,
         "low_40d": 67.77,
-        "ma_200": 63.82,
-        "vs_10d_high_pct": -3.8,
-        "ret_5d_pct": 7.2,
-        "ret_40d_pct": 14.7,
-        "above_ma_200_pct": 31.0,
-        "capital": 590183.34
+        "ma_200": 63.96,
+        "vs_10d_high_pct": -3.7,
+        "ret_5d_pct": 4.5,
+        "ret_40d_pct": 10.5,
+        "above_ma_200_pct": 28.6,
+        "capital": 345296.54
       },
       "gates": {
         "layer1_v7": {
-          "pass": false,
-          "reason": "Gate 1 FAIL: RSI 77 > 75",
-          "size_mult": 0
+          "pass": true,
+          "reason": "v7 gates pass (mult=1.0)",
+          "size_mult": 1.0
         },
         "layer4_empirical": {
           "pass": true,
@@ -753,7 +753,7 @@
       },
       "sizing": {
         "regime_locked": "SIDEWAYS",
-        "condition": "1RG",
+        "condition": "2R",
         "base_units_from_matrix": 10,
         "final_mult": 1.0,
         "units_after_mult": 10,
@@ -764,7 +764,7 @@
       },
       "strike_derivation": {
         "rule": "richest strike with |delta| ≤ 0.3 at spot (calibrated surface); live chain pick overrides",
-        "spot": 82.04,
+        "spot": 82.17,
         "delta_cap": 0.3,
         "plan_strike": 72.0,
         "plan_strike_delta": -0.232,
@@ -773,24 +773,24 @@
       "batches": [
         {
           "units": 3,
-          "trigger_price": 81.22,
-          "trigger_price_alt": 82.78,
-          "drop_pct": 1.0,
-          "premium": 2.75
+          "trigger_price": 80.94,
+          "trigger_price_alt": 81.05,
+          "drop_pct": 1.5,
+          "premium": 2.88
         },
         {
           "units": 3,
-          "trigger_price": 80.52,
-          "trigger_price_alt": 81.95,
-          "drop_pct": 1.9,
-          "premium": 2.89
+          "trigger_price": 80.23,
+          "trigger_price_alt": 80.22,
+          "drop_pct": 2.4,
+          "premium": 3.02
         },
         {
           "units": 4,
-          "trigger_price": 79.58,
-          "trigger_price_alt": 81.11,
-          "drop_pct": 3.0,
-          "premium": 3.09
+          "trigger_price": 79.29,
+          "trigger_price_alt": 79.4,
+          "drop_pct": 3.5,
+          "premium": 3.23
         }
       ],
       "positions_context": {
@@ -806,33 +806,33 @@
         "backtest_period_years": 16
       },
       "live_data": {
-        "live_spot": 82.0401,
+        "live_spot": 82.17,
         "live_spot_source": "nasdaq_live_premarket",
         "live_chain_atm_iv": 0.584774,
         "live_chain_atm_strike": 82.0,
-        "live_put_call_ratio": 1.31,
+        "live_put_call_ratio": 1.2,
         "live_put_call_ratio_oi": 0.87,
         "live_pcr_detail": {
-          "pcr_volume": 1.31,
+          "pcr_volume": 1.2,
           "pcr_oi": 0.87,
-          "put_volume": 89945,
-          "call_volume": 68904,
+          "put_volume": 17007,
+          "call_volume": 14182,
           "put_oi": 712671,
           "call_oi": 819394
         },
         "live_chain_strike": 72.0,
-        "live_chain_bid": 1.95,
-        "live_chain_ask": 2.14,
-        "live_chain_mid": 2.045,
+        "live_chain_bid": 2.17,
+        "live_chain_ask": 2.43,
+        "live_chain_mid": 2.3,
         "live_chain_iv": 0.638357,
         "live_chain_delta": -0.195982,
         "live_chain_expiry": "2026-11-13",
         "live_chain_identifier": "TQQQ  261113P00072000",
-        "live_chain_anchor_strike": 71.7850875,
+        "live_chain_anchor_strike": 71.89875,
         "live_chain_anchor_otm": 0.125,
         "live_chain_pick_method": "tiger_native_delta",
         "live_chain_no_entry_reason": null,
-        "live_chain_note": "tiger native δ: picked $72 (δ=-0.196, IV=63.8%, target 0.2, cap 0.30); spot $82.04; 80 strikes w/ greeks",
+        "live_chain_note": "tiger native δ: picked $72 (δ=-0.196, IV=63.8%, target 0.2, cap 0.30); spot $82.17; 80 strikes w/ greeks",
         "news_mode": "CLEAR",
         "news_mode_source": "vxn+cross_asset+bash",
         "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.89 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.48%; 3m/10y normal (+124bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
@@ -842,53 +842,53 @@
         "live_chain_delta_cap": 0.3,
         "live_chain_delta_target": 0.2,
         "data_source": "tiger_chain(native δ) + nasdaq_spot/pcr",
-        "data_age_seconds": 6,
-        "live_ts_ratio": 0.887,
-        "live_ts_vix": 15.71,
-        "live_ts_vix3m": 17.72,
+        "data_age_seconds": 5,
+        "live_ts_ratio": 0.859,
+        "live_ts_vix": 15.43,
+        "live_ts_vix3m": 17.97,
         "live_ts_error": null,
         "live_chain_candidates": [
           {
             "strike": 57.0,
-            "bid": 0.45,
-            "ask": 0.6,
-            "mid": 0.53,
+            "bid": 0.25,
+            "ask": 0.79,
+            "mid": 0.52,
             "iv": 0.8118,
             "delta": -0.0519,
             "oi": 10
           },
           {
             "strike": 58.0,
-            "bid": 0.39,
-            "ask": 0.74,
-            "mid": 0.56,
+            "bid": 0.54,
+            "ask": 0.8,
+            "mid": 0.67,
             "iv": 0.796,
             "delta": -0.0564,
             "oi": 40
           },
           {
             "strike": 59.0,
-            "bid": 0.44,
-            "ask": 0.7,
-            "mid": 0.57,
+            "bid": 0.63,
+            "ask": 0.78,
+            "mid": 0.71,
             "iv": 0.7674,
             "delta": -0.0587,
             "oi": 25
           },
           {
             "strike": 60.0,
-            "bid": 0.54,
-            "ask": 0.75,
-            "mid": 0.65,
+            "bid": 0.7,
+            "ask": 0.78,
+            "mid": 0.74,
             "iv": 0.7604,
             "delta": -0.0658,
             "oi": 721
           },
           {
             "strike": 61.0,
-            "bid": 0.7,
-            "ask": 0.84,
-            "mid": 0.77,
+            "bid": 0.81,
+            "ask": 0.92,
+            "mid": 0.86,
             "iv": 0.7645,
             "delta": -0.0759,
             "oi": 27
@@ -896,206 +896,206 @@
           {
             "strike": 62.0,
             "bid": 0.78,
-            "ask": 1.0,
-            "mid": 0.89,
+            "ask": 0.96,
+            "mid": 0.87,
             "iv": 0.7635,
             "delta": -0.0857,
             "oi": 66
           },
           {
             "strike": 63.0,
-            "bid": 0.75,
-            "ask": 0.99,
-            "mid": 0.87,
+            "bid": 0.71,
+            "ask": 1.07,
+            "mid": 0.89,
             "iv": 0.7279,
             "delta": -0.0879,
             "oi": 52
           },
           {
             "strike": 64.0,
-            "bid": 0.74,
-            "ask": 1.06,
-            "mid": 0.9,
+            "bid": 0.8,
+            "ask": 1.18,
+            "mid": 0.99,
             "iv": 0.7047,
             "delta": -0.0931,
             "oi": 137
           },
           {
             "strike": 65.0,
-            "bid": 0.99,
-            "ask": 1.18,
-            "mid": 1.08,
+            "bid": 1.18,
+            "ask": 1.28,
+            "mid": 1.23,
             "iv": 0.713,
             "delta": -0.1074,
             "oi": 1298
           },
           {
             "strike": 66.0,
-            "bid": 1.01,
-            "ask": 1.29,
-            "mid": 1.15,
+            "bid": 1.31,
+            "ask": 1.38,
+            "mid": 1.34,
             "iv": 0.694,
             "delta": -0.1154,
             "oi": 248
           },
           {
             "strike": 67.0,
-            "bid": 1.07,
-            "ask": 1.42,
-            "mid": 1.25,
+            "bid": 1.42,
+            "ask": 1.55,
+            "mid": 1.48,
             "iv": 0.6805,
             "delta": -0.1253,
             "oi": 34
           },
           {
             "strike": 68.0,
-            "bid": 1.39,
-            "ask": 1.58,
-            "mid": 1.48,
+            "bid": 1.58,
+            "ask": 1.7,
+            "mid": 1.64,
             "iv": 0.6897,
             "delta": -0.1426,
             "oi": 233
           },
           {
             "strike": 69.0,
-            "bid": 1.5,
-            "ask": 1.75,
-            "mid": 1.62,
+            "bid": 1.28,
+            "ask": 1.92,
+            "mid": 1.6,
             "iv": 0.679,
             "delta": -0.1552,
             "oi": 184
           },
           {
             "strike": 70.0,
-            "bid": 1.66,
-            "ask": 1.76,
-            "mid": 1.71,
+            "bid": 1.89,
+            "ask": 1.97,
+            "mid": 1.93,
             "iv": 0.6591,
             "delta": -0.1659,
             "oi": 484
           },
           {
             "strike": 71.0,
-            "bid": 1.6,
-            "ask": 2.05,
-            "mid": 1.82,
+            "bid": 1.91,
+            "ask": 2.36,
+            "mid": 2.13,
             "iv": 0.6418,
             "delta": -0.1785,
             "oi": 157
           },
           {
             "strike": 72.0,
-            "bid": 1.95,
-            "ask": 2.14,
-            "mid": 2.04,
+            "bid": 2.17,
+            "ask": 2.43,
+            "mid": 2.3,
             "iv": 0.6384,
             "delta": -0.196,
             "oi": 147
           },
           {
             "strike": 72.5,
-            "bid": 2.01,
-            "ask": 2.36,
-            "mid": 2.18,
+            "bid": 2.09,
+            "ask": 2.84,
+            "mid": 2.46,
             "iv": 0.6394,
             "delta": -0.2059,
             "oi": 126
           },
           {
             "strike": 73.0,
-            "bid": 2.07,
-            "ask": 2.46,
-            "mid": 2.26,
+            "bid": 2.46,
+            "ask": 2.78,
+            "mid": 2.62,
             "iv": 0.6325,
             "delta": -0.2137,
             "oi": 267
           },
           {
             "strike": 73.5,
-            "bid": 2.2,
-            "ask": 2.49,
-            "mid": 2.35,
+            "bid": 2.15,
+            "ask": 2.72,
+            "mid": 2.44,
             "iv": 0.6246,
             "delta": -0.2217,
             "oi": 211
           },
           {
             "strike": 74.0,
-            "bid": 2.25,
-            "ask": 2.58,
-            "mid": 2.42,
+            "bid": 2.56,
+            "ask": 3.1,
+            "mid": 2.83,
             "iv": 0.6152,
             "delta": -0.2295,
             "oi": 101
           },
           {
             "strike": 74.5,
-            "bid": 2.55,
-            "ask": 2.79,
-            "mid": 2.67,
+            "bid": 2.85,
+            "ask": 3.2,
+            "mid": 3.03,
             "iv": 0.6285,
             "delta": -0.2433,
             "oi": 11
           },
           {
             "strike": 75.0,
-            "bid": 2.68,
-            "ask": 2.8,
-            "mid": 2.74,
+            "bid": 2.99,
+            "ask": 3.35,
+            "mid": 3.17,
             "iv": 0.6177,
             "delta": -0.2515,
             "oi": 198
           },
           {
             "strike": 75.5,
-            "bid": 2.71,
-            "ask": 3.25,
-            "mid": 2.98,
+            "bid": 2.65,
+            "ask": 3.75,
+            "mid": 3.2,
             "iv": 0.6268,
             "delta": -0.2645,
             "oi": 17
           },
           {
             "strike": 76.0,
-            "bid": 2.8,
-            "ask": 3.2,
-            "mid": 3.0,
+            "bid": 3.25,
+            "ask": 3.5,
+            "mid": 3.38,
             "iv": 0.6104,
             "delta": -0.2718,
             "oi": 37
           },
           {
             "strike": 76.5,
-            "bid": 3.1,
-            "ask": 3.35,
-            "mid": 3.23,
+            "bid": 3.35,
+            "ask": 3.7,
+            "mid": 3.53,
             "iv": 0.6157,
             "delta": -0.2843,
             "oi": 61
           },
           {
             "strike": 77.0,
-            "bid": 3.05,
-            "ask": 3.5,
-            "mid": 3.27,
+            "bid": 3.1,
+            "ask": 4.25,
+            "mid": 3.67,
             "iv": 0.6016,
             "delta": -0.293,
             "oi": 60
           },
           {
             "strike": 77.5,
-            "bid": 2.8,
-            "ask": 3.9,
-            "mid": 3.35,
+            "bid": 3.3,
+            "ask": 4.3,
+            "mid": 3.8,
             "iv": 0.5904,
             "delta": -0.3025,
             "oi": 22
           },
           {
             "strike": 78.0,
-            "bid": 3.45,
-            "ask": 4.3,
-            "mid": 3.88,
+            "bid": 3.85,
+            "ask": 4.15,
+            "mid": 4.0,
             "iv": 0.6254,
             "delta": -0.3205,
             "oi": 33
@@ -1103,89 +1103,89 @@
           {
             "strike": 78.5,
             "bid": 3.6,
-            "ask": 4.05,
-            "mid": 3.83,
+            "ask": 4.7,
+            "mid": 4.15,
             "iv": 0.5997,
             "delta": -0.3284,
             "oi": 11
           },
           {
             "strike": 79.0,
-            "bid": 3.55,
-            "ask": 4.1,
-            "mid": 3.82,
+            "bid": 4.2,
+            "ask": 4.4,
+            "mid": 4.3,
             "iv": 0.5791,
             "delta": -0.3376,
             "oi": 58
           },
           {
             "strike": 79.5,
-            "bid": 3.8,
-            "ask": 4.5,
-            "mid": 4.15,
+            "bid": 4.0,
+            "ask": 5.15,
+            "mid": 4.58,
             "iv": 0.5907,
             "delta": -0.3518,
             "oi": 30
           },
           {
             "strike": 80.0,
-            "bid": 4.0,
-            "ask": 4.45,
-            "mid": 4.22,
+            "bid": 4.6,
+            "ask": 4.8,
+            "mid": 4.7,
             "iv": 0.577,
             "delta": -0.3628,
             "oi": 262
           },
           {
             "strike": 80.5,
-            "bid": 4.25,
-            "ask": 4.8,
-            "mid": 4.53,
+            "bid": 4.8,
+            "ask": 5.1,
+            "mid": 4.95,
             "iv": 0.5849,
             "delta": -0.3763,
             "oi": 7
           },
           {
             "strike": 81.0,
-            "bid": 4.35,
-            "ask": 5.05,
-            "mid": 4.7,
+            "bid": 4.7,
+            "ask": 5.45,
+            "mid": 5.08,
             "iv": 0.5797,
             "delta": -0.3888,
             "oi": 51
           },
           {
             "strike": 81.5,
-            "bid": 4.6,
-            "ask": 5.05,
-            "mid": 4.82,
+            "bid": 4.8,
+            "ask": 5.9,
+            "mid": 5.35,
             "iv": 0.5696,
             "delta": -0.4012,
             "oi": 34
           },
           {
             "strike": 82.0,
-            "bid": 4.95,
-            "ask": 5.5,
-            "mid": 5.22,
+            "bid": 5.0,
+            "ask": 6.1,
+            "mid": 5.55,
             "iv": 0.5848,
             "delta": -0.4147,
             "oi": 61
           },
           {
             "strike": 82.5,
-            "bid": 5.05,
-            "ask": 5.65,
-            "mid": 5.35,
+            "bid": 5.55,
+            "ask": 6.3,
+            "mid": 5.92,
             "iv": 0.5731,
             "delta": -0.4276,
             "oi": 8
           },
           {
             "strike": 83.0,
-            "bid": 5.2,
-            "ask": 5.65,
-            "mid": 5.43,
+            "bid": 5.35,
+            "ask": 6.4,
+            "mid": 5.88,
             "iv": 0.5566,
             "delta": -0.4411,
             "oi": 113
@@ -1194,16 +1194,16 @@
         "existing_units": 0,
         "broker_snapshot_possibly_stale": false,
         "broker_snapshot_note": "Tiger position snapshot within refresh window",
-        "fetched_at_iso": "2026-10-08T13:00:19Z",
-        "fetched_at": 1791464419.144135
+        "fetched_at_iso": "2026-10-08T14:05:09Z",
+        "fetched_at": 1791468309.659311
       }
     },
-    "live_premium_bid": 1.95,
-    "live_premium_ask": 2.14,
+    "live_premium_bid": 2.17,
+    "live_premium_ask": 2.43,
     "live_premium_iv": 0.638357,
     "live_premium_delta": -0.195982,
-    "engine_run_at_iso": "2026-10-08T13:00:22Z",
-    "engine_run_at": 1791464422.231744
+    "engine_run_at_iso": "2026-10-08T14:05:14Z",
+    "engine_run_at": 1791468314.635122
   },
   "pre_market": {
     "timestamp": "2026-10-08 12:30:04 UTC",

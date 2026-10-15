@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-10-15T12:30:29Z",
+  "timestamp": "2026-10-15T13:00:13Z",
   "plan": {
     "as_of": "2026-10-15",
     "user_id": "you",
@@ -615,7 +615,7 @@
       "down_days_20d": 8,
       "condition": "3R",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -17.0,
+      "vs_10d_high_pct": -16.5,
       "ret_5d_pct": -11.4,
       "ret_40d_pct": 2.4,
       "above_ma_200_pct": 15.0
@@ -631,7 +631,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-11.0% from anchor)",
+        "reason": "drawdown OK (-10.5% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -654,9 +654,9 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 79.61,
-      "spot": 70.82,
-      "dd_pct": -11.0,
-      "reason": "drawdown OK (-11.0% from anchor)"
+      "spot": 71.27,
+      "dd_pct": -10.5,
+      "reason": "drawdown OK (-10.5% from anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
@@ -670,14 +670,14 @@
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "EXCESS-LIQ RED: cushion 16.6% of net-liq (< 40%) — force-sell danger zone",
+      "EXCESS-LIQ RED: cushion 16.9% of net-liq (< 40%) — force-sell danger zone",
       "10-day-high BRAKE active",
       "empirical: 5d return -11.4% < -7.0%"
     ],
     "batches": [],
     "clearance": {
       "metric": "vs 10d high",
-      "now": -17.0,
+      "now": -16.5,
       "needs": -15.0,
       "op": ">=",
       "asof": "2026-10-15 close"
@@ -687,8 +687,8 @@
     "live_premium_ask": 2.15,
     "live_premium_iv": 0.710049,
     "live_premium_delta": -0.198151,
-    "engine_run_at_iso": "2026-10-15T12:30:28Z",
-    "engine_run_at": 1792067428.196069
+    "engine_run_at_iso": "2026-10-15T13:00:13Z",
+    "engine_run_at": 1792069213.044693
   },
   "pre_market": {
     "timestamp": "2026-10-15 12:30:04 UTC",

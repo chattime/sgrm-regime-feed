@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-10-15T13:00:13Z",
+  "timestamp": "2026-10-15T14:05:14Z",
   "plan": {
     "as_of": "2026-10-15",
     "user_id": "you",
@@ -15,10 +15,6 @@
     "greed_day": true,
     "greed_brake_bypassed": false,
     "recent_closes": [
-      {
-        "date": "2026-08-19",
-        "close": 71.92
-      },
       {
         "date": "2026-08-20",
         "close": 70.34
@@ -174,18 +170,13 @@
       {
         "date": "2026-10-14",
         "close": 74.12
+      },
+      {
+        "date": "2026-10-15",
+        "close": 71.2
       }
     ],
     "recent_days": [
-      {
-        "date": "2026-09-02",
-        "day": "Wed",
-        "close": 69.47,
-        "chg_pct": 0.65,
-        "streak": 1,
-        "ma40": 70.61,
-        "rsi14": 29.6
-      },
       {
         "date": "2026-09-03",
         "day": "Thu",
@@ -446,6 +437,15 @@
         "streak": -3,
         "ma40": 74.68,
         "rsi14": 40.3
+      },
+      {
+        "date": "2026-10-15",
+        "day": "Thu",
+        "close": 71.2,
+        "chg_pct": -3.94,
+        "streak": -4,
+        "ma40": 74.66,
+        "rsi14": 33.1
       }
     ],
     "calendar": {
@@ -557,40 +557,40 @@
         {
           "rung": 1,
           "drop_pct": 5.0,
-          "entry": 70.41,
-          "strike": 62.5,
-          "otm_pct": 11.2,
-          "delta": -0.24,
-          "credit": 2.22,
+          "entry": 67.64,
+          "strike": 60.0,
+          "otm_pct": 11.3,
+          "delta": -0.25,
+          "credit": 2.36,
           "exit_buyback": [
-            1.11,
-            1.56
+            1.18,
+            1.66
           ]
         },
         {
           "rung": 2,
           "drop_pct": 8.0,
-          "entry": 68.19,
-          "strike": 60.5,
-          "otm_pct": 11.3,
-          "delta": -0.24,
-          "credit": 2.15,
+          "entry": 65.5,
+          "strike": 58.0,
+          "otm_pct": 11.5,
+          "delta": -0.25,
+          "credit": 2.26,
           "exit_buyback": [
-            1.07,
-            1.5
+            1.13,
+            1.58
           ]
         },
         {
           "rung": 3,
           "drop_pct": 11.0,
-          "entry": 65.97,
-          "strike": 58.5,
-          "otm_pct": 11.3,
+          "entry": 63.37,
+          "strike": 56.0,
+          "otm_pct": 11.6,
           "delta": -0.24,
-          "credit": 2.07,
+          "credit": 2.16,
           "exit_buyback": [
-            1.03,
-            1.45
+            1.08,
+            1.51
           ]
         }
       ],
@@ -603,22 +603,22 @@
       "note": "Exit = buy-to-close at +30–50% of credit. Credit est uses current VXN; a real spike prints richer."
     },
     "market": {
-      "tqqq_close": 74.12,
-      "vxn": 22.7,
-      "rsi": 40.0,
-      "red_streak": 3,
+      "tqqq_close": 71.2,
+      "vxn": 24.9,
+      "rsi": 33.0,
+      "red_streak": 4,
       "green_streak": 0,
       "green_before_red": 1,
-      "up_days_10d": 5,
-      "down_days_10d": 5,
-      "up_days_20d": 12,
-      "down_days_20d": 8,
-      "condition": "3R",
+      "up_days_10d": 4,
+      "down_days_10d": 6,
+      "up_days_20d": 11,
+      "down_days_20d": 9,
+      "condition": "4R+",
       "regime": "SIDEWAYS",
       "vs_10d_high_pct": -16.5,
-      "ret_5d_pct": -11.4,
-      "ret_40d_pct": 2.4,
-      "above_ma_200_pct": 15.0
+      "ret_5d_pct": -11.3,
+      "ret_40d_pct": -1.0,
+      "above_ma_200_pct": 10.4
     },
     "pre_market": {
       "qqq_overnight_gap_pct": -1.35,
@@ -642,7 +642,7 @@
       },
       "empirical": {
         "pass": false,
-        "reason": "empirical: 5d return -11.4% < -7.0%",
+        "reason": "empirical: 5d return -11.3% < -7.0% + RSI 33 < 35 + red streak 4",
         "size_mult": 0.0
       },
       "news": {
@@ -654,25 +654,25 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 79.61,
-      "spot": 71.27,
+      "spot": 71.23,
       "dd_pct": -10.5,
       "reason": "drawdown OK (-10.5% from anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
     "atm_iv": 63.5,
-    "hv_20d": 51.6,
-    "iv_hv": 1.23,
+    "hv_20d": 50.9,
+    "iv_hv": 1.25,
     "iv_hv_mult": 1.0,
     "iv_hv_flag": "rich",
-    "iv_percentile": 44.0,
+    "iv_percentile": 67.0,
     "action": "NO ENTRY",
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "EXCESS-LIQ RED: cushion 16.9% of net-liq (< 40%) — force-sell danger zone",
+      "EXCESS-LIQ RED: cushion 19.2% of net-liq (< 40%) — force-sell danger zone",
       "10-day-high BRAKE active",
-      "empirical: 5d return -11.4% < -7.0%"
+      "empirical: 5d return -11.3% < -7.0% + RSI 33 < 35 + red streak 4"
     ],
     "batches": [],
     "clearance": {
@@ -683,12 +683,12 @@
       "asof": "2026-10-15 close"
     },
     "recommended_strike": 63.0,
-    "live_premium_bid": 1.99,
-    "live_premium_ask": 2.15,
+    "live_premium_bid": 2.76,
+    "live_premium_ask": 2.9,
     "live_premium_iv": 0.710049,
     "live_premium_delta": -0.198151,
-    "engine_run_at_iso": "2026-10-15T13:00:13Z",
-    "engine_run_at": 1792069213.044693
+    "engine_run_at_iso": "2026-10-15T14:05:14Z",
+    "engine_run_at": 1792073114.192137
   },
   "pre_market": {
     "timestamp": "2026-10-15 12:30:04 UTC",

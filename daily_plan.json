@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-10-16T12:30:22Z",
+  "timestamp": "2026-10-16T13:00:13Z",
   "plan": {
     "as_of": "2026-10-16",
     "user_id": "you",
@@ -615,7 +615,7 @@
       "down_days_20d": 9,
       "condition": "4R+",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -13.6,
+      "vs_10d_high_pct": -14.1,
       "ret_5d_pct": -8.0,
       "ret_40d_pct": 2.6,
       "above_ma_200_pct": 14.4
@@ -629,7 +629,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-7.4% from anchor)",
+        "reason": "drawdown OK (-8.0% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -652,15 +652,15 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 79.61,
-      "spot": 73.68,
-      "dd_pct": -7.4,
-      "reason": "drawdown OK (-7.4% from anchor)"
+      "spot": 73.26,
+      "dd_pct": -8.0,
+      "reason": "drawdown OK (-8.0% from anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 58.9,
+    "atm_iv": 58.3,
     "hv_20d": 48.7,
-    "iv_hv": 1.21,
+    "iv_hv": 1.2,
     "iv_hv_mult": 1.0,
     "iv_hv_flag": "rich",
     "iv_percentile": 45.0,
@@ -677,8 +677,8 @@
     "live_premium_ask": 2.15,
     "live_premium_iv": 0.713382,
     "live_premium_delta": -0.201774,
-    "engine_run_at_iso": "2026-10-16T12:30:21Z",
-    "engine_run_at": 1792153821.502822
+    "engine_run_at_iso": "2026-10-16T13:00:13Z",
+    "engine_run_at": 1792155613.586373
   },
   "pre_market": {
     "timestamp": "2026-10-16 12:30:05 UTC",

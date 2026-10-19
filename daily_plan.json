@@ -1,6 +1,745 @@
 {
   "version": 1,
-  "timestamp": "",
-  "plan": null,
-  "pre_market": null
+  "timestamp": "2026-10-19T12:30:24Z",
+  "plan": {
+    "as_of": "2026-10-19",
+    "user_id": "you",
+    "close_backfill": null,
+    "sizing_mode": "matrix",
+    "profit_target": {
+      "model": "GREED",
+      "pt_pct": 0.25,
+      "stop_mult": 1.6,
+      "adaptive": false
+    },
+    "greed_day": true,
+    "greed_brake_bypassed": false,
+    "recent_closes": [
+      {
+        "date": "2026-08-21",
+        "close": 71.03
+      },
+      {
+        "date": "2026-08-24",
+        "close": 68.88
+      },
+      {
+        "date": "2026-08-25",
+        "close": 70.13
+      },
+      {
+        "date": "2026-08-26",
+        "close": 70.33
+      },
+      {
+        "date": "2026-08-27",
+        "close": 73.16
+      },
+      {
+        "date": "2026-08-28",
+        "close": 71.71
+      },
+      {
+        "date": "2026-08-31",
+        "close": 71.78
+      },
+      {
+        "date": "2026-09-01",
+        "close": 69.02
+      },
+      {
+        "date": "2026-09-02",
+        "close": 69.47
+      },
+      {
+        "date": "2026-09-03",
+        "close": 71.89
+      },
+      {
+        "date": "2026-09-04",
+        "close": 72.23
+      },
+      {
+        "date": "2026-09-08",
+        "close": 72.02
+      },
+      {
+        "date": "2026-09-09",
+        "close": 71.41
+      },
+      {
+        "date": "2026-09-10",
+        "close": 69.08
+      },
+      {
+        "date": "2026-09-11",
+        "close": 70.84
+      },
+      {
+        "date": "2026-09-14",
+        "close": 69.14
+      },
+      {
+        "date": "2026-09-15",
+        "close": 67.77
+      },
+      {
+        "date": "2026-09-16",
+        "close": 67.8
+      },
+      {
+        "date": "2026-09-17",
+        "close": 71.24
+      },
+      {
+        "date": "2026-09-18",
+        "close": 72.5
+      },
+      {
+        "date": "2026-09-21",
+        "close": 78.76
+      },
+      {
+        "date": "2026-09-22",
+        "close": 80.67
+      },
+      {
+        "date": "2026-09-23",
+        "close": 78.66
+      },
+      {
+        "date": "2026-09-24",
+        "close": 78.58
+      },
+      {
+        "date": "2026-09-25",
+        "close": 79.6
+      },
+      {
+        "date": "2026-09-28",
+        "close": 77.04
+      },
+      {
+        "date": "2026-09-29",
+        "close": 77.46
+      },
+      {
+        "date": "2026-09-30",
+        "close": 78.03
+      },
+      {
+        "date": "2026-10-01",
+        "close": 78.73
+      },
+      {
+        "date": "2026-10-02",
+        "close": 81.01
+      },
+      {
+        "date": "2026-10-05",
+        "close": 83.12
+      },
+      {
+        "date": "2026-10-06",
+        "close": 84.25
+      },
+      {
+        "date": "2026-10-07",
+        "close": 83.62
+      },
+      {
+        "date": "2026-10-08",
+        "close": 80.23
+      },
+      {
+        "date": "2026-10-09",
+        "close": 81.28
+      },
+      {
+        "date": "2026-10-12",
+        "close": 79.61
+      },
+      {
+        "date": "2026-10-13",
+        "close": 78.81
+      },
+      {
+        "date": "2026-10-14",
+        "close": 74.12
+      },
+      {
+        "date": "2026-10-15",
+        "close": 73.82
+      },
+      {
+        "date": "2026-10-16",
+        "close": 68.21
+      }
+    ],
+    "recent_days": [
+      {
+        "date": "2026-09-04",
+        "day": "Fri",
+        "close": 72.23,
+        "chg_pct": 0.47,
+        "streak": 3,
+        "ma40": 70.38,
+        "rsi14": 40.2
+      },
+      {
+        "date": "2026-09-08",
+        "day": "Tue",
+        "close": 72.02,
+        "chg_pct": -0.29,
+        "streak": -1,
+        "ma40": 70.37,
+        "rsi14": 48.9
+      },
+      {
+        "date": "2026-09-09",
+        "day": "Wed",
+        "close": 71.41,
+        "chg_pct": -0.85,
+        "streak": -2,
+        "ma40": 70.28,
+        "rsi14": 48.5
+      },
+      {
+        "date": "2026-09-10",
+        "day": "Thu",
+        "close": 69.08,
+        "chg_pct": -3.27,
+        "streak": -3,
+        "ma40": 70.15,
+        "rsi14": 46.4
+      },
+      {
+        "date": "2026-09-11",
+        "day": "Fri",
+        "close": 70.84,
+        "chg_pct": 2.56,
+        "streak": 1,
+        "ma40": 70.16,
+        "rsi14": 49.5
+      },
+      {
+        "date": "2026-09-14",
+        "day": "Mon",
+        "close": 69.14,
+        "chg_pct": -2.41,
+        "streak": -1,
+        "ma40": 70.2,
+        "rsi14": 50.7
+      },
+      {
+        "date": "2026-09-15",
+        "day": "Tue",
+        "close": 67.77,
+        "chg_pct": -1.98,
+        "streak": -2,
+        "ma40": 70.21,
+        "rsi14": 43.6
+      },
+      {
+        "date": "2026-09-16",
+        "day": "Wed",
+        "close": 67.8,
+        "chg_pct": 0.04,
+        "streak": 1,
+        "ma40": 70.12,
+        "rsi14": 43.1
+      },
+      {
+        "date": "2026-09-17",
+        "day": "Thu",
+        "close": 71.24,
+        "chg_pct": 5.08,
+        "streak": 2,
+        "ma40": 70.15,
+        "rsi14": 44.9
+      },
+      {
+        "date": "2026-09-18",
+        "day": "Fri",
+        "close": 72.5,
+        "chg_pct": 1.77,
+        "streak": 3,
+        "ma40": 70.31,
+        "rsi14": 52.1
+      },
+      {
+        "date": "2026-09-21",
+        "day": "Mon",
+        "close": 78.76,
+        "chg_pct": 8.63,
+        "streak": 4,
+        "ma40": 70.68,
+        "rsi14": 64.0
+      },
+      {
+        "date": "2026-09-22",
+        "day": "Tue",
+        "close": 80.67,
+        "chg_pct": 2.43,
+        "streak": 5,
+        "ma40": 71.12,
+        "rsi14": 74.2
+      },
+      {
+        "date": "2026-09-23",
+        "day": "Wed",
+        "close": 78.66,
+        "chg_pct": -2.5,
+        "streak": -1,
+        "ma40": 71.55,
+        "rsi14": 67.9
+      },
+      {
+        "date": "2026-09-24",
+        "day": "Thu",
+        "close": 78.58,
+        "chg_pct": -0.1,
+        "streak": -2,
+        "ma40": 72.07,
+        "rsi14": 64.3
+      },
+      {
+        "date": "2026-09-25",
+        "day": "Fri",
+        "close": 79.6,
+        "chg_pct": 1.3,
+        "streak": 1,
+        "ma40": 72.48,
+        "rsi14": 65.3
+      },
+      {
+        "date": "2026-09-28",
+        "day": "Mon",
+        "close": 77.04,
+        "chg_pct": -3.22,
+        "streak": -1,
+        "ma40": 72.79,
+        "rsi14": 59.5
+      },
+      {
+        "date": "2026-09-29",
+        "day": "Tue",
+        "close": 77.46,
+        "chg_pct": 0.55,
+        "streak": 1,
+        "ma40": 73.03,
+        "rsi14": 61.6
+      },
+      {
+        "date": "2026-09-30",
+        "day": "Wed",
+        "close": 78.03,
+        "chg_pct": 0.74,
+        "streak": 2,
+        "ma40": 73.12,
+        "rsi14": 68.3
+      },
+      {
+        "date": "2026-10-01",
+        "day": "Thu",
+        "close": 78.73,
+        "chg_pct": 0.9,
+        "streak": 3,
+        "ma40": 73.27,
+        "rsi14": 66.9
+      },
+      {
+        "date": "2026-10-02",
+        "day": "Fri",
+        "close": 81.01,
+        "chg_pct": 2.9,
+        "streak": 4,
+        "ma40": 73.5,
+        "rsi14": 74.8
+      },
+      {
+        "date": "2026-10-05",
+        "day": "Mon",
+        "close": 83.12,
+        "chg_pct": 2.6,
+        "streak": 5,
+        "ma40": 73.72,
+        "rsi14": 81.1
+      },
+      {
+        "date": "2026-10-06",
+        "day": "Tue",
+        "close": 84.25,
+        "chg_pct": 1.36,
+        "streak": 6,
+        "ma40": 73.98,
+        "rsi14": 81.9
+      },
+      {
+        "date": "2026-10-07",
+        "day": "Wed",
+        "close": 83.62,
+        "chg_pct": -0.75,
+        "streak": -1,
+        "ma40": 74.25,
+        "rsi14": 77.0
+      },
+      {
+        "date": "2026-10-08",
+        "day": "Thu",
+        "close": 80.23,
+        "chg_pct": -4.05,
+        "streak": -2,
+        "ma40": 74.39,
+        "rsi14": 65.4
+      },
+      {
+        "date": "2026-10-09",
+        "day": "Fri",
+        "close": 81.28,
+        "chg_pct": 1.31,
+        "streak": 1,
+        "ma40": 74.5,
+        "rsi14": 56.3
+      },
+      {
+        "date": "2026-10-12",
+        "day": "Mon",
+        "close": 79.61,
+        "chg_pct": -2.05,
+        "streak": -1,
+        "ma40": 74.57,
+        "rsi14": 47.3
+      },
+      {
+        "date": "2026-10-13",
+        "day": "Tue",
+        "close": 78.81,
+        "chg_pct": -1.0,
+        "streak": -2,
+        "ma40": 74.64,
+        "rsi14": 50.4
+      },
+      {
+        "date": "2026-10-14",
+        "day": "Wed",
+        "close": 74.12,
+        "chg_pct": -5.95,
+        "streak": -3,
+        "ma40": 74.68,
+        "rsi14": 40.3
+      },
+      {
+        "date": "2026-10-15",
+        "day": "Thu",
+        "close": 73.82,
+        "chg_pct": -0.4,
+        "streak": -4,
+        "ma40": 74.73,
+        "rsi14": 37.0
+      },
+      {
+        "date": "2026-10-16",
+        "day": "Fri",
+        "close": 68.21,
+        "chg_pct": -7.6,
+        "streak": -5,
+        "ma40": 74.68,
+        "rsi14": 32.6
+      }
+    ],
+    "calendar": {
+      "next_opex": "2026-11-20",
+      "days_to_opex": 32,
+      "next_witching": "2026-12-18",
+      "days_to_witching": 60,
+      "next_nfp": "2026-11-06",
+      "days_to_nfp": 18,
+      "next_month_end": "2026-10-30",
+      "days_to_month_end": 11,
+      "next_quarter_end": "2026-12-31",
+      "days_to_quarter_end": 73,
+      "next_russell": "2027-06-25",
+      "days_to_russell": 249,
+      "next_vix_expiry": "2026-11-18",
+      "days_to_vix_expiry": 30,
+      "events": [
+        {
+          "event": "Month-end rebalance",
+          "date": "2026-10-30",
+          "days": 11
+        },
+        {
+          "event": "NFP (jobs)",
+          "date": "2026-11-06",
+          "days": 18
+        },
+        {
+          "event": "VIX expiry",
+          "date": "2026-11-18",
+          "days": 30
+        },
+        {
+          "event": "Monthly OPEX",
+          "date": "2026-11-20",
+          "days": 32
+        },
+        {
+          "event": "Quad-witching",
+          "date": "2026-12-18",
+          "days": 60
+        },
+        {
+          "event": "Quarter-end rebalance",
+          "date": "2026-12-31",
+          "days": 73
+        },
+        {
+          "event": "Russell reconstitution",
+          "date": "2027-06-25",
+          "days": 249
+        }
+      ],
+      "flags": [],
+      "days_to_rebalance": 73,
+      "next_rebalance": "2026-12-31"
+    },
+    "econ_calendar": {
+      "upcoming": [
+        {
+          "event": "FOMC decision",
+          "date": "2026-10-28",
+          "days": 9
+        },
+        {
+          "event": "PCE",
+          "date": "2026-10-30",
+          "days": 11
+        },
+        {
+          "event": "CPI",
+          "date": "2026-11-12",
+          "days": 24
+        },
+        {
+          "event": "PPI",
+          "date": "2026-11-13",
+          "days": 25
+        },
+        {
+          "event": "PCE",
+          "date": "2026-11-25",
+          "days": 37
+        },
+        {
+          "event": "CPI",
+          "date": "2026-12-10",
+          "days": 52
+        }
+      ],
+      "flags": [],
+      "summary": "no major macro events in the next 5d",
+      "today": [],
+      "next": {
+        "event": "FOMC decision",
+        "date": "2026-10-28",
+        "days": 9
+      }
+    },
+    "scalp_plan": {
+      "signal": "SELL-to-open puts if TQQQ drops ≥ 3% intraday on a ONE-OFF shock (IV spike = rich premium)",
+      "trigger_drop_pct": 3.0,
+      "delta_cap": 0.25,
+      "dte": 30,
+      "rungs": [
+        {
+          "rung": 1,
+          "drop_pct": 5.0,
+          "entry": 64.8,
+          "strike": 57.0,
+          "otm_pct": 12.0,
+          "delta": -0.25,
+          "credit": 2.37,
+          "exit_buyback": [
+            1.19,
+            1.66
+          ]
+        },
+        {
+          "rung": 2,
+          "drop_pct": 8.0,
+          "entry": 62.75,
+          "strike": 55.0,
+          "otm_pct": 12.4,
+          "delta": -0.24,
+          "credit": 2.25,
+          "exit_buyback": [
+            1.12,
+            1.57
+          ]
+        },
+        {
+          "rung": 3,
+          "drop_pct": 11.0,
+          "entry": 60.71,
+          "strike": 53.5,
+          "otm_pct": 11.9,
+          "delta": -0.25,
+          "credit": 2.25,
+          "exit_buyback": [
+            1.12,
+            1.57
+          ]
+        }
+      ],
+      "sizing": "STO 2–5 contracts per rung · ≤30 DTE · NOT counted toward the daily unit cap",
+      "profit_target_pct": [
+        30,
+        50
+      ],
+      "guard": "One-off noise spike only. Stand down if structural: drawdown brake, news SHOCK, or 10d-high brake.",
+      "note": "Exit = buy-to-close at +30–50% of credit. Credit est uses current VXN; a real spike prints richer."
+    },
+    "market": {
+      "tqqq_close": 68.21,
+      "vxn": 27.1,
+      "rsi": 33.0,
+      "red_streak": 5,
+      "green_streak": 0,
+      "green_before_red": 1,
+      "up_days_10d": 3,
+      "down_days_10d": 7,
+      "up_days_20d": 10,
+      "down_days_20d": 10,
+      "condition": "4R+",
+      "regime": "SIDEWAYS",
+      "vs_10d_high_pct": -16.8,
+      "ret_5d_pct": -16.1,
+      "ret_40d_pct": -3.0,
+      "above_ma_200_pct": 5.6
+    },
+    "pre_market": {
+      "qqq_overnight_gap_pct": 1.35,
+      "news_shock_score": 2,
+      "news_top_stories": [
+        "Indonesian stocks plunge to six-year low as MSCI downgrade fears mount"
+      ],
+      "shock_level": "CLEAR"
+    },
+    "gate_results": {
+      "drawdown_brake": {
+        "pass": true,
+        "reason": "drawdown OK (-10.9% from anchor)",
+        "size_mult": 1.0,
+        "band": "GREEN"
+      },
+      "v7": {
+        "pass": false,
+        "reason": "10-day-high BRAKE active",
+        "size_mult": 0
+      },
+      "empirical": {
+        "pass": false,
+        "reason": "empirical: 5d return -16.1% < -7.0% + RSI 33 < 35 + red streak 5",
+        "size_mult": 0.0
+      },
+      "news": {
+        "pass": true,
+        "reason": "no news shock",
+        "size_mult": 1.0
+      }
+    },
+    "drawdown_brake": {
+      "band": "GREEN",
+      "anchor": 79.61,
+      "spot": 70.96,
+      "dd_pct": -10.9,
+      "reason": "drawdown OK (-10.9% from anchor)"
+    },
+    "flat_book": true,
+    "atm_iv_source": "nasdaq chain",
+    "atm_iv": 62.6,
+    "hv_20d": 55.6,
+    "iv_hv": 1.13,
+    "iv_hv_mult": 1.0,
+    "iv_hv_flag": "rich",
+    "iv_percentile": 80.0,
+    "action": "NO ENTRY",
+    "size_mult": 0,
+    "recommended_units": 0,
+    "blocking_reasons": [
+      "EXCESS-LIQ RED: cushion 37.0% of net-liq (< 40%) — force-sell danger zone",
+      "10-day-high BRAKE active",
+      "empirical: 5d return -16.1% < -7.0% + RSI 33 < 35 + red streak 5"
+    ],
+    "batches": [],
+    "clearance": {
+      "metric": "vs 10d high",
+      "now": -16.8,
+      "needs": -15.0,
+      "op": ">=",
+      "asof": "2026-10-19 close"
+    },
+    "recommended_strike": 55.0,
+    "live_premium_bid": 1.99,
+    "live_premium_ask": 2.11,
+    "live_premium_iv": 0.815552,
+    "live_premium_delta": -0.175851,
+    "engine_run_at_iso": "2026-10-19T12:30:23Z",
+    "engine_run_at": 1792413023.628715
+  },
+  "pre_market": {
+    "timestamp": "2026-10-19 12:30:04 UTC",
+    "news_shock_score": 2,
+    "news_top_stories": [
+      "Indonesian stocks plunge to six-year low as MSCI downgrade fears mount"
+    ],
+    "event_alert": "",
+    "regime": {
+      "vxn": 0,
+      "tqqq": 0,
+      "stage": 0,
+      "climate": ""
+    },
+    "qqq_overnight_gap_pct": 1.35,
+    "shock_level": "CLEAR",
+    "reason": "all clear",
+    "delta_cap": 0.3,
+    "size_mult": 1.0,
+    "news_mode_source": "vxn+cross_asset+bash",
+    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.91 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD-0.18%/UUP-0.28%/TLT+0.10%); 3m/10y normal (+103bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
+    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.91). No real flight to safety in gold / bonds / dollar. Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "vxn_term": {
+      "ok": true,
+      "vix_front": 18.59,
+      "vix3m_back": 20.5,
+      "term_ratio": 0.907,
+      "term_inverted": false
+    },
+    "cross_asset": {
+      "ok": true,
+      "gld": {
+        "prev": 382.71,
+        "curr": 382.01,
+        "change_pct": -0.18
+      },
+      "uup": {
+        "prev": 29.0,
+        "curr": 28.92,
+        "change_pct": -0.28
+      },
+      "tlt": {
+        "prev": 79.97,
+        "curr": 80.05,
+        "change_pct": 0.1
+      },
+      "yield_10y": 5.098,
+      "yield_3m": 4.07,
+      "yield_5y": 4.899,
+      "spread_3m10y_bp": 103,
+      "spread_5y10y_bp": 20,
+      "curve_inverted_3m10y": false
+    },
+    "news_classifier_run_at": "2026-10-19T12:30:05.888623+00:00"
+  }
 }

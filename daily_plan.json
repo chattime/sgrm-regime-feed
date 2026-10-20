@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-10-20T12:30:20Z",
+  "timestamp": "2026-10-20T13:00:11Z",
   "plan": {
     "as_of": "2026-10-20",
     "user_id": "you",
@@ -613,7 +613,7 @@
       "down_days_20d": 10,
       "condition": "GREEN",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -19.1,
+      "vs_10d_high_pct": -18.3,
       "ret_5d_pct": -11.3,
       "ret_40d_pct": -0.6,
       "above_ma_200_pct": 9.2
@@ -640,7 +640,7 @@
       },
       "empirical": {
         "pass": false,
-        "reason": "empirical: 5d return -11.3% < -7.0% + vs 10d high -19.1% < -18.0%",
+        "reason": "empirical: 5d return -11.3% < -7.0% + vs 10d high -18.3% < -18.0%",
         "size_mult": 0.0
       },
       "news": {
@@ -652,15 +652,15 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": null,
-      "spot": 69.0,
+      "spot": 69.73,
       "dd_pct": null,
       "reason": "no active streak (no anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 61.1,
+    "atm_iv": 60.3,
     "hv_20d": 47.2,
-    "iv_hv": 1.3,
+    "iv_hv": 1.28,
     "iv_hv_mult": 1.0,
     "iv_hv_flag": "rich",
     "iv_percentile": 69.0,
@@ -668,14 +668,14 @@
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "EXCESS-LIQ RED: cushion 38.5% of net-liq (< 40%) — force-sell danger zone",
+      "EXCESS-LIQ RED: cushion 39.1% of net-liq (< 40%) — force-sell danger zone",
       "10-day-high BRAKE active",
-      "empirical: 5d return -11.3% < -7.0% + vs 10d high -19.1% < -18.0%"
+      "empirical: 5d return -11.3% < -7.0% + vs 10d high -18.3% < -18.0%"
     ],
     "batches": [],
     "clearance": {
       "metric": "vs 10d high",
-      "now": -19.1,
+      "now": -18.3,
       "needs": -15.0,
       "op": ">=",
       "asof": "2026-10-20 close"
@@ -685,8 +685,8 @@
     "live_premium_ask": 2.44,
     "live_premium_iv": 0.737885,
     "live_premium_delta": -0.208037,
-    "engine_run_at_iso": "2026-10-20T12:30:19Z",
-    "engine_run_at": 1792499419.376716
+    "engine_run_at_iso": "2026-10-20T13:00:11Z",
+    "engine_run_at": 1792501211.03077
   },
   "pre_market": {
     "timestamp": "2026-10-20 12:30:05 UTC",

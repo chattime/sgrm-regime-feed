@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-10-20T12:02:05Z",
+  "timestamp": "2026-10-20T12:30:20Z",
   "plan": {
-    "as_of": "2026-10-19",
+    "as_of": "2026-10-20",
     "user_id": "you",
     "close_backfill": null,
     "sizing_mode": "matrix",
@@ -450,58 +450,58 @@
     ],
     "calendar": {
       "next_opex": "2026-11-20",
-      "days_to_opex": 32,
+      "days_to_opex": 31,
       "next_witching": "2026-12-18",
-      "days_to_witching": 60,
+      "days_to_witching": 59,
       "next_nfp": "2026-11-06",
-      "days_to_nfp": 18,
+      "days_to_nfp": 17,
       "next_month_end": "2026-10-30",
-      "days_to_month_end": 11,
+      "days_to_month_end": 10,
       "next_quarter_end": "2026-12-31",
-      "days_to_quarter_end": 73,
+      "days_to_quarter_end": 72,
       "next_russell": "2027-06-25",
-      "days_to_russell": 249,
+      "days_to_russell": 248,
       "next_vix_expiry": "2026-11-18",
-      "days_to_vix_expiry": 30,
+      "days_to_vix_expiry": 29,
       "events": [
         {
           "event": "Month-end rebalance",
           "date": "2026-10-30",
-          "days": 11
+          "days": 10
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-11-06",
-          "days": 18
+          "days": 17
         },
         {
           "event": "VIX expiry",
           "date": "2026-11-18",
-          "days": 30
+          "days": 29
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-11-20",
-          "days": 32
+          "days": 31
         },
         {
           "event": "Quad-witching",
           "date": "2026-12-18",
-          "days": 60
+          "days": 59
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-12-31",
-          "days": 73
+          "days": 72
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 249
+          "days": 248
         }
       ],
       "flags": [],
-      "days_to_rebalance": 73,
+      "days_to_rebalance": 72,
       "next_rebalance": "2026-12-31"
     },
     "econ_calendar": {
@@ -509,32 +509,32 @@
         {
           "event": "FOMC decision",
           "date": "2026-10-28",
-          "days": 9
+          "days": 8
         },
         {
           "event": "PCE",
           "date": "2026-10-30",
-          "days": 11
+          "days": 10
         },
         {
           "event": "CPI",
           "date": "2026-11-12",
-          "days": 24
+          "days": 23
         },
         {
           "event": "PPI",
           "date": "2026-11-13",
-          "days": 25
+          "days": 24
         },
         {
           "event": "PCE",
           "date": "2026-11-25",
-          "days": 37
+          "days": 36
         },
         {
           "event": "CPI",
           "date": "2026-12-10",
-          "days": 52
+          "days": 51
         }
       ],
       "flags": [],
@@ -543,7 +543,7 @@
       "next": {
         "event": "FOMC decision",
         "date": "2026-10-28",
-        "days": 9
+        "days": 8
       }
     },
     "scalp_plan": {
@@ -613,16 +613,16 @@
       "down_days_20d": 10,
       "condition": "GREEN",
       "regime": "SIDEWAYS",
-      "vs_10d_high_pct": -17.1,
+      "vs_10d_high_pct": -19.1,
       "ret_5d_pct": -11.3,
       "ret_40d_pct": -0.6,
       "above_ma_200_pct": 9.2
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": 1.35,
+      "qqq_overnight_gap_pct": -0.77,
       "news_shock_score": 2,
       "news_top_stories": [
-        "Indonesian stocks plunge to six-year low as MSCI downgrade fears mount"
+        "Bank Indonesia faces mounting pressure to hike after MSCI threat fuels market rout"
       ],
       "shock_level": "CLEAR"
     },
@@ -640,7 +640,7 @@
       },
       "empirical": {
         "pass": false,
-        "reason": "empirical: 5d return -11.3% < -7.0%",
+        "reason": "empirical: 5d return -11.3% < -7.0% + vs 10d high -19.1% < -18.0%",
         "size_mult": 0.0
       },
       "news": {
@@ -652,15 +652,15 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": null,
-      "spot": 70.74,
+      "spot": 69.0,
       "dd_pct": null,
       "reason": "no active streak (no anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 58.6,
+    "atm_iv": 61.1,
     "hv_20d": 47.2,
-    "iv_hv": 1.24,
+    "iv_hv": 1.3,
     "iv_hv_mult": 1.0,
     "iv_hv_flag": "rich",
     "iv_percentile": 69.0,
@@ -668,31 +668,31 @@
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "EXCESS-LIQ RED: cushion 39.6% of net-liq (< 40%) — force-sell danger zone",
+      "EXCESS-LIQ RED: cushion 38.5% of net-liq (< 40%) — force-sell danger zone",
       "10-day-high BRAKE active",
-      "empirical: 5d return -11.3% < -7.0%"
+      "empirical: 5d return -11.3% < -7.0% + vs 10d high -19.1% < -18.0%"
     ],
     "batches": [],
     "clearance": {
       "metric": "vs 10d high",
-      "now": -17.1,
+      "now": -19.1,
       "needs": -15.0,
       "op": ">=",
-      "asof": "2026-10-19 close"
+      "asof": "2026-10-20 close"
     },
     "recommended_strike": 60.0,
     "live_premium_bid": 2.08,
     "live_premium_ask": 2.44,
-    "live_premium_iv": 0.7407196044921873,
-    "live_premium_delta": -0.20748821094077585,
-    "engine_run_at_iso": "2026-10-19T20:30:18Z",
-    "engine_run_at": 1792441818.154358
+    "live_premium_iv": 0.737885,
+    "live_premium_delta": -0.208037,
+    "engine_run_at_iso": "2026-10-20T12:30:19Z",
+    "engine_run_at": 1792499419.376716
   },
   "pre_market": {
-    "timestamp": "2026-10-19 12:30:04 UTC",
+    "timestamp": "2026-10-20 12:30:05 UTC",
     "news_shock_score": 2,
     "news_top_stories": [
-      "Indonesian stocks plunge to six-year low as MSCI downgrade fears mount"
+      "Bank Indonesia faces mounting pressure to hike after MSCI threat fuels market rout"
     ],
     "event_alert": "",
     "regime": {
@@ -701,45 +701,45 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": 1.35,
+    "qqq_overnight_gap_pct": -0.77,
     "shock_level": "CLEAR",
     "reason": "all clear",
     "delta_cap": 0.3,
     "size_mult": 1.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.91 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD-0.18%/UUP-0.28%/TLT+0.10%); 3m/10y normal (+103bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
-    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.91). No real flight to safety in gold / bonds / dollar. Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.96 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.28%; 3m/10y normal (+106bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
+    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.96). Some money is moving to safety (the dollar +0.28%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 18.59,
-      "vix3m_back": 20.5,
-      "term_ratio": 0.907,
+      "vix_front": 18.89,
+      "vix3m_back": 19.6,
+      "term_ratio": 0.964,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 382.71,
-        "curr": 382.01,
-        "change_pct": -0.18
+        "prev": 382.01,
+        "curr": 379.69,
+        "change_pct": -0.61
       },
       "uup": {
-        "prev": 29.0,
-        "curr": 28.92,
-        "change_pct": -0.28
+        "prev": 28.92,
+        "curr": 29.0,
+        "change_pct": 0.28
       },
       "tlt": {
-        "prev": 79.97,
-        "curr": 80.05,
-        "change_pct": 0.1
+        "prev": 80.05,
+        "curr": 79.46,
+        "change_pct": -0.74
       },
-      "yield_10y": 5.098,
-      "yield_3m": 4.07,
-      "yield_5y": 4.899,
-      "spread_3m10y_bp": 103,
-      "spread_5y10y_bp": 20,
+      "yield_10y": 5.136,
+      "yield_3m": 4.075,
+      "yield_5y": 4.929,
+      "spread_3m10y_bp": 106,
+      "spread_5y10y_bp": 21,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-10-19T12:30:05.888623+00:00"
+    "news_classifier_run_at": "2026-10-20T12:30:05.916572+00:00"
   }
 }

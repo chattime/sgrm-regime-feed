@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-10-22T12:01:49Z",
+  "timestamp": "2026-10-22T12:30:24Z",
   "plan": {
     "as_of": "2026-10-21",
     "user_id": "you",
@@ -954,7 +954,7 @@
     "engine_run_at": 1792614620.764814
   },
   "pre_market": {
-    "timestamp": "2026-10-21 12:30:04 UTC",
+    "timestamp": "2026-10-22 12:30:05 UTC",
     "news_shock_score": 0,
     "news_top_stories": [],
     "event_alert": "",
@@ -964,37 +964,37 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": 0.68,
+    "qqq_overnight_gap_pct": null,
     "shock_level": "CLEAR",
     "reason": "all clear",
     "delta_cap": 0.3,
     "size_mult": 1.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.91 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: TLT +0.84%; 3m/10y normal (+104bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
-    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.91). Some money is moving to safety (long bonds +0.84%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.95 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD+nan%/UUP+nan%/TLT+nan%); 3m/10y normal (+104bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
+    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.95). No real flight to safety in gold / bonds / dollar. Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 17.34,
+      "vix_front": 18.11,
       "vix3m_back": 18.99,
-      "term_ratio": 0.913,
+      "term_ratio": 0.954,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 379.69,
-        "curr": 377.65,
-        "change_pct": -0.54
+        "prev": 377.65,
+        "curr": null,
+        "change_pct": null
       },
       "uup": {
-        "prev": 29.0,
-        "curr": 28.9,
-        "change_pct": -0.34
+        "prev": 28.9,
+        "curr": null,
+        "change_pct": null
       },
       "tlt": {
-        "prev": 79.46,
-        "curr": 80.13,
-        "change_pct": 0.84
+        "prev": 80.13,
+        "curr": null,
+        "change_pct": null
       },
       "yield_10y": 5.117,
       "yield_3m": 4.08,
@@ -1003,6 +1003,6 @@
       "spread_5y10y_bp": 18,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-10-21T12:30:05.714047+00:00"
+    "news_classifier_run_at": "2026-10-22T12:30:06.360620+00:00"
   }
 }

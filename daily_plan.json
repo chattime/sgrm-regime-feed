@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-10-23T12:02:13Z",
+  "timestamp": "2026-10-23T12:30:26Z",
   "plan": {
-    "as_of": "2026-10-22",
+    "as_of": "2026-10-23",
     "user_id": "you",
     "close_backfill": null,
     "sizing_mode": "matrix",
@@ -450,58 +450,58 @@
     ],
     "calendar": {
       "next_opex": "2026-11-20",
-      "days_to_opex": 29,
+      "days_to_opex": 28,
       "next_witching": "2026-12-18",
-      "days_to_witching": 57,
+      "days_to_witching": 56,
       "next_nfp": "2026-11-06",
-      "days_to_nfp": 15,
+      "days_to_nfp": 14,
       "next_month_end": "2026-10-30",
-      "days_to_month_end": 8,
+      "days_to_month_end": 7,
       "next_quarter_end": "2026-12-31",
-      "days_to_quarter_end": 70,
+      "days_to_quarter_end": 69,
       "next_russell": "2027-06-25",
-      "days_to_russell": 246,
+      "days_to_russell": 245,
       "next_vix_expiry": "2026-11-18",
-      "days_to_vix_expiry": 27,
+      "days_to_vix_expiry": 26,
       "events": [
         {
           "event": "Month-end rebalance",
           "date": "2026-10-30",
-          "days": 8
+          "days": 7
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-11-06",
-          "days": 15
+          "days": 14
         },
         {
           "event": "VIX expiry",
           "date": "2026-11-18",
-          "days": 27
+          "days": 26
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-11-20",
-          "days": 29
+          "days": 28
         },
         {
           "event": "Quad-witching",
           "date": "2026-12-18",
-          "days": 57
+          "days": 56
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-12-31",
-          "days": 70
+          "days": 69
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 246
+          "days": 245
         }
       ],
       "flags": [],
-      "days_to_rebalance": 70,
+      "days_to_rebalance": 69,
       "next_rebalance": "2026-12-31"
     },
     "econ_calendar": {
@@ -509,41 +509,43 @@
         {
           "event": "FOMC decision",
           "date": "2026-10-28",
-          "days": 6
+          "days": 5
         },
         {
           "event": "PCE",
           "date": "2026-10-30",
-          "days": 8
+          "days": 7
         },
         {
           "event": "CPI",
           "date": "2026-11-12",
-          "days": 21
+          "days": 20
         },
         {
           "event": "PPI",
           "date": "2026-11-13",
-          "days": 22
+          "days": 21
         },
         {
           "event": "PCE",
           "date": "2026-11-25",
-          "days": 34
+          "days": 33
         },
         {
           "event": "CPI",
           "date": "2026-12-10",
-          "days": 49
+          "days": 48
         }
       ],
-      "flags": [],
-      "summary": "no major macro events in the next 5d",
+      "flags": [
+        "FOMC decision in 5d (2026-10-28)"
+      ],
+      "summary": "FOMC decision in 5d (2026-10-28)",
       "today": [],
       "next": {
         "event": "FOMC decision",
         "date": "2026-10-28",
-        "days": 6
+        "days": 5
       }
     },
     "scalp_plan": {
@@ -613,21 +615,23 @@
       "down_days_20d": 10,
       "condition": "1R",
       "regime": "DOWN",
-      "vs_10d_high_pct": -18.9,
+      "vs_10d_high_pct": -19.2,
       "ret_5d_pct": -10.0,
       "ret_40d_pct": -5.6,
       "above_ma_200_pct": 2.3
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": null,
-      "news_shock_score": 0,
-      "news_top_stories": [],
+      "qqq_overnight_gap_pct": -0.14,
+      "news_shock_score": 2,
+      "news_top_stories": [
+        "Why is LKQ stock crashing today?"
+      ],
       "shock_level": "CLEAR"
     },
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-0.1% from anchor)",
+        "reason": "drawdown OK (-0.5% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -638,27 +642,27 @@
       },
       "empirical": {
         "pass": false,
-        "reason": "empirical: 5d return -10.0% < -7.0% + vs 10d high -18.9% < -18.0%",
+        "reason": "empirical: 5d return -10.0% < -7.0% + vs 10d high -19.2% < -18.0%",
         "size_mult": 0.0
       },
       "news": {
         "pass": true,
-        "reason": "no news shock | v3.12 THROTTLE: soft caution: half size, tighter δ (news=CLEAR, risk_off=CAUTION 5/10)",
-        "size_mult": 0.5
+        "reason": "no news shock",
+        "size_mult": 1.0
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 66.42,
-      "spot": 66.37,
-      "dd_pct": -0.1,
-      "reason": "drawdown OK (-0.1% from anchor)"
+      "spot": 66.08,
+      "dd_pct": -0.5,
+      "reason": "drawdown OK (-0.5% from anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 73.4,
+    "atm_iv": 67.5,
     "hv_20d": 55.4,
-    "iv_hv": 1.33,
+    "iv_hv": 1.22,
     "iv_hv_mult": 1.0,
     "iv_hv_flag": "rich",
     "iv_percentile": 90.0,
@@ -666,30 +670,32 @@
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "EXCESS-LIQ RED: cushion 8.6% of net-liq (< 40%) — force-sell danger zone",
+      "EXCESS-LIQ RED: cushion 8.2% of net-liq (< 40%) — force-sell danger zone",
       "10-day-high BRAKE active",
-      "empirical: 5d return -10.0% < -7.0% + vs 10d high -18.9% < -18.0%"
+      "empirical: 5d return -10.0% < -7.0% + vs 10d high -19.2% < -18.0%"
     ],
     "batches": [],
     "clearance": {
       "metric": "vs 10d high",
-      "now": -18.9,
+      "now": -19.2,
       "needs": -15.0,
       "op": ">=",
-      "asof": "2026-10-22 close"
+      "asof": "2026-10-23 close"
     },
-    "recommended_strike": 60.0,
-    "live_premium_bid": 3.4,
-    "live_premium_ask": 3.65,
-    "live_premium_iv": 0.8016246795654295,
-    "live_premium_delta": -0.2920902250602869,
-    "engine_run_at_iso": "2026-10-22T20:30:11Z",
-    "engine_run_at": 1792701011.032989
+    "recommended_strike": 55.0,
+    "live_premium_bid": 2.08,
+    "live_premium_ask": 2.34,
+    "live_premium_iv": 0.848952,
+    "live_premium_delta": -0.19648,
+    "engine_run_at_iso": "2026-10-23T12:30:25Z",
+    "engine_run_at": 1792758625.228372
   },
   "pre_market": {
-    "timestamp": "2026-10-22 12:30:05 UTC",
-    "news_shock_score": 0,
-    "news_top_stories": [],
+    "timestamp": "2026-10-23 12:30:04 UTC",
+    "news_shock_score": 2,
+    "news_top_stories": [
+      "Why is LKQ stock crashing today?"
+    ],
     "event_alert": "",
     "regime": {
       "vxn": 0,
@@ -697,45 +703,45 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": null,
+    "qqq_overnight_gap_pct": -0.14,
     "shock_level": "CLEAR",
     "reason": "all clear",
     "delta_cap": 0.3,
     "size_mult": 1.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.95 (normal contango). CrossAsset[CLEAR]: 0/4 risk-off (GLD+nan%/UUP+nan%/TLT+nan%); 3m/10y normal (+104bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
-    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.95). No real flight to safety in gold / bonds / dollar. Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.98 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: TLT +1.87%; 3m/10y normal (+93bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
+    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.98). Some money is moving to safety (long bonds +1.87%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 18.11,
-      "vix3m_back": 18.99,
-      "term_ratio": 0.954,
+      "vix_front": 19.78,
+      "vix3m_back": 20.12,
+      "term_ratio": 0.983,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 377.65,
-        "curr": null,
-        "change_pct": null
+        "prev": 378.95,
+        "curr": 369.0,
+        "change_pct": -2.63
       },
       "uup": {
-        "prev": 28.9,
-        "curr": null,
-        "change_pct": null
+        "prev": 28.92,
+        "curr": 28.9,
+        "change_pct": -0.07
       },
       "tlt": {
-        "prev": 80.13,
-        "curr": null,
-        "change_pct": null
+        "prev": 80.24,
+        "curr": 81.74,
+        "change_pct": 1.87
       },
-      "yield_10y": 5.117,
-      "yield_3m": 4.08,
-      "yield_5y": 4.935,
-      "spread_3m10y_bp": 104,
-      "spread_5y10y_bp": 18,
+      "yield_10y": 4.953,
+      "yield_3m": 4.022,
+      "yield_5y": 4.768,
+      "spread_3m10y_bp": 93,
+      "spread_5y10y_bp": 19,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-10-22T12:30:06.360620+00:00"
+    "news_classifier_run_at": "2026-10-23T12:30:05.750484+00:00"
   }
 }

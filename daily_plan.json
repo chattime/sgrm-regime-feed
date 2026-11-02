@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-11-02T13:00:08Z",
+  "timestamp": "2026-11-02T14:05:07Z",
   "plan": {
     "as_of": "2026-11-02",
     "user_id": "you",
@@ -613,7 +613,7 @@
       "down_days_20d": 12,
       "condition": "2R",
       "regime": "DOWN",
-      "vs_10d_high_pct": -14.0,
+      "vs_10d_high_pct": -13.6,
       "ret_5d_pct": -6.5,
       "ret_40d_pct": -13.7,
       "above_ma_200_pct": -5.1
@@ -629,7 +629,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-8.8% from anchor)",
+        "reason": "drawdown OK (-8.4% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -652,9 +652,9 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 69.26,
-      "spot": 63.17,
-      "dd_pct": -8.8,
-      "reason": "drawdown OK (-8.8% from anchor)"
+      "spot": 63.41,
+      "dd_pct": -8.4,
+      "reason": "drawdown OK (-8.4% from anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
@@ -666,10 +666,10 @@
     "iv_percentile": 88.0,
     "size_mult": 1.0,
     "dip_armed": false,
-    "spot_reference": 63.17,
+    "spot_reference": 63.41,
     "spot_source": "live/pre-market",
     "ladder_base": 62.01,
-    "ladder_base_alt": 63.17,
+    "ladder_base_alt": 63.41,
     "ladder_base_source": "prior close",
     "strike_source": "nasdaq chain",
     "sizing_limiter": "matrix (regime×streak)",
@@ -689,21 +689,21 @@
       {
         "units": 2,
         "trigger_price": 61.08,
-        "trigger_price_alt": 62.22,
+        "trigger_price_alt": 62.46,
         "drop_pct": 1.5,
         "premium": 2.29
       },
       {
         "units": 3,
         "trigger_price": 60.35,
-        "trigger_price_alt": 61.59,
+        "trigger_price_alt": 61.82,
         "drop_pct": 2.7,
         "premium": 2.4
       },
       {
         "units": 5,
         "trigger_price": 59.84,
-        "trigger_price_alt": 60.96,
+        "trigger_price_alt": 61.19,
         "drop_pct": 3.5,
         "premium": 2.49
       }
@@ -711,9 +711,9 @@
     "capital": {
       "mode": "cash_secured",
       "reserve_pct": 0.3,
-      "cap_total": 140742.0,
+      "cap_total": 141036.0,
       "already_committed": 0,
-      "available_for_new": 140742.0,
+      "available_for_new": 141036.0,
       "this_plan_will_use": 51000.0,
       "pct_of_cap": 36.2
     },
@@ -729,11 +729,11 @@
         "high_40d": 84.25,
         "low_40d": 62.01,
         "ma_200": 65.34,
-        "vs_10d_high_pct": -14.0,
+        "vs_10d_high_pct": -13.6,
         "ret_5d_pct": -6.5,
         "ret_40d_pct": -13.7,
         "above_ma_200_pct": -5.1,
-        "capital": 462805.58
+        "capital": 466259.02
       },
       "gates": {
         "layer1_v7": {
@@ -764,31 +764,31 @@
       },
       "strike_derivation": {
         "rule": "richest strike with |delta| ≤ 0.3 at spot (calibrated surface); live chain pick overrides",
-        "spot": 63.17,
+        "spot": 63.41,
         "delta_cap": 0.3,
         "plan_strike": 51.0,
-        "plan_strike_delta": -0.182,
+        "plan_strike_delta": -0.179,
         "dte_target": 39
       },
       "batches": [
         {
           "units": 2,
           "trigger_price": 61.08,
-          "trigger_price_alt": 62.22,
+          "trigger_price_alt": 62.46,
           "drop_pct": 1.5,
           "premium": 2.29
         },
         {
           "units": 3,
           "trigger_price": 60.35,
-          "trigger_price_alt": 61.59,
+          "trigger_price_alt": 61.82,
           "drop_pct": 2.7,
           "premium": 2.4
         },
         {
           "units": 5,
           "trigger_price": 59.84,
-          "trigger_price_alt": 60.96,
+          "trigger_price_alt": 61.19,
           "drop_pct": 3.5,
           "premium": 2.49
         }
@@ -806,7 +806,7 @@
         "backtest_period_years": 16
       },
       "live_data": {
-        "live_spot": 63.1695,
+        "live_spot": 63.41,
         "live_spot_source": "nasdaq_live_premarket",
         "live_chain_atm_iv": 0.636335,
         "live_chain_atm_strike": 63.0,
@@ -828,11 +828,11 @@
         "live_chain_delta": -0.210176,
         "live_chain_expiry": "2026-12-11",
         "live_chain_identifier": "TQQQ  261211P00051000",
-        "live_chain_anchor_strike": 55.2733125,
+        "live_chain_anchor_strike": 55.48375,
         "live_chain_anchor_otm": 0.125,
         "live_chain_pick_method": "tiger_native_delta",
         "live_chain_no_entry_reason": null,
-        "live_chain_note": "tiger native δ: picked $51 (δ=-0.210, IV=90.1%, target 0.2, cap 0.30); spot $63.17; 89 strikes w/ greeks",
+        "live_chain_note": "tiger native δ: picked $51 (δ=-0.210, IV=90.1%, target 0.2, cap 0.30); spot $63.41; 89 strikes w/ greeks",
         "news_mode": "CLEAR",
         "news_mode_source": "news control OFF",
         "news_mode_reasoning": "news is not read by any model (owner 2026-11-01)",
@@ -842,9 +842,9 @@
         "live_chain_delta_cap": 0.3,
         "live_chain_delta_target": 0.2,
         "data_source": "tiger_chain(native δ) + nasdaq_spot/pcr",
-        "data_age_seconds": 0,
-        "live_ts_ratio": 0.931,
-        "live_ts_vix": 19.34,
+        "data_age_seconds": 1,
+        "live_ts_ratio": 0.915,
+        "live_ts_vix": 19.02,
         "live_ts_vix3m": 20.78,
         "live_ts_error": null,
         "live_chain_candidates": [
@@ -1095,16 +1095,16 @@
         "existing_units": 0,
         "broker_snapshot_possibly_stale": false,
         "broker_snapshot_note": "Tiger position snapshot within refresh window",
-        "fetched_at_iso": "2026-11-02T13:00:06Z",
-        "fetched_at": 1793624406.386506
+        "fetched_at_iso": "2026-11-02T14:05:05Z",
+        "fetched_at": 1793628305.352978
       }
     },
     "live_premium_bid": 2.27,
     "live_premium_ask": 3.0,
     "live_premium_iv": 0.900712,
     "live_premium_delta": -0.210176,
-    "engine_run_at_iso": "2026-11-02T13:00:08Z",
-    "engine_run_at": 1793624408.567588
+    "engine_run_at_iso": "2026-11-02T14:05:07Z",
+    "engine_run_at": 1793628307.174293
   },
   "pre_market": {
     "timestamp": "2026-11-02 12:30:04 UTC",

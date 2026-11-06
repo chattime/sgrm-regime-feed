@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-11-06T12:30:14Z",
+  "timestamp": "2026-11-06T13:00:09Z",
   "plan": {
     "as_of": "2026-11-06",
     "user_id": "you",
@@ -615,7 +615,7 @@
       "down_days_20d": 12,
       "condition": "1R",
       "regime": "DOWN",
-      "vs_10d_high_pct": -27.1,
+      "vs_10d_high_pct": -27.8,
       "ret_5d_pct": -27.1,
       "ret_40d_pct": -26.9,
       "above_ma_200_pct": -22.9
@@ -631,7 +631,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (4.7% from anchor)",
+        "reason": "drawdown OK (3.7% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -642,7 +642,7 @@
       },
       "empirical": {
         "pass": false,
-        "reason": "empirical: 5d return -27.1% < -7.0% + vs 10d high -27.1% < -18.0%",
+        "reason": "empirical: 5d return -27.1% < -7.0% + vs 10d high -27.8% < -18.0%",
         "size_mult": 0.0
       },
       "news": {
@@ -654,15 +654,15 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 50.47,
-      "spot": 52.86,
-      "dd_pct": 4.7,
-      "reason": "drawdown OK (4.7% from anchor)"
+      "spot": 52.35,
+      "dd_pct": 3.7,
+      "reason": "drawdown OK (3.7% from anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 85.4,
+    "atm_iv": 86.7,
     "hv_20d": 92.7,
-    "iv_hv": 0.92,
+    "iv_hv": 0.93,
     "iv_hv_mult": 1.0,
     "iv_hv_flag": "fair",
     "iv_percentile": 100.0,
@@ -670,14 +670,14 @@
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "EXCESS-LIQ RED: cushion 38.0% of net-liq (< 40%) — force-sell danger zone",
+      "EXCESS-LIQ RED: cushion 37.8% of net-liq (< 40%) — force-sell danger zone",
       "10-day-high BRAKE active",
-      "empirical: 5d return -27.1% < -7.0% + vs 10d high -27.1% < -18.0%"
+      "empirical: 5d return -27.1% < -7.0% + vs 10d high -27.8% < -18.0%"
     ],
     "batches": [],
     "clearance": {
       "metric": "vs 10d high",
-      "now": -27.1,
+      "now": -27.8,
       "needs": -15.0,
       "op": ">=",
       "asof": "2026-11-06 close"
@@ -687,8 +687,8 @@
     "live_premium_ask": 2.73,
     "live_premium_iv": 1.01624,
     "live_premium_delta": -0.20578,
-    "engine_run_at_iso": "2026-11-06T12:30:13Z",
-    "engine_run_at": 1793968213.580564
+    "engine_run_at_iso": "2026-11-06T13:00:08Z",
+    "engine_run_at": 1793970008.929453
   },
   "pre_market": {
     "timestamp": "2026-11-06 12:30:05 UTC",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-11-09T13:00:10Z",
+  "timestamp": "2026-11-09T14:05:06Z",
   "plan": {
     "as_of": "2026-11-09",
     "user_id": "you",
@@ -616,7 +616,7 @@
       "down_days_20d": 12,
       "condition": "GREEN",
       "regime": "DOWN",
-      "vs_10d_high_pct": -25.8,
+      "vs_10d_high_pct": -26.1,
       "ret_5d_pct": -15.7,
       "ret_40d_pct": -26.2,
       "above_ma_200_pct": -20.2
@@ -641,7 +641,7 @@
       },
       "empirical": {
         "pass": false,
-        "reason": "empirical: 5d return -15.7% < -7.0% + vs 10d high -25.8% < -18.0%",
+        "reason": "empirical: 5d return -15.7% < -7.0% + vs 10d high -26.1% < -18.0%",
         "size_mult": 0.0
       },
       "news": {
@@ -653,7 +653,7 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": null,
-      "spot": 53.81,
+      "spot": 53.6,
       "dd_pct": null,
       "reason": "no active streak (no anchor)"
     },
@@ -669,14 +669,14 @@
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "EXCESS-LIQ RED: cushion 31.5% of net-liq (< 40%) — force-sell danger zone",
+      "EXCESS-LIQ RED: cushion 31.6% of net-liq (< 40%) — force-sell danger zone",
       "10-day-high BRAKE active",
-      "empirical: 5d return -15.7% < -7.0% + vs 10d high -25.8% < -18.0%"
+      "empirical: 5d return -15.7% < -7.0% + vs 10d high -26.1% < -18.0%"
     ],
     "batches": [],
     "clearance": {
       "metric": "vs 10d high",
-      "now": -25.8,
+      "now": -26.1,
       "needs": -15.0,
       "op": ">=",
       "asof": "2026-11-09 close"
@@ -686,8 +686,8 @@
     "live_premium_ask": 2.67,
     "live_premium_iv": 1.02061,
     "live_premium_delta": -0.207533,
-    "engine_run_at_iso": "2026-11-09T13:00:09Z",
-    "engine_run_at": 1794229209.205267
+    "engine_run_at_iso": "2026-11-09T14:05:06Z",
+    "engine_run_at": 1794233106.501112
   },
   "pre_market": {
     "timestamp": "2026-11-09 12:30:05 UTC",

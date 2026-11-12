@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-11-12T12:30:16Z",
+  "timestamp": "2026-11-12T13:00:13Z",
   "plan": {
     "as_of": "2026-11-12",
     "user_id": "you",
@@ -618,7 +618,7 @@
       "down_days_20d": 10,
       "condition": "GREEN",
       "regime": "DOWN",
-      "vs_10d_high_pct": -16.2,
+      "vs_10d_high_pct": -16.4,
       "ret_5d_pct": -2.9,
       "ret_40d_pct": -10.9,
       "above_ma_200_pct": -7.7
@@ -655,7 +655,7 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": null,
-      "spot": 58.72,
+      "spot": 58.55,
       "dd_pct": null,
       "reason": "no active streak (no anchor)"
     },
@@ -671,13 +671,13 @@
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "EXCESS-LIQ RED: cushion 33.1% of net-liq (< 40%) — force-sell danger zone",
+      "EXCESS-LIQ RED: cushion 32.9% of net-liq (< 40%) — force-sell danger zone",
       "10-day-high BRAKE active"
     ],
     "batches": [],
     "clearance": {
       "metric": "vs 10d high",
-      "now": -16.2,
+      "now": -16.4,
       "needs": -15.0,
       "op": ">=",
       "asof": "2026-11-12 close"
@@ -687,8 +687,8 @@
     "live_premium_ask": 1.94,
     "live_premium_iv": 0.819459,
     "live_premium_delta": -0.191753,
-    "engine_run_at_iso": "2026-11-12T12:30:15Z",
-    "engine_run_at": 1794486615.172516
+    "engine_run_at_iso": "2026-11-12T13:00:13Z",
+    "engine_run_at": 1794488413.23319
   },
   "pre_market": {
     "timestamp": "2026-11-12 12:30:05 UTC",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-11-16T13:00:10Z",
+  "timestamp": "2026-11-16T14:05:07Z",
   "plan": {
     "as_of": "2026-11-16",
     "user_id": "you",
@@ -615,7 +615,7 @@
       "down_days_20d": 10,
       "condition": "2R",
       "regime": "DOWN",
-      "vs_10d_high_pct": -14.3,
+      "vs_10d_high_pct": -14.5,
       "ret_5d_pct": 10.4,
       "ret_40d_pct": -20.4,
       "above_ma_200_pct": -12.0
@@ -631,7 +631,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-7.4% from anchor)",
+        "reason": "drawdown OK (-7.5% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -654,9 +654,9 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 59.88,
-      "spot": 55.47,
-      "dd_pct": -7.4,
-      "reason": "drawdown OK (-7.4% from anchor)"
+      "spot": 55.4,
+      "dd_pct": -7.5,
+      "reason": "drawdown OK (-7.5% from anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
@@ -670,7 +670,7 @@
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "EXCESS-LIQ RED: cushion 27.9% of net-liq (< 40%) — force-sell danger zone",
+      "EXCESS-LIQ RED: cushion 27.8% of net-liq (< 40%) — force-sell danger zone",
       "40d-grind HALT (ret_40d=-20%)"
     ],
     "batches": [],
@@ -686,8 +686,8 @@
     "live_premium_ask": 2.48,
     "live_premium_iv": 0.820661,
     "live_premium_delta": -0.206014,
-    "engine_run_at_iso": "2026-11-16T13:00:10Z",
-    "engine_run_at": 1794834010.193982
+    "engine_run_at_iso": "2026-11-16T14:05:07Z",
+    "engine_run_at": 1794837907.545796
   },
   "pre_market": {
     "timestamp": "2026-11-16 12:30:05 UTC",

@@ -1,24 +1,20 @@
 {
   "version": 1,
-  "timestamp": "2026-11-16T14:05:07Z",
+  "timestamp": "2026-11-16T20:30:10Z",
   "plan": {
     "as_of": "2026-11-16",
     "user_id": "you",
     "close_backfill": null,
     "sizing_mode": "matrix",
     "profit_target": {
-      "model": "M5",
-      "pt_pct": 0.4,
+      "model": "GREED",
+      "pt_pct": 0.25,
       "stop_mult": 1.6,
       "adaptive": false
     },
-    "greed_day": false,
+    "greed_day": true,
     "greed_brake_bypassed": false,
     "recent_closes": [
-      {
-        "date": "2026-09-21",
-        "close": 78.76
-      },
       {
         "date": "2026-09-22",
         "close": 80.67
@@ -174,18 +170,13 @@
       {
         "date": "2026-11-13",
         "close": 57.68
+      },
+      {
+        "date": "2026-11-16",
+        "close": 53.1
       }
     ],
     "recent_days": [
-      {
-        "date": "2026-10-05",
-        "day": "Mon",
-        "close": 83.12,
-        "chg_pct": 2.6,
-        "streak": 5,
-        "ma40": 73.72,
-        "rsi14": 81.1
-      },
       {
         "date": "2026-10-06",
         "day": "Tue",
@@ -446,6 +437,15 @@
         "streak": -2,
         "ma40": 71.05,
         "rsi14": 38.4
+      },
+      {
+        "date": "2026-11-16",
+        "day": "Mon",
+        "close": 53.1,
+        "chg_pct": -7.95,
+        "streak": -3,
+        "ma40": 70.41,
+        "rsi14": 31.4
       }
     ],
     "calendar": {
@@ -557,40 +557,40 @@
         {
           "rung": 1,
           "drop_pct": 5.0,
-          "entry": 54.8,
-          "strike": 48.0,
-          "otm_pct": 12.4,
-          "delta": -0.25,
-          "credit": 2.14,
+          "entry": 50.44,
+          "strike": 43.5,
+          "otm_pct": 13.8,
+          "delta": -0.24,
+          "credit": 2.12,
           "exit_buyback": [
-            1.07,
-            1.5
+            1.06,
+            1.48
           ]
         },
         {
           "rung": 2,
           "drop_pct": 8.0,
-          "entry": 53.07,
-          "strike": 46.5,
-          "otm_pct": 12.4,
-          "delta": -0.25,
-          "credit": 2.08,
+          "entry": 48.85,
+          "strike": 42.0,
+          "otm_pct": 14.0,
+          "delta": -0.24,
+          "credit": 2.02,
           "exit_buyback": [
-            1.04,
-            1.45
+            1.01,
+            1.41
           ]
         },
         {
           "rung": 3,
           "drop_pct": 11.0,
-          "entry": 51.34,
-          "strike": 45.0,
-          "otm_pct": 12.3,
+          "entry": 47.26,
+          "strike": 41.0,
+          "otm_pct": 13.2,
           "delta": -0.25,
-          "credit": 2.01,
+          "credit": 2.05,
           "exit_buyback": [
-            1.01,
-            1.41
+            1.02,
+            1.43
           ]
         }
       ],
@@ -603,22 +603,22 @@
       "note": "Exit = buy-to-close at +30–50% of credit. Credit est uses current VXN; a real spike prints richer."
     },
     "market": {
-      "tqqq_close": 57.68,
-      "vxn": 29.4,
-      "rsi": 38.0,
-      "red_streak": 2,
+      "tqqq_close": 53.1,
+      "vxn": 33.7,
+      "rsi": 31.0,
+      "red_streak": 3,
       "green_streak": 0,
       "green_before_red": 1,
       "up_days_10d": 5,
       "down_days_10d": 5,
-      "up_days_20d": 10,
-      "down_days_20d": 10,
-      "condition": "2R",
+      "up_days_20d": 9,
+      "down_days_20d": 11,
+      "condition": "3R",
       "regime": "DOWN",
-      "vs_10d_high_pct": -14.5,
-      "ret_5d_pct": 10.4,
-      "ret_40d_pct": -20.4,
-      "above_ma_200_pct": -12.0
+      "vs_10d_high_pct": -18.1,
+      "ret_5d_pct": -7.8,
+      "ret_40d_pct": -32.6,
+      "above_ma_200_pct": -19.0
     },
     "pre_market": {
       "qqq_overnight_gap_pct": -1.68,
@@ -631,18 +631,18 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-7.5% from anchor)",
+        "reason": "drawdown OK (-11.4% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
       "v7": {
         "pass": false,
-        "reason": "40d-grind HALT (ret_40d=-20%)",
+        "reason": "10-day-high BRAKE active",
         "size_mult": 0
       },
       "empirical": {
         "pass": true,
-        "reason": "empirical gates pass",
+        "reason": "empirical: 5d return -7.8% < -7.0% + vs 10d high -18.1% < -18.0% + RSI 31 < 35 + red streak 3 BUT momentum 2/5 confirms turn (KDJ K>D for 3 bars; mild capitulation (3d down + VXN 34)) → FULL SIZE (capitulation is high-quality entry per backtest)",
         "size_mult": 1.0
       },
       "news": {
@@ -654,40 +654,40 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 59.88,
-      "spot": 55.4,
-      "dd_pct": -7.5,
-      "reason": "drawdown OK (-7.5% from anchor)"
+      "spot": 53.06,
+      "dd_pct": -11.4,
+      "reason": "drawdown OK (-11.4% from anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 71.3,
-    "hv_20d": 103.7,
-    "iv_hv": 0.69,
+    "atm_iv": 77.4,
+    "hv_20d": 105.6,
+    "iv_hv": 0.73,
     "iv_hv_mult": 0.5,
     "iv_hv_flag": "underpaid",
-    "iv_percentile": 92.0,
+    "iv_percentile": 99.0,
     "action": "NO ENTRY",
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "EXCESS-LIQ RED: cushion 27.8% of net-liq (< 40%) — force-sell danger zone",
-      "40d-grind HALT (ret_40d=-20%)"
+      "EXCESS-LIQ RED: cushion 22.6% of net-liq (< 40%) — force-sell danger zone",
+      "10-day-high BRAKE active"
     ],
     "batches": [],
     "clearance": {
-      "metric": "40d return",
-      "now": -20.4,
-      "needs": -20.0,
+      "metric": "vs 10d high",
+      "now": -18.1,
+      "needs": -15.0,
       "op": ">=",
       "asof": "2026-11-16 close"
     },
     "recommended_strike": 48.0,
-    "live_premium_bid": 1.75,
-    "live_premium_ask": 2.48,
+    "live_premium_bid": 3.1,
+    "live_premium_ask": 4.0,
     "live_premium_iv": 0.820661,
     "live_premium_delta": -0.206014,
-    "engine_run_at_iso": "2026-11-16T14:05:07Z",
-    "engine_run_at": 1794837907.545796
+    "engine_run_at_iso": "2026-11-16T20:30:10Z",
+    "engine_run_at": 1794861010.600972
   },
   "pre_market": {
     "timestamp": "2026-11-16 12:30:05 UTC",

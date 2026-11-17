@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "timestamp": "2026-11-17T12:00:58Z",
+  "timestamp": "2026-11-17T12:31:30Z",
   "plan": {
-    "as_of": "2026-11-16",
+    "as_of": "2026-11-17",
     "user_id": "you",
     "close_backfill": null,
     "sizing_mode": "matrix",
@@ -173,7 +173,7 @@
       },
       {
         "date": "2026-11-16",
-        "close": 53.1
+        "close": 53.03
       }
     ],
     "recent_days": [
@@ -441,69 +441,69 @@
       {
         "date": "2026-11-16",
         "day": "Mon",
-        "close": 53.1,
-        "chg_pct": -7.95,
+        "close": 53.03,
+        "chg_pct": -8.06,
         "streak": -3,
         "ma40": 70.41,
-        "rsi14": 31.4
+        "rsi14": 31.3
       }
     ],
     "calendar": {
       "next_opex": "2026-11-20",
-      "days_to_opex": 4,
+      "days_to_opex": 3,
       "next_witching": "2026-12-18",
-      "days_to_witching": 32,
+      "days_to_witching": 31,
       "next_nfp": "2026-12-04",
-      "days_to_nfp": 18,
+      "days_to_nfp": 17,
       "next_month_end": "2026-11-30",
-      "days_to_month_end": 14,
+      "days_to_month_end": 13,
       "next_quarter_end": "2026-12-31",
-      "days_to_quarter_end": 45,
+      "days_to_quarter_end": 44,
       "next_russell": "2027-06-25",
-      "days_to_russell": 221,
+      "days_to_russell": 220,
       "next_vix_expiry": "2026-11-18",
-      "days_to_vix_expiry": 2,
+      "days_to_vix_expiry": 1,
       "events": [
         {
           "event": "VIX expiry",
           "date": "2026-11-18",
-          "days": 2
+          "days": 1
         },
         {
           "event": "Monthly OPEX",
           "date": "2026-11-20",
-          "days": 4
+          "days": 3
         },
         {
           "event": "Month-end rebalance",
           "date": "2026-11-30",
-          "days": 14
+          "days": 13
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-12-04",
-          "days": 18
+          "days": 17
         },
         {
           "event": "Quad-witching",
           "date": "2026-12-18",
-          "days": 32
+          "days": 31
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-12-31",
-          "days": 45
+          "days": 44
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 221
+          "days": 220
         }
       ],
       "flags": [
-        "VIX expiry in 2d (2026-11-18)"
+        "VIX expiry in 1d (2026-11-18)"
       ],
-      "days_to_rebalance": 45,
+      "days_to_rebalance": 44,
       "next_rebalance": "2026-12-31"
     },
     "econ_calendar": {
@@ -511,32 +511,32 @@
         {
           "event": "PCE",
           "date": "2026-11-25",
-          "days": 9
+          "days": 8
         },
         {
           "event": "CPI",
           "date": "2026-12-10",
-          "days": 24
+          "days": 23
         },
         {
           "event": "PPI",
           "date": "2026-12-11",
-          "days": 25
+          "days": 24
         },
         {
           "event": "FOMC decision",
           "date": "2026-12-16",
-          "days": 30
+          "days": 29
         },
         {
           "event": "PCE",
           "date": "2026-12-23",
-          "days": 37
+          "days": 36
         },
         {
           "event": "CPI",
           "date": "2027-01-13",
-          "days": 58
+          "days": 57
         }
       ],
       "flags": [],
@@ -545,7 +545,7 @@
       "next": {
         "event": "PCE",
         "date": "2026-11-25",
-        "days": 9
+        "days": 8
       }
     },
     "scalp_plan": {
@@ -557,40 +557,40 @@
         {
           "rung": 1,
           "drop_pct": 5.0,
-          "entry": 50.44,
+          "entry": 50.38,
           "strike": 43.5,
-          "otm_pct": 13.8,
+          "otm_pct": 13.7,
           "delta": -0.24,
-          "credit": 2.12,
+          "credit": 2.07,
           "exit_buyback": [
-            1.06,
-            1.48
+            1.03,
+            1.45
           ]
         },
         {
           "rung": 2,
           "drop_pct": 8.0,
-          "entry": 48.85,
-          "strike": 42.0,
-          "otm_pct": 14.0,
-          "delta": -0.24,
-          "credit": 2.02,
+          "entry": 48.79,
+          "strike": 42.5,
+          "otm_pct": 12.9,
+          "delta": -0.25,
+          "credit": 2.1,
           "exit_buyback": [
-            1.01,
-            1.41
+            1.05,
+            1.47
           ]
         },
         {
           "rung": 3,
           "drop_pct": 11.0,
-          "entry": 47.26,
+          "entry": 47.2,
           "strike": 41.0,
-          "otm_pct": 13.2,
+          "otm_pct": 13.1,
           "delta": -0.25,
-          "credit": 2.05,
+          "credit": 2.0,
           "exit_buyback": [
-            1.02,
-            1.43
+            1.0,
+            1.4
           ]
         }
       ],
@@ -603,8 +603,8 @@
       "note": "Exit = buy-to-close at +30–50% of credit. Credit est uses current VXN; a real spike prints richer."
     },
     "market": {
-      "tqqq_close": 53.1,
-      "vxn": 33.7,
+      "tqqq_close": 53.03,
+      "vxn": 32.9,
       "rsi": 31.0,
       "red_streak": 3,
       "green_streak": 0,
@@ -615,23 +615,21 @@
       "down_days_20d": 11,
       "condition": "3R",
       "regime": "DOWN",
-      "vs_10d_high_pct": -18.1,
-      "ret_5d_pct": -7.8,
-      "ret_40d_pct": -32.6,
-      "above_ma_200_pct": -19.0
+      "vs_10d_high_pct": -17.0,
+      "ret_5d_pct": -7.9,
+      "ret_40d_pct": -32.7,
+      "above_ma_200_pct": -19.1
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": -1.68,
-      "news_shock_score": 2,
-      "news_top_stories": [
-        "Why this 40-year market veteran is making a lonely bet on a 40% stock-market crash — and $500 oil"
-      ],
-      "shock_level": "SHOCK"
+      "qqq_overnight_gap_pct": 0.46,
+      "news_shock_score": 0,
+      "news_top_stories": [],
+      "shock_level": "CLEAR"
     },
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-11.4% from anchor)",
+        "reason": "drawdown OK (-10.2% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -642,30 +640,30 @@
       },
       "empirical": {
         "pass": true,
-        "reason": "empirical: 5d return -7.8% < -7.0% + vs 10d high -18.1% < -18.0% + RSI 31 < 35 + red streak 3 BUT momentum 2/5 confirms turn (KDJ K>D for 3 bars; mild capitulation (3d down + VXN 34)) → FULL SIZE (capitulation is high-quality entry per backtest)",
+        "reason": "empirical: 5d return -7.9% < -7.0% + RSI 31 < 35 + red streak 3 BUT momentum 2/5 confirms turn (KDJ K>D for 3 bars; mild capitulation (3d down + VXN 33)) → FULL SIZE (capitulation is high-quality entry per backtest)",
         "size_mult": 1.0
       },
       "news": {
         "pass": true,
-        "reason": "news SHOCK (control OFF — informational only): qqq_gap=-1.68% < -1.5%",
+        "reason": "no news shock",
         "size_mult": 1.0
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 59.88,
-      "spot": 53.06,
-      "dd_pct": -11.4,
-      "reason": "drawdown OK (-11.4% from anchor)"
+      "spot": 53.76,
+      "dd_pct": -10.2,
+      "reason": "drawdown OK (-10.2% from anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 77.4,
-    "hv_20d": 105.6,
-    "iv_hv": 0.73,
+    "atm_iv": 79.5,
+    "hv_20d": 105.7,
+    "iv_hv": 0.75,
     "iv_hv_mult": 0.5,
     "iv_hv_flag": "underpaid",
-    "iv_percentile": 99.0,
+    "iv_percentile": 98.0,
     "action": "NO ENTRY",
     "size_mult": 0,
     "recommended_units": 0,
@@ -676,25 +674,23 @@
     "batches": [],
     "clearance": {
       "metric": "vs 10d high",
-      "now": -18.1,
+      "now": -17.0,
       "needs": -15.0,
       "op": ">=",
-      "asof": "2026-11-16 close"
+      "asof": "2026-11-17 close"
     },
-    "recommended_strike": 48.0,
-    "live_premium_bid": 3.1,
-    "live_premium_ask": 4.0,
-    "live_premium_iv": 0.820661,
-    "live_premium_delta": -0.206014,
-    "engine_run_at_iso": "2026-11-16T20:30:10Z",
-    "engine_run_at": 1794861010.600972
+    "recommended_strike": 43.0,
+    "live_premium_bid": 1.91,
+    "live_premium_ask": 2.71,
+    "live_premium_iv": 0.996267,
+    "live_premium_delta": -0.204714,
+    "engine_run_at_iso": "2026-11-17T12:31:29Z",
+    "engine_run_at": 1794918689.233868
   },
   "pre_market": {
-    "timestamp": "2026-11-16 12:30:05 UTC",
-    "news_shock_score": 2,
-    "news_top_stories": [
-      "Why this 40-year market veteran is making a lonely bet on a 40% stock-market crash — and $500 oil"
-    ],
+    "timestamp": "2026-11-17 12:30:07 UTC",
+    "news_shock_score": 0,
+    "news_top_stories": [],
     "event_alert": "",
     "regime": {
       "vxn": 0,
@@ -702,45 +698,45 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": -1.68,
-    "shock_level": "SHOCK",
-    "reason": "qqq_gap=-1.68% < -1.5%",
-    "delta_cap": 0.2,
-    "size_mult": 0.0,
+    "qqq_overnight_gap_pct": 0.46,
+    "shock_level": "CLEAR",
+    "reason": "all clear",
+    "delta_cap": 0.3,
+    "size_mult": 1.0,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=SHOCK. VXN[CLEAR]: VIX/VIX3M = 1.00 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.27%; 3m/10y normal (+103bp). Combine: both signals CLEAR. Bash[SHOCK]: qqq_gap=-1.68% < -1.5%. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=SHOCK → SHOCK.",
-    "news_mode_reasoning_plain": "News mode: SHOCK — STAND DOWN — no new entries today. Volatility is calm — the fear-gauge term structure is normal (ratio 1.00). Some money is moving to safety (gold +0.16%, the dollar +0.27%). Headlines / overnight flagged SHOCK: qqq_gap=-1.68% < -1.5%. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.98 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: UUP +0.20%; 3m/10y normal (+100bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
+    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.98). Some money is moving to safety (the dollar +0.20%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 20.53,
-      "vix3m_back": 20.62,
-      "term_ratio": 0.996,
+      "vix_front": 22.62,
+      "vix3m_back": 23.02,
+      "term_ratio": 0.983,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 354.89,
-        "curr": 355.45,
-        "change_pct": 0.16
+        "prev": 355.45,
+        "curr": 352.93,
+        "change_pct": -0.71
       },
       "uup": {
-        "prev": 29.42,
-        "curr": 29.5,
-        "change_pct": 0.27
+        "prev": 29.5,
+        "curr": 29.56,
+        "change_pct": 0.2
       },
       "tlt": {
-        "prev": 79.72,
+        "prev": 79.38,
         "curr": 79.38,
-        "change_pct": -0.43
+        "change_pct": 0.0
       },
-      "yield_10y": 5.154,
-      "yield_3m": 4.122,
-      "yield_5y": 4.981,
-      "spread_3m10y_bp": 103,
-      "spread_5y10y_bp": 17,
+      "yield_10y": 5.121,
+      "yield_3m": 4.125,
+      "yield_5y": 4.935,
+      "spread_3m10y_bp": 100,
+      "spread_5y10y_bp": 19,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-11-16T12:30:07.066485+00:00"
+    "news_classifier_run_at": "2026-11-17T12:30:10.295896+00:00"
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-11-18T12:30:17Z",
+  "timestamp": "2026-11-18T13:00:08Z",
   "plan": {
     "as_of": "2026-11-18",
     "user_id": "you",
@@ -616,7 +616,7 @@
       "down_days_20d": 11,
       "condition": "4R+",
       "regime": "DOWN",
-      "vs_10d_high_pct": -18.0,
+      "vs_10d_high_pct": -18.7,
       "ret_5d_pct": -8.4,
       "ret_40d_pct": -35.8,
       "above_ma_200_pct": -20.9
@@ -630,7 +630,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-11.3% from anchor)",
+        "reason": "drawdown OK (-12.0% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -641,7 +641,7 @@
       },
       "empirical": {
         "pass": true,
-        "reason": "empirical: 5d return -8.4% < -7.0% + RSI 29 < 35 + red streak 4 BUT momentum 1/5 confirms turn (mild capitulation (4d down + VXN 34)) → FULL SIZE (capitulation is high-quality entry per backtest)",
+        "reason": "empirical: 5d return -8.4% < -7.0% + vs 10d high -18.7% < -18.0% + RSI 29 < 35 + red streak 4 BUT momentum 1/5 confirms turn (mild capitulation (4d down + VXN 34)) → FULL SIZE (capitulation is high-quality entry per backtest)",
         "size_mult": 1.0
       },
       "news": {
@@ -653,9 +653,9 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 59.88,
-      "spot": 53.11,
-      "dd_pct": -11.3,
-      "reason": "drawdown OK (-11.3% from anchor)"
+      "spot": 52.68,
+      "dd_pct": -12.0,
+      "reason": "drawdown OK (-12.0% from anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
@@ -669,13 +669,13 @@
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "EXCESS-LIQ RED: cushion 21.3% of net-liq (< 40%) — force-sell danger zone",
+      "EXCESS-LIQ RED: cushion 21.1% of net-liq (< 40%) — force-sell danger zone",
       "10-day-high BRAKE active"
     ],
     "batches": [],
     "clearance": {
       "metric": "vs 10d high",
-      "now": -18.0,
+      "now": -18.7,
       "needs": -15.0,
       "op": ">=",
       "asof": "2026-11-18 close"
@@ -685,8 +685,8 @@
     "live_premium_ask": 3.35,
     "live_premium_iv": 1.12996,
     "live_premium_delta": -0.200243,
-    "engine_run_at_iso": "2026-11-18T12:30:16Z",
-    "engine_run_at": 1795005016.140454
+    "engine_run_at_iso": "2026-11-18T13:00:08Z",
+    "engine_run_at": 1795006808.492411
   },
   "pre_market": {
     "timestamp": "2026-11-18 12:30:05 UTC",

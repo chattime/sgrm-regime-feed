@@ -1,18 +1,18 @@
 {
   "version": 1,
-  "timestamp": "2026-11-19T12:00:53Z",
+  "timestamp": "2026-11-19T12:30:16Z",
   "plan": {
-    "as_of": "2026-11-18",
+    "as_of": "2026-11-19",
     "user_id": "you",
     "close_backfill": null,
     "sizing_mode": "matrix",
     "profit_target": {
-      "model": "GREED",
-      "pt_pct": 0.25,
+      "model": "M5",
+      "pt_pct": 0.4,
       "stop_mult": 1.6,
       "adaptive": false
     },
-    "greed_day": true,
+    "greed_day": false,
     "greed_brake_bypassed": false,
     "recent_closes": [
       {
@@ -173,7 +173,7 @@
       },
       {
         "date": "2026-11-18",
-        "close": 51.58
+        "close": 52.44
       }
     ],
     "recent_days": [
@@ -441,70 +441,69 @@
       {
         "date": "2026-11-18",
         "day": "Wed",
-        "close": 51.58,
-        "chg_pct": -0.43,
-        "streak": -5,
-        "ma40": 69.01,
-        "rsi14": 30.5
+        "close": 52.44,
+        "chg_pct": 1.22,
+        "streak": 1,
+        "ma40": 69.03,
+        "rsi14": 31.6
       }
     ],
     "calendar": {
       "next_opex": "2026-11-20",
-      "days_to_opex": 2,
+      "days_to_opex": 1,
       "next_witching": "2026-12-18",
-      "days_to_witching": 30,
+      "days_to_witching": 29,
       "next_nfp": "2026-12-04",
-      "days_to_nfp": 16,
+      "days_to_nfp": 15,
       "next_month_end": "2026-11-30",
-      "days_to_month_end": 12,
+      "days_to_month_end": 11,
       "next_quarter_end": "2026-12-31",
-      "days_to_quarter_end": 43,
+      "days_to_quarter_end": 42,
       "next_russell": "2027-06-25",
-      "days_to_russell": 219,
-      "next_vix_expiry": "2026-11-18",
-      "days_to_vix_expiry": 0,
+      "days_to_russell": 218,
+      "next_vix_expiry": "2026-12-16",
+      "days_to_vix_expiry": 27,
       "events": [
-        {
-          "event": "VIX expiry",
-          "date": "2026-11-18",
-          "days": 0
-        },
         {
           "event": "Monthly OPEX",
           "date": "2026-11-20",
-          "days": 2
+          "days": 1
         },
         {
           "event": "Month-end rebalance",
           "date": "2026-11-30",
-          "days": 12
+          "days": 11
         },
         {
           "event": "NFP (jobs)",
           "date": "2026-12-04",
-          "days": 16
+          "days": 15
+        },
+        {
+          "event": "VIX expiry",
+          "date": "2026-12-16",
+          "days": 27
         },
         {
           "event": "Quad-witching",
           "date": "2026-12-18",
-          "days": 30
+          "days": 29
         },
         {
           "event": "Quarter-end rebalance",
           "date": "2026-12-31",
-          "days": 43
+          "days": 42
         },
         {
           "event": "Russell reconstitution",
           "date": "2027-06-25",
-          "days": 219
+          "days": 218
         }
       ],
       "flags": [
-        "Monthly OPEX in 2d (2026-11-20)",
-        "VIX expiry in 0d (2026-11-18)"
+        "Monthly OPEX in 1d (2026-11-20)"
       ],
-      "days_to_rebalance": 43,
+      "days_to_rebalance": 42,
       "next_rebalance": "2026-12-31"
     },
     "econ_calendar": {
@@ -512,32 +511,32 @@
         {
           "event": "PCE",
           "date": "2026-11-25",
-          "days": 7
+          "days": 6
         },
         {
           "event": "CPI",
           "date": "2026-12-10",
-          "days": 22
+          "days": 21
         },
         {
           "event": "PPI",
           "date": "2026-12-11",
-          "days": 23
+          "days": 22
         },
         {
           "event": "FOMC decision",
           "date": "2026-12-16",
-          "days": 28
+          "days": 27
         },
         {
           "event": "PCE",
           "date": "2026-12-23",
-          "days": 35
+          "days": 34
         },
         {
           "event": "CPI",
           "date": "2027-01-13",
-          "days": 56
+          "days": 55
         }
       ],
       "flags": [],
@@ -546,7 +545,7 @@
       "next": {
         "event": "PCE",
         "date": "2026-11-25",
-        "days": 7
+        "days": 6
       }
     },
     "scalp_plan": {
@@ -558,40 +557,40 @@
         {
           "rung": 1,
           "drop_pct": 5.0,
-          "entry": 49.01,
-          "strike": 42.5,
-          "otm_pct": 13.3,
-          "delta": -0.25,
-          "credit": 2.12,
+          "entry": 49.82,
+          "strike": 43.0,
+          "otm_pct": 13.7,
+          "delta": -0.24,
+          "credit": 2.06,
           "exit_buyback": [
-            1.06,
-            1.48
+            1.03,
+            1.44
           ]
         },
         {
           "rung": 2,
           "drop_pct": 8.0,
-          "entry": 47.46,
-          "strike": 41.0,
-          "otm_pct": 13.6,
-          "delta": -0.24,
-          "credit": 2.01,
+          "entry": 48.24,
+          "strike": 42.0,
+          "otm_pct": 12.9,
+          "delta": -0.25,
+          "credit": 2.09,
           "exit_buyback": [
-            1.0,
-            1.41
+            1.04,
+            1.46
           ]
         },
         {
           "rung": 3,
           "drop_pct": 11.0,
-          "entry": 45.91,
-          "strike": 39.5,
-          "otm_pct": 14.0,
-          "delta": -0.24,
-          "credit": 1.9,
+          "entry": 46.67,
+          "strike": 40.5,
+          "otm_pct": 13.2,
+          "delta": -0.25,
+          "credit": 1.98,
           "exit_buyback": [
-            0.95,
-            1.33
+            0.99,
+            1.39
           ]
         }
       ],
@@ -604,92 +603,93 @@
       "note": "Exit = buy-to-close at +30–50% of credit. Credit est uses current VXN; a real spike prints richer."
     },
     "market": {
-      "tqqq_close": 51.58,
-      "vxn": 33.7,
-      "rsi": 30.0,
-      "red_streak": 5,
-      "green_streak": 0,
+      "tqqq_close": 52.44,
+      "vxn": 33.1,
+      "rsi": 32.0,
+      "red_streak": 0,
+      "green_streak": 1,
       "green_before_red": 1,
-      "up_days_10d": 3,
-      "down_days_10d": 7,
-      "up_days_20d": 8,
-      "down_days_20d": 12,
-      "condition": "4R+",
+      "up_days_10d": 4,
+      "down_days_10d": 6,
+      "up_days_20d": 9,
+      "down_days_20d": 11,
+      "condition": "GREEN",
       "regime": "DOWN",
-      "vs_10d_high_pct": -15.6,
-      "ret_5d_pct": -14.7,
-      "ret_40d_pct": -34.4,
-      "above_ma_200_pct": -21.2
+      "vs_10d_high_pct": -9.8,
+      "ret_5d_pct": -13.2,
+      "ret_40d_pct": -33.3,
+      "above_ma_200_pct": -19.9
     },
     "pre_market": {
-      "qqq_overnight_gap_pct": 0.82,
+      "qqq_overnight_gap_pct": 2.07,
       "news_shock_score": 0,
       "news_top_stories": [],
-      "shock_level": "CLEAR"
+      "shock_level": "CAUTION"
     },
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-13.0% from anchor)",
+        "reason": "no active streak (no anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
       "v7": {
         "pass": false,
-        "reason": "10-day-high BRAKE active",
+        "reason": "Gate 1 FAIL: RSI 32 < 35 (oversold)",
         "size_mult": 0
       },
       "empirical": {
-        "pass": true,
-        "reason": "empirical: 5d return -14.7% < -7.0% + RSI 30 < 35 + red streak 5 BUT momentum 2/5 confirms turn (DEEP capitulation (5d down + VXN 34)) → FULL SIZE (capitulation is high-quality entry per backtest)",
-        "size_mult": 1.0
+        "pass": false,
+        "reason": "empirical: 5d return -13.2% < -7.0%",
+        "size_mult": 0.0
       },
       "news": {
         "pass": true,
-        "reason": "no news shock",
+        "reason": "news CAUTION (control OFF — informational only): all clear",
         "size_mult": 1.0
       }
     },
     "drawdown_brake": {
       "band": "GREEN",
-      "anchor": 59.88,
-      "spot": 52.12,
-      "dd_pct": -13.0,
-      "reason": "drawdown OK (-13.0% from anchor)"
+      "anchor": null,
+      "spot": 55.69,
+      "dd_pct": null,
+      "reason": "no active streak (no anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
-    "atm_iv": 89.5,
-    "hv_20d": 104.5,
-    "iv_hv": 0.86,
-    "iv_hv_mult": 1.0,
-    "iv_hv_flag": "fair",
-    "iv_percentile": 99.0,
+    "atm_iv": 84.0,
+    "hv_20d": 104.8,
+    "iv_hv": 0.8,
+    "iv_hv_mult": 0.5,
+    "iv_hv_flag": "underpaid",
+    "iv_percentile": 98.0,
     "action": "NO ENTRY",
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "EXCESS-LIQ RED: cushion 25.0% of net-liq (< 40%) — force-sell danger zone",
-      "10-day-high BRAKE active"
+      "EXCESS-LIQ RED: cushion 29.8% of net-liq (< 40%) — force-sell danger zone",
+      "Gate 1 FAIL: RSI 32 < 35 (oversold)",
+      "empirical: 5d return -13.2% < -7.0%"
     ],
     "batches": [],
     "clearance": {
-      "metric": "vs 10d high",
-      "now": -15.6,
-      "needs": -15.0,
+      "metric": "RSI",
+      "now": 31.6,
+      "needs": 35.0,
       "op": ">=",
-      "asof": "2026-11-18 close"
+      "asof": "2026-11-19 close"
     },
-    "recommended_strike": 41.0,
-    "live_premium_bid": 1.49,
-    "live_premium_ask": 2.33,
-    "live_premium_iv": 1.12996,
-    "live_premium_delta": -0.200243,
-    "engine_run_at_iso": "2026-11-18T20:30:09Z",
-    "engine_run_at": 1795033809.822529
+    "recommended_strike": 42.0,
+    "live_premium_bid": 1.55,
+    "live_premium_ask": 2.8,
+    "live_premium_iv": 1.03268,
+    "live_premium_delta": -0.195555,
+    "engine_run_at_iso": "2026-11-19T12:30:15Z",
+    "engine_run_at": 1795091415.359307
   },
   "pre_market": {
-    "timestamp": "2026-11-18 12:30:05 UTC",
+    "timestamp": "2026-11-19 12:30:05 UTC",
     "news_shock_score": 0,
     "news_top_stories": [],
     "event_alert": "",
@@ -699,45 +699,45 @@
       "stage": 0,
       "climate": ""
     },
-    "qqq_overnight_gap_pct": 0.82,
-    "shock_level": "CLEAR",
+    "qqq_overnight_gap_pct": 2.07,
+    "shock_level": "CAUTION",
     "reason": "all clear",
-    "delta_cap": 0.3,
-    "size_mult": 1.0,
+    "delta_cap": 0.27,
+    "size_mult": 0.5,
     "news_mode_source": "vxn+cross_asset+bash",
-    "news_mode_reasoning": "FINAL=CLEAR. VXN[CLEAR]: VIX/VIX3M = 0.97 (normal contango). CrossAsset[CLEAR]: 1/4 risk-off confirms: TLT +0.21%; 3m/10y normal (+96bp). Combine: both signals CLEAR. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CLEAR, bash(news+gap)=CLEAR → CLEAR.",
-    "news_mode_reasoning_plain": "News mode: CLEAR — trade normally (full size). Volatility is calm — the fear-gauge term structure is normal (ratio 0.97). Some money is moving to safety (long bonds +0.21%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
+    "news_mode_reasoning": "FINAL=CAUTION. VXN[CLEAR]: VIX/VIX3M = 0.91 (normal contango). CrossAsset[CAUTION]: 2/4 risk-off confirms: UUP +0.27%, TLT +0.84%; 3m/10y normal (+92bp). Combine: single-signal CAUTION. Bash[CLEAR]: all clear. Merge: max-severity merge: classifier=CAUTION, bash(news+gap)=CLEAR → CAUTION.",
+    "news_mode_reasoning_plain": "News mode: CAUTION — sell at HALF size — premium is rich but stay careful. Volatility is calm — the fear-gauge term structure is normal (ratio 0.91). Some money is moving to safety (long bonds +0.84%, the dollar +0.27%). Headlines and the overnight gap are clean. We take the most cautious of these signals to set the day.",
     "vxn_term": {
       "ok": true,
-      "vix_front": 24.27,
-      "vix3m_back": 24.98,
-      "term_ratio": 0.972,
+      "vix_front": 22.19,
+      "vix3m_back": 24.29,
+      "term_ratio": 0.914,
       "term_inverted": false
     },
     "cross_asset": {
       "ok": true,
       "gld": {
-        "prev": 352.93,
-        "curr": 352.48,
-        "change_pct": -0.13
+        "prev": 352.48,
+        "curr": 341.19,
+        "change_pct": -3.2
       },
       "uup": {
-        "prev": 29.56,
-        "curr": 29.54,
-        "change_pct": -0.07
+        "prev": 29.54,
+        "curr": 29.62,
+        "change_pct": 0.27
       },
       "tlt": {
-        "prev": 79.38,
-        "curr": 79.55,
-        "change_pct": 0.21
+        "prev": 79.55,
+        "curr": 80.22,
+        "change_pct": 0.84
       },
-      "yield_10y": 5.103,
-      "yield_3m": 4.138,
-      "yield_5y": 4.9,
-      "spread_3m10y_bp": 96,
-      "spread_5y10y_bp": 20,
+      "yield_10y": 5.066,
+      "yield_3m": 4.145,
+      "yield_5y": 4.884,
+      "spread_3m10y_bp": 92,
+      "spread_5y10y_bp": 18,
       "curve_inverted_3m10y": false
     },
-    "news_classifier_run_at": "2026-11-18T12:30:07.172630+00:00"
+    "news_classifier_run_at": "2026-11-19T12:30:07.240829+00:00"
   }
 }

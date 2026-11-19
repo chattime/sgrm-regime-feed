@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-11-19T12:30:16Z",
+  "timestamp": "2026-11-19T13:00:17Z",
   "plan": {
     "as_of": "2026-11-19",
     "user_id": "you",
@@ -615,7 +615,7 @@
       "down_days_20d": 11,
       "condition": "GREEN",
       "regime": "DOWN",
-      "vs_10d_high_pct": -9.8,
+      "vs_10d_high_pct": -9.9,
       "ret_5d_pct": -13.2,
       "ret_40d_pct": -33.3,
       "above_ma_200_pct": -19.9
@@ -652,7 +652,7 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": null,
-      "spot": 55.69,
+      "spot": 55.64,
       "dd_pct": null,
       "reason": "no active streak (no anchor)"
     },
@@ -668,7 +668,7 @@
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "EXCESS-LIQ RED: cushion 29.8% of net-liq (< 40%) — force-sell danger zone",
+      "EXCESS-LIQ RED: cushion 29.2% of net-liq (< 40%) — force-sell danger zone",
       "Gate 1 FAIL: RSI 32 < 35 (oversold)",
       "empirical: 5d return -13.2% < -7.0%"
     ],
@@ -685,8 +685,8 @@
     "live_premium_ask": 2.8,
     "live_premium_iv": 1.03268,
     "live_premium_delta": -0.195555,
-    "engine_run_at_iso": "2026-11-19T12:30:15Z",
-    "engine_run_at": 1795091415.359307
+    "engine_run_at_iso": "2026-11-19T13:00:16Z",
+    "engine_run_at": 1795093216.425015
   },
   "pre_market": {
     "timestamp": "2026-11-19 12:30:05 UTC",

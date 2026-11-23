@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-11-23T13:00:08Z",
+  "timestamp": "2026-11-23T14:05:08Z",
   "plan": {
     "as_of": "2026-11-23",
     "user_id": "you",
@@ -615,7 +615,7 @@
       "down_days_20d": 11,
       "condition": "2R",
       "regime": "DOWN",
-      "vs_10d_high_pct": -27.7,
+      "vs_10d_high_pct": -20.2,
       "ret_5d_pct": -28.6,
       "ret_40d_pct": -48.2,
       "above_ma_200_pct": -37.1
@@ -629,7 +629,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-8.9% from anchor)",
+        "reason": "drawdown OK (0.6% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -640,7 +640,7 @@
       },
       "empirical": {
         "pass": false,
-        "reason": "empirical: 5d return -28.6% < -7.0% + vs 10d high -27.7% < -18.0% + RSI 31 < 35 + red streak 2",
+        "reason": "empirical: 5d return -28.6% < -7.0% + vs 10d high -20.2% < -18.0% + RSI 31 < 35 + red streak 2",
         "size_mult": 0.0
       },
       "news": {
@@ -652,9 +652,9 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 49.01,
-      "spot": 44.64,
-      "dd_pct": -8.9,
-      "reason": "drawdown OK (-8.9% from anchor)"
+      "spot": 49.3,
+      "dd_pct": 0.6,
+      "reason": "drawdown OK (0.6% from anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
@@ -668,25 +668,25 @@
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "EXCESS-LIQ RED: $8,819 below $15,000 absolute floor — force-sell risk",
+      "EXCESS-LIQ RED: $10,539 below $15,000 absolute floor — force-sell risk",
       "10-day-high BRAKE active",
-      "empirical: 5d return -28.6% < -7.0% + vs 10d high -27.7% < -18.0% + RSI 31 < 35 + red streak 2"
+      "empirical: 5d return -28.6% < -7.0% + vs 10d high -20.2% < -18.0% + RSI 31 < 35 + red streak 2"
     ],
     "batches": [],
     "clearance": {
       "metric": "vs 10d high",
-      "now": -27.7,
+      "now": -20.2,
       "needs": -15.0,
       "op": ">=",
       "asof": "2026-11-23 close"
     },
     "recommended_strike": 30.0,
-    "live_premium_bid": 2.21,
-    "live_premium_ask": 2.52,
-    "live_premium_iv": 1.38597,
-    "live_premium_delta": -0.180416,
-    "engine_run_at_iso": "2026-11-23T13:00:07Z",
-    "engine_run_at": 1795438807.975763
+    "live_premium_bid": 1.93,
+    "live_premium_ask": 2.42,
+    "live_premium_iv": 1.46227,
+    "live_premium_delta": -0.175873,
+    "engine_run_at_iso": "2026-11-23T14:05:08Z",
+    "engine_run_at": 1795442708.11907
   },
   "pre_market": {
     "timestamp": "2026-11-23 12:30:06 UTC",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-11-23T12:30:20Z",
+  "timestamp": "2026-11-23T13:00:08Z",
   "plan": {
     "as_of": "2026-11-23",
     "user_id": "you",
@@ -652,7 +652,7 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 49.01,
-      "spot": 44.67,
+      "spot": 44.64,
       "dd_pct": -8.9,
       "reason": "drawdown OK (-8.9% from anchor)"
     },
@@ -668,7 +668,7 @@
     "size_mult": 0,
     "recommended_units": 0,
     "blocking_reasons": [
-      "EXCESS-LIQ RED: $9,129 below $15,000 absolute floor — force-sell risk",
+      "EXCESS-LIQ RED: $8,819 below $15,000 absolute floor — force-sell risk",
       "10-day-high BRAKE active",
       "empirical: 5d return -28.6% < -7.0% + vs 10d high -27.7% < -18.0% + RSI 31 < 35 + red streak 2"
     ],
@@ -685,8 +685,8 @@
     "live_premium_ask": 2.52,
     "live_premium_iv": 1.38597,
     "live_premium_delta": -0.180416,
-    "engine_run_at_iso": "2026-11-23T12:30:19Z",
-    "engine_run_at": 1795437019.353944
+    "engine_run_at_iso": "2026-11-23T13:00:07Z",
+    "engine_run_at": 1795438807.975763
   },
   "pre_market": {
     "timestamp": "2026-11-23 12:30:06 UTC",

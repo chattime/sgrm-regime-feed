@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-11-25T13:00:11Z",
+  "timestamp": "2026-11-25T14:05:10Z",
   "plan": {
     "as_of": "2026-11-25",
     "user_id": "you",
@@ -617,7 +617,7 @@
       "down_days_20d": 12,
       "condition": "1R",
       "regime": "DOWN",
-      "vs_10d_high_pct": -31.6,
+      "vs_10d_high_pct": -32.6,
       "ret_5d_pct": -10.8,
       "ret_40d_pct": -40.4,
       "above_ma_200_pct": -29.4
@@ -633,7 +633,7 @@
     "gate_results": {
       "drawdown_brake": {
         "pass": true,
-        "reason": "drawdown OK (-8.5% from anchor)",
+        "reason": "drawdown OK (-9.9% from anchor)",
         "size_mult": 1.0,
         "band": "GREEN"
       },
@@ -644,7 +644,7 @@
       },
       "empirical": {
         "pass": true,
-        "reason": "empirical: 5d return -10.8% < -7.0% + vs 10d high -31.6% < -18.0% BUT momentum 1/5 confirms turn (RSI rising in 3/5 bars) → FULL SIZE (capitulation is high-quality entry per backtest)",
+        "reason": "empirical: 5d return -10.8% < -7.0% + vs 10d high -32.6% < -18.0% BUT momentum 1/5 confirms turn (RSI rising in 3/5 bars) → FULL SIZE (capitulation is high-quality entry per backtest)",
         "size_mult": 1.0
       },
       "news": {
@@ -656,9 +656,9 @@
     "drawdown_brake": {
       "band": "GREEN",
       "anchor": 46.19,
-      "spot": 42.28,
-      "dd_pct": -8.5,
-      "reason": "drawdown OK (-8.5% from anchor)"
+      "spot": 41.64,
+      "dd_pct": -9.9,
+      "reason": "drawdown OK (-9.9% from anchor)"
     },
     "flat_book": true,
     "atm_iv_source": "nasdaq chain",
@@ -670,9 +670,9 @@
     "iv_percentile": 99.0,
     "size_mult": 0.5,
     "dip_armed": false,
-    "spot_reference": 42.28,
+    "spot_reference": 41.64,
     "spot_source": "live/pre-market",
-    "ladder_base": 42.28,
+    "ladder_base": 41.64,
     "ladder_base_alt": 46.19,
     "ladder_base_source": "live/pre-market",
     "strike_source": "nasdaq chain",
@@ -681,7 +681,7 @@
       "matrix (regime×streak)": 2,
       "empirical cap (12)": 12,
       "hard cap (50)": 50,
-      "buying power": 36,
+      "buying power": 35,
       "portfolio cap (open units)": 12
     },
     "sizing_mult_notes": [
@@ -694,27 +694,27 @@
     "batches": [
       {
         "units": 1,
-        "trigger_price": 40.8,
+        "trigger_price": 40.18,
         "trigger_price_alt": 44.8,
         "drop_pct": 3.5,
-        "premium": 2.14
+        "premium": 2.26
       },
       {
         "units": 1,
-        "trigger_price": 40.59,
+        "trigger_price": 39.97,
         "trigger_price_alt": 44.34,
         "drop_pct": 4.0,
-        "premium": 2.18
+        "premium": 2.3
       }
     ],
     "capital": {
       "mode": "cash_secured",
       "reserve_pct": 0.3,
-      "cap_total": 127986.0,
+      "cap_total": 125962.0,
       "already_committed": 0,
-      "available_for_new": 127986.0,
+      "available_for_new": 125962.0,
       "this_plan_will_use": 7000.0,
-      "pct_of_cap": 5.5
+      "pct_of_cap": 5.6
     },
     "trace_json": {
       "version": "v2.6",
@@ -728,11 +728,11 @@
         "high_40d": 84.25,
         "low_40d": 41.2,
         "ma_200": 65.44,
-        "vs_10d_high_pct": -31.6,
+        "vs_10d_high_pct": -32.6,
         "ret_5d_pct": -10.8,
         "ret_40d_pct": -40.4,
         "above_ma_200_pct": -29.4,
-        "capital": 570250.13
+        "capital": 565384.47
       },
       "gates": {
         "layer1_v7": {
@@ -742,7 +742,7 @@
         },
         "layer4_empirical": {
           "pass": true,
-          "reason": "empirical: 5d return -10.8% < -7.0% + vs 10d high -31.6% < -18.0% BUT momentum 1/5 confirms turn (RSI rising in 3/5 bars) → FULL SIZE (capitulation is high-quality entry per backtest)"
+          "reason": "empirical: 5d return -10.8% < -7.0% + vs 10d high -32.6% < -18.0% BUT momentum 1/5 confirms turn (RSI rising in 3/5 bars) → FULL SIZE (capitulation is high-quality entry per backtest)"
         },
         "layer5_news": {
           "pass": true,
@@ -757,32 +757,32 @@
         "final_mult": 0.5,
         "units_after_mult": 2,
         "empirical_cap": 12,
-        "bp_cap_units": 36,
+        "bp_cap_units": 35,
         "portfolio_cap_units": 12,
         "final_units": 2
       },
       "strike_derivation": {
         "rule": "richest strike with |delta| ≤ 0.3 at spot (calibrated surface); live chain pick overrides",
-        "spot": 42.28,
+        "spot": 41.64,
         "delta_cap": 0.3,
         "plan_strike": 35.0,
-        "plan_strike_delta": -0.219,
+        "plan_strike_delta": -0.233,
         "dte_target": 36
       },
       "batches": [
         {
           "units": 1,
-          "trigger_price": 40.8,
+          "trigger_price": 40.18,
           "trigger_price_alt": 44.8,
           "drop_pct": 3.5,
-          "premium": 2.14
+          "premium": 2.26
         },
         {
           "units": 1,
-          "trigger_price": 40.59,
+          "trigger_price": 39.97,
           "trigger_price_alt": 44.34,
           "drop_pct": 4.0,
-          "premium": 2.18
+          "premium": 2.3
         }
       ],
       "positions_context": {
@@ -798,7 +798,7 @@
         "backtest_period_years": 16
       },
       "live_data": {
-        "live_spot": 42.28,
+        "live_spot": 41.6384,
         "live_spot_source": "nasdaq_live_premarket",
         "live_chain_atm_iv": 1.01413,
         "live_chain_atm_strike": 40.0,
@@ -820,11 +820,11 @@
         "live_chain_delta": -0.169851,
         "live_chain_expiry": "2026-12-31",
         "live_chain_identifier": "TQQQ  261231P00035000",
-        "live_chain_anchor_strike": 36.995000000000005,
+        "live_chain_anchor_strike": 36.4336,
         "live_chain_anchor_otm": 0.125,
         "live_chain_pick_method": "tiger_native_delta",
         "live_chain_no_entry_reason": null,
-        "live_chain_note": "tiger native δ: picked $35 (δ=-0.170, IV=114.2%, target 0.2, cap 0.30); spot $42.28; 54 strikes w/ greeks",
+        "live_chain_note": "tiger native δ: picked $35 (δ=-0.170, IV=114.2%, target 0.2, cap 0.30); spot $41.64; 54 strikes w/ greeks",
         "news_mode": "CLEAR",
         "news_mode_source": "news control OFF",
         "news_mode_reasoning": "news is not read by any model (owner 2026-11-01)",
@@ -834,9 +834,9 @@
         "live_chain_delta_cap": 0.3,
         "live_chain_delta_target": 0.2,
         "data_source": "tiger_chain(native δ) + nasdaq_spot/pcr",
-        "data_age_seconds": 0,
-        "live_ts_ratio": 1.207,
-        "live_ts_vix": 30.73,
+        "data_age_seconds": 1,
+        "live_ts_ratio": 1.229,
+        "live_ts_vix": 31.3,
         "live_ts_vix3m": 25.47,
         "live_ts_error": null,
         "live_chain_candidates": [
@@ -880,16 +880,16 @@
         "existing_units": 0,
         "broker_snapshot_possibly_stale": false,
         "broker_snapshot_note": "Tiger position snapshot within refresh window",
-        "fetched_at_iso": "2026-11-25T13:00:08Z",
-        "fetched_at": 1795611608.750347
+        "fetched_at_iso": "2026-11-25T14:05:07Z",
+        "fetched_at": 1795615507.179859
       }
     },
     "live_premium_bid": 1.64,
     "live_premium_ask": 2.01,
     "live_premium_iv": 1.14182,
     "live_premium_delta": -0.169851,
-    "engine_run_at_iso": "2026-11-25T13:00:11Z",
-    "engine_run_at": 1795611611.309854
+    "engine_run_at_iso": "2026-11-25T14:05:09Z",
+    "engine_run_at": 1795615509.780273
   },
   "pre_market": {
     "timestamp": "2026-11-25 12:30:05 UTC",

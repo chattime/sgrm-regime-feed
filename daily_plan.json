@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "timestamp": "2026-11-26T14:05:07Z",
+  "timestamp": "2026-11-26T20:30:07Z",
   "plan": {
     "as_of": "2026-11-26",
     "user_id": "you",
@@ -715,9 +715,9 @@
     "capital": {
       "mode": "cash_secured",
       "reserve_pct": 0.3,
-      "cap_total": 132196.0,
+      "cap_total": 132189.0,
       "already_committed": 0,
-      "available_for_new": 132196.0,
+      "available_for_new": 132189.0,
       "this_plan_will_use": 17500.0,
       "pct_of_cap": 13.2
     },
@@ -737,7 +737,7 @@
         "ret_5d_pct": -13.7,
         "ret_40d_pct": -42.0,
         "above_ma_200_pct": -30.8,
-        "capital": 594208.27
+        "capital": 594166.75
       },
       "gates": {
         "layer1_v7": {
@@ -810,8 +810,8 @@
         "backtest_period_years": 16
       },
       "live_data": {
-        "live_spot": 45.28,
-        "live_spot_source": "nasdaq_live_premarket",
+        "live_spot": 45.279998779296875,
+        "live_spot_source": "yfinance_settled_close (post-close window)",
         "live_chain_atm_iv": 0.966177,
         "live_chain_atm_strike": 45.0,
         "live_put_call_ratio": 0.52,
@@ -832,7 +832,7 @@
         "live_chain_delta": -0.183906,
         "live_chain_expiry": "2026-12-31",
         "live_chain_identifier": "TQQQ  261231P00035000",
-        "live_chain_anchor_strike": 39.620000000000005,
+        "live_chain_anchor_strike": 39.619998931884766,
         "live_chain_anchor_otm": 0.125,
         "live_chain_pick_method": "tiger_native_delta",
         "live_chain_no_entry_reason": null,
@@ -847,8 +847,8 @@
         "live_chain_delta_target": 0.2,
         "data_source": "tiger_chain(native δ) + nasdaq_spot/pcr",
         "data_age_seconds": 1,
-        "live_ts_ratio": 1.021,
-        "live_ts_vix": 26.84,
+        "live_ts_ratio": 1.019,
+        "live_ts_vix": 26.8,
         "live_ts_vix3m": 26.29,
         "live_ts_error": null,
         "live_chain_candidates": [
@@ -892,16 +892,16 @@
         "existing_units": 0,
         "broker_snapshot_possibly_stale": false,
         "broker_snapshot_note": "Tiger position snapshot within refresh window",
-        "fetched_at_iso": "2026-11-26T14:05:04Z",
-        "fetched_at": 1795701904.538638
+        "fetched_at_iso": "2026-11-26T20:30:04Z",
+        "fetched_at": 1795725004.75328
       }
     },
     "live_premium_bid": 1.81,
     "live_premium_ask": 2.15,
     "live_premium_iv": 1.1561,
     "live_premium_delta": -0.183906,
-    "engine_run_at_iso": "2026-11-26T14:05:06Z",
-    "engine_run_at": 1795701906.985658
+    "engine_run_at_iso": "2026-11-26T20:30:07Z",
+    "engine_run_at": 1795725007.286818
   },
   "pre_market": {
     "timestamp": "2026-11-26 12:30:05 UTC",
